@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DSH·daily-pulse · 第 14 期 · 2026-08-17 06:00</title>
+<!-- 防闪烁：首屏绘制前应用持久化主题 -->
+<script>
+  (function(){try{
+    var t=localStorage.getItem('dsh-theme');
+    if(!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t='light';
+    if(t) document.documentElement.dataset.theme=t;
+  }catch(e){}})();
+</script>
+<style>
+  /* ============ 设计令牌 v0.2（三层：常量 / 主题 / 配色，全部走 CSS 变量，组件零写死） ============ */
+  /* ① 常量层 :root —— 品牌 & 语义色（永不变）+ 暗色（默认）表面/文本 */
+  :root{
+    --brand:#3E7BFA; --brand-2:#5C93FF; --brand-soft:rgba(62,123,250,.14);
+    --up:#25C99B; --down:#F4606B; --warn:#F5B544; --info:#3E7BFA;
+    --bg-base:#0A0E17; --bg-surface:#111623; --bg-elev:#181F2E;
+    --border:#232C3F; --border-strong:#2E3A52;
+    --text-1:#EAEEF6; --text-2:#9BA6BC; --text-3:#5E6A82;
+    --cat-v:#7FC8FF; --cat-w:#C9A3FF;
+    --logo-fg:#FFFFFF;
+    --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.40);
+    --shadow-sm:0 1px 0 rgba(255,255,255,.03) inset, 0 4px 14px rgba(0,0,0,.30);
+  }
+  /* ② 主题层 :root[data-theme="light"] —— 仅表面/文本（品牌&语义色沿用常量层，明暗一致） */
+  :root[data-theme="light"]{
+    --bg-base:#F6F8FC; --bg-surface:#FFFFFF; --bg-elev:#FFFFFF;
+    --border:#E4E9F1; --border-strong:#CFD7E5;
+    --text-1:#0E1726; --text-2:#46526A; --text-3:#8591A6;
+    --shadow:0 1px 2px rgba(16,23,38,.06), 0 12px 32px rgba(16,23,38,.10);
+    --shadow-sm:0 1px 2px rgba(16,23,38,.06), 0 4px 14px rgba(16,23,38,.08);
+  }
+  /* ③ 配色层 :root[data-accent="teal"] —— 品牌色整体换肤（dshplugins.dev 市场站兄弟皮肤预留钩子） */
+  :root[data-accent="teal"]{
+    --brand:#1FB6C9; --brand-2:#3FD0E0; --brand-soft:rgba(31,182,201,.14);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg-base); color:var(--text-1);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"JetBrains Mono","SF Mono","IBM Plex Mono",ui-monospace,"Cascadia Code",monospace}
+  .wrap{max-width:1080px; margin:0 auto; padding:28px 24px 96px}
+  a{color:var(--brand-2); text-decoration:none}
+  h2{font-size:13px; font-weight:700; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin:54px 0 16px; display:flex; align-items:center; gap:10px}
+  h2::before{content:""; width:7px; height:7px; border-radius:2px; background:var(--brand)}
+  p{color:var(--text-2); font-size:14.5px}
+  .muted{color:var(--text-3)}
+
+  /* 顶部品牌条 + 控制段 */
+  .topbar{display:flex; align-items:center; gap:14px; justify-content:space-between; flex-wrap:wrap; position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg-base) 88%, transparent); backdrop-filter:blur(8px); padding:14px 0; border-bottom:1px solid var(--border); margin-bottom:8px}
+  .brand{display:flex; align-items:center; gap:12px}
+  .logo{width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; color:var(--logo-fg); font-weight:800; font-size:15px; box-shadow:var(--shadow-sm)}
+  .brand b{font-size:16px; font-weight:700; letter-spacing:-.01em}
+  .brand span{color:var(--text-3); font-size:12px}
+  .controls{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .seg{display:inline-flex; align-items:center; gap:6px; background:var(--bg-surface); border:1px solid var(--border); border-radius:999px; padding:4px 6px 4px 10px}
+  .seg-lbl{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.04em}
+  .seg-btn{font-size:12.5px; color:var(--text-2); background:transparent; border:0; padding:5px 11px; border-radius:999px; cursor:pointer; font-family:inherit}
+  .seg-btn:hover{color:var(--text-1)}
+  .seg-btn[aria-pressed="true"]{background:var(--brand-soft); color:var(--brand-2); font-weight:600}
+  .toggle{font-size:13px; color:var(--text-2); border:1px solid var(--border); background:var(--bg-surface); padding:7px 14px; border-radius:999px; cursor:pointer}
+  .toggle:hover{color:var(--text-1)}
+
+  /* 刊头 Edition Header */
+  .hero{padding:18px 0 6px}
+  .hero .kicker{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--brand-2); font-weight:700}
+  .hero h1{font-size:42px; font-weight:800; margin:8px 0 4px; letter-spacing:-.03em; line-height:1.05}
+  .hero .sub{font-size:15.5px; color:var(--text-2)}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:16px; font-size:12.5px; color:var(--text-3)}
+  .hero .meta b{color:var(--text-1); font-weight:600}
+  .hero .meta .dot{width:5px; height:5px; border-radius:50%; background:var(--up); display:inline-block; margin-right:6px; box-shadow:0 0 0 3px var(--brand-soft)}
+
+  /* KPI 磁贴 */
+  .kpi-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px}
+  .kpi{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); position:relative; overflow:hidden}
+  .kpi::after{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(var(--brand),var(--brand-2))}
+  .kpi .k{font-size:12.5px; color:var(--text-3)}
+  .kpi .v{font-size:32px; font-weight:800; margin:6px 0 4px; letter-spacing:-.02em; font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace}
+  .delta{font-size:12.5px; font-weight:700; display:inline-flex; align-items:center; gap:4px}
+  .delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.warn{color:var(--warn)}
+
+  /* 爆发榜 */
+  .board{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .board .row{display:grid; grid-template-columns:34px 1fr 120px; align-items:center; gap:14px; padding:14px 18px; border-bottom:1px solid var(--border)}
+  .board .row:last-child{border-bottom:0}
+  .rank{font-weight:800; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:14px}
+  .rank.top{color:var(--warn)}
+  .pname{font-weight:700; font-size:15px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .pname small{display:block; color:var(--text-3); font-weight:400; font-size:12px; width:100%}
+  .bar{height:7px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+  .gain{text-align:right; font-weight:800; color:var(--up); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:15px; white-space:nowrap}
+
+  /* 分类标签 三色编码 + 中性灰（§7.5） */
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .cat{font-size:12px; padding:4px 11px; border-radius:999px; border:1px solid var(--border-strong); color:var(--text-2)}
+  .cat.v{color:var(--cat-v); border-color:color-mix(in srgb,var(--cat-v) 40%, transparent)}
+  .cat.w{color:var(--cat-w); border-color:color-mix(in srgb,var(--cat-w) 40%, transparent)}
+  .cat.t{color:var(--up); border-color:color-mix(in srgb,var(--up) 40%, transparent)}
+  .cat.n{color:var(--text-3); border-color:color-mix(in srgb,var(--text-3) 35%, transparent)}
+
+  /* 官方动态 时间轴 */
+  .timeline{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:8px 20px; box-shadow:var(--shadow-sm)}
+  .tl{display:grid; grid-template-columns:88px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--border); position:relative}
+  .tl:last-child{border-bottom:0}
+  .tl .t{font-size:12.5px; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; padding-top:2px}
+  .tl .t b{display:block; color:var(--brand-2); font-size:13px}
+  .tl .c b{font-size:14.5px; color:var(--text-1); font-weight:700}
+  .tl .c p{margin:3px 0 0; font-size:13.5px}
+
+  /* 健康分 + 沉寂预警 两栏 */
+  .two{display:grid; grid-template-columns:1fr 1.3fr; gap:16px}
+  .card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:var(--shadow-sm)}
+  .card .ct{font-size:12px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px}
+  .health{display:flex; align-items:center; gap:22px}
+  .ring{--p:78; --ring-c:var(--up); width:104px; height:104px; border-radius:50%; background:conic-gradient(var(--ring-c) calc(var(--p)*1%), var(--border) 0); display:grid; place-items:center; flex:none}
+  .ring--brand{--ring-c:var(--brand)}
+  .ring--down{--ring-c:var(--down)}
+  .ring i{width:78px; height:78px; border-radius:50%; background:var(--bg-surface); display:grid; place-items:center; font-size:28px; font-weight:800; font-style:normal; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .health .note{font-size:13px}
+  .warnlist{display:flex; flex-direction:column; gap:10px}
+  .wl{display:flex; align-items:center; gap:12px; padding:11px 13px; border:1px solid var(--border); border-radius:10px; background:var(--bg-elev)}
+  .wl .ic{width:8px; height:8px; border-radius:50%; flex:none}
+  .wl .ic.warn{background:var(--warn)} .wl .ic.down{background:var(--down)}
+  .wl b{font-size:15px; font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:800}
+  .wl span{color:var(--text-3); font-size:13px}
+
+  /* 中文摘要 i18n（§11） */
+  .i18n{display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px}
+  :root[data-lang="bi"] .i18n{grid-template-columns:1fr 1fr}
+  [data-lang="zh"] .i18n-en{display:none}
+  [data-lang="en"] .i18n-zh{display:none}
+  .i18n-zh,.i18n-en{background:var(--brand-soft); border:1px solid color-mix(in srgb,var(--brand) 30%, transparent); border-left:3px solid var(--brand); border-radius:10px; padding:15px 17px}
+  .i18n-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; color:var(--brand-2); text-transform:uppercase; margin-bottom:7px}
+  .i18n-zh p,.i18n-en p{margin:0; font-size:14.5px; color:var(--text-1); line-height:1.6}
+  .i18n-en p{font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace; font-size:12px; line-height:1.55}
+
+  /* 档案馆入口 */
+  .archive{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:22px; box-shadow:var(--shadow-sm)}
+  .archive .head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+  .archive .head b{font-size:16px}
+  .archive .head a{font-size:13px; font-weight:600}
+  .spark{width:100%; height:170px; display:block}
+  .archive .cap{display:flex; justify-content:space-between; font-size:12px; color:var(--text-3); margin-top:8px; font-family:"JetBrains Mono",ui-monospace,monospace}
+
+  footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+
+  @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 顶栏 -->
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">D</div>
+      <div><b>DSH·daily-pulse</b><br><span>DSH 生态日报 · 设计原型</span></div>
+    </div>
+    <div class="controls">
+      <div class="seg">
+        <span class="seg-lbl">语言</span>
+        <button class="seg-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="seg-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="seg-btn" data-lang="bi" aria-pressed="true">双语</button>
+      </div>
+      <div class="seg">
+        <span class="seg-lbl">配色</span>
+        <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
+        <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
+      </div>
+      <button class="toggle" id="tg">切换为亮色</button>
+    </div>
+  </div>
+
+  <!-- 刊头 -->
+  <section class="hero">
+    <div class="kicker">Daily Pulse</div>
+    <h1>DSH 生态日报</h1>
+    <div class="sub">每天三次，1 分钟读懂 DSH 生态的脉搏。</div>
+    <div class="meta">
+      <span><span class="dot"></span><b>2026-08-17 · 06:00</b> GMT+8</span>
+      <span>第 <b>14</b> 期</span>
+      <span>采集窗口 <b>过去 8 小时</b></span>
+      <span>数据源 <b>唯一历史数据集</b></span>
+    </div>
+  </section>
+
+  <!-- 快照 KPI 带 -->
+  <h2>生态快照</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="k">插件总数</div><div class="v">3,287</div><div class="delta up">▲ +142 <span class="muted" style="font-weight:400">/ 8h</span></div></div>
+    <div class="kpi"><div class="k">8h 新增 stars</div><div class="v">1,644</div><div class="delta up">▲ +12% <span class="muted" style="font-weight:400">环比</span></div></div>
+    <div class="kpi"><div class="k">官方仓库 stars</div><div class="v">94,210</div><div class="delta up">▲ +3,180 <span class="muted" style="font-weight:400">/ 24h</span></div></div>
+    <div class="kpi"><div class="k">npm 周下载</div><div class="v">1.24M</div><div class="delta up">▲ +8.3% <span class="muted" style="font-weight:400">WoW</span></div></div>
+  </div>
+
+  <!-- 爆发榜 -->
+  <h2>star 增速爆发榜 · Top 5</h2>
+  <div class="board">
+    <div class="row">
+      <div class="rank top">01</div>
+      <div class="pname">dsh-vision-canvas <small>视觉类 · Vision / Web UI</small></div>
+      <div class="gain">+1,820</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:100%"></i></div>
+    <div class="row">
+      <div class="rank">02</div>
+      <div class="pname">dsh-workflow-orchestrator <small>工作流 · Workflow / Skills</small></div>
+      <div class="gain">+1,140</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:62.6%"></i></div>
+    <div class="row">
+      <div class="rank">03</div>
+      <div class="pname">dsh-memory-store <small>终端类 · Terminal / Memory</small></div>
+      <div class="gain">+910</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:50%"></i></div>
+    <div class="row">
+      <div class="rank">04</div>
+      <div class="pname">dsh-browser-agent <small>终端类 · Terminal / Browser</small></div>
+      <div class="gain">+760</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:41.8%"></i></div>
+    <div class="row">
+      <div class="rank">05</div>
+      <div class="pname">dsh-cordis-dev <small>核心 · Core</small></div>
+      <div class="gain">+540</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 18px; width:auto"><i style="width:29.7%"></i></div>
+  </div>
+  <div class="chips">
+    <span class="cat v">蓝 = 视觉类 (Vision / Web UI)</span>
+    <span class="cat w">紫 = 工作流 (Workflow / Skills)</span>
+    <span class="cat t">绿 = 终端类 (Terminal / Memory / Browser)</span>
+    <span class="cat n">灰 = 中性（无明确分类）</span>
+  </div>
+
+  <!-- 官方动态 -->
+  <h2>官方动态</h2>
+  <div class="timeline">
+    <div class="tl"><div class="t"><b>08-16</b>22:00</div><div class="c"><b>DSH core v0.4 发布</b><p>Cordis 插件热重载上线，开发期无需重启宿主进程。</p></div></div>
+    <div class="tl"><div class="t"><b>08-16</b>14:00</div><div class="c"><b>官方示例库扩容</b><p>新增 12 个 workflow 模板，覆盖检索增强与多 agent 编排。</p></div></div>
+    <div class="tl"><div class="t"><b>08-16</b>06:00</div><div class="c"><b>dsh-cli 登顶周下载榜</b><p>npm 包 dsh-cli 进入开发者工具周下载 Top 10。</p></div></div>
+  </div>
+
+  <!-- 健康分 + 沉寂预警 -->
+  <h2>健康分 & 沉寂预警</h2>
+  <div class="two">
+    <div class="card">
+      <div class="ct">生态健康分</div>
+      <div class="health">
+        <div class="ring ring--brand"><i>78</i></div>
+        <div class="note">当前 <b style="color:var(--brand)">78 / 100</b>，处于「稳定扩张」区间（60–79，品牌蓝）。<br><span class="muted">色带随值：≥80 绿 / 60–79 蓝 / &lt;60 红。</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">沉寂预警</div>
+      <div class="warnlist">
+        <div class="wl"><span class="ic warn"></span><b>12</b><span>个插件 7 天无提交，建议关注维护活跃度</span></div>
+        <div class="wl"><span class="ic down"></span><b>3</b><span>个核心依赖弃养率上升，已触发监控告警</span></div>
+        <div class="wl"><span class="ic warn"></span><b>1</b><span>个高频插件版本回退，等待官方说明</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中文摘要 i18n -->
+  <h2>今日摘要</h2>
+  <div class="i18n">
+    <div class="i18n-zh">
+      <span class="i18n-tag">中文</span>
+      <p>DSH 生态今日新增 <b>1,644</b> stars，视觉类插件 <b>dsh-vision-canvas</b> 领跑；终端类弃养率需持续观察，建议纳入健康分监控。</p>
+    </div>
+    <div class="i18n-en">
+      <span class="i18n-tag">EN · GEO</span>
+      <p>DSH ecosystem gained 1,644 stars today, led by vision-class dsh-vision-canvas (+1,820). Terminal-class abandonment rate rose; recommend adding it to the health-score monitor.</p>
+    </div>
+  </div>
+
+  <!-- 档案馆入口 -->
+  <h2>生态档案馆</h2>
+  <div class="archive">
+    <div class="head">
+      <b>官方仓库 stars · 近 14 天累计</b>
+      <a href="#">查看完整历史曲线 →</a>
+    </div>
+    <svg class="spark" viewBox="0 0 620 170" preserveAspectRatio="none" role="img" aria-label="近14天累计stars曲线">
+      <defs>
+        <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
+          <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <polyline fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+        points="10,140 56,122.5 102,109.3 148,96.2 194,84.5 240,74.2 286,66.9 332,58.2 378,50.8 424,42 470,34.8 516,28.9 562,23.1 608,20"/>
+      <polygon fill="url(#fill)"
+        points="10,140 56,122.5 102,109.3 148,96.2 194,84.5 240,74.2 286,66.9 332,58.2 378,50.8 424,42 470,34.8 516,28.9 562,23.1 608,20 608,160 10,160"/>
+      <circle cx="608" cy="20" r="3.5" fill="var(--brand-2)"/>
+    </svg>
+    <div class="cap"><span>08-04 · 86.0k</span><span>08-17 · 94.21k</span></div>
+  </div>
+
+  <footer>
+    <span>DSH·daily-pulse · 设计原型 v0.1（基于设计系统 v0.2 令牌）</span>
+    <span>数据为示意 · 非真实采集</span>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var root=document.documentElement;
+    // 语言 / 配色 持久化
+    try{
+      var sa=localStorage.getItem('dsh-accent'); if(sa) root.dataset.accent=sa;
+      var sl=localStorage.getItem('dsh-lang');   if(sl) root.dataset.lang=sl; else root.dataset.lang='bi';
+    }catch(e){}
+
+    // 主题切换
+    var tg=document.getElementById('tg');
+    function themeLabel(){ tg.textContent = root.dataset.theme==='light' ? '切换为暗色' : '切换为亮色'; }
+    tg.onclick=function(){
+      var next = root.dataset.theme==='light' ? 'dark' : 'light';
+      root.dataset.theme=next;
+      try{ localStorage.setItem('dsh-theme', next); }catch(e){}
+      themeLabel();
+    };
+    themeLabel();
+
+    // 通用段控件（语言 / 配色）
+    function bindSeg(attr, storeKey){
+      var btns=[].slice.call(document.querySelectorAll('[data-'+attr+']'));
+      btns.forEach(function(b){
+        b.onclick=function(){
+          var val=b.dataset[attr];
+          root.setAttribute('data-'+attr, val);
+          btns.forEach(function(x){ x.setAttribute('aria-pressed', x.dataset[attr]===val); });
+          try{ if(storeKey) localStorage.setItem(storeKey, val); }catch(e){}
+        };
+      });
+    }
+    bindSeg('lang','dsh-lang');
+    bindSeg('accent','dsh-accent');
+  })();
+</script>
+</body>
+</html>
