@@ -46,7 +46,7 @@ const windowEnd = cst(snap.window_end).split(' · ')[1];
 // —— KPI 磁贴 ——
 const k = snap.kpis;
 const kpi = [
-  { label: '插件总数', value: k.total_plugins.toLocaleString('en-US'), delta: `▲ +${k.new_8h_repos}`, note: '/ 8h 新增', tone: 'up' },
+  { label: '插件总数', value: (k.total_plugins ?? 0).toLocaleString('en-US'), delta: `▲ +${k.new_8h_repos}`, note: '/ 8h 新增 · 含 fork', tone: 'up' },
   { label: '8h 新增仓库', value: k.new_8h_repos.toLocaleString('en-US'), delta: new8hDelta != null ? `${new8hDelta >= 0 ? '▲ +' : '▼ '}${Math.abs(new8hDelta)}` : '基线建立', note: new8hDelta != null ? 'vs 上期' : '首期快照', tone: new8hDelta != null && new8hDelta < 0 ? 'down' : 'warn' },
   { label: '官方仓库 stars', value: k.official_stars.toLocaleString('en-US'), delta: `forks ${k.official_forks.toLocaleString('en-US')}`, note: '', tone: 'up' },
   { label: 'npm 周下载', value: fmtNum(k.npm_weekly_downloads), delta: '@deepseek-ai/dsh', note: '过去 7 天', tone: 'up' },
@@ -62,9 +62,10 @@ const board = boardData.map((r) => {
   const pct = Math.round((gain / maxGain) * 100);
   const top = r.rank <= 3 ? ' top' : '';
   const gainTxt = r.delta != null ? `+${r.delta.toLocaleString('en-US')}` : `+${r.stars.toLocaleString('en-US')}`;
-  const sub = r.delta != null
+  const scoreTxt = r.score != null ? ` · 可信 ${r.score}/5` : '';
+  const sub = (r.delta != null
     ? `窗口增速 +${r.delta.toLocaleString('en-US')} · 累计 ${r.stars.toLocaleString('en-US')}★`
-    : (r.desc || '');
+    : (r.desc || '')) + scoreTxt;
   return `
     <div class="row">
       <div class="rank${top}">${String(r.rank).padStart(2, '0')}</div>

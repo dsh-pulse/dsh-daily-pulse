@@ -53,6 +53,64 @@ async function npmDownloads(pkg) {
   return r.json();
 }
 
+// —— M0 §1.3：总量抓 /topics/dsh-plugin 页面 HTML 计数（绕开 Search 上限 + 解析失败告警）——
+async function topicPageCount() {
+  try {
+    const r = await fetch('https://github.com/topics/dsh-plugin', {
+      headers: { 'User-Agent': 'dsh-daily-pulse', 'Accept': 'text/html' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (r.ok) {
+      const html = await r.text();
+      const m = html.match(/([\d,]+)\s+public repositories/);
+      if (m) {
+        const count = parseInt(m[1].replace(/,/g, ''), 10);
+        if (count > 0) return { count, source: 'topics-page' };
+      }
+    }
+  } catch {}
+  // 降级：Search total_count（不排除 fork，口径近似）+ 告警
+  const sc = (await gh('/search/repositories?q=topic%3Adsh-plugin&per_page=1')).total_count;
+  console.error('⚠️  /topics/dsh-plugin 页面计数解析失败，降级 Search total_count');
+  return { count: sc, source: 'search-fallback' };
+}
+
+// —— M0 §1.2：蹭标签计分制（manifest +2 / 依赖 @deepseek-ai/dsh +2 / topic +1，≥3 计入）——
+const SCORE_MANIFEST = 2;
+const SCORE_DEPS = 2;
+const SCORE_TOPIC = 1;
+const SCORE_MIN = 3;
+const DSH_PKG = '@deepseek-ai/dsh';
+
+async function fetchRaw(fullName, branch, path) {
+  const r = await fetch(`https://raw.githubusercontent.com/${fullName}/${branch}/${path}`, {
+    headers: { 'User-Agent': 'dsh-daily-pulse' },
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!r.ok) return null;
+  return r.text();
+}
+
+async function pluginScore(item) {
+  // item: GitHub search result（含 topics[] + default_branch）
+  const topics = (item.topics || []).map((t) => t.toLowerCase());
+  let score = topics.includes('dsh-plugin') ? SCORE_TOPIC : 0;
+  const branch = item.default_branch || 'main';
+  const manifestNames = ['package.json', 'dsh.json', 'dsh.config.json', 'plugin.json'];
+  for (const name of manifestNames) {
+    const text = await fetchRaw(item.full_name, branch, name);
+    if (!text) continue;
+    score += SCORE_MANIFEST; // manifest 存在
+    try {
+      const json = JSON.parse(text);
+      const deps = { ...(json.dependencies || {}), ...(json.devDependencies || {}), ...(json.peerDependencies || {}) };
+      if (deps[DSH_PKG]) score += SCORE_DEPS; // 依赖 @deepseek-ai/dsh
+    } catch {}
+    break; // 命中任一 manifest 即停
+  }
+  return { score, verified: score >= SCORE_MIN };
+}
+
 function iso(d) { return d.toISOString().replace(/\.\d+Z$/, 'Z'); }
 
 // 分类（关键词匹配，对齐设计系统 §7.5 三色编码：蓝视觉 / 紫工作流 / 绿终端）
@@ -72,45 +130,57 @@ async function main() {
 
   console.log(`[collect] 采集窗口 ${winStartISO} → ${nowISO}`);
 
-  // 1. KPIs（total_count 计数，绕开 1000 结果上限）
-  const total = (await gh('/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse&per_page=1')).total_count;
+  // 1. KPIs（M0 §1.3：总数用 topics 页官方计数；追踪口径用 fork:false）
+  const topic = await topicPageCount();
+  const nonFork = (await gh('/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse&per_page=1')).total_count;
   const new8h = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${encodeURIComponent(winStartISO)}&per_page=1`)).total_count;
   const official = await gh('/repos/deepseek-ai/deepseek-harness');
   const npm = await npmDownloads('@deepseek-ai/dsh');
 
-  // 2. 新秀爆发榜 + 差分增速榜（M1）：star-index 维护每仓库星标基线，算窗口内增速
+  // 2. 新秀爆发榜 + 差分增速榜（M1）：star-index 维护每仓库星标基线，算窗口内增速；
+  //    M0 §1.2 蹭标签计分制：manifest +2 / 依赖 @deepseek-ai/dsh +2 / topic +1，≥3 才计入榜
   const rookie = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${DSH_LAUNCH}&sort=stars&order=desc&per_page=20`);
   const starIndex = loadStarIndex();
-  const boardItems = rookie.items
+  const boardCandidates = rookie.items
     .filter((i) => i.full_name !== 'deepseek-ai/deepseek-harness')
     .slice(0, 12);
-  const leaderboard = boardItems
-    .slice(0, 6)
-    .map((item, i) => {
-      const prev = starIndex[item.full_name];
-      return {
-        rank: i + 1,
-        name: item.full_name,
-        desc: (item.description || '').slice(0, 80),
-        stars: item.stargazers_count,
-        delta: prev ? item.stargazers_count - prev.stars : null, // 首见为 null（基线建立中）
-        is_new: !prev,
-        created: item.created_at,
-        pushed: item.pushed_at,
-        category: category(item),
-        url: item.html_url,
-      };
-    });
+
+  // 计分（串行，避免突发请求）
+  const scoredCandidates = [];
+  for (const item of boardCandidates) {
+    const { score, verified } = await pluginScore(item);
+    scoredCandidates.push({ item, score, verified });
+  }
+  const verifiedItems = scoredCandidates.filter((s) => s.verified).map((s) => s.item).slice(0, 6);
+
+  const leaderboard = verifiedItems.map((item, i) => {
+    const prev = starIndex[item.full_name];
+    const s = scoredCandidates.find((x) => x.item.full_name === item.full_name);
+    return {
+      rank: i + 1,
+      name: item.full_name,
+      desc: (item.description || '').slice(0, 80),
+      stars: item.stargazers_count,
+      delta: prev ? item.stargazers_count - prev.stars : null, // 首见为 null（基线建立中）
+      is_new: !prev,
+      score: s ? s.score : 0,
+      created: item.created_at,
+      pushed: item.pushed_at,
+      category: category(item),
+      url: item.html_url,
+    };
+  });
 
   // 差分增速榜：按窗口内 star 增量排序（首期无基线 → 退化为按绝对 stars 排）
   const growth = leaderboard
     .filter((r) => r.delta != null)
     .sort((a, b) => b.delta - a.delta)
     .slice(0, 6)
-    .map((r, i) => ({ rank: i + 1, name: r.name, desc: r.desc, delta: r.delta, stars: r.stars, is_new: r.is_new, category: r.category, url: r.url }));
+    .map((r) => ({ rank: r.rank, name: r.name, desc: r.desc, delta: r.delta, stars: r.stars, is_new: r.is_new, score: r.score, category: r.category, url: r.url }))
+    .map((r, i) => ({ ...r, rank: i + 1 }));
 
-  // 更新 star-index（下一期才有差分基线）
-  for (const item of boardItems) {
+  // 更新 star-index（下一期才有差分基线；追踪全部候选，不只榜上）
+  for (const item of boardCandidates) {
     const prev = starIndex[item.full_name];
     starIndex[item.full_name] = {
       stars: item.stargazers_count,
@@ -133,7 +203,7 @@ async function main() {
   const d1ago = iso(new Date(now.getTime() - 1 * 86400000));
   const stale7d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d7ago)}&per_page=1`)).total_count;
   const stale1d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d1ago)}&per_page=1`)).total_count;
-  const healthScore = Math.round((1 - stale7d / Math.max(total, 1)) * 100);
+  const healthScore = Math.round((1 - stale7d / Math.max(nonFork, 1)) * 100);
 
   // 5. 上期快照（用于增速对比；首期无基线）
   const prev = readPrevSnapshot();
@@ -146,7 +216,9 @@ async function main() {
     window_end: nowISO,
     has_baseline: !!prev,
     kpis: {
-      total_plugins: total,
+      total_plugins: topic.count,   // M0 §1.3：/topics/dsh-plugin 官方计数（含 fork）
+      non_fork_plugins: nonFork,    // 追踪口径（排除 fork）
+      count_source: topic.source,   // 'topics-page' | 'search-fallback'
       new_8h_repos: new8h,
       official_stars: official.stargazers_count,
       official_forks: official.forks_count,
@@ -166,7 +238,7 @@ async function main() {
       score: healthScore,
       stale_7d: stale7d,
       stale_1d: stale1d,
-      total_tracked: total,
+      total_tracked: nonFork,
     },
   };
 
@@ -174,11 +246,12 @@ async function main() {
   appendFileSync(join(STORE, 'snapshots.jsonl'), JSON.stringify(snapshot) + '\n');
 
   console.log('\n[collect] 完成 ✔');
-  console.log(`  插件总数: ${total}`);
+  console.log(`  插件总数: ${topic.count} (${topic.source}) / 非 fork ${nonFork}`);
   console.log(`  8h 新增: ${new8h}`);
   console.log(`  官方 stars: ${official.stargazers_count} (forks ${official.forks_count})`);
   console.log(`  npm 周下载: ${npm ? npm.downloads : 'N/A'}`);
   console.log(`  健康分: ${healthScore}/100 (7天弃养 ${stale7d} 个)`);
+  console.log(`  蹭标签剔除: ${boardCandidates.length - verifiedItems.length} 个候选未达计分门槛(≥${SCORE_MIN})`);
   console.log(`  新秀榜 top: ${leaderboard.map((p) => p.name).join(', ')}`);
   console.log(`  增速榜 top: ${growth.length ? growth.map((p) => `${p.name}+${p.delta}`).join(', ') : '(首期无基线，次期起生效)'}`);
   console.log(`  快照已写 store/latest.json + store/snapshots.jsonl`);

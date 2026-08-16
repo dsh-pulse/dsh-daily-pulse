@@ -14,7 +14,8 @@
 
 ```
 dsh-daily-pulse/
-├── collect.mjs         # 采集：GitHub Search 计数 + 官方仓库 + npm + 新秀榜 + 差分增速榜
+├── collect.mjs         # 采集：topics 页官方计数 + Search 计数 + 官方仓库 + npm + 新秀榜 + 差分增速榜 + 蹭标签计分
+├── bootstrap.mjs       # 一次性：首次按 star 抓前 1000 建历史库 → store/repos.jsonl（护城河数据集根基）
 ├── render.mjs          # 渲染单期日报 → reports/<期号>_<时间>.html + latest.html
 ├── render-index.mjs    # 渲染档案馆首页 → reports/index.html（历史曲线 + 全量期号）
 ├── tokens.mjs          # 设计系统 v0.2 令牌模块（三层令牌 + 组件 CSS + 图表，单文件可交付）
@@ -22,7 +23,8 @@ dsh-daily-pulse/
 ├── store/
 │   ├── snapshots.jsonl # 历史快照（护城河数据集，增量追加，每天 3 期）
 │   ├── latest.json     # 最新快照（供渲染）
-│   └── star-index.json # 仓库 star 基线（差分增速榜依赖）
+│   ├── star-index.json # 仓库 star 基线（差分增速榜依赖）
+│   └── repos.jsonl     # top-1000 仓库历史库（bootstrap.mjs 建）
 ├── reports/            # 日报 + 档案馆首页（GitHub Pages 站点根）
 └── .github/workflows/daily.yml  # 三时点定时采集 + commit + Pages 部署
 ```
@@ -30,7 +32,9 @@ dsh-daily-pulse/
 ## 本地运行
 
 ```bash
-# 1) GitHub 认证（Search API 配额：认证 30 次/分钟，足够本脚本 ~12 次调用）
+# 0) 首次建库（只跑一次，抓 topic:dsh-plugin 前 1000 个仓库）
+node bootstrap.mjs
+# 1) GitHub 认证（Search API 配额：认证 30 次/分钟，足够本脚本 ~15 次调用）
 gh auth login
 # 2) 采集 → 渲染 → 档案馆
 node collect.mjs
@@ -54,13 +58,16 @@ node render-index.mjs
 
 | 数据 | 来源 | 说明 |
 |---|---|---|
-| 插件总数 / 8h 新增 | GitHub Search API `topic:dsh-plugin` | 用 `total_count` 绕开 1000 条结果硬上限 |
+| 插件总数（生态口径） | GitHub `/topics/dsh-plugin` 页面 HTML 计数 | 官方 topic 计数（含 fork）；解析失败自动降级 Search 并告警 |
+| 追踪口径 / 8h 新增 / 弃养 | GitHub Search API `topic:dsh-plugin fork:false` | 用 `total_count` 绕开 1000 条结果硬上限 |
 | 官方仓库 | `deepseek-ai/deepseek-harness` REST | stars / forks / commits |
 | npm 周下载 | npm registry API | `@deepseek-ai/dsh` |
 | 差分增速榜 | 本仓库 `star-index.json` 基线 | 首期无基线，次期起生效 |
+| 蹭标签过滤 | 计分制：manifest +2 / 依赖 `@deepseek-ai/dsh` +2 / topic +1，≥3 计入 | 爆发榜只收录达标仓库，标注可信分 /5 |
 
-- Search API 未认证 10 次/分钟、认证 30 次/分钟；脚本约 12 次调用，CI 用 `GITHUB_TOKEN` 无压力。
+- Search API 未认证 10 次/分钟、认证 30 次/分钟；脚本约 15 次调用，CI 用 `GITHUB_TOKEN` 无压力。
 - 8h 窗口留 5 分钟重叠防漏；增速榜按窗口内 star 增量排序，非绝对星标。
+- `bootstrap.mjs` 一次性建库约 30–40s（10 页 × 100，页间 2.5s 软限速）。
 
 ## 设计系统
 
