@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="DSH 插件生态日报 · 每天三次，1 分钟读懂 DSH 生态的脉搏" />
 <meta name="generator" content="dsh-daily-pulse" />
-<title>DSH·daily-pulse · 档案馆 · 4 期</title>
+<title>DSH·daily-pulse · 档案馆 · 7 期</title>
 <script>
   (function(){try{
     var t=localStorage.getItem('dsh-theme');
@@ -110,6 +110,16 @@
   .wl .ic.warn{background:var(--warn)} .wl .ic.down{background:var(--down)}
   .wl b{font-size:15px; font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:800}
   .wl span{color:var(--text-3); font-size:13px}
+  .factors{display:flex; flex-direction:column; gap:9px; margin-top:16px; padding-top:14px; border-top:1px solid var(--border)}
+  .factor{display:grid; grid-template-columns:1fr auto; gap:2px 12px; align-items:center}
+  .factor .fl{font-size:12.5px; color:var(--text-2); font-weight:600}
+  .factor .fl small{display:block; color:var(--text-3); font-weight:400; font-size:11px}
+  .factor .fv{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12.5px; font-weight:700}
+  .factor .fv.up{color:var(--up)} .factor .fv.warn{color:var(--warn)} .factor .fv.down{color:var(--down)}
+  .factor .fbar{grid-column:1/-1; height:5px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .factor .fbar i{display:block; height:100%; border-radius:999px}
+  .factor .fbar i.up{background:var(--up)} .factor .fbar i.warn{background:var(--warn)} .factor .fbar i.down{background:var(--down)}
+  .src-tag{font-size:11px; font-weight:600; color:var(--text-3); background:var(--bg-elev); border:1px solid var(--border); padding:2px 9px; border-radius:999px; text-transform:none; letter-spacing:0; margin-left:8px}
   .i18n{display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px}
   :root[data-lang="bi"] .i18n{grid-template-columns:1fr 1fr}
   [data-lang="zh"] .i18n-en{display:none}
@@ -168,21 +178,21 @@
   <section class="hero">
     <div class="kicker">Archive</div>
     <h1>DSH 生态档案馆</h1>
-    <div class="sub">每一次采集都是一条快照 — 4 期 × 约 8h，累积成生态的完整时间轴。</div>
+    <div class="sub">每一次采集都是一条快照 — 7 期 × 约 8h，累积成生态的完整时间轴。</div>
     <div class="meta">
-      <span><span class="dot"></span><b>4</b> 期快照</span>
+      <span><span class="dot"></span><b>7</b> 期快照</span>
       <span>覆盖 <b>2</b> 天</span>
-      <span>最新 <b>143.9K</b> ★ · <b>6.3K</b> 插件</span>
+      <span>最新 <b>148.3K</b> ★ · <b>6.7K</b> 插件</span>
       <span>数据源 <b>GitHub API · npm</b></span>
     </div>
   </section>
 
   <h2>生态概要</h2>
   <div class="kpi-row">
-    <div class="kpi"><div class="k">快照期数</div><div class="v">4</div><div class="delta up">2 天跨度</div></div>
-    <div class="kpi"><div class="k">官方 stars · 最新</div><div class="v">143.9K</div><div class="delta up">fans</div></div>
-    <div class="kpi"><div class="k">插件总数 · 最新</div><div class="v">6.3K</div><div class="delta up">tracked</div></div>
-    <div class="kpi"><div class="k">最新 8h 新增</div><div class="v">371</div><div class="delta up">仓库</div></div>
+    <div class="kpi"><div class="k">快照期数</div><div class="v">7</div><div class="delta up">2 天跨度</div></div>
+    <div class="kpi"><div class="k">官方 stars · 最新</div><div class="v">148.3K</div><div class="delta up">fans</div></div>
+    <div class="kpi"><div class="k">插件总数 · 最新</div><div class="v">6.7K</div><div class="delta up">tracked</div></div>
+    <div class="kpi"><div class="k">最新 8h 新增</div><div class="v">312</div><div class="delta up">仓库</div></div>
   </div>
 
   <h2>历史曲线</h2>
@@ -202,14 +212,14 @@
       <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <path d="M10.0,148.0 L210.0,135.0 L410.0,114.9 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
-  <path d="M10.0,148.0 L210.0,135.0 L410.0,114.9 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
-  <path d="M10.0,148.0 L210.0,117.3 L410.0,106.5 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="210.0" cy="135.0" r="2.2" fill="var(--brand)"/><circle cx="410.0" cy="114.9" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
+  <path d="M10.0,148.0 L110.0,138.1 L210.0,122.7 L310.0,45.8 L410.0,21.6 L510.0,19.7 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
+  <path d="M10.0,148.0 L110.0,138.1 L210.0,122.7 L310.0,45.8 L410.0,21.6 L510.0,19.7 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M10.0,148.0 L110.0,127.7 L210.0,120.6 L310.0,59.4 L410.0,22.7 L510.0,21.1 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="110.0" cy="138.1" r="2.2" fill="var(--brand)"/><circle cx="210.0" cy="122.7" r="2.2" fill="var(--brand)"/><circle cx="310.0" cy="45.8" r="2.2" fill="var(--brand)"/><circle cx="410.0" cy="21.6" r="2.2" fill="var(--brand)"/><circle cx="510.0" cy="19.7" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
   <text x="10.0" y="160" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-16</text>
   <text x="610.0" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-17</text>
 </svg>
-<div class="cap"><span>官方 stars 143.9K · 插件总数 6.3K</span><span>4 期快照</span></div>
+<div class="cap"><span>官方 stars 148.3K · 插件总数 6.7K</span><span>7 期快照</span></div>
   </div>
 
   <h2>全部期号</h2>
@@ -217,9 +227,27 @@
     <div class="issues">
       
     <a class="issue" href="latest.html" style="text-decoration:none;color:inherit">
+      <div class="no">#007</div>
+      <div class="t"><b>2026-08-18 · 01:18 GMT+8</b><span>2026-08-17 · 官方 stars 148.3K · 8h 新增 312</span></div>
+      <div class="go">最新 ↗</div>
+    </a>
+
+    <a class="issue" href="0006_2026-08-17-2332.html" style="text-decoration:none;color:inherit">
+      <div class="no">#006</div>
+      <div class="t"><b>2026-08-17 · 23:32 GMT+8</b><span>2026-08-17 · 官方 stars 147.6K · 8h 新增 359</span></div>
+      <div class="go">查看 →</div>
+    </a>
+
+    <a class="issue" href="0005_2026-08-17-2307.html" style="text-decoration:none;color:inherit">
+      <div class="no">#005</div>
+      <div class="t"><b>2026-08-17 · 23:07 GMT+8</b><span>2026-08-17 · 官方 stars 147.3K · 8h 新增 367</span></div>
+      <div class="go">查看 →</div>
+    </a>
+
+    <a class="issue" href="0004_2026-08-17-1748.html" style="text-decoration:none;color:inherit">
       <div class="no">#004</div>
       <div class="t"><b>2026-08-17 · 17:48 GMT+8</b><span>2026-08-17 · 官方 stars 143.9K · 8h 新增 371</span></div>
-      <div class="go">最新 ↗</div>
+      <div class="go">查看 →</div>
     </a>
 
     <a class="issue" href="0003_2026-08-17-0938.html" style="text-decoration:none;color:inherit">
@@ -243,8 +271,8 @@
   </div>
 
   <footer>
-    <span>DSH·daily-pulse · 档案馆 · 4 期快照</span>
-    <span>数据源 GitHub Search API + npm registry · 生成于 2026-08-17 · 17:48</span>
+    <span>DSH·daily-pulse · 档案馆 · 7 期快照</span>
+    <span>数据源 GitHub Search API + npm registry · 生成于 2026-08-18 · 01:19</span>
   </footer>
 
 </div>
