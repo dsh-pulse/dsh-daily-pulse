@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-17T01:38:25Z",
-  "window_start": "2026-08-16T17:33:25Z",
-  "window_end": "2026-08-17T01:38:25Z",
+  "generated_at": "2026-08-17T15:32:32Z",
+  "window_start": "2026-08-17T07:27:32Z",
+  "window_end": "2026-08-17T15:32:32Z",
   "has_baseline": true,
   "kpis": {
-    "total_plugins": 5763,
-    "non_fork_plugins": 5699,
+    "total_plugins": 6629,
+    "non_fork_plugins": 6554,
     "count_source": "topics-page",
-    "new_8h_repos": 160,
-    "official_stars": 133224,
-    "official_forks": 13380,
+    "new_8h_repos": 359,
+    "official_stars": 147550,
+    "official_forks": 15076,
     "npm_weekly_downloads": 195945,
-    "delta_8h_stars": 2137
+    "delta_8h_stars": 257
   },
   "official": {
     "full_name": "deepseek-ai/deepseek-harness",
-    "pushed_at": "2026-08-13T13:00:21Z",
+    "pushed_at": "2026-08-17T12:01:58Z",
     "created_at": "2026-08-13T11:56:32Z",
     "open_issues": 0
   },
@@ -23,13 +23,13 @@
     {
       "rank": 1,
       "name": "anywhere-labs/deepseek-harness-desktop",
-      "desc": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案",
-      "stars": 9168,
-      "delta": 307,
+      "desc": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。",
+      "stars": 11392,
+      "delta": 35,
       "is_new": false,
       "score": 3,
       "created": "2026-08-13T16:30:50Z",
-      "pushed": "2026-08-16T19:37:16Z",
+      "pushed": "2026-08-17T15:21:26Z",
       "category": "视觉",
       "url": "https://github.com/anywhere-labs/deepseek-harness-desktop"
     },
@@ -37,12 +37,12 @@
       "rank": 2,
       "name": "awesome-dsh-plugin/awesome-dsh-plugin",
       "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
-      "stars": 5336,
-      "delta": 263,
+      "stars": 7443,
+      "delta": 19,
       "is_new": false,
       "score": 3,
       "created": "2026-08-13T13:55:31Z",
-      "pushed": "2026-08-16T20:39:35Z",
+      "pushed": "2026-08-17T15:10:50Z",
       "category": "终端",
       "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin"
     },
@@ -50,12 +50,12 @@
       "rank": 3,
       "name": "xiaobright/dsh-anchored-standard",
       "desc": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",
-      "stars": 3067,
-      "delta": 53,
+      "stars": 3394,
+      "delta": 4,
       "is_new": false,
       "score": 3,
       "created": "2026-08-14T14:06:39Z",
-      "pushed": "2026-08-17T01:14:49Z",
+      "pushed": "2026-08-17T06:19:58Z",
       "category": "工作流",
       "url": "https://github.com/xiaobright/dsh-anchored-standard"
     },
@@ -63,12 +63,12 @@
       "rank": 4,
       "name": "ccch1mneyyy/dsh-TUI",
       "desc": "DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ",
-      "stars": 1562,
-      "delta": 21,
+      "stars": 1791,
+      "delta": 0,
       "is_new": false,
       "score": 3,
       "created": "2026-08-13T12:49:31Z",
-      "pushed": "2026-08-17T01:35:41Z",
+      "pushed": "2026-08-17T13:40:19Z",
       "category": "视觉",
       "url": "https://github.com/ccch1mneyyy/dsh-TUI"
     },
@@ -76,12 +76,12 @@
       "rank": 5,
       "name": "dsh-market/dsh-market",
       "desc": "The plugin market inside DeepSeek Harness — browse, search, one-click install · ",
-      "stars": 587,
-      "delta": 24,
+      "stars": 803,
+      "delta": 0,
       "is_new": false,
       "score": 3,
       "created": "2026-08-14T04:58:15Z",
-      "pushed": "2026-08-16T17:22:29Z",
+      "pushed": "2026-08-17T15:24:30Z",
       "category": "视觉",
       "url": "https://github.com/dsh-market/dsh-market"
     },
@@ -89,12 +89,12 @@
       "rank": 6,
       "name": "ysr666/dsh-vision-router",
       "desc": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ",
-      "stars": 446,
-      "delta": 16,
+      "stars": 613,
+      "delta": 4,
       "is_new": false,
       "score": 3,
       "created": "2026-08-13T18:57:47Z",
-      "pushed": "2026-08-17T01:26:41Z",
+      "pushed": "2026-08-17T15:30:51Z",
       "category": "视觉",
       "url": "https://github.com/ysr666/dsh-vision-router"
     }
@@ -103,9 +103,9 @@
     {
       "rank": 1,
       "name": "anywhere-labs/deepseek-harness-desktop",
-      "desc": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案",
-      "delta": 307,
-      "stars": 9168,
+      "desc": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。",
+      "delta": 35,
+      "stars": 11392,
       "is_new": false,
       "score": 3,
       "category": "视觉",
@@ -115,8 +115,8 @@
       "rank": 2,
       "name": "awesome-dsh-plugin/awesome-dsh-plugin",
       "desc": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
-      "delta": 263,
-      "stars": 5336,
+      "delta": 19,
+      "stars": 7443,
       "is_new": false,
       "score": 3,
       "category": "终端",
@@ -126,8 +126,8 @@
       "rank": 3,
       "name": "xiaobright/dsh-anchored-standard",
       "desc": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",
-      "delta": 53,
-      "stars": 3067,
+      "delta": 4,
+      "stars": 3394,
       "is_new": false,
       "score": 3,
       "category": "工作流",
@@ -135,21 +135,21 @@
     },
     {
       "rank": 4,
-      "name": "dsh-market/dsh-market",
-      "desc": "The plugin market inside DeepSeek Harness — browse, search, one-click install · ",
-      "delta": 24,
-      "stars": 587,
+      "name": "ysr666/dsh-vision-router",
+      "desc": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ",
+      "delta": 4,
+      "stars": 613,
       "is_new": false,
       "score": 3,
       "category": "视觉",
-      "url": "https://github.com/dsh-market/dsh-market"
+      "url": "https://github.com/ysr666/dsh-vision-router"
     },
     {
       "rank": 5,
       "name": "ccch1mneyyy/dsh-TUI",
       "desc": "DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ",
-      "delta": 21,
-      "stars": 1562,
+      "delta": 0,
+      "stars": 1791,
       "is_new": false,
       "score": 3,
       "category": "视觉",
@@ -157,37 +157,69 @@
     },
     {
       "rank": 6,
-      "name": "ysr666/dsh-vision-router",
-      "desc": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ",
-      "delta": 16,
-      "stars": 446,
+      "name": "dsh-market/dsh-market",
+      "desc": "The plugin market inside DeepSeek Harness — browse, search, one-click install · ",
+      "delta": 0,
+      "stars": 803,
       "is_new": false,
       "score": 3,
       "category": "视觉",
-      "url": "https://github.com/ysr666/dsh-vision-router"
+      "url": "https://github.com/dsh-market/dsh-market"
     }
   ],
   "official_activity": [
     {
-      "sha": "47f9438",
-      "date": "2026-08-13T11:38:46Z",
-      "msg": "Merge pull request #2519 from deepseek-harness/feat/npm-public"
+      "sha": "99f6f02",
+      "date": "2026-08-17T11:03:17Z",
+      "msg": "Merge pull request #2620 from deepseek-harness/release/dsh-0.1.0-rc.7"
     },
     {
-      "sha": "abe560f",
-      "date": "2026-08-13T10:43:09Z",
-      "msg": "release(dsh): 0.1.0-rc.5"
+      "sha": "bb4ca69",
+      "date": "2026-08-17T10:26:07Z",
+      "msg": "release(dsh): 0.1.0-rc.7"
     },
     {
-      "sha": "8c1e8d9",
-      "date": "2026-08-13T10:05:10Z",
-      "msg": "build(release): publish the dsh family publicly"
+      "sha": "8822d67",
+      "date": "2026-08-17T10:38:01Z",
+      "msg": "Merge pull request #2252 from deepseek-harness/worktree/fix-1463-rich-content-bridge"
     }
   ],
   "health": {
-    "score": 99,
-    "stale_7d": 46,
-    "stale_1d": 2996,
-    "total_tracked": 5699
+    "score": 87,
+    "factors": {
+      "activity": {
+        "score": 40,
+        "max": 40,
+        "label": "活跃度",
+        "note": "7 天内有提交的仓库占比"
+      },
+      "freshness": {
+        "score": 20,
+        "max": 20,
+        "label": "新鲜度",
+        "note": "8h 新建仓库占比"
+      },
+      "adoption": {
+        "score": 16,
+        "max": 20,
+        "label": "采用度",
+        "note": "npm 周下载分级"
+      },
+      "diversity": {
+        "score": 11,
+        "max": 20,
+        "label": "多样性",
+        "note": "爆发榜 top1 占比（越低越好）"
+      }
+    },
+    "stale_7d": 52,
+    "stale_1d": 3993,
+    "total_tracked": 6554
+  },
+  "summary": {
+    "zh": "过去8小时DSH生态新增<b>359</b>个插件，总数达<b>6629</b>；桌面端项目anywhere-labs/deepseek-harness-desktop以<b>+35</b>星领跑增长榜，官方发布rc.7版本，建议关注桌面端趋势。",
+    "en": "DSH ecosystem added <b>359</b> plugins in 8h (total <b>6629</b>); desktop client anywhere-labs/deepseek-harness-desktop led growth with <b>+35</b> stars, while official rc.7 release landed.",
+    "model": "deepseek-v4-flash",
+    "source": "deepseek"
   }
 }

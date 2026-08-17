@@ -82,18 +82,34 @@ const SCORE_TOPIC = 1;
 const SCORE_MIN = 3;
 const DSH_PKG = '@deepseek-ai/dsh';
 
+// —— M0 §1.2 计分辅助：读仓库文件内容。
+//    优先走 GitHub API contents 端点（api.github.com，带 token、享 5000/h 额度，稳定）；
+//    raw.githubusercontent.com 直连在本机间歇性 429/超时且不认 token，故不作为主路径。
+//    任一失败（404/超时/网络）返回 null，绝不中断主采集。
 async function fetchRaw(fullName, branch, path) {
-  // 计分辅助读取：任何失败（超时/网络/404）都返回 null，绝不中断主采集
+  // 路径 1：API contents（base64 解码）
+  try {
+    const r = await fetch(`${API}/repos/${fullName}/contents/${path}?ref=${branch}`, {
+      headers: H,
+      signal: AbortSignal.timeout(8000),
+    });
+    if (r.ok) {
+      const j = await r.json();
+      if (j.content) return Buffer.from(j.content, 'base64').toString('utf8');
+    }
+    if (r.status !== 404) {
+      // 非 404（如 403 限流），降级 raw 再试一次
+    }
+  } catch {}
+  // 路径 2：raw 降级（API 不可达时的兜底）
   try {
     const r = await fetch(`https://raw.githubusercontent.com/${fullName}/${branch}/${path}`, {
       headers: { 'User-Agent': 'dsh-daily-pulse' },
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(6000),
     });
-    if (!r.ok) return null;
-    return r.text();
-  } catch {
-    return null;
-  }
+    if (r.ok) return r.text();
+  } catch {}
+  return null;
 }
 
 async function pluginScore(item) {
@@ -203,12 +219,37 @@ async function main() {
     msg: c.commit.message.split('\n')[0].slice(0, 90),
   }));
 
-  // 4. 健康分 + 沉寂预警（真实计数）
+  // 4. 健康分（M2 全量计分制）+ 沉寂预警（真实计数）
+  //    四因子 0–100：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20
+  //    替换 M0 的单因子 7 天活跃率近似，给出更诚实的生态健康画像
   const d7ago = iso(new Date(now.getTime() - 7 * 86400000));
   const d1ago = iso(new Date(now.getTime() - 1 * 86400000));
   const stale7d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d7ago)}&per_page=1`)).total_count;
   const stale1d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d1ago)}&per_page=1`)).total_count;
-  const healthScore = Math.round((1 - stale7d / Math.max(nonFork, 1)) * 100);
+
+  // 因子 1 · 活跃度（40pt）：7 天内有 push 的仓库占比
+  const fActivity = (1 - stale7d / Math.max(nonFork, 1)) * 40;
+
+  // 因子 2 · 新鲜度（20pt）：8h 新建仓库占比，≥3.3% 即满分（早期爆发期满分，成熟后自然回落）
+  const fFreshness = Math.min((new8h / Math.max(nonFork, 1)) * 600, 20);
+
+  // 因子 3 · 采用度（20pt）：npm 周下载分级——真实使用信号，超越 stars 自嗨
+  const npmW = npm ? npm.downloads : 0;
+  const fAdoption = npmW >= 500000 ? 20 : npmW >= 100000 ? 16 : npmW >= 10000 ? 12 : npmW >= 1000 ? 8 : npmW > 0 ? 4 : 0;
+
+  // 因子 4 · 多样性（20pt）：爆发榜 top1 占 top6 stars 比例越低越健康（避免单点垄断）
+  const topStars = leaderboard.slice(0, 6).map((r) => r.stars || 0);
+  const sumTop = topStars.reduce((a, b) => a + b, 0);
+  const top1Ratio = sumTop > 0 ? Math.min((topStars[0] || 0) / sumTop, 1) : 1;
+  const fDiversity = (1 - top1Ratio) * 20;
+
+  const healthScore = Math.round(fActivity + fFreshness + fAdoption + fDiversity);
+  const healthFactors = {
+    activity: { score: Math.round(fActivity), max: 40, label: '活跃度', note: '7 天内有提交的仓库占比' },
+    freshness: { score: Math.round(fFreshness), max: 20, label: '新鲜度', note: '8h 新建仓库占比' },
+    adoption: { score: fAdoption, max: 20, label: '采用度', note: 'npm 周下载分级' },
+    diversity: { score: Math.round(fDiversity), max: 20, label: '多样性', note: '爆发榜 top1 占比（越低越好）' },
+  };
 
   // 5. 上期快照（用于增速对比；首期无基线）
   const prev = readPrevSnapshot();
@@ -241,6 +282,7 @@ async function main() {
     official_activity: officialActivity,
     health: {
       score: healthScore,
+      factors: healthFactors,
       stale_7d: stale7d,
       stale_1d: stale1d,
       total_tracked: nonFork,
@@ -255,7 +297,7 @@ async function main() {
   console.log(`  8h 新增: ${new8h}`);
   console.log(`  官方 stars: ${official.stargazers_count} (forks ${official.forks_count})`);
   console.log(`  npm 周下载: ${npm ? npm.downloads : 'N/A'}`);
-  console.log(`  健康分: ${healthScore}/100 (7天弃养 ${stale7d} 个)`);
+  console.log(`  健康分: ${healthScore}/100 (活跃${healthFactors.activity.score}/40 · 新鲜${healthFactors.freshness.score}/20 · 采用${healthFactors.adoption.score}/20 · 多样${healthFactors.diversity.score}/20 · 7天弃养 ${stale7d} 个)`);
   console.log(`  蹭标签剔除: ${boardCandidates.length - verifiedItems.length} 个候选未达计分门槛(≥${SCORE_MIN})`);
   console.log(`  新秀榜 top: ${leaderboard.map((p) => p.name).join(', ')}`);
   console.log(`  增速榜 top: ${growth.length ? growth.map((p) => `${p.name}+${p.delta}`).join(', ') : '(首期无基线，次期起生效)'}`);

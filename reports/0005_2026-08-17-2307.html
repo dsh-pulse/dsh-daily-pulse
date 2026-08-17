@@ -1,94 +1,19 @@
-#!/usr/bin/env node
-/**
- * tokens.mjs — dsh-daily-pulse 共享设计系统令牌与工具（对齐 dsh-design-system.md v0.2）
- *
- * 供 render.mjs（单期日报）与 render-index.mjs（档案馆首页）复用：
- *   CSS()              完整设计系统 style（三层令牌 + 全部组件样式）
- *   head()             <head> 片段（含防闪烁主题脚本、meta）
- *   topbar()           顶部品牌条 + 导航 + 控制段（语言 / 配色 / 明暗切换）
- *   scripts()          交互脚本（主题 / 语言 / 配色切换）
- *   historyChart()     历史曲线 SVG（官方 stars 实线 + 插件总数 虚线）
- *   fmtNum()           数字缩写（1.34K / 1.29M）
- *   cst()              UTC → 北京时间（GMT+8）字符串
- *   isoDate()          UTC ISO → "YYYY-MM-DD"
- *   CAT_LABEL / CAT_CLS  分类三色编码
- *
- * v0.2.1（2026-08-17）：补齐健康分 / 沉寂预警 / 摘要 i18n / 分类图例组件样式
- * （初版漏了这些组件，导致日报对应区块无样式）。
- */
-export const CAT_CLS = { 视觉: 'v', 工作流: 'w', 终端: 't', 其他: 'n' };
-export const CAT_LABEL = { 视觉: '视觉类', 工作流: '工作流', 终端: '终端类', 其他: '其他' };
-
-export function fmtNum(n) {
-  if (n == null || isNaN(n)) return '—';
-  if (n >= 1e6) return (n / 1e6).toFixed(2).replace(/\.?0+$/, '') + 'M';
-  if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
-  return String(n);
-}
-
-// UTC ISO → 北京时间 "YYYY-MM-DD · HH:MM"
-export function cst(isoStr) {
-  if (!isoStr) return '—';
-  const c = new Date(new Date(isoStr).getTime() + 8 * 3600 * 1000);
-  const p = (n, l = 2) => String(n).padStart(l, '0');
-  return `${p(c.getUTCFullYear())}-${p(c.getUTCMonth() + 1)}-${p(c.getUTCDate())} · ${p(c.getUTCHours())}:${p(c.getUTCMinutes())}`;
-}
-
-export function isoDate(isoStr) {
-  if (!isoStr) return '';
-  return (isoStr || '').slice(0, 10);
-}
-
-// —— 顶部品牌条 + 导航；nav=当前页（'daily' | 'index'），index 高亮「档案馆」——
-export function topbar(nav = 'daily') {
-  const item = (href, label, cur) =>
-    `<a class="navi ${cur ? ' on' : ''}" href="${href}">${label}</a>`;
-  return `
-  <div class="topbar">
-    <div class="brand">
-      <div class="logo">D</div>
-      <div><b>DSH·daily-pulse</b><br><span>DSH 生态日报 · 真实数据</span></div>
-    </div>
-    <div class="controls">
-      <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
-        ${item('index.html', '档案馆', nav === 'index')}
-        ${item('latest.html', '最新一期', nav === 'daily')}
-      </nav>
-      <div class="seg">
-        <span class="seg-lbl">语言</span>
-        <button class="seg-btn" data-lang="zh" aria-pressed="false">中文</button>
-        <button class="seg-btn" data-lang="en" aria-pressed="false">EN</button>
-        <button class="seg-btn" data-lang="bi" aria-pressed="true">双语</button>
-      </div>
-      <div class="seg">
-        <span class="seg-lbl">配色</span>
-        <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
-        <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
-      </div>
-      <button class="toggle" id="tg">切换为亮色</button>
-    </div>
-  </div>`;
-}
-
-export function head(title, desc = 'DSH 插件生态日报 · 每天三次，1 分钟读懂 DSH 生态的脉搏') {
-  return `<head>
+<!doctype html>
+<html lang="zh-CN">
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="${desc}" />
+<meta name="description" content="DSH 插件生态日报 · 每天三次，1 分钟读懂 DSH 生态的脉搏" />
 <meta name="generator" content="dsh-daily-pulse" />
-<title>${title}</title>
+<title>DSH·daily-pulse · 第 5 期 · 2026-08-17 · 23:07</title>
 <script>
   (function(){try{
     var t=localStorage.getItem('dsh-theme');
     if(!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t='light';
     if(t) document.documentElement.dataset.theme=t;
   }catch(e){}})();
-</script>`;
-}
-
-// 完整设计系统 CSS（三层令牌 + 全部组件样式）
-export function CSS() {
-  return `
+</script>
+<style>
   :root{
     --brand:#3E7BFA; --brand-2:#5C93FF; --brand-soft:rgba(62,123,250,.14);
     --up:#25C99B; --down:#F4606B; --warn:#F5B544; --info:#3E7BFA;
@@ -219,12 +144,149 @@ export function CSS() {
   .issue:hover{background:var(--bg-elev)}
   footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
   @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
-`;
-}
+</style>
+</head>
+<body>
+<div class="wrap">
 
-// 交互脚本（语言 / 配色 / 明暗），供各页统一注入
-export function scripts() {
-  return `<script>
+  
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">D</div>
+      <div><b>DSH·daily-pulse</b><br><span>DSH 生态日报 · 真实数据</span></div>
+    </div>
+    <div class="controls">
+      <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
+        <a class="navi " href="index.html">档案馆</a>
+        <a class="navi  on" href="latest.html">最新一期</a>
+      </nav>
+      <div class="seg">
+        <span class="seg-lbl">语言</span>
+        <button class="seg-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="seg-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="seg-btn" data-lang="bi" aria-pressed="true">双语</button>
+      </div>
+      <div class="seg">
+        <span class="seg-lbl">配色</span>
+        <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
+        <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
+      </div>
+      <button class="toggle" id="tg">切换为亮色</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">Daily Pulse</div>
+    <h1>DSH 生态日报</h1>
+    <div class="sub">每天三次，1 分钟读懂 DSH 生态的脉搏。</div>
+    <div class="meta">
+      <span><span class="dot"></span><b>2026-08-17 · 23:07</b> GMT+8</span>
+      <span>第 <b>5</b> 期</span>
+      <span>采集窗口 <b>15:02 – 23:07</b></span>
+      <span>数据源 <b>GitHub API · npm</b></span>
+    </div>
+  </section>
+
+  <h2>生态快照</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="k">插件总数</div><div class="v">6,615</div><div class="delta up">▲ +367 <span class="muted" style="font-weight:400">/ 8h 新增 · 含 fork</span></div></div>
+
+    <div class="kpi"><div class="k">8h 新增仓库</div><div class="v">367</div><div class="delta down">▼ 4 <span class="muted" style="font-weight:400">vs 上期</span></div></div>
+
+    <div class="kpi"><div class="k">官方仓库 stars</div><div class="v">147,293</div><div class="delta up">forks 15,041</div></div>
+
+    <div class="kpi"><div class="k">npm 周下载</div><div class="v">195.9K</div><div class="delta up">@deepseek-ai/dsh <span class="muted" style="font-weight:400">过去 7 天</span></div></div>
+  </div>
+
+  <h2>新秀爆发榜 · Top 0</h2>
+  <div class="board">
+  </div>
+  <div class="chips">
+    <span class="cat v">蓝 = 视觉类 (Vision / Web UI)</span>
+    <span class="cat w">紫 = 工作流 (Workflow / Skills)</span>
+    <span class="cat t">绿 = 终端类 (Terminal / Memory / Browser)</span>
+    <span class="cat n">灰 = 中性（无明确分类）</span>
+  </div>
+
+  <h2>官方动态</h2>
+  <div class="timeline">
+    <div class="tl"><div class="t"><b>08-17</b>11:03</div><div class="c"><b>Merge pull request #2620 from deepseek-harness/release/dsh-0.1.0-rc.7</b><p><span class="muted">99f6f02</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>08-17</b>10:26</div><div class="c"><b>release(dsh): 0.1.0-rc.7</b><p><span class="muted">bb4ca69</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>08-17</b>10:38</div><div class="c"><b>Merge pull request #2252 from deepseek-harness/worktree/fix-1463-rich-content-bridge</b><p><span class="muted">8822d67</span></p></div></div>
+  </div>
+
+  <h2>健康分 & 沉寂预警</h2>
+  <div class="two">
+    <div class="card">
+      <div class="ct">生态健康分</div>
+      <div class="health">
+        <div class="ring ring--brand" style="--p:76"><i>76</i></div>
+        <div class="note">当前 <b style="color:var(--brand)">76 / 100</b>，「稳定扩张」区间（60–79 蓝）。<br><span class="muted">M2 全量计分制：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20。</span></div>
+      </div>
+      
+      <div class="factors">
+        <div class="factor"><span class="fl">活跃度<small>7 天内有提交的仓库占比</small></span><span class="fv up">40/40</span><div class="fbar"><i style="width:100%" class="up"></i></div></div><div class="factor"><span class="fl">新鲜度<small>8h 新建仓库占比</small></span><span class="fv up">20/20</span><div class="fbar"><i style="width:100%" class="up"></i></div></div><div class="factor"><span class="fl">采用度<small>npm 周下载分级</small></span><span class="fv up">16/20</span><div class="fbar"><i style="width:80%" class="up"></i></div></div><div class="factor"><span class="fl">多样性<small>爆发榜 top1 占比（越低越好）</small></span><span class="fv down">0/20</span><div class="fbar"><i style="width:0%" class="down"></i></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">沉寂预警</div>
+      <div class="warnlist">
+        <div class="wl"><span class="ic warn"></span><b>52</b><span>个仓库 7 天无提交（0.8% 弃养率）</span></div>
+        <div class="wl"><span class="ic warn"></span><b>3,939</b><span>个仓库近 24h 无更新（占 60%）</span></div>
+        <div class="wl"><span class="ic down"></span><b>6,540</b><span>个仓库纳入追踪（topic:dsh-plugin, 排除 fork）</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>今日摘要 <span class="src-tag">AI 摘要 · deepseek-v4-flash</span></h2>
+  <div class="i18n">
+    <div class="i18n-zh">
+      <span class="i18n-tag">中文</span>
+      <p>过去8小时新增<b>367</b>个插件，总量达<b>6615</b>，官方发布0.1.0-rc.7候选版，健康分76，建议持续观察。</p>
+    </div>
+    <div class="i18n-en">
+      <span class="i18n-tag">EN · GEO</span>
+      <p>367 new plugins in 8h (total 6,615); official release 0.1.0-rc.7; health score 76.</p>
+    </div>
+  </div>
+
+  <h2>生态档案馆</h2>
+  <div class="archive">
+    <div class="head">
+      <b>官方 stars & 插件总数 · 历史曲线（5 期）</b>
+      <a href="index.html">查看完整历史 →</a>
+    </div>
+    <svg class="spark" viewBox="0 0 620 170" preserveAspectRatio="none" role="img" aria-label="官方 stars 与插件总数历史曲线">
+  <defs>
+    <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fillB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--up)" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M10.0,148.0 L160.0,137.5 L310.0,121.2 L460.0,39.7 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
+  <path d="M10.0,148.0 L160.0,137.5 L310.0,121.2 L460.0,39.7 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M10.0,148.0 L160.0,126.3 L310.0,118.6 L460.0,53.2 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="160.0" cy="137.5" r="2.2" fill="var(--brand)"/><circle cx="310.0" cy="121.2" r="2.2" fill="var(--brand)"/><circle cx="460.0" cy="39.7" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
+  <text x="10.0" y="160" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-16</text>
+  <text x="610.0" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-17</text>
+</svg>
+<div class="cap"><span>官方 stars 147.3K · 插件总数 6.6K</span><span>5 期快照</span></div>
+  </div>
+
+  <footer>
+    <span>DSH·daily-pulse · 第 5 期 · 真实采集数据</span>
+    <span>数据源 GitHub Search API + npm registry · 生成于 2026-08-17 · 23:07</span>
+  </footer>
+
+</div>
+
+<script>
   (function(){
     var root=document.documentElement;
     try{
@@ -254,49 +316,6 @@ export function scripts() {
     bindSeg('lang','dsh-lang');
     bindSeg('accent','dsh-accent');
   })();
-</script>`;
-}
-
-// 由快照生成历史曲线 SVG（官方 stars 实线 + 插件总数 虚线 + 面积）
-// rows=[{date, stars, total}, ...]（按时间正序即可，函数内排序）
-export function historyChart(rows, w = 620, h = 170) {
-  if (!rows || rows.length < 1) return '';
-  const data = rows.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
-  const pad = { l: 10, r: 10, t: 14, b: 22 };
-  const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
-  const x = (i) => pad.l + (data.length === 1 ? iw / 2 : (i / (data.length - 1)) * iw);
-  const scale = (arr) => {
-    const min = Math.min(...arr), max = Math.max(...arr);
-    return (v) => (max === min ? pad.t + ih * 0.5 : pad.t + ((max - v) / (max - min)) * ih);
-  };
-  const ys = scale(data.map((d) => d.stars));
-  const yt = scale(data.map((d) => d.total));
-
-  const line = (fn, accessor) =>
-    data.map((d, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${fn(accessor(d)).toFixed(1)}`).join(' ');
-  const area = (fn, accessor) =>
-    `${line(fn, accessor)} L${x(data.length - 1).toFixed(1)},${(pad.t + ih).toFixed(1)} L${x(0).toFixed(1)},${(pad.t + ih).toFixed(1)} Z`;
-
-  const last = data[data.length - 1];
-  const pts = data.map((d, i) => `<circle cx="${x(i).toFixed(1)}" cy="${ys(d.stars).toFixed(1)}" r="2.2" fill="var(--brand)"/>`).join('');
-
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="官方 stars 与插件总数历史曲线">
-  <defs>
-    <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="fillB" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--up)" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <path d="${area(ys, (d) => d.stars)}" fill="url(#fillA)"/>
-  <path d="${line(ys, (d) => d.stars)}" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
-  <path d="${line(yt, (d) => d.total)}" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-  ${pts}
-  <text x="${x(0).toFixed(1)}" y="160" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">${isoDate(data[0].date)}</text>
-  <text x="${x(data.length - 1).toFixed(1)}" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">${isoDate(last.date)}</text>
-</svg>
-<div class="cap"><span>官方 stars ${fmtNum(last.stars)} · 插件总数 ${fmtNum(last.total)}</span><span>${data.length} 期快照</span></div>`;
-}
+</script>
+</body>
+</html>

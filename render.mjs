@@ -92,10 +92,16 @@ const staleNote = h.stale_7d > 0
   ? `${h.stale_7d} 个仓库 7 天无提交，建议关注维护活跃度`
   : '暂无 7 天无提交仓库';
 
-// —— 摘要（规则生成，M2 换 DeepSeek AI）——
+// —— 摘要（M2：DeepSeek AI 生成，summarize.mjs 写入 snap.summary；无则降级规则）——
+const sm = snap.summary || {};
 const top1 = snap.leaderboard[0]?.name || '—';
-const summaryZh = `DSH 生态今日 8 小时新增 <b>${k.new_8h_repos}</b> 个插件仓库，官方 stars 达 <b>${k.official_stars.toLocaleString('en-US')}</b>；新秀榜首 <b>${top1}</b> 领跑。7 天弃养率 ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%，生态整体健康。`;
-const summaryEn = `DSH ecosystem added ${k.new_8h_repos} plugin repos in 8h; official repo now at ${k.official_stars.toLocaleString('en-US')} stars. Rookie leader: ${top1}. 7-day abandonment ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%.`;
+// 降级规则（summarize.mjs 未跑或旧快照时兜底）
+const _ruleZh = `DSH 生态今日 8 小时新增 <b>${k.new_8h_repos}</b> 个插件仓库，官方 stars 达 <b>${k.official_stars.toLocaleString('en-US')}</b>；新秀榜首 <b>${top1}</b> 领跑。7 天弃养率 ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%，生态整体健康。`;
+const _ruleEn = `DSH ecosystem added ${k.new_8h_repos} plugin repos in 8h; official repo now at ${k.official_stars.toLocaleString('en-US')} stars. Rookie leader: ${top1}. 7-day abandonment ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%.`;
+const summaryZh = sm.zh || _ruleZh;
+const summaryEn = sm.en || _ruleEn;
+const summarySource = sm.source === 'deepseek' ? 'AI 摘要' : sm.source === 'rule' ? '规则生成' : '规则生成';
+const summaryModel = sm.model || '';
 
 const html = `<!doctype html>
 <html lang="zh-CN">
@@ -143,8 +149,16 @@ ${head(`DSH·daily-pulse · 第 ${issueNo} 期 · ${stamp}`)}
       <div class="ct">生态健康分</div>
       <div class="health">
         <div class="ring${ringCls}" style="--p:${h.score}"><i>${h.score}</i></div>
-        <div class="note">当前 <b style="color:var(--brand)">${h.score} / 100</b>，${h.score >= 80 ? '「健康扩张」区间' : h.score >= 60 ? '「稳定扩张」区间' : '「需关注」区间'}（${bandTxt}）。<br><span class="muted">基于 7 天活跃率近似，M2 升级为全量计分制。</span></div>
+        <div class="note">当前 <b style="color:var(--brand)">${h.score} / 100</b>，${h.score >= 80 ? '「健康扩张」区间' : h.score >= 60 ? '「稳定扩张」区间' : '「需关注」区间'}（${bandTxt}）。<br><span class="muted">M2 全量计分制：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20。</span></div>
       </div>
+      ${h.factors ? `
+      <div class="factors">
+        ${Object.values(h.factors).map((f) => {
+          const pct = Math.round((f.score / f.max) * 100);
+          const tone = pct >= 75 ? 'up' : pct >= 40 ? 'warn' : 'down';
+          return `<div class="factor"><span class="fl">${f.label}<small>${f.note}</small></span><span class="fv ${tone}">${f.score}/${f.max}</span><div class="fbar"><i style="width:${pct}%" class="${tone}"></i></div></div>`;
+        }).join('')}
+      </div>` : ''}
     </div>
     <div class="card">
       <div class="ct">沉寂预警</div>
@@ -156,7 +170,7 @@ ${head(`DSH·daily-pulse · 第 ${issueNo} 期 · ${stamp}`)}
     </div>
   </div>
 
-  <h2>今日摘要</h2>
+  <h2>今日摘要 <span class="src-tag">${summarySource}${summaryModel ? ` · ${summaryModel}` : ''}</span></h2>
   <div class="i18n">
     <div class="i18n-zh">
       <span class="i18n-tag">中文</span>

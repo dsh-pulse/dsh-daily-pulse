@@ -33,6 +33,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: AI 中文摘要（DeepSeek，无 key 自动降级规则）
+        run: node summarize.mjs
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+
       - name: 渲染单期日报
         run: node render.mjs
 
