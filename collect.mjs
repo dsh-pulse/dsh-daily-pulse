@@ -83,12 +83,17 @@ const SCORE_MIN = 3;
 const DSH_PKG = '@deepseek-ai/dsh';
 
 async function fetchRaw(fullName, branch, path) {
-  const r = await fetch(`https://raw.githubusercontent.com/${fullName}/${branch}/${path}`, {
-    headers: { 'User-Agent': 'dsh-daily-pulse' },
-    signal: AbortSignal.timeout(10000),
-  });
-  if (!r.ok) return null;
-  return r.text();
+  // 计分辅助读取：任何失败（超时/网络/404）都返回 null，绝不中断主采集
+  try {
+    const r = await fetch(`https://raw.githubusercontent.com/${fullName}/${branch}/${path}`, {
+      headers: { 'User-Agent': 'dsh-daily-pulse' },
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!r.ok) return null;
+    return r.text();
+  } catch {
+    return null;
+  }
 }
 
 async function pluginScore(item) {
