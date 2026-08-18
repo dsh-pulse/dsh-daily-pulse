@@ -1,53 +1,53 @@
 {
   "anywhere-labs/deepseek-harness-desktop": {
-    "stars": 12544,
+    "stars": 12939,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "awesome-dsh-plugin/awesome-dsh-plugin": {
-    "stars": 7995,
+    "stars": 8206,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "xiaobright/dsh-anchored-standard": {
-    "stars": 3478,
+    "stars": 3505,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "ccch1mneyyy/dsh-TUI": {
-    "stars": 1894,
+    "stars": 1920,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "Small-tailqwq/dsh-deep-whale": {
-    "stars": 1287,
+    "stars": 1315,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "dsh-market/dsh-market": {
-    "stars": 913,
+    "stars": 947,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "Anionex/dsh-vision-toolkit": {
-    "stars": 659,
-    "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
-  },
-  "ysr666/dsh-vision-router": {
     "stars": 680,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
+  },
+  "ysr666/dsh-vision-router": {
+    "stars": 709,
+    "first_seen": "2026-08-16T18:17:34Z",
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "Electricitysheep/dsh-handbook": {
-    "stars": 467,
+    "stars": 480,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "hairyf/deepseek-harness-desktop": {
-    "stars": 439,
+    "stars": 500,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "omdsh-dev/dsh-at-file": {
     "stars": 330,
@@ -55,13 +55,13 @@
     "last_seen": "2026-08-17T23:53:40Z"
   },
   "vibeinging/deepseek-harness-desktop-app": {
-    "stars": 393,
+    "stars": 392,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   },
   "Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report": {
-    "stars": 732,
+    "stars": 805,
     "first_seen": "2026-08-17T22:16:43Z",
-    "last_seen": "2026-08-18T07:06:35Z"
+    "last_seen": "2026-08-18T09:51:57Z"
   }
 }
