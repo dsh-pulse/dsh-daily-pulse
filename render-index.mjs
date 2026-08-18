@@ -43,7 +43,7 @@ const rows = snaps.map((s) => ({
   date: s.generated_at,
   stars: (s.kpis && s.kpis.official_stars) || 0,
   total: (s.kpis && s.kpis.total_plugins) || 0,
-  npm: (s.kpis && s.kpis.npm_weekly_downloads) ?? null,
+  npm: (s.kpis && s.kpis.npm_daily) ?? (s.kpis && s.kpis.npm_weekly_downloads) ?? null,
   new8h: (s.kpis && s.kpis.new_8h_repos) ?? null,
   health: (s.health && s.health.score) ?? null,
 }));
@@ -132,7 +132,7 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive · ' + total + ' issues' 
 
   <h2>${LANG === 'zh' ? '指标趋势' : 'Metric Trends'}</h2>
   <div class="chart-grid">
-    ${miniChart(rows, 'npm', LANG === 'zh' ? 'npm 周下载' : 'npm weekly', 'area', 300, 120, LANG)}
+    ${miniChart(rows, 'npm', LANG === 'zh' ? 'npm 日下载' : 'npm daily downloads', 'bar', 300, 120, LANG)}
     ${miniChart(rows, 'new8h', LANG === 'zh' ? '8h 新增仓库' : 'New repos (8h)', 'bar', 300, 120, LANG)}
     ${miniChart(rows, 'health', LANG === 'zh' ? '健康分' : 'Health score', 'area', 300, 120, LANG)}
     ${miniChart(rows, 'total', LANG === 'zh' ? '插件总数' : 'Plugins', 'area', 300, 120, LANG)}

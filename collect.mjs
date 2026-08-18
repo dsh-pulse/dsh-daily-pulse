@@ -48,9 +48,12 @@ async function gh(path) {
 }
 
 async function npmDownloads(pkg) {
+  // 周下载（滚动 7 天；爆发期变化极小，仅作分级信号）
   const r = await fetch(`https://api.npmjs.org/downloads/point/last-week/${pkg}`);
-  if (!r.ok) return null;
-  return r.json();
+  const weekly = r.ok ? await r.json() : null;
+  // 日下载（变化明显，用于趋势图；0 值天回退前一天）
+  const day = await fetch(`https://api.npmjs.org/downloads/point/last-day/${pkg}`).then((x) => (x.ok ? x.json() : null)).catch(() => null);
+  return { weekly: weekly ? weekly.downloads : null, daily: day && day.downloads ? day.downloads : null };
 }
 
 // —— M0 §1.3：总量抓 /topics/dsh-plugin 页面 HTML 计数（绕开 Search 上限 + 解析失败告警）——
@@ -234,7 +237,7 @@ async function main() {
   const fFreshness = Math.min((new8h / Math.max(nonFork, 1)) * 600, 20);
 
   // 因子 3 · 采用度（20pt）：npm 周下载分级——真实使用信号，超越 stars 自嗨
-  const npmW = npm ? npm.downloads : 0;
+  const npmW = npm ? npm.weekly ?? 0 : 0;
   const fAdoption = npmW >= 500000 ? 20 : npmW >= 100000 ? 16 : npmW >= 10000 ? 12 : npmW >= 1000 ? 8 : npmW > 0 ? 4 : 0;
 
   // 因子 4 · 多样性（20pt）：爆发榜 top1 占 top6 stars 比例越低越健康（避免单点垄断）
@@ -268,7 +271,8 @@ async function main() {
       new_8h_repos: new8h,
       official_stars: official.stargazers_count,
       official_forks: official.forks_count,
-      npm_weekly_downloads: npm ? npm.downloads : null,
+      npm_weekly_downloads: npm ? npm.weekly : null,
+      npm_daily: npm ? npm.daily : null,
       delta_8h_stars: delta8hStars, // 首期为 null（无基线）
     },
     official: {
