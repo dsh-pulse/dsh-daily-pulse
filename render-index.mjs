@@ -49,8 +49,12 @@ const npmDailyOf = (s) => {
   const k = s.kpis || {};
   if (k.npm_daily && k.npm_daily > 0) return k.npm_daily;
   const day = (s.generated_at || '').slice(0, 10);
-  const v = npmDailyMap.get(day);
-  if (v && v > 0) return v;
+  // 回退到 <= 该期的最近非 0 自然日（当天数据未出时取前一天，避免 weekly 平直段）
+  let v = 0;
+  for (const [d, n] of npmDailyMap) {
+    if (d <= day && n > 0) v = n;
+  }
+  if (v > 0) return v;
   return k.npm_weekly_downloads ?? null;
 };
 

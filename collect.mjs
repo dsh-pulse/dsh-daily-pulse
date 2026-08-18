@@ -51,9 +51,23 @@ async function npmDownloads(pkg) {
   // 周下载（滚动 7 天；爆发期变化极小，仅作分级信号）
   const r = await fetch(`https://api.npmjs.org/downloads/point/last-week/${pkg}`);
   const weekly = r.ok ? await r.json() : null;
-  // 日下载（变化明显，用于趋势图；0 值天回退前一天）
-  const day = await fetch(`https://api.npmjs.org/downloads/point/last-day/${pkg}`).then((x) => (x.ok ? x.json() : null)).catch(() => null);
-  return { weekly: weekly ? weekly.downloads : null, daily: day && day.downloads ? day.downloads : null };
+  // 日下载（自然日口径）：range API 近 4 天，取最后一个非 0 值——
+  // 当天（UTC）数据可能未统计完返回 0，取最近完整自然日保证每天一个稳定值
+  let daily = null;
+  let dailyDate = null;
+  try {
+    const today = new Date();
+    const from = new Date(today.getTime() - 4 * 86400000).toISOString().slice(0, 10);
+    const to = today.toISOString().slice(0, 10);
+    const rr = await fetch(`https://api.npmjs.org/downloads/range/${from}:${to}/${pkg}`);
+    if (rr.ok) {
+      const j = await rr.json();
+      const days = (j.downloads || []).filter((d) => d.downloads > 0);
+      const last = days[days.length - 1];
+      if (last) { daily = last.downloads; dailyDate = last.day; }
+    }
+  } catch { /* 网络失败则 daily 为 null（图表 fallback） */ }
+  return { weekly: weekly ? weekly.downloads : null, daily, dailyDate };
 }
 
 // —— M0 §1.3：总量抓 /topics/dsh-plugin 页面 HTML 计数（绕开 Search 上限 + 解析失败告警）——
@@ -273,6 +287,7 @@ async function main() {
       official_forks: official.forks_count,
       npm_weekly_downloads: npm ? npm.weekly : null,
       npm_daily: npm ? npm.daily : null,
+      npm_daily_date: npm ? npm.dailyDate : null,
       delta_8h_stars: delta8hStars, // 首期为 null（无基线）
     },
     official: {
@@ -300,7 +315,7 @@ async function main() {
   console.log(`  插件总数: ${topic.count} (${topic.source}) / 非 fork ${nonFork}`);
   console.log(`  8h 新增: ${new8h}`);
   console.log(`  官方 stars: ${official.stargazers_count} (forks ${official.forks_count})`);
-  console.log(`  npm 周下载: ${npm ? npm.downloads : 'N/A'}`);
+  console.log(`  npm 周下载: ${npm ? (npm.weekly ?? 'N/A') : 'N/A'}`);
   console.log(`  健康分: ${healthScore}/100 (活跃${healthFactors.activity.score}/40 · 新鲜${healthFactors.freshness.score}/20 · 采用${healthFactors.adoption.score}/20 · 多样${healthFactors.diversity.score}/20 · 7天弃养 ${stale7d} 个)`);
   console.log(`  蹭标签剔除: ${boardCandidates.length - verifiedItems.length} 个候选未达计分门槛(≥${SCORE_MIN})`);
   console.log(`  新秀榜 top: ${leaderboard.map((p) => p.name).join(', ')}`);
