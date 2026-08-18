@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ZASENJC/dsh-plugins-store,56,,1,,0,工作流,2026-08-13T22:16:37Z,2026-08-18T17:52:04Z,https://github.com/ZASENJC/dsh-plugins-store
-active,2,ysr666/dsh-vision-router,752,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-18T17:49:30Z,https://github.com/ysr666/dsh-vision-router
-active,3,ccch1mneyyy/dsh-TUI,1961,0,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-18T17:46:51Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,hairyf/deepseek-harness-desktop,525,0,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-18T17:45:41Z,https://github.com/hairyf/deepseek-harness-desktop
-active,5,whyihaveyou/dsh-suite,42,,1,,0,工作流,2026-08-13T13:32:50Z,2026-08-18T17:44:46Z,https://github.com/whyihaveyou/dsh-suite
+active,1,hikariming/dshfind,161,1,0,3,1,终端,2026-08-13T12:16:50Z,2026-08-18T22:08:28Z,https://github.com/hikariming/dshfind
+active,2,ysr666/dsh-vision-router,754,2,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-18T22:04:24Z,https://github.com/ysr666/dsh-vision-router
+active,3,ZASENJC/dsh-plugins-store,56,0,0,,0,工作流,2026-08-13T22:16:37Z,2026-08-18T21:46:44Z,https://github.com/ZASENJC/dsh-plugins-store
+active,4,whyihaveyou/dsh-suite,42,0,0,,0,工作流,2026-08-13T13:32:50Z,2026-08-18T21:39:50Z,https://github.com/whyihaveyou/dsh-suite
+active,5,ccch1mneyyy/dsh-TUI,1968,7,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-18T21:35:12Z,https://github.com/ccch1mneyyy/dsh-TUI
