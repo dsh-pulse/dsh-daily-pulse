@@ -209,3 +209,19 @@ writeFileSync(join(REPORTS, 'latest.html'), html); // 稳定入口，供首页�
 console.log(`[render] 日报已生成 → reports/${fname}`);
 console.log(`  期号 ${issueNo} · ${stamp} GMT+8`);
 console.log(`  KPIs: 插件 ${k.total_plugins} / 8h新增 ${k.new_8h_repos} / 官方 ${k.official_stars}★ / npm周下载 ${fmtNum(k.npm_weekly_downloads)}`);
+
+// —— M0：bridge 微信通知（本地跑报时推微信；CI 无 DSH_BRIDGE_TOKEN env 自动跳过）——
+// 设计：dsh-hermes-bridge 插件提供 POST /v1/notify（127.0.0.1:8643，Bearer 鉴权），
+// 本地设置 DSH_BRIDGE_TOKEN 后，日报生成完自动推微信；GitHub Actions CI 不设即跳过。
+if (process.env.DSH_BRIDGE_TOKEN) {
+  const bridgeBase = process.env.DSH_BRIDGE_URL || 'http://127.0.0.1:8643';
+  const summaryPlain = (sm.zh || _ruleZh || '').replace(/<[^>]+>/g, '');
+  const notifyText = `[日报] ✅ 第 ${issueNo} 期已生成：插件 ${k.total_plugins} / 8h+${k.new_8h_repos} / 官方 ${k.official_stars.toLocaleString('en-US')}★${summaryPlain ? `\n${summaryPlain}` : ''}`;
+  fetch(`${bridgeBase}/v1/notify`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.DSH_BRIDGE_TOKEN}` },
+    body: JSON.stringify({ text: notifyText }),
+  })
+    .then((r) => console.log(`[render] bridge 微信通知: HTTP ${r.status}`))
+    .catch((e) => console.warn(`[render] bridge 微信通知失败: ${e.message}`));
+}
