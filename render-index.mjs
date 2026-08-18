@@ -135,6 +135,8 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive · ' + total + ' issues' 
       <span>${LANG === 'zh' ? '覆盖' : 'Coverage'} <b>${days}</b> ${LANG === 'zh' ? '天' : 'days'}</span>
       <span>${LANG === 'zh' ? '最新' : 'Latest'} <b>${latestK ? fmtNum(latestK.official_stars) : '—'}</b> ★ · <b>${latestK ? fmtNum(latestK.total_plugins) : '—'}</b> ${LANG === 'zh' ? '插件' : 'plugins'}</span>
       <span>${LANG === 'zh' ? '数据源' : 'Sources'} <b>GitHub API · npm</b></span>
+      <span class="data-links">${LANG === 'zh' ? '开放数据' : 'Open data'}
+        <a href="data/snapshots.csv">CSV</a> · <a href="data/latest.json">JSON</a></span>
     </div>
   </section>
 

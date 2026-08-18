@@ -5,12 +5,13 @@
 DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次，1 分钟读懂 DSH 生态的脉搏。
 定位：DSH 生态的「财经早报」，质量信号层 + 中文社区层卡位；历史快照数据集是核心护城河。
 
-## 现状（2026-08-17）
+## 现状（2026-08-18）
 
 - **M0 ✅**：增量采集 + 单期日报渲染全链路跑通（真实 GitHub / npm 数据）
-- **M1 ✅（本仓库当前）**：差分增速榜（star-index 基线）、档案馆首页（历史曲线）、三时点 CI 自动化
-- **M2 ⏳**：DeepSeek 中文摘要（现为规则生成）、健康分全量计分制、自动 commit 公开仓库
-- **M3 ⏳**：GitHub Pages「生态档案馆」正式站点（当前已具备雏形）
+- **M1 ✅**：差分增速榜（star-index 基线）、档案馆首页（历史曲线）、三时点 CI 自动化
+- **M2 ✅**：DeepSeek 中文摘要、健康分全量计分制、自动 commit 公开仓库
+- **M3 ✅**：GitHub Pages「生态档案馆」正式站点（18+ 期、双轴主图 + 4 指标矩阵、中英双语、npm 自然日口径）
+- **M4 🔄（进行中）**：开放数据接口下载（CSV/JSON，本页「开放数据」节）→ 细分榜单 → 数据地图
 
 ## 目录结构
 
@@ -21,6 +22,7 @@ dsh-daily-pulse/
 ├── render.mjs          # 渲染单期日报（双语：--lang zh|en）→ reports/<期号>_<时间>_zh/_en.html + latest.html
 ├── render-index.mjs    # 渲染档案馆首页（双语）→ reports/index.html + index_en.html
 ├── render-structured.mjs # 渲染结构化输出 → reports/structured/（JSON-LD + 英文正文，GEO 引用源）
+├── export.mjs          # M4：导出开放数据 → reports/data/（snapshots.csv / latest.csv / leaderboard.csv / latest.json）
 ├── tokens.mjs          # 设计系统 v0.2 令牌模块（三层令牌 + 组件 CSS + 图表，单文件可交付）
 ├── dsh-daily-pulse.html# 高保真设计原型（设计系统 v0.2 演示）
 ├── store/
@@ -39,13 +41,14 @@ dsh-daily-pulse/
 node bootstrap.mjs
 # 1) GitHub 认证（Search API 配额：认证 30 次/分钟，足够本脚本 ~15 次调用）
 gh auth login
-# 2) 采集 → 渲染（中英双档）→ 档案馆 → 结构化
+# 2) 采集 → 渲染（中英双档）→ 档案馆 → 结构化 → 开放数据
 node collect.mjs
 node render.mjs --lang zh
 node render.mjs --lang en
 node render-index.mjs --lang zh
 node render-index.mjs --lang en
 node render-structured.mjs
+node export.mjs
 # 3) 打开 reports/latest.html（中文默认）/ latest 的 EN 切换 / reports/index_en.html
 #    M2b：每天 3 采集时点 × 中英双档 = 6 期（Q6 拍板）
 ```
@@ -86,6 +89,39 @@ i18n 接口（zh / en / bi）、`data-mode="structured"` 结构化输出。`toke
   `Dataset` schema，机器可读快照）+ `latest.json` / `latest.md`（干净英文正文，data-led，供
   ChatGPT / Gemini 等 AI 引擎直接引用）；单期日报 HTML 的 `<head>` 亦内嵌 JSON-LD。站点 URL 可用
   `DSH_SITE_URL` 环境变量覆盖（默认 `https://dsh-pulse.github.io/dsh-daily-pulse/`）。
+
+## 开放数据（M4）
+
+随每期 CI 自动生成并随 Pages 部署，所有数据可爬、可引用：
+
+| 文件 | 内容 |
+|---|---|
+| [`data/snapshots.csv`](data/snapshots.csv) | 全历史时间序列（每期一行，行序 = 期号） |
+| [`data/latest.csv`](data/latest.csv) | 当期 KPI 宽表（一行 25 列，含健康分四因子） |
+| [`data/leaderboard.csv`](data/leaderboard.csv) | 当期榜单（`list` 列区分 `leaderboard` 爆发榜 / `growth` 增速榜） |
+| [`data/latest.json`](data/latest.json) | 当期完整快照（与 `store/latest.json` 同构，程序直接消费） |
+
+字段字典（`snapshots.csv` / `latest.csv` 共用的核心列）：
+
+| 字段 | 含义 | 口径 |
+|---|---|---|
+| `generated_at` / `window_start` / `window_end` | 快照生成时间 / 采集窗口 | UTC ISO8601；窗口 8h + 5 分钟重叠防漏 |
+| `total_plugins` | 插件总数（生态口径，含 fork） | GitHub `/topics/dsh-plugin` 页官方计数；解析失败降级 Search 并置 `count_source=search-fallback` |
+| `non_fork_plugins` | 追踪口径（排除 fork） | Search `topic:dsh-plugin fork:false` `total_count` |
+| `count_source` | 总数来源 | `topics-page` \| `search-fallback` |
+| `new_8h_repos` | 8h 新增仓库数 | `created:>=window_start`（窗口留 5 分钟重叠） |
+| `official_stars` / `official_forks` | 官方仓库 stars / forks | `deepseek-ai/deepseek-harness` REST |
+| `npm_weekly_downloads` | npm 周下载 | `@deepseek-ai/dsh`，滚动 7 天 |
+| `npm_daily` / `npm_daily_date` | npm 日下载（自然日） | range API 最近完整非 0 自然日；`npm_daily_date` 标注实际日期 |
+| `delta_8h_stars` | 官方 star 8h 增量 | 与上期快照对比；首期（无基线）为空 |
+| `health_score` | 生态健康分（0–100） | 四因子：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20（因子分见 `latest.csv` 末 4 列） |
+| `stale_7d` / `stale_1d` | 沉寂仓库数（7 天 / 24h 无 push） | Search `pushed:<阈值`（追踪口径内） |
+| `total_tracked` | 健康分分母（= `non_fork_plugins`） | — |
+
+`leaderboard.csv` 列：`list`（`leaderboard`=爆发榜，按 stars；`growth`=增速榜，按窗口 star 增量）、
+`rank`、`name`（full_name）、`desc`、`stars`、`delta`（窗口增量，首见为空）、`is_new`（1/0，
+DSH 发布日 2026-08-13 后首见）、`score`（蹭标签计分 ≥3 才上榜）、`category`（视觉/工作流/终端/其他）、
+`created`、`pushed`、`url`。增速榜 `created`/`pushed` 为空（由爆发榜行提供）。
 
 ## 相关文档（vault）
 

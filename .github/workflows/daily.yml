@@ -53,6 +53,9 @@ jobs:
       - name: 渲染结构化输出（JSON-LD + 英文正文，GEO 引用源）
         run: node render-structured.mjs
 
+      - name: 导出开放数据（CSV/JSON，M4 数据接口）
+        run: node export.mjs
+
       - name: Commit 快照与日报
         run: |
           git config user.name "dsh-daily-pulse[bot]"
