@@ -116,6 +116,21 @@ const activeRows = (snap.active_board || []).map((r) => {
 }).join('\n');
 const hasActive = (snap.active_board || []).length > 0;
 
+// —— M4-A 内容化：新面孔（8h 新增 top6）——
+const newReposHtml = (snap.new_repos || []).map((r, i) => {
+  const created = r.created ? r.created.slice(0, 10) : '—';
+  const desc = r.desc ? ` · ${r.desc}` : '';
+  return `<div class="cat-row"><span class="rank">${String(i + 1).padStart(2, '0')}</span><span class="pname">${r.name}<small>${t.newRepoStars.replace('{n}', nf(r.stars))} · ${t.newRepoCreated.replace('{t}', created)}${desc}</small></span></div>`;
+}).join('\n');
+const hasNewRepos = (snap.new_repos || []).length > 0;
+
+// —— M4-A 内容化：沉寂名单（7 天无 push top6）——
+const staleRows = (snap.stale_list || []).map((r, i) => {
+  const desc = r.desc ? ` · ${r.desc}` : '';
+  return `<div class="cat-row"><span class="rank">${String(i + 1).padStart(2, '0')}</span><span class="pname">${r.name}<small>${t.staleDays.replace('{n}', r.stale_days).replace('{m}', nf(r.stars))}${desc}</small></span></div>`;
+}).join('\n');
+const hasStale = (snap.stale_list || []).length > 0;
+
 // —— 健康分（M2b：i18n 文案）——
 const h = snap.health;
 const ringCls = h.score >= 80 ? '' : h.score >= 60 ? ' ring--brand' : ' ring--down';
@@ -136,9 +151,11 @@ const fNote = (f) => (LANG === 'en' ? (healthFactorNoteEn[f.note] || '') : f.not
 // —— 摘要（M2：DeepSeek AI 生成，summarize.mjs 写入 snap.summary；无则降级规则）——
 const sm = snap.summary || {};
 const top1 = snap.leaderboard[0]?.name || '—';
+const topNew = snap.new_repos?.[0]?.name;
+const topStale = snap.stale_list?.[0];
 // 降级规则（summarize.mjs 未跑或旧快照时兜底）
-const _ruleZh = `DSH 生态今日 8 小时新增 <b>${k.new_8h_repos}</b> 个插件仓库，官方 stars 达 <b>${k.official_stars.toLocaleString('en-US')}</b>；新秀榜首 <b>${top1}</b> 领跑。7 天弃养率 ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%，生态整体健康。`;
-const _ruleEn = `DSH ecosystem added ${k.new_8h_repos} plugin repos in 8h; official repo now at ${k.official_stars.toLocaleString('en-US')} stars. Rookie leader: ${top1}. 7-day abandonment ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%.`;
+const _ruleZh = `DSH 生态今日 8 小时新增 <b>${k.new_8h_repos}</b> 个插件仓库，官方 stars 达 <b>${k.official_stars.toLocaleString('en-US')}</b>；新秀榜首 <b>${top1}</b> 领跑。${topNew ? `新面孔代表 <b>${topNew}</b>；` : ''}${topStale ? `沉寂预警 <b>${topStale.name}</b> 已停更 ${topStale.stale_days} 天。` : ''}7 天弃养率 ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%，生态整体健康。`;
+const _ruleEn = `DSH ecosystem added ${k.new_8h_repos} plugin repos in 8h; official repo now at ${k.official_stars.toLocaleString('en-US')} stars. Rookie leader: ${top1}.${topNew ? ` Notable new face: ${topNew}.` : ''}${topStale ? ` Stale alert: ${topStale.name} (${topStale.stale_days}d).` : ''} 7-day abandonment ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%.`;
 const summaryZh = sm.zh || _ruleZh;
 const summaryEn = sm.en || _ruleEn;
 const summarySource = sm.source === 'deepseek' ? t.summaryAi : t.summaryRule;
@@ -181,6 +198,14 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
   <div class="kpi-row">${kpi}
   </div>
 
+  <h2>${t.h2Summary} <span class="src-tag">${summarySource}${summaryModel ? ` · ${summaryModel}` : ''}</span></h2>
+  <div class="i18n">
+    <div class="i18n-${LANG}">
+      <span class="i18n-tag">${summaryTag}</span>
+      <p>${summaryText}</p>
+    </div>
+  </div>
+
   <h2>${growthMode ? t.h2Board.replace('{n}', snap.growth.length) : t.h2BoardRookie.replace('{n}', snap.leaderboard.length)}</h2>
   <div class="board">${board}
   </div>
@@ -196,6 +221,11 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
   ${hasActive ? `
   <h2>${t.h2Active}</h2>
   <div class="board cat-board">${activeRows}
+  </div>` : ''}
+
+  ${hasNewRepos ? `
+  <h2>${t.h2NewRepos}</h2>
+  <div class="board cat-board">${newReposHtml}
   </div>` : ''}
 
   <h2>${t.h2Activity}</h2>
@@ -229,13 +259,10 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
     </div>
   </div>
 
-  <h2>${t.h2Summary} <span class="src-tag">${summarySource}${summaryModel ? ` · ${summaryModel}` : ''}</span></h2>
-  <div class="i18n">
-    <div class="i18n-${LANG}">
-      <span class="i18n-tag">${summaryTag}</span>
-      <p>${summaryText}</p>
-    </div>
-  </div>
+  ${hasStale ? `
+  <h2>${t.h2Stale} <span class="muted" style="font-size:12px;font-weight:400">${t.staleNote}</span></h2>
+  <div class="board cat-board">${staleRows}
+  </div>` : ''}
 
   <h2>${t.h2Archive}</h2>
   <div class="archive">

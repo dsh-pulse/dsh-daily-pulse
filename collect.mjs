@@ -171,7 +171,9 @@ async function main() {
   // 1. KPIs（M0 §1.3：总数用 topics 页官方计数；追踪口径用 fork:false）
   const topic = await topicPageCount();
   const nonFork = (await gh('/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse&per_page=1')).total_count;
-  const new8h = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${encodeURIComponent(winStartISO)}&per_page=1`)).total_count;
+  // 8h 新增：计数 + 新面孔清单（M4-A：sort=stars 取今日最亮新仓库，topic 口径未计分）
+  const new8hR = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${encodeURIComponent(winStartISO)}&sort=stars&order=desc&per_page=6`);
+  const new8h = new8hR.total_count;
   const official = await gh('/repos/deepseek-ai/deepseek-harness');
   const npm = await npmDownloads('@deepseek-ai/dsh');
 
@@ -255,6 +257,16 @@ async function main() {
     .slice(0, 5)
     .map((r, i) => ({ rank: i + 1, ...r }));
 
+  // —— M4-A 内容化：新面孔清单（8h 新增，按 stars top6，topic 口径未计分）——
+  const newRepos = (new8hR.items || []).map((i) => ({
+    name: i.full_name,
+    desc: (i.description || '').slice(0, 80),
+    stars: i.stargazers_count,
+    created: i.created_at,
+    category: category(i),
+    url: i.html_url,
+  }));
+
   // 更新 star-index（下一期才有差分基线；追踪全部候选，不只榜上）
   for (const item of boardCandidates) {
     const prev = starIndex[item.full_name];
@@ -279,7 +291,9 @@ async function main() {
   //    替换 M0 的单因子 7 天活跃率近似，给出更诚实的生态健康画像
   const d7ago = iso(new Date(now.getTime() - 7 * 86400000));
   const d1ago = iso(new Date(now.getTime() - 1 * 86400000));
-  const stale7d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d7ago)}&per_page=1`)).total_count;
+  // 7 天沉寂：计数 + 停更名单（M4-A：sort=updated asc ≈ 最久未更；updated 含 issue 活动，口径近似）
+  const stale7dR = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d7ago)}&sort=updated&order=asc&per_page=6`);
+  const stale7d = stale7dR.total_count;
   const stale1d = (await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+pushed%3A%3C${encodeURIComponent(d1ago)}&per_page=1`)).total_count;
 
   // 因子 1 · 活跃度（40pt）：7 天内有 push 的仓库占比
@@ -305,6 +319,20 @@ async function main() {
     adoption: { score: fAdoption, max: 20, label: '采用度', note: 'npm 周下载分级' },
     diversity: { score: Math.round(fDiversity), max: 20, label: '多样性', note: '爆发榜 top1 占比（越低越好）' },
   };
+
+  // —— M4-A 内容化：沉寂名单（7 天无 push，按 updated 升序 ≈ 停更最久 top6）——
+  const staleList = (stale7dR.items || []).map((i) => {
+    const days = Math.max(Math.floor((now.getTime() - new Date(i.updated_at).getTime()) / 86400000), 1);
+    return {
+      name: i.full_name,
+      desc: (i.description || '').slice(0, 80),
+      stars: i.stargazers_count,
+      category: category(i),
+      updated_at: i.updated_at,
+      stale_days: days,
+      url: i.html_url,
+    };
+  });
 
   // 5. 上期快照（用于增速对比；首期无基线）
   const prev = readPrevSnapshot();
@@ -338,6 +366,8 @@ async function main() {
     growth,
     category_boards: categoryBoards, // M4 细分榜单：{类别: [top4]}
     active_board: activeBoard,      // M4 活跃榜：最近 push top5
+    new_repos: newRepos,            // M4-A 新面孔：8h 新增 top6
+    stale_list: staleList,          // M4-A 沉寂名单：7 天无 push top6
     official_activity: officialActivity,
     health: {
       score: healthScore,
@@ -360,6 +390,8 @@ async function main() {
   console.log(`  蹭标签剔除: ${boardCandidates.length - verifiedItems.length} 个候选未达计分门槛(≥${SCORE_MIN})`);
   console.log(`  新秀榜 top: ${leaderboard.map((p) => p.name).join(', ')}`);
   console.log(`  增速榜 top: ${growth.length ? growth.map((p) => `${p.name}+${p.delta}`).join(', ') : '(首期无基线，次期起生效)'}`);
+  console.log(`  新面孔: ${newRepos.map((p) => p.name).join(', ') || '(窗口内无新增)'}`);
+  console.log(`  沉寂名单: ${staleList.map((p) => `${p.name}(${p.stale_days}d)`).join(', ') || '(无)'}`);
   console.log(`  快照已写 store/latest.json + store/snapshots.jsonl`);
 }
 
