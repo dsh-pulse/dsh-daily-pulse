@@ -104,7 +104,14 @@ const bandIdx = h.score >= 80 ? 0 : h.score >= 60 ? 1 : 2;
 const zoneTxt = t.healthZone[zoneIdx];
 const bandTxt = t.healthBand[bandIdx];
 const healthFactorLabel = { 活跃度: 'Activity', 新鲜度: 'Freshness', 采用度: 'Adoption', 多样性: 'Diversity' };
+const healthFactorNoteEn = {
+  '7 天内有提交的仓库占比': 'repos with commits in 7d',
+  '8h 新建仓库占比': 'new repos in 8h',
+  'npm 周下载分级': 'npm weekly downloads tier',
+  '爆发榜 top1 占比（越低越好）': 'top1 share of leaderboard (lower = better)',
+};
 const fLabel = (f) => (LANG === 'en' ? healthFactorLabel[f.label] || f.label : f.label);
+const fNote = (f) => (LANG === 'en' ? (healthFactorNoteEn[f.note] || '') : f.note);
 
 // —— 摘要（M2：DeepSeek AI 生成，summarize.mjs 写入 snap.summary；无则降级规则）——
 const sm = snap.summary || {};
@@ -129,7 +136,7 @@ const altFile = LANG === 'zh' ? fname.replace('_zh.html', '_en.html') : fname;
 
 const html = `<!doctype html>
 <html lang="${LANG === 'en' ? 'en' : 'zh-CN'}">
-${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.metaIssue.replace('{n}', issueNo)} · ${stamp}`)}
+${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.metaIssue.replace('{n}', issueNo)} · ${stamp}`, LANG === 'en' ? 'DSH plugin ecosystem daily digest - 3x a day, 1 min to read the pulse.' : 'DSH 插件生态日报 · 每天三次，1 分钟读懂 DSH 生态的脉搏')}
 <script type="application/ld+json">${jsonLd}</script>
 <style>${CSS()}</style>
 </head>
@@ -178,7 +185,7 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
         ${Object.values(h.factors).map((f) => {
           const pct = Math.round((f.score / f.max) * 100);
           const tone = pct >= 75 ? 'up' : pct >= 40 ? 'warn' : 'down';
-          return `<div class="factor"><span class="fl">${fLabel(f)}<small>${f.note}</small></span><span class="fv ${tone}">${f.score}/${f.max}</span><div class="fbar"><i style="width:${pct}%" class="${tone}"></i></div></div>`;
+          return `<div class="factor"><span class="fl">${fLabel(f)}<small>${fNote(f)}</small></span><span class="fv ${tone}">${f.score}/${f.max}</span><div class="fbar"><i style="width:${pct}%" class="${tone}"></i></div></div>`;
         }).join('')}
       </div>` : ''}
     </div>
@@ -206,7 +213,7 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
       <b>${t.archiveHead.replace('{n}', historyRows.length)}</b>
       <a href="index.html">${t.archiveLink}</a>
     </div>
-    ${historyRows.length >= 1 ? historyChart(historyRows) : t.archiveFirst}
+    ${historyRows.length >= 1 ? historyChart(historyRows, 620, 170, LANG) : t.archiveFirst}
   </div>
 
   <footer>
@@ -216,7 +223,7 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
 
 </div>
 
-${scripts()}
+${scripts(LANG)}
 </body>
 </html>
 `;

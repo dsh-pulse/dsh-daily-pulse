@@ -89,7 +89,7 @@ if (!last) {
 
 const html = `<!doctype html>
 <html lang="${LANG === 'en' ? 'en' : 'zh-CN'}">
-${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive' : 'DSH·daily-pulse · 档案馆'} · ${total} 期`)}
+${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive' : 'DSH·daily-pulse · 档案馆'} · ${total} 期`, LANG === 'en' ? 'DSH plugin ecosystem archive - full historical timeline.' : 'DSH 插件生态档案馆 · 全量历史快照时间轴')}
 <style>${CSS()}</style>
 </head>
 <body>
@@ -123,7 +123,7 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive' : 'DSH·daily-pulse · �
       <b>${LANG === 'zh' ? '官方 stars（实线） & 插件总数（虚线）' : 'Official stars (solid) & plugin totals (dashed)'}</b>
       <a href="latest.html">${LANG === 'zh' ? '最新一期 →' : 'Latest issue →'}</a>
     </div>
-    ${historyChart(rows)}
+    ${historyChart(rows, 620, 170, LANG)}
   </div>
 
   <h2>${LANG === 'zh' ? '全部期号' : 'All Issues'}</h2>
@@ -140,7 +140,7 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive' : 'DSH·daily-pulse · �
 
 </div>
 
-${scripts()}
+${scripts(LANG)}
 </body>
 </html>
 `;

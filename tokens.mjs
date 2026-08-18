@@ -49,7 +49,7 @@ export function topbar(nav = 'daily', lang = 'zh', altFile = '') {
   <div class="topbar">
     <div class="brand">
       <div class="logo">D</div>
-      <div><b>DSH·daily-pulse</b><br><span>DSH 生态日报 · 真实数据</span></div>
+      <div><b>DSH·daily-pulse</b><br><span>${lang === 'zh' ? 'DSH 生态日报 · 真实数据' : 'DSH Ecosystem Pulse · real data'}</span></div>
     </div>
     <div class="controls">
       <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
@@ -220,8 +220,9 @@ export function CSS() {
 `;
 }
 
-// 交互脚本（语言 / 配色 / 明暗），供各页统一注入
-export function scripts() {
+// 交互脚本（配色 / 明暗），供各页统一注入；lang 用于主题按钮文案
+// @param {string} lang - 'zh' | 'en'
+export function scripts(lang = 'zh') {
   return `<script>
   (function(){
     var root=document.documentElement;
@@ -230,7 +231,7 @@ export function scripts() {
       var sl=localStorage.getItem('dsh-lang');   if(sl) root.dataset.lang=sl; else root.dataset.lang='bi';
     }catch(e){}
     var tg=document.getElementById('tg');
-    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? '切换为暗色' : '切换为亮色'; }
+    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? (lang==='en' ? 'Dark mode' : '切换为暗色') : (lang==='en' ? 'Light mode' : '切换为亮色'); }
     if(tg){ tg.onclick=function(){
       var next = root.dataset.theme==='light' ? 'dark' : 'light';
       root.dataset.theme=next;
@@ -255,8 +256,9 @@ export function scripts() {
 }
 
 // 由快照生成历史曲线 SVG（官方 stars 实线 + 插件总数 虚线 + 面积）
-// rows=[{date, stars, total}, ...]（按时间正序即可，函数内排序）
-export function historyChart(rows, w = 620, h = 170) {
+// rows=[{date, stars, total}, ...]（按时间正序即可，函数内排序）；lang 控制图注文案
+// @param {string} [lang] - 'zh' | 'en'
+export function historyChart(rows, w = 620, h = 170, lang = 'zh') {
   if (!rows || rows.length < 1) return '';
   const data = rows.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
   const pad = { l: 10, r: 10, t: 14, b: 22 };
@@ -277,7 +279,7 @@ export function historyChart(rows, w = 620, h = 170) {
   const last = data[data.length - 1];
   const pts = data.map((d, i) => `<circle cx="${x(i).toFixed(1)}" cy="${ys(d.stars).toFixed(1)}" r="2.2" fill="var(--brand)"/>`).join('');
 
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="官方 stars 与插件总数历史曲线">
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${lang === 'en' ? 'Official stars & plugin totals history' : '官方 stars 与插件总数历史曲线'}">
   <defs>
     <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
@@ -295,5 +297,5 @@ export function historyChart(rows, w = 620, h = 170) {
   <text x="${x(0).toFixed(1)}" y="160" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">${isoDate(data[0].date)}</text>
   <text x="${x(data.length - 1).toFixed(1)}" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">${isoDate(last.date)}</text>
 </svg>
-<div class="cap"><span>官方 stars ${fmtNum(last.stars)} · 插件总数 ${fmtNum(last.total)}</span><span>${data.length} 期快照</span></div>`;
+<div class="cap"><span>${lang === 'en' ? 'Official stars' : '官方 stars'} ${fmtNum(last.stars)} · ${lang === 'en' ? 'plugins' : '插件总数'} ${fmtNum(last.total)}</span><span>${data.length} ${lang === 'en' ? 'snapshots' : '期快照'}</span></div>`;
 }

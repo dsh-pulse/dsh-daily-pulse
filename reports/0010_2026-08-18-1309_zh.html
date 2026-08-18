@@ -328,7 +328,7 @@
       var sl=localStorage.getItem('dsh-lang');   if(sl) root.dataset.lang=sl; else root.dataset.lang='bi';
     }catch(e){}
     var tg=document.getElementById('tg');
-    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? '切换为暗色' : '切换为亮色'; }
+    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? (lang==='en' ? 'Dark mode' : '切换为暗色') : (lang==='en' ? 'Light mode' : '切换为亮色'); }
     if(tg){ tg.onclick=function(){
       var next = root.dataset.theme==='light' ? 'dark' : 'light';
       root.dataset.theme=next;
