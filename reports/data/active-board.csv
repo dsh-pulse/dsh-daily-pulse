@@ -1,0 +1,6 @@
+list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
+active,1,ysr666/dsh-vision-router,751,19,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-18T17:21:19Z,https://github.com/ysr666/dsh-vision-router
+active,2,anywhere-labs/deepseek-harness-desktop,13488,176,0,3,1,视觉,2026-08-13T16:30:50Z,2026-08-18T17:12:45Z,https://github.com/anywhere-labs/deepseek-harness-desktop
+active,3,ccch1mneyyy/dsh-TUI,1960,15,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-18T17:12:21Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,hairyf/deepseek-harness-desktop,525,4,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-18T17:00:32Z,https://github.com/hairyf/deepseek-harness-desktop
+active,5,awesome-dsh-plugin/awesome-dsh-plugin,8733,189,0,3,1,终端,2026-08-13T13:55:31Z,2026-08-18T16:27:30Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="DSH 插件生态档案馆 · 全量历史快照时间轴" />
 <meta name="generator" content="dsh-daily-pulse" />
-<title>DSH·daily-pulse · 档案馆 · 21 期</title>
+<title>DSH·daily-pulse · 档案馆 · 22 期</title>
 <script>
   (function(){try{
     var t=localStorage.getItem('dsh-theme');
@@ -88,6 +88,20 @@
   .cat.w{color:var(--cat-w); border-color:color-mix(in srgb,var(--cat-w) 40%, transparent)}
   .cat.t{color:var(--up); border-color:color-mix(in srgb,var(--up) 40%, transparent)}
   .cat.n{color:var(--text-3); border-color:color-mix(in srgb,var(--text-3) 35%, transparent)}
+  .cat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px}
+  .cat-col{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .cat-head{padding:10px 16px; font-size:13px; font-weight:800; border-bottom:1px solid var(--border); letter-spacing:.02em}
+  .cat-head.v{color:var(--cat-v); border-bottom-color:color-mix(in srgb,var(--cat-v) 30%, transparent)}
+  .cat-head.w{color:var(--cat-w); border-bottom-color:color-mix(in srgb,var(--cat-w) 30%, transparent)}
+  .cat-head.t{color:var(--up); border-bottom-color:color-mix(in srgb,var(--up) 30%, transparent)}
+  .cat-head.n{color:var(--text-3)}
+  .cat-row{display:grid; grid-template-columns:26px 1fr; align-items:baseline; gap:10px; padding:9px 16px; border-bottom:1px solid var(--border)}
+  .cat-row:last-child{border-bottom:0}
+  .cat-row .rank{font-size:12px; color:var(--text-3)}
+  .cat-row .pname{font-size:13px; font-weight:600}
+  .cat-row .pname small{font-size:11px; margin-top:1px}
+  .cat-board .cat-row{grid-template-columns:26px 1fr}
+  @media (max-width:680px){ .cat-grid{grid-template-columns:1fr} }
   .timeline{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:8px 20px; box-shadow:var(--shadow-sm)}
   .tl{display:grid; grid-template-columns:88px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--border)}
   .tl:last-child{border-bottom:0}
@@ -181,21 +195,23 @@
   <section class="hero">
     <div class="kicker">Archive</div>
     <h1>DSH 生态档案馆</h1>
-    <div class="sub">每一次采集都是一条快照 — 21 期 × 约 8h，累积成生态的完整时间轴。</div>
+    <div class="sub">每一次采集都是一条快照 — 22 期 × 约 8h，累积成生态的完整时间轴。</div>
     <div class="meta">
-      <span><span class="dot"></span><b>21</b> 期快照</span>
+      <span><span class="dot"></span><b>22</b> 期快照</span>
       <span>覆盖 <b>3</b> 天</span>
-      <span>最新 <b>158.6K</b> ★ · <b>7.4K</b> 插件</span>
+      <span>最新 <b>159.5K</b> ★ · <b>7.5K</b> 插件</span>
       <span>数据源 <b>GitHub API · npm</b></span>
+      <span class="data-links">开放数据
+        <a href="data/snapshots.csv">CSV</a> · <a href="data/latest.json">JSON</a></span>
     </div>
   </section>
 
   <h2>生态概要</h2>
   <div class="kpi-row">
-    <div class="kpi"><div class="k">快照期数</div><div class="v">21</div><div class="delta up">3 天跨度</div></div>
-    <div class="kpi"><div class="k">官方 stars · 最新</div><div class="v">158.6K</div><div class="delta up">fans</div></div>
-    <div class="kpi"><div class="k">插件总数 · 最新</div><div class="v">7.4K</div><div class="delta up">tracked</div></div>
-    <div class="kpi"><div class="k">最新 8h 新增</div><div class="v">249</div><div class="delta up">仓库</div></div>
+    <div class="kpi"><div class="k">快照期数</div><div class="v">22</div><div class="delta up">3 天跨度</div></div>
+    <div class="kpi"><div class="k">官方 stars · 最新</div><div class="v">159.5K</div><div class="delta up">fans</div></div>
+    <div class="kpi"><div class="k">插件总数 · 最新</div><div class="v">7.5K</div><div class="delta up">tracked</div></div>
+    <div class="kpi"><div class="k">最新 8h 新增</div><div class="v">230</div><div class="delta up">仓库</div></div>
   </div>
 
   <h2>历史曲线（双轴）</h2>
@@ -211,144 +227,150 @@
       <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <line x1="46" y1="288.0" x2="614" y2="288.0" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="220.0" x2="614" y2="220.0" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="152.1" x2="614" y2="152.1" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="84.2" x2="614" y2="84.2" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="16.2" x2="614" y2="16.2" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="222" x2="614" y2="222" stroke="var(--border-strong)" stroke-width="0.8"/>
-  <text x="39" y="291.5" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">120K</text><text x="39" y="223.5" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">130K</text><text x="39" y="155.6" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">140K</text><text x="39" y="87.7" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">150K</text><text x="39" y="19.7" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">160K</text>
-  <text x="621" y="228.0" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">5.5K</text><text x="621" y="175.0" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6K</text><text x="621" y="121.9" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6.5K</text><text x="621" y="68.9" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7K</text><text x="621" y="15.8" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7.5K</text>
-  <text x="46.0" y="242" text-anchor="start" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-16</text><text x="330.0" y="242" text-anchor="middle" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-18</text><text x="614.0" y="242" text-anchor="end" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-18</text>
+  <line x1="46" y1="286.0" x2="614" y2="286.0" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="220.1" x2="614" y2="220.1" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="154.2" x2="614" y2="154.2" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="88.4" x2="614" y2="88.4" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="22.5" x2="614" y2="22.5" stroke="var(--border)" stroke-width="0.5"/><line x1="46" y1="222" x2="614" y2="222" stroke="var(--border-strong)" stroke-width="0.8"/>
+  <text x="39" y="289.5" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">120K</text><text x="39" y="223.6" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">130K</text><text x="39" y="157.7" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">140K</text><text x="39" y="91.9" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">150K</text><text x="39" y="26.0" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">160K</text>
+  <text x="621" y="227.9" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">5.5K</text><text x="621" y="178.6" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6K</text><text x="621" y="129.4" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6.5K</text><text x="621" y="80.2" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7K</text><text x="621" y="31.0" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7.5K</text><text x="621" y="-18.2" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">8K</text>
+  <text x="46.0" y="242" text-anchor="start" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-16</text><text x="316.5" y="242" text-anchor="middle" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-18</text><text x="614.0" y="242" text-anchor="end" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-18</text>
   <text x="46" y="13" text-anchor="start" font-size="10" fill="var(--brand-2)" font-family="JetBrains Mono,monospace">▬ 官方 stars</text>
   <text x="614" y="13" text-anchor="end" font-size="10" fill="var(--up)" font-family="JetBrains Mono,monospace">插件总数 ┄┄</text>
-  <path d="M46.0,222.0 L74.4,212.6 L102.8,198.1 L131.2,125.5 L159.6,102.6 L188.0,100.8 L216.4,95.4 L244.8,87.6 L273.2,85.7 L301.6,62.1 L330.0,55.5 L358.4,53.0 L386.8,52.8 L415.2,39.6 L443.6,39.5 L472.0,38.3 L500.4,38.0 L528.8,37.9 L557.2,37.8 L585.6,36.8 L614.0,26.0 L614.0,222.0 L46.0,222.0 Z" fill="url(#fillA)"/>
-  <path d="M46.0,222.0 L74.4,212.6 L102.8,198.1 L131.2,125.5 L159.6,102.6 L188.0,100.8 L216.4,95.4 L244.8,87.6 L273.2,85.7 L301.6,62.1 L330.0,55.5 L358.4,53.0 L386.8,52.8 L415.2,39.6 L443.6,39.5 L472.0,38.3 L500.4,38.0 L528.8,37.9 L557.2,37.8 L585.6,36.8 L614.0,26.0" fill="none" stroke="var(--brand)" stroke-width="2"/>
-  <path d="M46.0,222.0 L74.4,203.2 L102.8,196.6 L131.2,140.1 L159.6,106.2 L188.0,104.7 L216.4,98.2 L244.8,90.1 L273.2,88.2 L301.6,69.7 L330.0,62.2 L358.4,59.5 L386.8,59.5 L415.2,43.5 L443.6,43.4 L472.0,42.7 L500.4,51.0 L528.8,51.0 L557.2,51.0 L585.6,41.0 L614.0,26.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <path d="M46.0,222.0 L73.0,212.9 L100.1,198.9 L127.1,128.4 L154.2,106.2 L181.2,104.5 L208.3,99.2 L235.3,91.7 L262.4,89.9 L289.4,66.9 L316.5,60.5 L343.5,58.1 L370.6,57.9 L397.6,45.2 L424.7,45.1 L451.7,43.9 L478.8,43.6 L505.8,43.5 L532.9,43.4 L559.9,42.4 L587.0,31.9 L614.0,26.0 L614.0,222.0 L46.0,222.0 Z" fill="url(#fillA)"/>
+  <path d="M46.0,222.0 L73.0,212.9 L100.1,198.9 L127.1,128.4 L154.2,106.2 L181.2,104.5 L208.3,99.2 L235.3,91.7 L262.4,89.9 L289.4,66.9 L316.5,60.5 L343.5,58.1 L370.6,57.9 L397.6,45.2 L424.7,45.1 L451.7,43.9 L478.8,43.6 L505.8,43.5 L532.9,43.4 L559.9,42.4 L587.0,31.9 L614.0,26.0" fill="none" stroke="var(--brand)" stroke-width="2"/>
+  <path d="M46.0,222.0 L73.0,204.6 L100.1,198.5 L127.1,146.0 L154.2,114.6 L181.2,113.2 L208.3,107.1 L235.3,99.6 L262.4,97.9 L289.4,80.7 L316.5,73.7 L343.5,71.3 L370.6,71.3 L397.6,56.4 L424.7,56.3 L451.7,55.6 L478.8,63.4 L505.8,63.4 L532.9,63.4 L559.9,54.1 L587.0,40.2 L614.0,26.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3"/>
   <circle cx="46.0" cy="222.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 1 期 · 2026-08-16
 Stars 129.7K · 插件 5.5K
 npm 98.4K · 8h+646
-健康分 99/100</title></circle><circle cx="74.4" cy="203.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 2 期 · 2026-08-16
+健康分 99/100</title></circle><circle cx="73.0" cy="204.6" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 2 期 · 2026-08-16
 Stars 131.1K · 插件 5.7K
 npm 98.4K · 8h+297
-健康分 99/100</title></circle><circle cx="102.8" cy="196.6" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 3 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="100.1" cy="198.5" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 3 期 · 2026-08-17
 Stars 133.2K · 插件 5.8K
 npm 131K · 8h+160
-健康分 99/100</title></circle><circle cx="131.2" cy="140.1" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 4 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="127.1" cy="146.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 4 期 · 2026-08-17
 Stars 143.9K · 插件 6.3K
 npm 131K · 8h+371
-健康分 99/100</title></circle><circle cx="159.6" cy="106.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 5 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="154.2" cy="114.6" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 5 期 · 2026-08-17
 Stars 147.3K · 插件 6.6K
 npm 131K · 8h+367
-健康分 76/100</title></circle><circle cx="188.0" cy="104.7" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 6 期 · 2026-08-17
+健康分 76/100</title></circle><circle cx="181.2" cy="113.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 6 期 · 2026-08-17
 Stars 147.6K · 插件 6.6K
 npm 131K · 8h+359
-健康分 87/100</title></circle><circle cx="216.4" cy="98.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 7 期 · 2026-08-17
+健康分 87/100</title></circle><circle cx="208.3" cy="107.1" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 7 期 · 2026-08-17
 Stars 148.3K · 插件 6.7K
 npm 131K · 8h+312
-健康分 87/100</title></circle><circle cx="244.8" cy="90.1" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 8 期 · 2026-08-17
+健康分 87/100</title></circle><circle cx="235.3" cy="99.6" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 8 期 · 2026-08-17
 Stars 149.5K · 插件 6.8K
 npm 131K · 8h+146
-健康分 80/100</title></circle><circle cx="273.2" cy="88.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 9 期 · 2026-08-17
+健康分 80/100</title></circle><circle cx="262.4" cy="97.9" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 9 期 · 2026-08-17
 Stars 149.8K · 插件 6.8K
 npm 131K · 8h+97
-健康分 75/100</title></circle><circle cx="301.6" cy="69.7" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 10 期 · 2026-08-18
+健康分 75/100</title></circle><circle cx="289.4" cy="80.7" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 10 期 · 2026-08-18
 Stars 153.3K · 插件 7K
 npm 131K · 8h+124
-健康分 77/100</title></circle><circle cx="330.0" cy="62.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 11 期 · 2026-08-18
+健康分 77/100</title></circle><circle cx="316.5" cy="73.7" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 11 期 · 2026-08-18
 Stars 154.2K · 插件 7K
 npm 131K · 8h+168
-健康分 81/100</title></circle><circle cx="358.4" cy="59.5" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 12 期 · 2026-08-18
+健康分 81/100</title></circle><circle cx="343.5" cy="71.3" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 12 期 · 2026-08-18
 Stars 154.6K · 插件 7.1K
 npm 131K · 8h+183
-健康分 82/100</title></circle><circle cx="386.8" cy="59.5" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 13 期 · 2026-08-18
+健康分 82/100</title></circle><circle cx="370.6" cy="71.3" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 13 期 · 2026-08-18
 Stars 154.6K · 插件 7.1K
 npm 131K · 8h+183
-健康分 82/100</title></circle><circle cx="415.2" cy="43.5" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 14 期 · 2026-08-18
+健康分 82/100</title></circle><circle cx="397.6" cy="56.4" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 14 期 · 2026-08-18
 Stars 156.6K · 插件 7.2K
 npm 131K · 8h+274
-健康分 87/100</title></circle><circle cx="443.6" cy="43.4" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 15 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="424.7" cy="56.3" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 15 期 · 2026-08-18
 Stars 156.6K · 插件 7.2K
 npm 131K · 8h+275
-健康分 87/100</title></circle><circle cx="472.0" cy="42.7" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 16 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="451.7" cy="55.6" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 16 期 · 2026-08-18
 Stars 156.7K · 插件 7.2K
 npm 131K · 8h+276
-健康分 87/100</title></circle><circle cx="500.4" cy="51.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 17 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="478.8" cy="63.4" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 17 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 131K · 8h+274
-健康分 87/100</title></circle><circle cx="528.8" cy="51.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 18 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="505.8" cy="63.4" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 18 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 114.8K · 8h+271
-健康分 87/100</title></circle><circle cx="557.2" cy="51.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 19 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="532.9" cy="63.4" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 19 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 114.8K · 8h+271
-健康分 87/100</title></circle><circle cx="585.6" cy="41.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 20 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="559.9" cy="54.1" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 20 期 · 2026-08-18
 Stars 157K · 插件 7.2K
 npm 131K · 8h+270
-健康分 87/100</title></circle><circle cx="614.0" cy="26.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 21 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="587.0" cy="40.2" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 21 期 · 2026-08-18
 Stars 158.6K · 插件 7.4K
 npm 131K · 8h+249
-健康分 87/100</title></circle><circle cx="46.0" cy="222.0" r="2.8" fill="var(--brand)"><title>第 1 期 · 2026-08-16
+健康分 87/100</title></circle><circle cx="614.0" cy="26.0" r="2.2" fill="var(--bg-surface)" stroke="var(--up)" stroke-width="1.4"><title>第 22 期 · 2026-08-18
+Stars 159.5K · 插件 7.5K
+npm 131K · 8h+230
+健康分 85/100</title></circle><circle cx="46.0" cy="222.0" r="2.8" fill="var(--brand)"><title>第 1 期 · 2026-08-16
 Stars 129.7K · 插件 5.5K
 npm 98.4K · 8h+646
-健康分 99/100</title></circle><circle cx="74.4" cy="212.6" r="2.8" fill="var(--brand)"><title>第 2 期 · 2026-08-16
+健康分 99/100</title></circle><circle cx="73.0" cy="212.9" r="2.8" fill="var(--brand)"><title>第 2 期 · 2026-08-16
 Stars 131.1K · 插件 5.7K
 npm 98.4K · 8h+297
-健康分 99/100</title></circle><circle cx="102.8" cy="198.1" r="2.8" fill="var(--brand)"><title>第 3 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="100.1" cy="198.9" r="2.8" fill="var(--brand)"><title>第 3 期 · 2026-08-17
 Stars 133.2K · 插件 5.8K
 npm 131K · 8h+160
-健康分 99/100</title></circle><circle cx="131.2" cy="125.5" r="2.8" fill="var(--brand)"><title>第 4 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="127.1" cy="128.4" r="2.8" fill="var(--brand)"><title>第 4 期 · 2026-08-17
 Stars 143.9K · 插件 6.3K
 npm 131K · 8h+371
-健康分 99/100</title></circle><circle cx="159.6" cy="102.6" r="2.8" fill="var(--brand)"><title>第 5 期 · 2026-08-17
+健康分 99/100</title></circle><circle cx="154.2" cy="106.2" r="2.8" fill="var(--brand)"><title>第 5 期 · 2026-08-17
 Stars 147.3K · 插件 6.6K
 npm 131K · 8h+367
-健康分 76/100</title></circle><circle cx="188.0" cy="100.8" r="2.8" fill="var(--brand)"><title>第 6 期 · 2026-08-17
+健康分 76/100</title></circle><circle cx="181.2" cy="104.5" r="2.8" fill="var(--brand)"><title>第 6 期 · 2026-08-17
 Stars 147.6K · 插件 6.6K
 npm 131K · 8h+359
-健康分 87/100</title></circle><circle cx="216.4" cy="95.4" r="2.8" fill="var(--brand)"><title>第 7 期 · 2026-08-17
+健康分 87/100</title></circle><circle cx="208.3" cy="99.2" r="2.8" fill="var(--brand)"><title>第 7 期 · 2026-08-17
 Stars 148.3K · 插件 6.7K
 npm 131K · 8h+312
-健康分 87/100</title></circle><circle cx="244.8" cy="87.6" r="2.8" fill="var(--brand)"><title>第 8 期 · 2026-08-17
+健康分 87/100</title></circle><circle cx="235.3" cy="91.7" r="2.8" fill="var(--brand)"><title>第 8 期 · 2026-08-17
 Stars 149.5K · 插件 6.8K
 npm 131K · 8h+146
-健康分 80/100</title></circle><circle cx="273.2" cy="85.7" r="2.8" fill="var(--brand)"><title>第 9 期 · 2026-08-17
+健康分 80/100</title></circle><circle cx="262.4" cy="89.9" r="2.8" fill="var(--brand)"><title>第 9 期 · 2026-08-17
 Stars 149.8K · 插件 6.8K
 npm 131K · 8h+97
-健康分 75/100</title></circle><circle cx="301.6" cy="62.1" r="2.8" fill="var(--brand)"><title>第 10 期 · 2026-08-18
+健康分 75/100</title></circle><circle cx="289.4" cy="66.9" r="2.8" fill="var(--brand)"><title>第 10 期 · 2026-08-18
 Stars 153.3K · 插件 7K
 npm 131K · 8h+124
-健康分 77/100</title></circle><circle cx="330.0" cy="55.5" r="2.8" fill="var(--brand)"><title>第 11 期 · 2026-08-18
+健康分 77/100</title></circle><circle cx="316.5" cy="60.5" r="2.8" fill="var(--brand)"><title>第 11 期 · 2026-08-18
 Stars 154.2K · 插件 7K
 npm 131K · 8h+168
-健康分 81/100</title></circle><circle cx="358.4" cy="53.0" r="2.8" fill="var(--brand)"><title>第 12 期 · 2026-08-18
+健康分 81/100</title></circle><circle cx="343.5" cy="58.1" r="2.8" fill="var(--brand)"><title>第 12 期 · 2026-08-18
 Stars 154.6K · 插件 7.1K
 npm 131K · 8h+183
-健康分 82/100</title></circle><circle cx="386.8" cy="52.8" r="2.8" fill="var(--brand)"><title>第 13 期 · 2026-08-18
+健康分 82/100</title></circle><circle cx="370.6" cy="57.9" r="2.8" fill="var(--brand)"><title>第 13 期 · 2026-08-18
 Stars 154.6K · 插件 7.1K
 npm 131K · 8h+183
-健康分 82/100</title></circle><circle cx="415.2" cy="39.6" r="2.8" fill="var(--brand)"><title>第 14 期 · 2026-08-18
+健康分 82/100</title></circle><circle cx="397.6" cy="45.2" r="2.8" fill="var(--brand)"><title>第 14 期 · 2026-08-18
 Stars 156.6K · 插件 7.2K
 npm 131K · 8h+274
-健康分 87/100</title></circle><circle cx="443.6" cy="39.5" r="2.8" fill="var(--brand)"><title>第 15 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="424.7" cy="45.1" r="2.8" fill="var(--brand)"><title>第 15 期 · 2026-08-18
 Stars 156.6K · 插件 7.2K
 npm 131K · 8h+275
-健康分 87/100</title></circle><circle cx="472.0" cy="38.3" r="2.8" fill="var(--brand)"><title>第 16 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="451.7" cy="43.9" r="2.8" fill="var(--brand)"><title>第 16 期 · 2026-08-18
 Stars 156.7K · 插件 7.2K
 npm 131K · 8h+276
-健康分 87/100</title></circle><circle cx="500.4" cy="38.0" r="2.8" fill="var(--brand)"><title>第 17 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="478.8" cy="43.6" r="2.8" fill="var(--brand)"><title>第 17 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 131K · 8h+274
-健康分 87/100</title></circle><circle cx="528.8" cy="37.9" r="2.8" fill="var(--brand)"><title>第 18 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="505.8" cy="43.5" r="2.8" fill="var(--brand)"><title>第 18 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 114.8K · 8h+271
-健康分 87/100</title></circle><circle cx="557.2" cy="37.8" r="2.8" fill="var(--brand)"><title>第 19 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="532.9" cy="43.4" r="2.8" fill="var(--brand)"><title>第 19 期 · 2026-08-18
 Stars 156.8K · 插件 7.1K
 npm 114.8K · 8h+271
-健康分 87/100</title></circle><circle cx="585.6" cy="36.8" r="2.8" fill="var(--brand)"><title>第 20 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="559.9" cy="42.4" r="2.8" fill="var(--brand)"><title>第 20 期 · 2026-08-18
 Stars 157K · 插件 7.2K
 npm 131K · 8h+270
-健康分 87/100</title></circle><circle cx="614.0" cy="26.0" r="2.8" fill="var(--brand)"><title>第 21 期 · 2026-08-18
+健康分 87/100</title></circle><circle cx="587.0" cy="31.9" r="2.8" fill="var(--brand)"><title>第 21 期 · 2026-08-18
 Stars 158.6K · 插件 7.4K
 npm 131K · 8h+249
-健康分 87/100</title></circle>
+健康分 87/100</title></circle><circle cx="614.0" cy="26.0" r="2.8" fill="var(--brand)"><title>第 22 期 · 2026-08-18
+Stars 159.5K · 插件 7.5K
+npm 131K · 8h+230
+健康分 85/100</title></circle>
 </svg>
-<div class="cap"><span>官方 stars 158.6K · 插件总数 7.4K</span><span>21 期快照 · 悬停圆点看明细</span></div>
+<div class="cap"><span>官方 stars 159.5K · 插件总数 7.5K</span><span>22 期快照 · 悬停圆点看明细</span></div>
   </div>
 
   <h2>指标趋势</h2>
@@ -362,13 +384,13 @@ npm 131K · 8h+249
       <text x="10" y="101.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">0</text>
       
       
-      <rect x="3.9" y="33.4" width="8.1" height="70.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 98.4K</title></rect><rect x="18.1" y="33.4" width="8.1" height="70.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 98.4K</title></rect><rect x="32.3" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="46.5" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="60.7" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="74.9" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="89.1" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="103.3" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="117.5" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="131.7" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="145.9" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="160.1" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="174.3" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="188.5" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="202.7" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="216.9" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="231.1" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="245.3" y="21.6" width="8.1" height="82.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 114.8K</title></rect><rect x="259.5" y="21.6" width="8.1" height="82.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 114.8K</title></rect><rect x="273.7" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="287.9" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect>
+      <rect x="4.1" y="33.4" width="7.7" height="70.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 98.4K</title></rect><rect x="17.7" y="33.4" width="7.7" height="70.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 98.4K</title></rect><rect x="31.2" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="44.7" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="58.2" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="71.7" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="85.3" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="98.8" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="112.3" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 131K</title></rect><rect x="125.8" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="139.4" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="152.9" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="166.4" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="179.9" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="193.5" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="207.0" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="220.5" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="234.0" y="21.6" width="7.7" height="82.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 114.8K</title></rect><rect x="247.6" y="21.6" width="7.7" height="82.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 114.8K</title></rect><rect x="261.1" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="274.6" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect><rect x="288.1" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 131K</title></rect>
       <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
       <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
     </svg>
   </div>
     <div class="chart-card">
-    <div class="ct">8h 新增仓库 <span class="cv">249</span></div>
+    <div class="ct">8h 新增仓库 <span class="cv">230</span></div>
     <svg viewBox="0 0 300 120" role="img">
       <line x1="8" y1="10.0" x2="292" y2="10.0" stroke="var(--border)" stroke-width="0.5"/>
       <line x1="8" y1="104.0" x2="292" y2="104.0" stroke="var(--border)" stroke-width="0.5"/>
@@ -376,35 +398,35 @@ npm 131K · 8h+249
       <text x="10" y="101.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">0</text>
       
       
-      <rect x="3.9" y="10.0" width="8.1" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 646</title></rect><rect x="18.1" y="60.8" width="8.1" height="43.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 297</title></rect><rect x="32.3" y="80.7" width="8.1" height="23.3" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 160</title></rect><rect x="46.5" y="50.0" width="8.1" height="54.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 371</title></rect><rect x="60.7" y="50.6" width="8.1" height="53.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 367</title></rect><rect x="74.9" y="51.8" width="8.1" height="52.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 359</title></rect><rect x="89.1" y="58.6" width="8.1" height="45.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 312</title></rect><rect x="103.3" y="82.8" width="8.1" height="21.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 146</title></rect><rect x="117.5" y="89.9" width="8.1" height="14.1" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 97</title></rect><rect x="131.7" y="86.0" width="8.1" height="18.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 124</title></rect><rect x="145.9" y="79.6" width="8.1" height="24.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 168</title></rect><rect x="160.1" y="77.4" width="8.1" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="174.3" y="77.4" width="8.1" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="188.5" y="64.1" width="8.1" height="39.9" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 274</title></rect><rect x="202.7" y="64.0" width="8.1" height="40.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 275</title></rect><rect x="216.9" y="63.8" width="8.1" height="40.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 276</title></rect><rect x="231.1" y="64.1" width="8.1" height="39.9" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 274</title></rect><rect x="245.3" y="64.6" width="8.1" height="39.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 271</title></rect><rect x="259.5" y="64.6" width="8.1" height="39.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 271</title></rect><rect x="273.7" y="64.7" width="8.1" height="39.3" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 270</title></rect><rect x="287.9" y="67.8" width="8.1" height="36.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 249</title></rect>
+      <rect x="4.1" y="10.0" width="7.7" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 646</title></rect><rect x="17.7" y="60.8" width="7.7" height="43.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 297</title></rect><rect x="31.2" y="80.7" width="7.7" height="23.3" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 160</title></rect><rect x="44.7" y="50.0" width="7.7" height="54.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 371</title></rect><rect x="58.2" y="50.6" width="7.7" height="53.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 367</title></rect><rect x="71.7" y="51.8" width="7.7" height="52.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 359</title></rect><rect x="85.3" y="58.6" width="7.7" height="45.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 312</title></rect><rect x="98.8" y="82.8" width="7.7" height="21.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 146</title></rect><rect x="112.3" y="89.9" width="7.7" height="14.1" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 97</title></rect><rect x="125.8" y="86.0" width="7.7" height="18.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 124</title></rect><rect x="139.4" y="79.6" width="7.7" height="24.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 168</title></rect><rect x="152.9" y="77.4" width="7.7" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="166.4" y="77.4" width="7.7" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="179.9" y="64.1" width="7.7" height="39.9" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 274</title></rect><rect x="193.5" y="64.0" width="7.7" height="40.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 275</title></rect><rect x="207.0" y="63.8" width="7.7" height="40.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 276</title></rect><rect x="220.5" y="64.1" width="7.7" height="39.9" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 274</title></rect><rect x="234.0" y="64.6" width="7.7" height="39.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 271</title></rect><rect x="247.6" y="64.6" width="7.7" height="39.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 271</title></rect><rect x="261.1" y="64.7" width="7.7" height="39.3" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 270</title></rect><rect x="274.6" y="67.8" width="7.7" height="36.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 249</title></rect><rect x="288.1" y="70.5" width="7.7" height="33.5" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 230</title></rect>
       <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
       <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
     </svg>
   </div>
     <div class="chart-card">
-    <div class="ct">健康分 <span class="cv">87</span></div>
+    <div class="ct">健康分 <span class="cv">85</span></div>
     <svg viewBox="0 0 300 120" role="img">
       <line x1="8" y1="10.0" x2="292" y2="10.0" stroke="var(--border)" stroke-width="0.5"/>
       <line x1="8" y1="104.0" x2="292" y2="104.0" stroke="var(--border)" stroke-width="0.5"/>
       <text x="10" y="18.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">99</text>
       <text x="10" y="101.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">0</text>
       <line x1="8" y1="28.0" x2="292" y2="28.0" stroke="var(--border-strong)" stroke-width="0.6" stroke-dasharray="3 3"/>
-      <path d="M8.0,10.0 L22.2,10.0 L36.4,10.0 L50.6,10.0 L64.8,31.8 L79.0,21.4 L93.2,21.4 L107.4,28.0 L121.6,32.8 L135.8,30.9 L150.0,27.1 L164.2,26.1 L178.4,26.1 L192.6,21.4 L206.8,21.4 L221.0,21.4 L235.2,21.4 L249.4,21.4 L263.6,21.4 L277.8,21.4 L292.0,21.4" fill="none" stroke="var(--up)" stroke-width="1.6"/>
-      <circle cx="8.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="22.2" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="36.4" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="50.6" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="64.8" cy="31.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 76</title></circle><circle cx="79.0" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="93.2" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="107.4" cy="28.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 80</title></circle><circle cx="121.6" cy="32.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 75</title></circle><circle cx="135.8" cy="30.9" r="2.4" fill="var(--brand)"><title>2026-08-18: 77</title></circle><circle cx="150.0" cy="27.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 81</title></circle><circle cx="164.2" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="178.4" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="192.6" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="206.8" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="221.0" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="235.2" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="249.4" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="263.6" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="277.8" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="292.0" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle>
+      <path d="M8.0,10.0 L21.5,10.0 L35.0,10.0 L48.6,10.0 L62.1,31.8 L75.6,21.4 L89.1,21.4 L102.7,28.0 L116.2,32.8 L129.7,30.9 L143.2,27.1 L156.8,26.1 L170.3,26.1 L183.8,21.4 L197.3,21.4 L210.9,21.4 L224.4,21.4 L237.9,21.4 L251.4,21.4 L265.0,21.4 L278.5,21.4 L292.0,23.3" fill="none" stroke="var(--up)" stroke-width="1.6"/>
+      <circle cx="8.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="21.5" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="35.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="48.6" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="62.1" cy="31.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 76</title></circle><circle cx="75.6" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="89.1" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="102.7" cy="28.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 80</title></circle><circle cx="116.2" cy="32.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 75</title></circle><circle cx="129.7" cy="30.9" r="2.4" fill="var(--brand)"><title>2026-08-18: 77</title></circle><circle cx="143.2" cy="27.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 81</title></circle><circle cx="156.8" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="170.3" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="183.8" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="197.3" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="210.9" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="224.4" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="237.9" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="251.4" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="265.0" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="278.5" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="292.0" cy="23.3" r="2.4" fill="var(--brand)"><title>2026-08-18: 85</title></circle>
       <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
       <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
     </svg>
   </div>
     <div class="chart-card">
-    <div class="ct">插件总数 <span class="cv">7.4K</span></div>
+    <div class="ct">插件总数 <span class="cv">7.5K</span></div>
     <svg viewBox="0 0 300 120" role="img">
       <line x1="8" y1="10.0" x2="292" y2="10.0" stroke="var(--border)" stroke-width="0.5"/>
       <line x1="8" y1="104.0" x2="292" y2="104.0" stroke="var(--border)" stroke-width="0.5"/>
-      <text x="10" y="18.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">7.4K</text>
+      <text x="10" y="18.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">7.5K</text>
       <text x="10" y="101.0" text-anchor="start" fill="var(--text-3)" font-size="8.5" font-family="JetBrains Mono,monospace">0</text>
       
-      <path d="M8.0,33.6 L22.2,31.3 L36.4,30.5 L50.6,23.7 L64.8,19.6 L79.0,19.5 L93.2,18.7 L107.4,17.7 L121.6,17.5 L135.8,15.3 L150.0,14.3 L164.2,14.0 L178.4,14.0 L192.6,12.1 L206.8,12.1 L221.0,12.0 L235.2,13.0 L249.4,13.0 L263.6,13.0 L277.8,11.8 L292.0,10.0" fill="none" stroke="var(--brand)" stroke-width="1.6"/>
-      <circle cx="8.0" cy="33.6" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.5K</title></circle><circle cx="22.2" cy="31.3" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.7K</title></circle><circle cx="36.4" cy="30.5" r="2.4" fill="var(--brand)"><title>2026-08-17: 5.8K</title></circle><circle cx="50.6" cy="23.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.3K</title></circle><circle cx="64.8" cy="19.6" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="79.0" cy="19.5" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="93.2" cy="18.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.7K</title></circle><circle cx="107.4" cy="17.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="121.6" cy="17.5" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="135.8" cy="15.3" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="150.0" cy="14.3" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="164.2" cy="14.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="178.4" cy="14.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="192.6" cy="12.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="206.8" cy="12.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="221.0" cy="12.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="235.2" cy="13.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="249.4" cy="13.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="263.6" cy="13.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="277.8" cy="11.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="292.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.4K</title></circle>
+      <path d="M8.0,34.9 L21.5,32.7 L35.0,31.9 L48.6,25.2 L62.1,21.3 L75.6,21.1 L89.1,20.3 L102.7,19.4 L116.2,19.1 L129.7,17.0 L143.2,16.1 L156.8,15.8 L170.3,15.8 L183.8,13.9 L197.3,13.9 L210.9,13.8 L224.4,14.8 L237.9,14.8 L251.4,14.8 L265.0,13.6 L278.5,11.8 L292.0,10.0" fill="none" stroke="var(--brand)" stroke-width="1.6"/>
+      <circle cx="8.0" cy="34.9" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.5K</title></circle><circle cx="21.5" cy="32.7" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.7K</title></circle><circle cx="35.0" cy="31.9" r="2.4" fill="var(--brand)"><title>2026-08-17: 5.8K</title></circle><circle cx="48.6" cy="25.2" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.3K</title></circle><circle cx="62.1" cy="21.3" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="75.6" cy="21.1" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="89.1" cy="20.3" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.7K</title></circle><circle cx="102.7" cy="19.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="116.2" cy="19.1" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="129.7" cy="17.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="143.2" cy="16.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="156.8" cy="15.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="170.3" cy="15.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="183.8" cy="13.9" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="197.3" cy="13.9" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="210.9" cy="13.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="224.4" cy="14.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="237.9" cy="14.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="251.4" cy="14.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="265.0" cy="13.6" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="278.5" cy="11.8" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.4K</title></circle><circle cx="292.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.5K</title></circle>
       <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
       <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
     </svg>
@@ -416,9 +438,15 @@ npm 131K · 8h+249
     <div class="issues">
       
     <a class="issue" href="latest.html" style="text-decoration:none;color:inherit">
+      <div class="no">#022</div>
+      <div class="t"><b>2026-08-19 · 01:22 GMT+8</b><span>2026-08-18 · 官方 stars 159.5K · 8h 新增 230</span></div>
+      <div class="go">最新 ↗</div>
+    </a>
+
+    <a class="issue" href="0021_2026-08-18-2226_zh.html" style="text-decoration:none;color:inherit">
       <div class="no">#021</div>
       <div class="t"><b>2026-08-18 · 22:26 GMT+8</b><span>2026-08-18 · 官方 stars 158.6K · 8h 新增 249</span></div>
-      <div class="go">最新 ↗</div>
+      <div class="go">查看 →</div>
     </a>
 
     <a class="issue" href="0020_2026-08-18-1843_zh.html" style="text-decoration:none;color:inherit">
@@ -544,8 +572,8 @@ npm 131K · 8h+249
   </div>
 
   <footer>
-    <span>DSH·daily-pulse · 档案馆 · 21 期快照</span>
-    <span>数据源 GitHub Search API + npm registry · 2026-08-18 · 22:26</span>
+    <span>DSH·daily-pulse · 档案馆 · 22 期快照</span>
+    <span>数据源 GitHub Search API + npm registry · 2026-08-19 · 01:22</span>
   </footer>
 
 </div>
