@@ -39,10 +39,12 @@ export function isoDate(isoStr) {
   return (isoStr || '').slice(0, 10);
 }
 
-// —— 顶部品牌条 + 导航；nav=当前页（'daily' | 'index'），index 高亮「档案馆」——
-export function topbar(nav = 'daily') {
+// —— 顶部品牌条 + 导航；nav=当前页（'daily' | 'index'）；lang=en|zh；altFile=EN 按钮链接（缺省按 nav 推断）——
+export function topbar(nav = 'daily', lang = 'zh', altFile = '') {
   const item = (href, label, cur) =>
     `<a class="navi ${cur ? ' on' : ''}" href="${href}">${label}</a>`;
+  const zhHref = nav === 'index' ? 'index.html' : 'latest.html';
+  const enHref = altFile || (nav === 'index' ? 'index_en.html' : 'latest_en.html');
   return `
   <div class="topbar">
     <div class="brand">
@@ -51,21 +53,20 @@ export function topbar(nav = 'daily') {
     </div>
     <div class="controls">
       <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
-        ${item('index.html', '档案馆', nav === 'index')}
-        ${item('latest.html', '最新一期', nav === 'daily')}
+        ${item('index.html', lang === 'zh' ? '档案馆' : 'Archive', nav === 'index')}
+        ${item('latest.html', lang === 'zh' ? '最新一期' : 'Latest', nav === 'daily')}
       </nav>
       <div class="seg">
-        <span class="seg-lbl">语言</span>
-        <button class="seg-btn" data-lang="zh" aria-pressed="false">中文</button>
-        <button class="seg-btn" data-lang="en" aria-pressed="false">EN</button>
-        <button class="seg-btn" data-lang="bi" aria-pressed="true">双语</button>
+        <span class="seg-lbl">${lang === 'zh' ? '语言' : 'Lang'}</span>
+        <a class="seg-btn ${lang === 'zh' ? ' on' : ''}" href="${zhHref}" aria-pressed="${lang === 'zh'}">中文</a>
+        <a class="seg-btn ${lang === 'en' ? ' on' : ''}" href="${enHref}" aria-pressed="${lang === 'en'}">EN</a>
       </div>
       <div class="seg">
-        <span class="seg-lbl">配色</span>
+        <span class="seg-lbl">${lang === 'zh' ? '配色' : 'Accent'}</span>
         <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
         <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
       </div>
-      <button class="toggle" id="tg">切换为亮色</button>
+      <button class="toggle" id="tg">${lang === 'zh' ? '切换为亮色' : 'Light mode'}</button>
     </div>
   </div>`;
 }
@@ -196,9 +197,6 @@ export function CSS() {
   .factor .fbar i.up{background:var(--up)} .factor .fbar i.warn{background:var(--warn)} .factor .fbar i.down{background:var(--down)}
   .src-tag{font-size:11px; font-weight:600; color:var(--text-3); background:var(--bg-elev); border:1px solid var(--border); padding:2px 9px; border-radius:999px; text-transform:none; letter-spacing:0; margin-left:8px}
   .i18n{display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px}
-  :root[data-lang="bi"] .i18n{grid-template-columns:1fr 1fr}
-  [data-lang="zh"] .i18n-en{display:none}
-  [data-lang="en"] .i18n-zh{display:none}
   .i18n-zh,.i18n-en{background:var(--brand-soft); border:1px solid color-mix(in srgb,var(--brand) 30%, transparent); border-left:3px solid var(--brand); border-radius:10px; padding:15px 17px}
   .i18n-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; color:var(--brand-2); text-transform:uppercase; margin-bottom:7px}
   .i18n-zh p,.i18n-en p{margin:0; font-size:14.5px; color:var(--text-1); line-height:1.6}
@@ -241,7 +239,7 @@ export function scripts() {
     };}
     themeLabel();
     function bindSeg(attr, storeKey){
-      var btns=[].slice.call(document.querySelectorAll('[data-'+attr+']'));
+      var btns=[].slice.call(document.querySelectorAll('button[data-'+attr+']'));
       btns.forEach(function(b){
         b.onclick=function(){
           var val=b.dataset[attr];
@@ -251,7 +249,6 @@ export function scripts() {
         };
       });
     }
-    bindSeg('lang','dsh-lang');
     bindSeg('accent','dsh-accent');
   })();
 </script>`;

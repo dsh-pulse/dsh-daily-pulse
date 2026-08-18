@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * dsh-daily-pulse 渲染脚本（M0 基础版）
+ * dsh-daily-pulse 渲染脚本（M2b 双语版）
  *
- * 读取 store/latest.json，把真实数据填入日报 HTML（复用原型 dsh-daily-pulse.html 的
- * 设计系统 v0.2 令牌 + 组件结构，仅替换示意值为真实数据）。
- *
- * 输出：reports/<期号>_<北京时间>.html（单文件自包含）
- * 运行：node render.mjs
+ * 读取 store/latest.json，把真实数据填入日报 HTML（设计系统 v0.2 令牌 + 组件结构）。
+ * 支持 en / zh 双档（Q6 拍板：完整双语日报，URL 切换单语）：
+ *   node render.mjs --lang zh   → reports/<期号>_<时间戳>_zh.html
+ *   node render.mjs --lang en   → reports/<期号>_<时间戳>_en.html
+ *   node render.mjs             → 同 zh（latest.html 默认中文版，含语言切换器）
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -19,6 +19,17 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const STORE = join(__dirname, 'store');
 const REPORTS = join(__dirname, 'reports');
 mkdirSync(REPORTS, { recursive: true });
+
+// —— 语言参数（en / zh；默认 zh = latest.html 入口）——
+const langArg = process.argv.find((a) => a.startsWith('--lang=')) || process.argv[process.argv.indexOf('--lang') + 1];
+const LANG = (langArg === 'en' || langArg === 'zh') ? langArg : 'zh';
+const I18N = JSON.parse(readFileSync(join(__dirname, 'i18n.json'), 'utf8'));
+const t = I18N[LANG];
+// 分类标签英文映射（en 档用）
+const CAT_EN = { 视觉: 'Vision', 工作流: 'Workflow', 终端: 'Terminal', 其他: 'Other' };
+const catLabel = (c) => (LANG === 'en' ? CAT_EN[c] || c : CAT_LABEL[c] || c);
+// 数字格式化
+const nf = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
 
 const snap = JSON.parse(readFileSync(join(STORE, 'latest.json'), 'utf8'));
 
@@ -44,13 +55,13 @@ const stamp = cst(snap.generated_at);
 const windowStart = cst(snap.window_start).split(' · ')[1];
 const windowEnd = cst(snap.window_end).split(' · ')[1];
 
-// —— KPI 磁贴 ——
+// —— KPI 磁贴（M2b：i18n 文案）——
 const k = snap.kpis;
 const kpi = [
-  { label: '插件总数', value: (k.total_plugins ?? 0).toLocaleString('en-US'), delta: `▲ +${k.new_8h_repos}`, note: '/ 8h 新增 · 含 fork', tone: 'up' },
-  { label: '8h 新增仓库', value: k.new_8h_repos.toLocaleString('en-US'), delta: new8hDelta != null ? `${new8hDelta >= 0 ? '▲ +' : '▼ '}${Math.abs(new8hDelta)}` : '基线建立', note: new8hDelta != null ? 'vs 上期' : '首期快照', tone: new8hDelta != null && new8hDelta < 0 ? 'down' : 'warn' },
-  { label: '官方仓库 stars', value: k.official_stars.toLocaleString('en-US'), delta: `forks ${k.official_forks.toLocaleString('en-US')}`, note: '', tone: 'up' },
-  { label: 'npm 周下载', value: fmtNum(k.npm_weekly_downloads), delta: '@deepseek-ai/dsh', note: '过去 7 天', tone: 'up' },
+  { label: t.kpiTotal, value: nf(k.total_plugins), delta: `▲ +${k.new_8h_repos}`, note: t.kpiTotalNote, tone: 'up' },
+  { label: t.kpiNew8h, value: nf(k.new_8h_repos), delta: new8hDelta != null ? `${new8hDelta >= 0 ? '▲ +' : '▼ '}${Math.abs(new8hDelta)}` : t.kpiNew8hBase, note: new8hDelta != null ? t.kpiNew8hVs : t.kpiNew8hFirst, tone: new8hDelta != null && new8hDelta < 0 ? 'down' : 'warn' },
+  { label: t.kpiOfficial, value: nf(k.official_stars), delta: `forks ${nf(k.official_forks)}`, note: '', tone: 'up' },
+  { label: t.kpiNpm, value: fmtNum(k.npm_weekly_downloads), delta: '@deepseek-ai/dsh', note: t.kpiNpmNote, tone: 'up' },
 ].map((m) => `
     <div class="kpi"><div class="k">${m.label}</div><div class="v">${m.value}</div><div class="delta ${m.tone}">${m.delta}${m.note ? ` <span class="muted" style="font-weight:400">${m.note}</span>` : ''}</div></div>`).join('\n');
 
@@ -62,15 +73,15 @@ const board = boardData.map((r) => {
   const gain = r.delta != null ? r.delta : r.stars;
   const pct = Math.round((gain / maxGain) * 100);
   const top = r.rank <= 3 ? ' top' : '';
-  const gainTxt = r.delta != null ? `+${r.delta.toLocaleString('en-US')}` : `+${r.stars.toLocaleString('en-US')}`;
-  const scoreTxt = r.score != null ? ` · 可信 ${r.score}/5` : '';
+  const gainTxt = r.delta != null ? `+${nf(r.delta)}` : `+${nf(r.stars)}`;
+  const scoreTxt = r.score != null ? ` · ${t.boardTrust.replace('{n}', r.score)}` : '';
   const sub = (r.delta != null
-    ? `窗口增速 +${r.delta.toLocaleString('en-US')} · 累计 ${r.stars.toLocaleString('en-US')}★`
+    ? t.boardGain.replace('{n}', nf(r.delta)).replace('{m}', nf(r.stars))
     : (r.desc || '')) + scoreTxt;
   return `
     <div class="row">
       <div class="rank${top}">${String(r.rank).padStart(2, '0')}</div>
-      <div class="pname">${r.name} <small>${CAT_LABEL[r.category] || r.category}${sub ? ` · ${sub}` : ''}</small></div>
+      <div class="pname">${r.name} <small>${catLabel(r.category)}${sub ? ` · ${sub}` : ''}</small></div>
       <div class="gain">${gainTxt}</div>
     </div>
     <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:${pct}%"></i></div>`;
@@ -85,13 +96,15 @@ const activity = snap.official_activity.map((c) => {
     <div class="tl"><div class="t"><b>${mmdd}</b>${hhmm}</div><div class="c"><b>${c.msg}</b><p><span class="muted">${c.sha}</span></p></div></div>`;
 }).join('\n');
 
-// —— 健康分 ——
+// —— 健康分（M2b：i18n 文案）——
 const h = snap.health;
 const ringCls = h.score >= 80 ? '' : h.score >= 60 ? ' ring--brand' : ' ring--down';
-const bandTxt = h.score >= 80 ? '≥80 绿' : h.score >= 60 ? '60–79 蓝' : '<60 红';
-const staleNote = h.stale_7d > 0
-  ? `${h.stale_7d} 个仓库 7 天无提交，建议关注维护活跃度`
-  : '暂无 7 天无提交仓库';
+const zoneIdx = h.score >= 80 ? 0 : h.score >= 60 ? 1 : 2;
+const bandIdx = h.score >= 80 ? 0 : h.score >= 60 ? 1 : 2;
+const zoneTxt = t.healthZone[zoneIdx];
+const bandTxt = t.healthBand[bandIdx];
+const healthFactorLabel = { 活跃度: 'Activity', 新鲜度: 'Freshness', 采用度: 'Adoption', 多样性: 'Diversity' };
+const fLabel = (f) => (LANG === 'en' ? healthFactorLabel[f.label] || f.label : f.label);
 
 // —— 摘要（M2：DeepSeek AI 生成，summarize.mjs 写入 snap.summary；无则降级规则）——
 const sm = snap.summary || {};
@@ -101,104 +114,104 @@ const _ruleZh = `DSH 生态今日 8 小时新增 <b>${k.new_8h_repos}</b> 个插
 const _ruleEn = `DSH ecosystem added ${k.new_8h_repos} plugin repos in 8h; official repo now at ${k.official_stars.toLocaleString('en-US')} stars. Rookie leader: ${top1}. 7-day abandonment ${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}%.`;
 const summaryZh = sm.zh || _ruleZh;
 const summaryEn = sm.en || _ruleEn;
-const summarySource = sm.source === 'deepseek' ? 'AI 摘要' : sm.source === 'rule' ? '规则生成' : '规则生成';
+const summarySource = sm.source === 'deepseek' ? t.summaryAi : t.summaryRule;
 const summaryModel = sm.model || '';
+// 本档语言对应的摘要（en 档 → en 摘要；zh 档 → zh 摘要）
+const summaryText = LANG === 'en' ? summaryEn : summaryZh;
+const summaryTag = LANG === 'en' ? t.summaryEnTag : t.summaryZhTag;
 
 // —— JSON-LD（GEO 结构化数据，对齐设计系统 §11 data-mode="structured"）——
 const jsonLd = JSON.stringify(buildDatasetJsonLd(snap, issueNo)).replace(/</g, '\\u003c');
 
+// 输出文件名 + 语言切换链接（zh 页 → 同期 en 文件；en 页 EN 按钮指向自身、中文按钮指 latest.html）
+const fname = `${String(issueNo).padStart(4, '0')}_${stamp.replace(/\s*·\s*/g, '-').replace(/:/g, '')}_${LANG}.html`;
+const altFile = LANG === 'zh' ? fname.replace('_zh.html', '_en.html') : fname;
+
 const html = `<!doctype html>
-<html lang="zh-CN">
-${head(`DSH·daily-pulse · 第 ${issueNo} 期 · ${stamp}`)}
+<html lang="${LANG === 'en' ? 'en' : 'zh-CN'}">
+${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.metaIssue.replace('{n}', issueNo)} · ${stamp}`)}
 <script type="application/ld+json">${jsonLd}</script>
 <style>${CSS()}</style>
 </head>
 <body>
 <div class="wrap">
 
-  ${topbar('daily')}
+  ${topbar('daily', LANG, altFile)}
 
   <section class="hero">
-    <div class="kicker">Daily Pulse</div>
-    <h1>DSH 生态日报</h1>
-    <div class="sub">每天三次，1 分钟读懂 DSH 生态的脉搏。</div>
+    <div class="kicker">${t.kicker}</div>
+    <h1>${t.title}</h1>
+    <div class="sub">${t.sub}</div>
     <div class="meta">
       <span><span class="dot"></span><b>${stamp}</b> GMT+8</span>
-      <span>第 <b>${issueNo}</b> 期</span>
-      <span>采集窗口 <b>${windowStart} – ${windowEnd}</b></span>
-      <span>数据源 <b>GitHub API · npm</b></span>
+      <span>${t.metaIssue.replace('{n}', `<b>${issueNo}</b>`)}</span>
+      <span>${t.metaWindow} <b>${windowStart} – ${windowEnd}</b></span>
+      <span>${t.metaSource} <b>GitHub API · npm</b></span>
     </div>
   </section>
 
-  <h2>生态快照</h2>
+  <h2>${t.h2Kpi}</h2>
   <div class="kpi-row">${kpi}
   </div>
 
-  <h2>${growthMode ? `star 增速爆发榜 · Top ${snap.growth.length}` : `新秀爆发榜 · Top ${snap.leaderboard.length}`}</h2>
+  <h2>${growthMode ? t.h2Board.replace('{n}', snap.growth.length) : t.h2BoardRookie.replace('{n}', snap.leaderboard.length)}</h2>
   <div class="board">${board}
   </div>
   <div class="chips">
-    <span class="cat v">蓝 = 视觉类 (Vision / Web UI)</span>
-    <span class="cat w">紫 = 工作流 (Workflow / Skills)</span>
-    <span class="cat t">绿 = 终端类 (Terminal / Memory / Browser)</span>
-    <span class="cat n">灰 = 中性（无明确分类）</span>
+    ${t.boardCharts.map((c, i) => `<span class="cat ${['v', 'w', 't', 'n'][i]}">${c}</span>`).join('\n    ')}
   </div>
 
-  <h2>官方动态</h2>
+  <h2>${t.h2Activity}</h2>
   <div class="timeline">${activity}
   </div>
 
-  <h2>健康分 & 沉寂预警</h2>
+  <h2>${t.h2Health}</h2>
   <div class="two">
     <div class="card">
-      <div class="ct">生态健康分</div>
+      <div class="ct">${t.healthRing}</div>
       <div class="health">
         <div class="ring${ringCls}" style="--p:${h.score}"><i>${h.score}</i></div>
-        <div class="note">当前 <b style="color:var(--brand)">${h.score} / 100</b>，${h.score >= 80 ? '「健康扩张」区间' : h.score >= 60 ? '「稳定扩张」区间' : '「需关注」区间'}（${bandTxt}）。<br><span class="muted">M2 全量计分制：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20。</span></div>
+        <div class="note">${t.healthNow.replace('{n}', `<b style="color:var(--brand)">${h.score} / 100</b>`)}，${zoneTxt}（${bandTxt}）。<br><span class="muted">${t.healthMethod}</span></div>
       </div>
       ${h.factors ? `
       <div class="factors">
         ${Object.values(h.factors).map((f) => {
           const pct = Math.round((f.score / f.max) * 100);
           const tone = pct >= 75 ? 'up' : pct >= 40 ? 'warn' : 'down';
-          return `<div class="factor"><span class="fl">${f.label}<small>${f.note}</small></span><span class="fv ${tone}">${f.score}/${f.max}</span><div class="fbar"><i style="width:${pct}%" class="${tone}"></i></div></div>`;
+          return `<div class="factor"><span class="fl">${fLabel(f)}<small>${f.note}</small></span><span class="fv ${tone}">${f.score}/${f.max}</span><div class="fbar"><i style="width:${pct}%" class="${tone}"></i></div></div>`;
         }).join('')}
       </div>` : ''}
     </div>
     <div class="card">
-      <div class="ct">沉寂预警</div>
+      <div class="ct">${t.healthWarnTitle}</div>
       <div class="warnlist">
-        <div class="wl"><span class="ic ${h.stale_7d > 0 ? 'warn' : 'down'}"></span><b>${h.stale_7d}</b><span>个仓库 7 天无提交（${((h.stale_7d / h.total_tracked) * 100).toFixed(1)}% 弃养率）</span></div>
-        <div class="wl"><span class="ic warn"></span><b>${h.stale_1d.toLocaleString('en-US')}</b><span>个仓库近 24h 无更新（占 ${((h.stale_1d / h.total_tracked) * 100).toFixed(0)}%）</span></div>
-        <div class="wl"><span class="ic down"></span><b>${h.total_tracked.toLocaleString('en-US')}</b><span>个仓库纳入追踪（topic:dsh-plugin, 排除 fork）</span></div>
+        <div class="wl"><span class="ic ${h.stale_7d > 0 ? 'warn' : 'down'}"></span><b>${nf(h.stale_7d)}</b><span>${t.healthStale7d.replace('{p}', ((h.stale_7d / h.total_tracked) * 100).toFixed(1))}</span></div>
+        <div class="wl"><span class="ic warn"></span><b>${nf(h.stale_1d)}</b><span>${t.healthStale1d.replace('{p}', ((h.stale_1d / h.total_tracked) * 100).toFixed(0))}</span></div>
+        <div class="wl"><span class="ic down"></span><b>${nf(h.total_tracked)}</b><span>${t.healthTracked}</span></div>
       </div>
     </div>
   </div>
 
-  <h2>今日摘要 <span class="src-tag">${summarySource}${summaryModel ? ` · ${summaryModel}` : ''}</span></h2>
+  <h2>${t.h2Summary} <span class="src-tag">${summarySource}${summaryModel ? ` · ${summaryModel}` : ''}</span></h2>
   <div class="i18n">
-    <div class="i18n-zh">
-      <span class="i18n-tag">中文</span>
-      <p>${summaryZh}</p>
-    </div>
-    <div class="i18n-en">
-      <span class="i18n-tag">EN · GEO</span>
-      <p>${summaryEn}</p>
+    <div class="i18n-${LANG}">
+      <span class="i18n-tag">${summaryTag}</span>
+      <p>${summaryText}</p>
     </div>
   </div>
 
-  <h2>生态档案馆</h2>
+  <h2>${t.h2Archive}</h2>
   <div class="archive">
     <div class="head">
-      <b>官方 stars & 插件总数 · 历史曲线（${historyRows.length} 期）</b>
-      <a href="index.html">查看完整历史 →</a>
+      <b>${t.archiveHead.replace('{n}', historyRows.length)}</b>
+      <a href="index.html">${t.archiveLink}</a>
     </div>
-    ${historyRows.length >= 1 ? historyChart(historyRows) : '首期快照 · 历史曲线自第 2 期起累积'}
+    ${historyRows.length >= 1 ? historyChart(historyRows) : t.archiveFirst}
   </div>
 
   <footer>
-    <span>DSH·daily-pulse · 第 ${issueNo} 期 · 真实采集数据</span>
-    <span>数据源 GitHub Search API + npm registry · 生成于 ${stamp}</span>
+    <span>${t.footer1.replace('{n}', issueNo)}</span>
+    <span>${t.footer2.replace('{t}', stamp)}</span>
   </footer>
 
 </div>
@@ -208,10 +221,10 @@ ${scripts()}
 </html>
 `;
 
-const fname = `${String(issueNo).padStart(4, '0')}_${stamp.replace(/\s*·\s*/g, '-').replace(/:/g, '')}.html`;
 writeFileSync(join(REPORTS, fname), html);
-writeFileSync(join(REPORTS, 'latest.html'), html); // 稳定入口，供首页「最新一期」引用
-console.log(`[render] 日报已生成 → reports/${fname}`);
+// latest.html = 默认中文版入口（含语言切换器）；en 档单独落盘
+if (LANG === 'zh') writeFileSync(join(REPORTS, 'latest.html'), html);
+console.log(`[render] 日报已生成 → reports/${fname} (lang=${LANG})`);
 console.log(`  期号 ${issueNo} · ${stamp} GMT+8`);
 console.log(`  KPIs: 插件 ${k.total_plugins} / 8h新增 ${k.new_8h_repos} / 官方 ${k.official_stars}★ / npm周下载 ${fmtNum(k.npm_weekly_downloads)}`);
 

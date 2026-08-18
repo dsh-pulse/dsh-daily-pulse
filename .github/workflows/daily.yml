@@ -38,11 +38,17 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
 
-      - name: 渲染单期日报
-        run: node render.mjs
+      - name: 渲染单期日报（中文档）
+        run: node render.mjs --lang zh
 
-      - name: 渲染档案馆首页
-        run: node render-index.mjs
+      - name: 渲染单期日报（英文档）
+        run: node render.mjs --lang en
+
+      - name: 渲染档案馆首页（中文）
+        run: node render-index.mjs --lang zh
+
+      - name: 渲染档案馆首页（英文）
+        run: node render-index.mjs --lang en
 
       - name: 渲染结构化输出（JSON-LD + 英文正文，GEO 引用源）
         run: node render-structured.mjs

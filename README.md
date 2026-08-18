@@ -18,8 +18,8 @@ DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次�
 dsh-daily-pulse/
 ├── collect.mjs         # 采集：topics 页官方计数 + Search 计数 + 官方仓库 + npm + 新秀榜 + 差分增速榜 + 蹭标签计分
 ├── bootstrap.mjs       # 一次性：首次按 star 抓前 1000 建历史库 → store/repos.jsonl（护城河数据集根基）
-├── render.mjs          # 渲染单期日报 → reports/<期号>_<时间>.html + latest.html
-├── render-index.mjs    # 渲染档案馆首页 → reports/index.html（历史曲线 + 全量期号）
+├── render.mjs          # 渲染单期日报（双语：--lang zh|en）→ reports/<期号>_<时间>_zh/_en.html + latest.html
+├── render-index.mjs    # 渲染档案馆首页（双语）→ reports/index.html + index_en.html
 ├── render-structured.mjs # 渲染结构化输出 → reports/structured/（JSON-LD + 英文正文，GEO 引用源）
 ├── tokens.mjs          # 设计系统 v0.2 令牌模块（三层令牌 + 组件 CSS + 图表，单文件可交付）
 ├── dsh-daily-pulse.html# 高保真设计原型（设计系统 v0.2 演示）
@@ -39,12 +39,15 @@ dsh-daily-pulse/
 node bootstrap.mjs
 # 1) GitHub 认证（Search API 配额：认证 30 次/分钟，足够本脚本 ~15 次调用）
 gh auth login
-# 2) 采集 → 渲染 → 档案馆 → 结构化
+# 2) 采集 → 渲染（中英双档）→ 档案馆 → 结构化
 node collect.mjs
-node render.mjs
-node render-index.mjs
+node render.mjs --lang zh
+node render.mjs --lang en
+node render-index.mjs --lang zh
+node render-index.mjs --lang en
 node render-structured.mjs
-# 3) 打开 reports/latest.html / reports/index.html
+# 3) 打开 reports/latest.html（中文默认）/ latest 的 EN 切换 / reports/index_en.html
+#    M2b：每天 3 采集时点 × 中英双档 = 6 期（Q6 拍板）
 ```
 
 > 也可用 `GITHUB_TOKEN` 环境变量替代 `gh` 认证（CI 里即走此路）。
