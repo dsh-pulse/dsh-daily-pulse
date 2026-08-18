@@ -24,6 +24,7 @@ const langArg = langEq ? langEq.split('=')[1] : process.argv[process.argv.indexO
 const LANG = (langArg === 'en' || langArg === 'zh') ? langArg : 'zh';
 const I18N = JSON.parse(readFileSync(join(__dirname, 'i18n.json'), 'utf8'));
 const t = I18N[LANG];
+
 const STORE = join(__dirname, 'store');
 const REPORTS = join(__dirname, 'reports');
 mkdirSync(REPORTS, { recursive: true });
@@ -32,6 +33,26 @@ mkdirSync(REPORTS, { recursive: true });
 const lines = readFileSync(join(STORE, 'snapshots.jsonl'), 'utf8').trim().split('\n').filter(Boolean);
 const snaps = lines.map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean)
   .sort((a, b) => new Date(a.generated_at) - new Date(b.generated_at));
+
+// —— npm 日下载动态序列（range API；快照缺 npm_daily 时兜底，避免历史平直线）——
+let npmDailyMap = new Map();
+try {
+  const firstDay = snaps.length ? snaps[0].generated_at.slice(0, 10) : '2026-08-13';
+  const lastDay = snaps.length ? snaps[snaps.length - 1].generated_at.slice(0, 10) : new Date().toISOString().slice(0, 10);
+  const nr = await fetch(`https://api.npmjs.org/downloads/range/${firstDay}:${lastDay}/@deepseek-ai/dsh`);
+  if (nr.ok) {
+    const nj = await nr.json();
+    npmDailyMap = new Map((nj.downloads || []).map((d) => [d.day, d.downloads]));
+  }
+} catch { /* 网络失败则依赖快照字段 */ }
+const npmDailyOf = (s) => {
+  const k = s.kpis || {};
+  if (k.npm_daily && k.npm_daily > 0) return k.npm_daily;
+  const day = (s.generated_at || '').slice(0, 10);
+  const v = npmDailyMap.get(day);
+  if (v && v > 0) return v;
+  return k.npm_weekly_downloads ?? null;
+};
 
 const total = snaps.length;
 const first = snaps[0];
@@ -43,7 +64,7 @@ const rows = snaps.map((s) => ({
   date: s.generated_at,
   stars: (s.kpis && s.kpis.official_stars) || 0,
   total: (s.kpis && s.kpis.total_plugins) || 0,
-  npm: (s.kpis && s.kpis.npm_daily) ?? (s.kpis && s.kpis.npm_weekly_downloads) ?? null,
+  npm: npmDailyOf(s),
   new8h: (s.kpis && s.kpis.new_8h_repos) ?? null,
   health: (s.health && s.health.score) ?? null,
 }));
