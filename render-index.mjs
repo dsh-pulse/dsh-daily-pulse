@@ -14,7 +14,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { CSS, head, topbar, scripts, historyChart, fmtNum, cst, isoDate } from './tokens.mjs';
+import { CSS, head, topbar, scripts, historyChart, dualAxisChart, miniChart, fmtNum, cst, isoDate } from './tokens.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -42,6 +42,9 @@ const rows = snaps.map((s) => ({
   date: s.generated_at,
   stars: (s.kpis && s.kpis.official_stars) || 0,
   total: (s.kpis && s.kpis.total_plugins) || 0,
+  npm: (s.kpis && s.kpis.npm_weekly_downloads) ?? null,
+  new8h: (s.kpis && s.kpis.new_8h_repos) ?? null,
+  health: (s.health && s.health.score) ?? null,
 }));
 
 // —— 期号列表 ——
@@ -117,13 +120,21 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive · ' + total + ' issues' 
     <div class="kpi"><div class="k">${LANG === 'zh' ? '最新 8h 新增' : 'New repos (8h)'}</div><div class="v">${fmtNum(latestK ? latestK.new_8h_repos : 0)}</div><div class="delta up">${LANG === 'zh' ? '仓库' : 'repos'}</div></div>
   </div>
 
-  <h2>${LANG === 'zh' ? '历史曲线' : 'History'}</h2>
+  <h2>${LANG === 'zh' ? '历史曲线（双轴）' : 'History (dual-axis)'}</h2>
   <div class="archive">
     <div class="head">
-      <b>${LANG === 'zh' ? '官方 stars（实线） & 插件总数（虚线）' : 'Official stars (solid) & plugin totals (dashed)'}</b>
+      <b>${LANG === 'zh' ? '官方 stars（左轴实线） & 插件总数（右轴虚线）' : 'Official stars (left, solid) & plugins (right, dashed)'}</b>
       <a href="latest.html">${LANG === 'zh' ? '最新一期 →' : 'Latest issue →'}</a>
     </div>
-    ${historyChart(rows, 620, 170, LANG)}
+    ${dualAxisChart(rows, 660, 250, LANG)}
+  </div>
+
+  <h2>${LANG === 'zh' ? '指标趋势' : 'Metric Trends'}</h2>
+  <div class="chart-grid">
+    ${miniChart(rows, 'npm', LANG === 'zh' ? 'npm 周下载' : 'npm weekly', 'area', 300, 120, LANG)}
+    ${miniChart(rows, 'new8h', LANG === 'zh' ? '8h 新增仓库' : 'New repos (8h)', 'bar', 300, 120, LANG)}
+    ${miniChart(rows, 'health', LANG === 'zh' ? '健康分' : 'Health score', 'area', 300, 120, LANG)}
+    ${miniChart(rows, 'total', LANG === 'zh' ? '插件总数' : 'Plugins', 'area', 300, 120, LANG)}
   </div>
 
   <h2>${LANG === 'zh' ? '全部期号' : 'All Issues'}</h2>

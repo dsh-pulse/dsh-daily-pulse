@@ -215,6 +215,12 @@ export function CSS() {
   .issue .t span{font-size:12.5px; color:var(--text-3)}
   .issue .go{color:var(--brand-2); font-size:13px; font-weight:600}
   .issue:hover{background:var(--bg-elev)}
+  .chart-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px}
+  .chart-card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:16px 16px 12px; box-shadow:var(--shadow-sm)}
+  .chart-card .ct{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px}
+  .chart-card .cv{font-size:17px; font-weight:800; color:var(--text-1); font-family:"JetBrains Mono",ui-monospace,monospace; letter-spacing:0}
+  .dac{width:100%; height:250px; display:block}
+  @media (max-width:680px){ .chart-grid{grid-template-columns:1fr} .dac{height:200px} }
   footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
   @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
 `;
@@ -298,4 +304,134 @@ export function historyChart(rows, w = 620, h = 170, lang = 'zh') {
   <text x="${x(data.length - 1).toFixed(1)}" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">${isoDate(last.date)}</text>
 </svg>
 <div class="cap"><span>${lang === 'en' ? 'Official stars' : '官方 stars'} ${fmtNum(last.stars)} · ${lang === 'en' ? 'plugins' : '插件总数'} ${fmtNum(last.total)}</span><span>${data.length} ${lang === 'en' ? 'snapshots' : '期快照'}</span></div>`;
+}
+
+// ═══════════════ M3 可视化增强：双 y 轴主图 + 指标迷你图 ═══════════════
+
+/** 生成均匀刻度（min/max 之间 n+1 个值，自动取整到 1/2/5×10^k） */
+function niceTicks(min, max, n = 4) {
+  if (max === min) return [min];
+  const range = max - min;
+  const step = range / n;
+  const mag = Math.pow(10, Math.floor(Math.log10(step)));
+  const norm = step / mag;
+  const nice = (norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10) * mag;
+  const lo = Math.floor(min / nice) * nice;
+  const hi = Math.ceil(max / nice) * nice;
+  const out = [];
+  for (let v = lo; v <= hi + 1e-9; v += nice) out.push(v);
+  return out;
+}
+
+/**
+ * 双 y 轴主图：左轴官方 stars（实线·品牌蓝）+ 右轴插件总数（虚线·绿）。
+ * 每点带 <title> hover tooltip（显示该期全部关键指标）。
+ */
+export function dualAxisChart(rows, w = 660, h = 250, lang = 'zh') {
+  if (!rows || rows.length < 1) return '';
+  const data = rows.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  const pad = { l: 52, r: 52, t: 16, b: 26 };
+  const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+  const x = (i) => pad.l + (data.length === 1 ? iw / 2 : (i / (data.length - 1)) * iw);
+  const yFor = (arr) => {
+    const min = Math.min(...arr), max = Math.max(...arr);
+    const range = max - min || 1;
+    return (v) => pad.t + ((max - v) / range) * ih;
+  };
+  const ys = yFor(data.map((d) => d.stars));
+  const yt = yFor(data.map((d) => d.total));
+
+  const line = (fn, acc) => data.map((d, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${fn(acc(d)).toFixed(1)}`).join(' ');
+  const area = (fn, acc) => `${line(fn, acc)} L${x(data.length - 1).toFixed(1)},${(pad.t + ih).toFixed(1)} L${x(0).toFixed(1)},${(pad.t + ih).toFixed(1)} Z`;
+
+  // 轴刻度文本
+  const ticksS = niceTicks(Math.min(...data.map((d) => d.stars)), Math.max(...data.map((d) => d.stars)));
+  const ticksT = niceTicks(Math.min(...data.map((d) => d.total)), Math.max(...data.map((d) => d.total)));
+  const axisL = ticksS.map((v) => `<text x="${pad.l - 6}" y="${(ys(v) + 3.5).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">${fmtNum(v)}</text>`).join('');
+  const axisR = ticksT.map((v) => `<text x="${pad.l + iw + 6}" y="${(yt(v) + 3.5).toFixed(1)}" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">${fmtNum(v)}</text>`).join('');
+  // 水平网格线（左轴刻度处，细线）
+  const grid = ticksS.map((v) => `<line x1="${pad.l}" y1="${ys(v).toFixed(1)}" x2="${pad.l + iw}" y2="${ys(v).toFixed(1)}" stroke="var(--border)" stroke-width="0.5"/>`).join('');
+
+  // 每点 tooltip + 圆点
+  const pts = data.map((d, i) => {
+    const tip = lang === 'en'
+      ? `Issue ${i + 1} · ${isoDate(d.date)}\nStars ${fmtNum(d.stars)} · Plugins ${fmtNum(d.total)}${d.npm != null ? `\nnpm ${fmtNum(d.npm)} · 8h+${d.new8h}` : ''}${d.health != null ? `\nHealth ${d.health}/100` : ''}`
+      : `第 ${i + 1} 期 · ${isoDate(d.date)}\nStars ${fmtNum(d.stars)} · 插件 ${fmtNum(d.total)}${d.npm != null ? `\nnpm ${fmtNum(d.npm)} · 8h+${d.new8h}` : ''}${d.health != null ? `\n健康分 ${d.health}/100` : ''}`;
+    return `<circle cx="${x(i).toFixed(1)}" cy="${ys(d.stars).toFixed(1)}" r="2.6" fill="var(--brand)"><title>${tip}</title></circle>`;
+  }).join('');
+
+  const last = data[data.length - 1];
+  const L = lang === 'en' ? { s: 'Official stars', t: 'Plugins', cap: `Official stars ${fmtNum(last.stars)} · Plugins ${fmtNum(last.total)}` } : { s: '官方 stars', t: '插件总数', cap: `官方 stars ${fmtNum(last.stars)} · 插件总数 ${fmtNum(last.total)}` };
+
+  return `<svg class="dac" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="history">
+  <defs>
+    <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  ${grid}
+  ${axisL}
+  ${axisR}
+  <path d="${area(ys, (d) => d.stars)}" fill="url(#fillA)"/>
+  <path d="${line(ys, (d) => d.stars)}" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="${line(yt, (d) => d.total)}" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+  ${pts}
+  <text x="${pad.l}" y="162" text-anchor="start" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">${isoDate(data[0].date)}</text>
+  <text x="${pad.l + iw}" y="162" text-anchor="end" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">${isoDate(last.date)}</text>
+  <text x="${pad.l}" y="152" text-anchor="start" font-size="10" fill="var(--brand-2)" font-family="JetBrains Mono,monospace">${L.s} ▬</text>
+  <text x="${pad.l + iw}" y="152" text-anchor="end" font-size="10" fill="var(--up)" font-family="JetBrains Mono,monospace">${L.t} ┄┄</text>
+</svg>
+<div class="cap"><span>${L.cap}</span><span>${data.length} ${lang === 'en' ? 'snapshots' : '期快照'} · ${lang === 'en' ? 'hover a point' : '悬停圆点看明细'}</span></div>`;
+}
+
+/** 单指标迷你图（独立 y 轴）：key = 'npm'|'new8h'|'health'|'total'；kind = 'area'|'bar' */
+export function miniChart(rows, key, label, kind = 'area', w = 300, h = 120, lang = 'zh') {
+  if (!rows || rows.length < 1) return '';
+  const data = rows.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  const acc = (d) => {
+    if (key === 'npm') return d.npm ?? 0;
+    if (key === 'new8h') return d.new8h ?? 0;
+    if (key === 'health') return d.health ?? 0;
+    return d.total ?? 0;
+  };
+  const vals = data.map(acc);
+  const last = vals[vals.length - 1];
+  const pad = { l: 8, r: 8, t: 10, b: 16 };
+  const iw = w - pad.l - pad.r, ih = h - pad.t - pad.b;
+  const x = (i) => pad.l + (data.length === 1 ? iw / 2 : (i / (data.length - 1)) * iw);
+  const yFor = () => {
+    const min = Math.min(...vals, 0), max = Math.max(...vals, 1);
+    const range = max - min || 1;
+    return (v) => pad.t + ((max - v) / range) * ih;
+  };
+  const y = yFor();
+  const bw = Math.max(2, Math.min(10, (iw / data.length) * 0.6));
+
+  const bars = kind === 'bar'
+    ? data.map((d, i) => {
+        const v = acc(d);
+        const yv = y(v), y0 = y(0);
+        const tip = lang === 'en' ? `${isoDate(d.date)}: ${fmtNum(v)}` : `${isoDate(d.date)}: ${fmtNum(v)}`;
+        return `<rect x="${(x(i) - bw / 2).toFixed(1)}" y="${yv.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, y0 - yv).toFixed(1)}" rx="1.5" fill="var(--warn)" opacity="0.85"><title>${tip}</title></rect>`;
+      }).join('')
+    : data.map((d, i) => {
+        const v = acc(d);
+        const tip = lang === 'en' ? `${isoDate(d.date)}: ${fmtNum(v)}` : `${isoDate(d.date)}: ${fmtNum(v)}`;
+        return `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="2.4" fill="var(--brand)"><title>${tip}</title></circle>`;
+      }).join('');
+  const lineP = kind === 'bar' ? '' : `<path d="${data.map((d, i) => `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(acc(d)).toFixed(1)}`).join(' ')}" fill="none" stroke="${key === 'health' ? 'var(--up)' : 'var(--brand)'}" stroke-width="1.6" vector-effect="non-scaling-stroke"/>`;
+  // 健康分 0-100 参考线
+  const ref = key === 'health' ? `<line x1="${pad.l}" y1="${y(80).toFixed(1)}" x2="${pad.l + iw}" y2="${y(80).toFixed(1)}" stroke="var(--border-strong)" stroke-width="0.6" stroke-dasharray="3 3"/>` : '';
+
+  return `<div class="chart-card">
+    <div class="ct">${label} <span class="cv">${fmtNum(last)}</span></div>
+    <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img">
+      ${ref}
+      ${lineP}
+      ${bars}
+      <text x="${pad.l}" y="${h - 4}" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">${isoDate(data[0].date)}</text>
+      <text x="${pad.l + iw}" y="${h - 4}" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">${isoDate(data[data.length - 1].date)}</text>
+    </svg>
+  </div>`;
 }
