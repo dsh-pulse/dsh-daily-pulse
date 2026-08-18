@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="DSH plugin ecosystem archive - full historical timeline." />
 <meta name="generator" content="dsh-daily-pulse" />
-<title>DSH·daily-pulse · Archive · 14 issues</title>
+<title>DSH·daily-pulse · Archive · 15 issues</title>
 <script>
   (function(){try{
     var t=localStorage.getItem('dsh-theme');
@@ -139,6 +139,12 @@
   .issue .t span{font-size:12.5px; color:var(--text-3)}
   .issue .go{color:var(--brand-2); font-size:13px; font-weight:600}
   .issue:hover{background:var(--bg-elev)}
+  .chart-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px}
+  .chart-card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:16px 16px 12px; box-shadow:var(--shadow-sm)}
+  .chart-card .ct{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px}
+  .chart-card .cv{font-size:17px; font-weight:800; color:var(--text-1); font-family:"JetBrains Mono",ui-monospace,monospace; letter-spacing:0}
+  .dac{width:100%; height:250px; display:block}
+  @media (max-width:680px){ .chart-grid{grid-template-columns:1fr} .dac{height:200px} }
   footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
   @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
 </style>
@@ -174,9 +180,9 @@
   <section class="hero">
     <div class="kicker">Archive</div>
     <h1>DSH Ecosystem Archive</h1>
-    <div class="sub">Every collection is a snapshot — 14 issues × ~8h, a full timeline of the ecosystem.</div>
+    <div class="sub">Every collection is a snapshot — 15 issues × ~8h, a full timeline of the ecosystem.</div>
     <div class="meta">
-      <span><span class="dot"></span><b>14</b> snapshots</span>
+      <span><span class="dot"></span><b>15</b> snapshots</span>
       <span>Coverage <b>3</b> days</span>
       <span>Latest <b>156.6K</b> ★ · <b>7.2K</b> plugins</span>
       <span>Sources <b>GitHub API · npm</b></span>
@@ -185,37 +191,127 @@
 
   <h2>Overview</h2>
   <div class="kpi-row">
-    <div class="kpi"><div class="k">Snapshots</div><div class="v">14</div><div class="delta up">3 days</div></div>
+    <div class="kpi"><div class="k">Snapshots</div><div class="v">15</div><div class="delta up">3 days</div></div>
     <div class="kpi"><div class="k">Official stars · latest</div><div class="v">156.6K</div><div class="delta up">fans</div></div>
     <div class="kpi"><div class="k">Plugins · latest</div><div class="v">7.2K</div><div class="delta up">tracked</div></div>
-    <div class="kpi"><div class="k">New repos (8h)</div><div class="v">274</div><div class="delta up">repos</div></div>
+    <div class="kpi"><div class="k">New repos (8h)</div><div class="v">275</div><div class="delta up">repos</div></div>
   </div>
 
-  <h2>History</h2>
+  <h2>History (dual-axis)</h2>
   <div class="archive">
     <div class="head">
-      <b>Official stars (solid) & plugin totals (dashed)</b>
+      <b>Official stars (left, solid) & plugins (right, dashed)</b>
       <a href="latest.html">Latest issue →</a>
     </div>
-    <svg class="spark" viewBox="0 0 620 170" preserveAspectRatio="none" role="img" aria-label="Official stars & plugin totals history">
+    <svg class="dac" viewBox="0 0 660 250" preserveAspectRatio="none" role="img" aria-label="history">
   <defs>
     <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="fillB" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="var(--up)" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
-    </linearGradient>
   </defs>
-  <path d="M10.0,148.0 L56.2,141.1 L102.3,130.5 L148.5,77.1 L194.6,60.2 L240.8,59.0 L286.9,55.0 L333.1,49.2 L379.2,47.9 L425.4,30.5 L471.5,25.7 L517.7,23.8 L563.8,23.7 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
-  <path d="M10.0,148.0 L56.2,141.1 L102.3,130.5 L148.5,77.1 L194.6,60.2 L240.8,59.0 L286.9,55.0 L333.1,49.2 L379.2,47.9 L425.4,30.5 L471.5,25.7 L517.7,23.8 L563.8,23.7 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
-  <path d="M10.0,148.0 L56.2,133.9 L102.3,129.0 L148.5,86.5 L194.6,61.1 L240.8,60.0 L286.9,55.0 L333.1,49.0 L379.2,47.5 L425.4,33.7 L471.5,28.0 L517.7,26.0 L563.8,26.0 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
-  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="56.2" cy="141.1" r="2.2" fill="var(--brand)"/><circle cx="102.3" cy="130.5" r="2.2" fill="var(--brand)"/><circle cx="148.5" cy="77.1" r="2.2" fill="var(--brand)"/><circle cx="194.6" cy="60.2" r="2.2" fill="var(--brand)"/><circle cx="240.8" cy="59.0" r="2.2" fill="var(--brand)"/><circle cx="286.9" cy="55.0" r="2.2" fill="var(--brand)"/><circle cx="333.1" cy="49.2" r="2.2" fill="var(--brand)"/><circle cx="379.2" cy="47.9" r="2.2" fill="var(--brand)"/><circle cx="425.4" cy="30.5" r="2.2" fill="var(--brand)"/><circle cx="471.5" cy="25.7" r="2.2" fill="var(--brand)"/><circle cx="517.7" cy="23.8" r="2.2" fill="var(--brand)"/><circle cx="563.8" cy="23.7" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
-  <text x="10.0" y="160" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-16</text>
-  <text x="610.0" y="160" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-18</text>
+  <line x1="52" y1="299.2" x2="608" y2="299.2" stroke="var(--border)" stroke-width="0.5"/><line x1="52" y1="221.8" x2="608" y2="221.8" stroke="var(--border)" stroke-width="0.5"/><line x1="52" y1="144.3" x2="608" y2="144.3" stroke="var(--border)" stroke-width="0.5"/><line x1="52" y1="66.9" x2="608" y2="66.9" stroke="var(--border)" stroke-width="0.5"/><line x1="52" y1="-10.5" x2="608" y2="-10.5" stroke="var(--border)" stroke-width="0.5"/>
+  <text x="46" y="302.7" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">120K</text><text x="46" y="225.3" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">130K</text><text x="46" y="147.8" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">140K</text><text x="46" y="70.4" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">150K</text><text x="46" y="-7.0" text-anchor="end" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">160K</text>
+  <text x="614" y="230.5" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">5.5K</text><text x="614" y="168.7" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6K</text><text x="614" y="106.9" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">6.5K</text><text x="614" y="45.1" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7K</text><text x="614" y="-16.7" text-anchor="start" font-size="10" fill="var(--text-3)" font-family="JetBrains Mono,monospace">7.5K</text>
+  <path d="M52.0,224.0 L91.7,213.3 L131.4,196.8 L171.1,114.0 L210.9,87.8 L250.6,85.9 L290.3,79.7 L330.0,70.8 L369.7,68.7 L409.4,41.7 L449.1,34.2 L488.9,31.4 L528.6,31.1 L568.3,16.1 L608.0,16.0 L608.0,224.0 L52.0,224.0 Z" fill="url(#fillA)"/>
+  <path d="M52.0,224.0 L91.7,213.3 L131.4,196.8 L171.1,114.0 L210.9,87.8 L250.6,85.9 L290.3,79.7 L330.0,70.8 L369.7,68.7 L409.4,41.7 L449.1,34.2 L488.9,31.4 L528.6,31.1 L568.3,16.1 L608.0,16.0" fill="none" stroke="var(--brand)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+  <path d="M52.0,224.0 L91.7,202.1 L131.4,194.5 L171.1,128.6 L210.9,89.2 L250.6,87.4 L290.3,79.8 L330.0,70.4 L369.7,68.2 L409.4,46.7 L449.1,37.9 L488.9,34.8 L528.6,34.8 L568.3,16.1 L608.0,16.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3" vector-effect="non-scaling-stroke"/>
+  <circle cx="52.0" cy="224.0" r="2.6" fill="var(--brand)"><title>Issue 1 · 2026-08-16
+Stars 129.7K · Plugins 5.5K
+npm 195.9K · 8h+646
+Health 99/100</title></circle><circle cx="91.7" cy="213.3" r="2.6" fill="var(--brand)"><title>Issue 2 · 2026-08-16
+Stars 131.1K · Plugins 5.7K
+npm 195.9K · 8h+297
+Health 99/100</title></circle><circle cx="131.4" cy="196.8" r="2.6" fill="var(--brand)"><title>Issue 3 · 2026-08-17
+Stars 133.2K · Plugins 5.8K
+npm 195.9K · 8h+160
+Health 99/100</title></circle><circle cx="171.1" cy="114.0" r="2.6" fill="var(--brand)"><title>Issue 4 · 2026-08-17
+Stars 143.9K · Plugins 6.3K
+npm 195.9K · 8h+371
+Health 99/100</title></circle><circle cx="210.9" cy="87.8" r="2.6" fill="var(--brand)"><title>Issue 5 · 2026-08-17
+Stars 147.3K · Plugins 6.6K
+npm 195.9K · 8h+367
+Health 76/100</title></circle><circle cx="250.6" cy="85.9" r="2.6" fill="var(--brand)"><title>Issue 6 · 2026-08-17
+Stars 147.6K · Plugins 6.6K
+npm 195.9K · 8h+359
+Health 87/100</title></circle><circle cx="290.3" cy="79.7" r="2.6" fill="var(--brand)"><title>Issue 7 · 2026-08-17
+Stars 148.3K · Plugins 6.7K
+npm 195.9K · 8h+312
+Health 87/100</title></circle><circle cx="330.0" cy="70.8" r="2.6" fill="var(--brand)"><title>Issue 8 · 2026-08-17
+Stars 149.5K · Plugins 6.8K
+npm 195.9K · 8h+146
+Health 80/100</title></circle><circle cx="369.7" cy="68.7" r="2.6" fill="var(--brand)"><title>Issue 9 · 2026-08-17
+Stars 149.8K · Plugins 6.8K
+npm 195.9K · 8h+97
+Health 75/100</title></circle><circle cx="409.4" cy="41.7" r="2.6" fill="var(--brand)"><title>Issue 10 · 2026-08-18
+Stars 153.3K · Plugins 7K
+npm 195.9K · 8h+124
+Health 77/100</title></circle><circle cx="449.1" cy="34.2" r="2.6" fill="var(--brand)"><title>Issue 11 · 2026-08-18
+Stars 154.2K · Plugins 7K
+npm 195.9K · 8h+168
+Health 81/100</title></circle><circle cx="488.9" cy="31.4" r="2.6" fill="var(--brand)"><title>Issue 12 · 2026-08-18
+Stars 154.6K · Plugins 7.1K
+npm 195.9K · 8h+183
+Health 82/100</title></circle><circle cx="528.6" cy="31.1" r="2.6" fill="var(--brand)"><title>Issue 13 · 2026-08-18
+Stars 154.6K · Plugins 7.1K
+npm 195.9K · 8h+183
+Health 82/100</title></circle><circle cx="568.3" cy="16.1" r="2.6" fill="var(--brand)"><title>Issue 14 · 2026-08-18
+Stars 156.6K · Plugins 7.2K
+npm 195.9K · 8h+274
+Health 87/100</title></circle><circle cx="608.0" cy="16.0" r="2.6" fill="var(--brand)"><title>Issue 15 · 2026-08-18
+Stars 156.6K · Plugins 7.2K
+npm 195.9K · 8h+275
+Health 87/100</title></circle>
+  <text x="52" y="162" text-anchor="start" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-16</text>
+  <text x="608" y="162" text-anchor="end" fill="var(--text-3)" font-size="10" font-family="JetBrains Mono,monospace">2026-08-18</text>
+  <text x="52" y="152" text-anchor="start" font-size="10" fill="var(--brand-2)" font-family="JetBrains Mono,monospace">Official stars ▬</text>
+  <text x="608" y="152" text-anchor="end" font-size="10" fill="var(--up)" font-family="JetBrains Mono,monospace">Plugins ┄┄</text>
 </svg>
-<div class="cap"><span>Official stars 156.6K · plugins 7.2K</span><span>14 snapshots</span></div>
+<div class="cap"><span>Official stars 156.6K · Plugins 7.2K</span><span>15 snapshots · hover a point</span></div>
+  </div>
+
+  <h2>Metric Trends</h2>
+  <div class="chart-grid">
+    <div class="chart-card">
+    <div class="ct">npm weekly <span class="cv">195.9K</span></div>
+    <svg viewBox="0 0 300 120" preserveAspectRatio="none" role="img">
+      
+      <path d="M8.0,10.0 L28.3,10.0 L48.6,10.0 L68.9,10.0 L89.1,10.0 L109.4,10.0 L129.7,10.0 L150.0,10.0 L170.3,10.0 L190.6,10.0 L210.9,10.0 L231.1,10.0 L251.4,10.0 L271.7,10.0 L292.0,10.0" fill="none" stroke="var(--brand)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+      <circle cx="8.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 195.9K</title></circle><circle cx="28.3" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 195.9K</title></circle><circle cx="48.6" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="68.9" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="89.1" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="109.4" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="129.7" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="150.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="170.3" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 195.9K</title></circle><circle cx="190.6" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle><circle cx="210.9" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle><circle cx="231.1" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle><circle cx="251.4" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle><circle cx="271.7" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle><circle cx="292.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 195.9K</title></circle>
+      <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
+      <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
+    </svg>
+  </div>
+    <div class="chart-card">
+    <div class="ct">New repos (8h) <span class="cv">275</span></div>
+    <svg viewBox="0 0 300 120" preserveAspectRatio="none" role="img">
+      
+      
+      <rect x="3.0" y="10.0" width="10.0" height="94.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 646</title></rect><rect x="23.3" y="60.8" width="10.0" height="43.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-16: 297</title></rect><rect x="43.6" y="80.7" width="10.0" height="23.3" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 160</title></rect><rect x="63.9" y="50.0" width="10.0" height="54.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 371</title></rect><rect x="84.1" y="50.6" width="10.0" height="53.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 367</title></rect><rect x="104.4" y="51.8" width="10.0" height="52.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 359</title></rect><rect x="124.7" y="58.6" width="10.0" height="45.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 312</title></rect><rect x="145.0" y="82.8" width="10.0" height="21.2" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 146</title></rect><rect x="165.3" y="89.9" width="10.0" height="14.1" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-17: 97</title></rect><rect x="185.6" y="86.0" width="10.0" height="18.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 124</title></rect><rect x="205.9" y="79.6" width="10.0" height="24.4" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 168</title></rect><rect x="226.1" y="77.4" width="10.0" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="246.4" y="77.4" width="10.0" height="26.6" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 183</title></rect><rect x="266.7" y="64.1" width="10.0" height="39.9" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 274</title></rect><rect x="287.0" y="64.0" width="10.0" height="40.0" rx="1.5" fill="var(--warn)" opacity="0.85"><title>2026-08-18: 275</title></rect>
+      <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
+      <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
+    </svg>
+  </div>
+    <div class="chart-card">
+    <div class="ct">Health score <span class="cv">87</span></div>
+    <svg viewBox="0 0 300 120" preserveAspectRatio="none" role="img">
+      <line x1="8" y1="28.0" x2="292" y2="28.0" stroke="var(--border-strong)" stroke-width="0.6" stroke-dasharray="3 3"/>
+      <path d="M8.0,10.0 L28.3,10.0 L48.6,10.0 L68.9,10.0 L89.1,31.8 L109.4,21.4 L129.7,21.4 L150.0,28.0 L170.3,32.8 L190.6,30.9 L210.9,27.1 L231.1,26.1 L251.4,26.1 L271.7,21.4 L292.0,21.4" fill="none" stroke="var(--up)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+      <circle cx="8.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="28.3" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 99</title></circle><circle cx="48.6" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="68.9" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 99</title></circle><circle cx="89.1" cy="31.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 76</title></circle><circle cx="109.4" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="129.7" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-17: 87</title></circle><circle cx="150.0" cy="28.0" r="2.4" fill="var(--brand)"><title>2026-08-17: 80</title></circle><circle cx="170.3" cy="32.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 75</title></circle><circle cx="190.6" cy="30.9" r="2.4" fill="var(--brand)"><title>2026-08-18: 77</title></circle><circle cx="210.9" cy="27.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 81</title></circle><circle cx="231.1" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="251.4" cy="26.1" r="2.4" fill="var(--brand)"><title>2026-08-18: 82</title></circle><circle cx="271.7" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle><circle cx="292.0" cy="21.4" r="2.4" fill="var(--brand)"><title>2026-08-18: 87</title></circle>
+      <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
+      <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
+    </svg>
+  </div>
+    <div class="chart-card">
+    <div class="ct">Plugins <span class="cv">7.2K</span></div>
+    <svg viewBox="0 0 300 120" preserveAspectRatio="none" role="img">
+      
+      <path d="M8.0,32.0 L28.3,29.6 L48.6,28.8 L68.9,21.9 L89.1,17.7 L109.4,17.5 L129.7,16.7 L150.0,15.7 L170.3,15.5 L190.6,13.2 L210.9,12.3 L231.1,12.0 L251.4,12.0 L271.7,10.0 L292.0,10.0" fill="none" stroke="var(--brand)" stroke-width="1.6" vector-effect="non-scaling-stroke"/>
+      <circle cx="8.0" cy="32.0" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.5K</title></circle><circle cx="28.3" cy="29.6" r="2.4" fill="var(--brand)"><title>2026-08-16: 5.7K</title></circle><circle cx="48.6" cy="28.8" r="2.4" fill="var(--brand)"><title>2026-08-17: 5.8K</title></circle><circle cx="68.9" cy="21.9" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.3K</title></circle><circle cx="89.1" cy="17.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="109.4" cy="17.5" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.6K</title></circle><circle cx="129.7" cy="16.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.7K</title></circle><circle cx="150.0" cy="15.7" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="170.3" cy="15.5" r="2.4" fill="var(--brand)"><title>2026-08-17: 6.8K</title></circle><circle cx="190.6" cy="13.2" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="210.9" cy="12.3" r="2.4" fill="var(--brand)"><title>2026-08-18: 7K</title></circle><circle cx="231.1" cy="12.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="251.4" cy="12.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.1K</title></circle><circle cx="271.7" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle><circle cx="292.0" cy="10.0" r="2.4" fill="var(--brand)"><title>2026-08-18: 7.2K</title></circle>
+      <text x="8" y="116" text-anchor="start" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-16</text>
+      <text x="292" y="116" text-anchor="end" fill="var(--text-3)" font-size="9" font-family="JetBrains Mono,monospace">2026-08-18</text>
+    </svg>
+  </div>
   </div>
 
   <h2>All Issues</h2>
@@ -223,9 +319,15 @@
     <div class="issues">
       
     <a class="issue" href="latest.html" style="text-decoration:none;color:inherit">
+      <div class="no">#015</div>
+      <div class="t"><b>2026-08-18 · 17:53 GMT+8</b><span>2026-08-18 · official stars 156.6K · 8h new 275</span></div>
+      <div class="go">Latest ↗</div>
+    </a>
+
+    <a class="issue" href="0014_2026-08-18-1751_en.html" style="text-decoration:none;color:inherit">
       <div class="no">#014</div>
       <div class="t"><b>2026-08-18 · 17:51 GMT+8</b><span>2026-08-18 · official stars 156.6K · 8h new 274</span></div>
-      <div class="go">Latest ↗</div>
+      <div class="go">View →</div>
     </a>
 
     <a class="issue" href="0013_2026-08-18-1506_en.html" style="text-decoration:none;color:inherit">
@@ -309,8 +411,8 @@
   </div>
 
   <footer>
-    <span>DSH·daily-pulse · Archive · 14 snapshots</span>
-    <span>Sources GitHub Search API + npm registry · 2026-08-18 · 17:52</span>
+    <span>DSH·daily-pulse · Archive · 15 snapshots</span>
+    <span>Sources GitHub Search API + npm registry · 2026-08-18 · 17:53</span>
   </footer>
 
 </div>
