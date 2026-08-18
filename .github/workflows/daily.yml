@@ -44,6 +44,9 @@ jobs:
       - name: 渲染档案馆首页
         run: node render-index.mjs
 
+      - name: 渲染结构化输出（JSON-LD + 英文正文，GEO 引用源）
+        run: node render-structured.mjs
+
       - name: Commit 快照与日报
         run: |
           git config user.name "dsh-daily-pulse[bot]"

@@ -20,6 +20,7 @@ dsh-daily-pulse/
 ├── bootstrap.mjs       # 一次性：首次按 star 抓前 1000 建历史库 → store/repos.jsonl（护城河数据集根基）
 ├── render.mjs          # 渲染单期日报 → reports/<期号>_<时间>.html + latest.html
 ├── render-index.mjs    # 渲染档案馆首页 → reports/index.html（历史曲线 + 全量期号）
+├── render-structured.mjs # 渲染结构化输出 → reports/structured/（JSON-LD + 英文正文，GEO 引用源）
 ├── tokens.mjs          # 设计系统 v0.2 令牌模块（三层令牌 + 组件 CSS + 图表，单文件可交付）
 ├── dsh-daily-pulse.html# 高保真设计原型（设计系统 v0.2 演示）
 ├── store/
@@ -27,7 +28,7 @@ dsh-daily-pulse/
 │   ├── latest.json     # 最新快照（供渲染）
 │   ├── star-index.json # 仓库 star 基线（差分增速榜依赖）
 │   └── repos.jsonl     # top-1000 仓库历史库（bootstrap.mjs 建）
-├── reports/            # 日报 + 档案馆首页（GitHub Pages 站点根）
+├── reports/            # 日报 + 档案馆首页 + structured/（GitHub Pages 站点根）
 └── .github/workflows/daily.yml  # 三时点定时采集 + commit + Pages 部署
 ```
 
@@ -38,10 +39,11 @@ dsh-daily-pulse/
 node bootstrap.mjs
 # 1) GitHub 认证（Search API 配额：认证 30 次/分钟，足够本脚本 ~15 次调用）
 gh auth login
-# 2) 采集 → 渲染 → 档案馆
+# 2) 采集 → 渲染 → 档案馆 → 结构化
 node collect.mjs
 node render.mjs
 node render-index.mjs
+node render-structured.mjs
 # 3) 打开 reports/latest.html / reports/index.html
 ```
 
@@ -74,7 +76,13 @@ node render-index.mjs
 ## 设计系统
 
 对齐《dsh-design-system.md v0.2》：三层令牌（常量 / 主题 / 配色）、明暗主题、`data-accent` 换肤钩子、
-i18n 接口（zh / en / bi）。`tokens.mjs` 为单文件可交付模块，供 GitHub Pages 直接引用。
+i18n 接口（zh / en / bi）、`data-mode="structured"` 结构化输出。`tokens.mjs` 为单文件可交付模块，
+供 GitHub Pages 直接引用。
+
+- **结构化输出（GEO 资产）**：每次渲染额外产出 `reports/structured/` —— 每期 `NNNN.json`（JSON-LD
+  `Dataset` schema，机器可读快照）+ `latest.json` / `latest.md`（干净英文正文，data-led，供
+  ChatGPT / Gemini 等 AI 引擎直接引用）；单期日报 HTML 的 `<head>` 亦内嵌 JSON-LD。站点 URL 可用
+  `DSH_SITE_URL` 环境变量覆盖（默认 `https://dsh-pulse.github.io/dsh-daily-pulse/`）。
 
 ## 相关文档（vault）
 

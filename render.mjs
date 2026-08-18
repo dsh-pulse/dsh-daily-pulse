@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { CSS, head, topbar, scripts, historyChart, fmtNum, cst, CAT_LABEL } from './tokens.mjs';
+import { buildDatasetJsonLd } from './render-structured.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const STORE = join(__dirname, 'store');
@@ -103,9 +104,13 @@ const summaryEn = sm.en || _ruleEn;
 const summarySource = sm.source === 'deepseek' ? 'AI 摘要' : sm.source === 'rule' ? '规则生成' : '规则生成';
 const summaryModel = sm.model || '';
 
+// —— JSON-LD（GEO 结构化数据，对齐设计系统 §11 data-mode="structured"）——
+const jsonLd = JSON.stringify(buildDatasetJsonLd(snap, issueNo)).replace(/</g, '\\u003c');
+
 const html = `<!doctype html>
 <html lang="zh-CN">
 ${head(`DSH·daily-pulse · 第 ${issueNo} 期 · ${stamp}`)}
+<script type="application/ld+json">${jsonLd}</script>
 <style>${CSS()}</style>
 </head>
 <body>

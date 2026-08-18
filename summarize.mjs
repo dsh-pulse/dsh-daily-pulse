@@ -125,6 +125,22 @@ async function aiSummarize(snap, key) {
   return { zh: parsed.zh, en: parsed.en, model: j.model || MODEL };
 }
 
+// —— 把 summary 回填到 snapshots.jsonl 最后一行（快照历史自包含；generated_at 匹配才写，防错位）——
+function backfillSnapshotSummary(summary) {
+  const p = join(STORE, 'snapshots.jsonl');
+  if (!existsSync(p)) return;
+  try {
+    const lines = readFileSync(p, 'utf8').trim().split('\n').filter(Boolean);
+    if (lines.length === 0) return;
+    const last = JSON.parse(lines[lines.length - 1]);
+    const latest = JSON.parse(readFileSync(LATEST, 'utf8'));
+    if (!last.generated_at || last.generated_at !== latest.generated_at) return;
+    last.summary = summary;
+    lines[lines.length - 1] = JSON.stringify(last);
+    writeFileSync(p, lines.join('\n') + '\n');
+  } catch {}
+}
+
 async function main() {
   if (!existsSync(LATEST)) {
     console.error('[summarize] store/latest.json 不存在，请先跑 collect.mjs');
@@ -151,7 +167,8 @@ async function main() {
   }
 
   writeFileSync(LATEST, JSON.stringify(snap, null, 2));
-  console.log(`[summarize] 摘要已写入 store/latest.json (source=${snap.summary.source})`);
+  backfillSnapshotSummary(snap.summary);
+  console.log(`[summarize] 摘要已写入 store/latest.json + 回填 snapshots.jsonl (source=${snap.summary.source})`);
   console.log(`  zh: ${snap.summary.zh.replace(/<[^>]+>/g, '').slice(0, 80)}`);
 }
 

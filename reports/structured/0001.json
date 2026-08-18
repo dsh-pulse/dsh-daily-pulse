@@ -1,0 +1,174 @@
+{
+  "@context": [
+    "https://schema.org",
+    {
+      "dsh": "https://dsh-pulse.github.io/dsh-daily-pulse/ns#"
+    }
+  ],
+  "@type": "Dataset",
+  "@id": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0001.json",
+  "name": "DSH Plugin Ecosystem Snapshot · Issue #1",
+  "description": "Daily snapshot of the DeepSeek Harness (DSH) plugin ecosystem: 5524 plugins total, +646 in 8h, official repo 129710 stars, npm weekly 195.9K.",
+  "url": "https://dsh-pulse.github.io/dsh-daily-pulse/latest.html",
+  "datePublished": "2026-08-16T18:17:34Z",
+  "dateModified": "2026-08-16T18:17:34Z",
+  "temporalCoverage": "2026-08-16T10:12:34Z/2026-08-16T18:17:34Z",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Organization",
+    "name": "dsh-pulse",
+    "url": "https://dsh-pulse.github.io/dsh-daily-pulse/"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "dsh-daily-pulse"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0001.json",
+    "encodingFormat": "application/json"
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Total plugins (topic count, incl. forks)",
+      "value": 5524
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "New repos in 8h",
+      "value": 646
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Official repo stars",
+      "value": 129710
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Official repo forks",
+      "value": 12949
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "npm weekly downloads (@deepseek-ai/dsh)",
+      "value": 195945
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Ecosystem health score",
+      "value": 99
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Stale repos (7d no push)",
+      "value": 45
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Stale repos (24h no push)",
+      "value": 2835
+    }
+  ],
+  "kpis": {
+    "total_plugins": 5524,
+    "new_8h_repos": 646,
+    "official_stars": 129710,
+    "official_forks": 12949,
+    "npm_weekly_downloads": 195945,
+    "delta_8h_stars": null
+  },
+  "official": {
+    "full_name": "deepseek-ai/deepseek-harness",
+    "pushed_at": "2026-08-13T13:00:21Z",
+    "created_at": "2026-08-13T11:56:32Z",
+    "open_issues": 0
+  },
+  "leaderboard": [
+    {
+      "rank": 1,
+      "name": "anywhere-labs/deepseek-harness-desktop",
+      "stars": 8747,
+      "delta": null,
+      "category": "视觉",
+      "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
+      "created": "2026-08-13T16:30:50Z",
+      "pushed": "2026-08-16T17:41:43Z"
+    },
+    {
+      "rank": 2,
+      "name": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "stars": 4893,
+      "delta": null,
+      "category": "终端",
+      "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "created": "2026-08-13T13:55:31Z",
+      "pushed": "2026-08-16T17:20:02Z"
+    },
+    {
+      "rank": 3,
+      "name": "xiaobright/dsh-anchored-standard",
+      "stars": 2974,
+      "delta": null,
+      "category": "工作流",
+      "url": "https://github.com/xiaobright/dsh-anchored-standard",
+      "created": "2026-08-14T14:06:39Z",
+      "pushed": "2026-08-16T17:06:03Z"
+    },
+    {
+      "rank": 4,
+      "name": "ccch1mneyyy/dsh-TUI",
+      "stars": 1531,
+      "delta": null,
+      "category": "视觉",
+      "url": "https://github.com/ccch1mneyyy/dsh-TUI",
+      "created": "2026-08-13T12:49:31Z",
+      "pushed": "2026-08-16T18:12:13Z"
+    },
+    {
+      "rank": 5,
+      "name": "Small-tailqwq/dsh-deep-whale",
+      "stars": 1081,
+      "delta": null,
+      "category": "视觉",
+      "url": "https://github.com/Small-tailqwq/dsh-deep-whale",
+      "created": "2026-08-13T13:02:14Z",
+      "pushed": "2026-08-16T06:34:28Z"
+    },
+    {
+      "rank": 6,
+      "name": "dsh-market/dsh-market",
+      "stars": 546,
+      "delta": null,
+      "category": "视觉",
+      "url": "https://github.com/dsh-market/dsh-market",
+      "created": "2026-08-14T04:58:15Z",
+      "pushed": "2026-08-16T17:22:29Z"
+    }
+  ],
+  "growth": [],
+  "official_activity": [
+    {
+      "sha": "47f9438",
+      "date": "2026-08-13T11:38:46Z",
+      "msg": "Merge pull request #2519 from deepseek-harness/feat/npm-public"
+    },
+    {
+      "sha": "abe560f",
+      "date": "2026-08-13T10:43:09Z",
+      "msg": "release(dsh): 0.1.0-rc.5"
+    },
+    {
+      "sha": "8c1e8d9",
+      "date": "2026-08-13T10:05:10Z",
+      "msg": "build(release): publish the dsh family publicly"
+    }
+  ],
+  "health": {
+    "score": 99,
+    "stale_7d": 45,
+    "stale_1d": 2835,
+    "total_tracked": 5524
+  },
+  "summary": null
+}
