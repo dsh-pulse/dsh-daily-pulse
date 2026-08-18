@@ -1,7 +1,9 @@
 # dsh-daily-pulse
 
-> DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次，1 分钟读懂 DSH 生态的脉搏。
-> 定位：DSH 生态的「财经早报」，质量信号层 + 中文社区层卡位；历史快照数据集是核心护城河。
+> **Built for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)** — *"Everything is a Plugin."* · npm: [`@deepseek-ai/dsh`](https://www.npmjs.com/package/@deepseek-ai/dsh) · 官方 151K★
+
+DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次，1 分钟读懂 DSH 生态的脉搏。
+定位：DSH 生态的「财经早报」，质量信号层 + 中文社区层卡位；历史快照数据集是核心护城河。
 
 ## 现状（2026-08-17）
 
