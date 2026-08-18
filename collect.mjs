@@ -177,11 +177,12 @@ async function main() {
 
   // 2. 新秀爆发榜 + 差分增速榜（M1）：star-index 维护每仓库星标基线，算窗口内增速；
   //    M0 §1.2 蹭标签计分制：manifest +2 / 依赖 @deepseek-ai/dsh +2 / topic +1，≥3 才计入榜
-  const rookie = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${DSH_LAUNCH}&sort=stars&order=desc&per_page=20`);
+  //    M4 细分榜单：候选池扩到 60（按 stars 取），计分前 30，按类别/活跃度拆细分榜
+  const rookie = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${DSH_LAUNCH}&sort=stars&order=desc&per_page=60`);
   const starIndex = loadStarIndex();
   const boardCandidates = rookie.items
     .filter((i) => i.full_name !== 'deepseek-ai/deepseek-harness')
-    .slice(0, 12);
+    .slice(0, 30);
 
   // 计分（串行，避免突发请求）
   const scoredCandidates = [];
@@ -216,6 +217,43 @@ async function main() {
     .slice(0, 6)
     .map((r) => ({ rank: r.rank, name: r.name, desc: r.desc, delta: r.delta, stars: r.stars, is_new: r.is_new, score: r.score, category: r.category, url: r.url }))
     .map((r, i) => ({ ...r, rank: i + 1 }));
+
+  // —— M4 细分榜单：从全量候选（含未过计分门槛者，标注 verified）按类别 / 活跃度拆榜 ——
+  //    类别用 topic+description 关键词（零额外请求）；活跃榜按最近 push 时间
+  const allScored = scoredCandidates.map(({ item, score, verified }) => {
+    const prev = starIndex[item.full_name];
+    return {
+      name: item.full_name,
+      desc: (item.description || '').slice(0, 80),
+      stars: item.stargazers_count,
+      delta: prev ? item.stargazers_count - prev.stars : null,
+      is_new: !prev,
+      score,
+      verified,
+      category: category(item),
+      created: item.created_at,
+      pushed: item.pushed_at,
+      url: item.html_url,
+    };
+  });
+
+  // 类别榜：每类按 stars 取 top 4（候选池按 stars 取的前 30，覆盖主要类别）
+  const categoryBoards = {};
+  const CATEGORIES = ['视觉', '工作流', '终端', '其他'];
+  for (const c of CATEGORIES) {
+    categoryBoards[c] = allScored
+      .filter((r) => r.category === c)
+      .sort((a, b) => b.stars - a.stars)
+      .slice(0, 4)
+      .map((r, i) => ({ rank: i + 1, ...r }));
+  }
+
+  // 活跃榜：按最近 push 时间 top 5
+  const activeBoard = allScored
+    .filter((r) => r.pushed)
+    .sort((a, b) => (b.pushed || '').localeCompare(a.pushed || ''))
+    .slice(0, 5)
+    .map((r, i) => ({ rank: i + 1, ...r }));
 
   // 更新 star-index（下一期才有差分基线；追踪全部候选，不只榜上）
   for (const item of boardCandidates) {
@@ -298,6 +336,8 @@ async function main() {
     },
     leaderboard,
     growth,
+    category_boards: categoryBoards, // M4 细分榜单：{类别: [top4]}
+    active_board: activeBoard,      // M4 活跃榜：最近 push top5
     official_activity: officialActivity,
     health: {
       score: healthScore,

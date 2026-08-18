@@ -6,6 +6,8 @@
  *   reports/data/snapshots.csv   全历史时间序列（每期一行，期号=行序）
  *   reports/data/latest.csv      当期 KPI 宽表（一行）
  *   reports/data/leaderboard.csv 当期榜单（爆发榜 ∪ 增速榜，list 列区分）
+ *   reports/data/category-boards.csv 细分榜单（每类 top4，list=category:<类别>）
+ *   reports/data/active-board.csv    活跃榜（最近 push top5）
  *   reports/data/latest.json     当期完整快照（结构化 JSON，与 store/latest.json 同构）
  *
  * 数据字典（口径）见 README「开放数据」章节；字段名与 store/latest.json 键一一对应，
@@ -72,6 +74,18 @@ function boardRow(list, r) {
   ];
 }
 
+// —— 3b. M4 细分榜单 category-boards.csv（list=category:<类别>）+ active-board.csv ——
+const CAT_HEADERS = [
+  'list', 'rank', 'name', 'stars', 'delta', 'is_new', 'score', 'verified', 'category', 'created', 'pushed', 'url',
+];
+function catRow(list, r) {
+  return [
+    list, r.rank, r.name, r.stars, r.delta ?? null,
+    r.is_new === true ? 1 : (r.is_new === false ? 0 : r.is_new),
+    r.score, r.verified === true ? 1 : 0, r.category, r.created, r.pushed, r.url,
+  ];
+}
+
 function loadSnapshots() {
   const p = join(STORE, 'snapshots.jsonl');
   if (!existsSync(p)) return [];
@@ -108,6 +122,18 @@ function main() {
   for (const r of latest.growth || []) boardLines.push(csvRow(boardRow('growth', r)));
   writeFileSync(join(DATA, 'leaderboard.csv'), boardLines.join('\n') + '\n');
 
+  // category-boards.csv（M4 细分榜单：每类 top4，list=category:<类别>）
+  const catLines = [csvRow(CAT_HEADERS)];
+  for (const [cat, rows] of Object.entries(latest.category_boards || {})) {
+    for (const r of rows || []) catLines.push(csvRow(catRow(`category:${cat}`, r)));
+  }
+  writeFileSync(join(DATA, 'category-boards.csv'), catLines.join('\n') + '\n');
+
+  // active-board.csv（M4 活跃榜：最近 push top5）
+  const actLines = [csvRow(CAT_HEADERS)];
+  for (const r of latest.active_board || []) actLines.push(csvRow(catRow('active', r)));
+  writeFileSync(join(DATA, 'active-board.csv'), actLines.join('\n') + '\n');
+
   // latest.json（结构化，供程序直接消费）
   writeFileSync(join(DATA, 'latest.json'), JSON.stringify(latest, null, 2) + '\n');
 
@@ -115,6 +141,8 @@ function main() {
   console.log(`  snapshots.csv  ${snaps.length} 行历史序列`);
   console.log(`  latest.csv     当期 KPI 宽表（${LATEST_HEADERS.length} 列）`);
   console.log(`  leaderboard.csv ${(latest.leaderboard?.length || 0) + (latest.growth?.length || 0)} 行榜单`);
+  console.log(`  category-boards.csv ${catLines.length - 1} 行细分榜`);
+  console.log(`  active-board.csv ${actLines.length - 1} 行活跃榜`);
   console.log(`  latest.json    当期结构化快照（generated_at=${latest.generated_at}）`);
 }
 

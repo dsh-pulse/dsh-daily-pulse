@@ -164,6 +164,20 @@ export function CSS() {
   .cat.w{color:var(--cat-w); border-color:color-mix(in srgb,var(--cat-w) 40%, transparent)}
   .cat.t{color:var(--up); border-color:color-mix(in srgb,var(--up) 40%, transparent)}
   .cat.n{color:var(--text-3); border-color:color-mix(in srgb,var(--text-3) 35%, transparent)}
+  .cat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px}
+  .cat-col{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .cat-head{padding:10px 16px; font-size:13px; font-weight:800; border-bottom:1px solid var(--border); letter-spacing:.02em}
+  .cat-head.v{color:var(--cat-v); border-bottom-color:color-mix(in srgb,var(--cat-v) 30%, transparent)}
+  .cat-head.w{color:var(--cat-w); border-bottom-color:color-mix(in srgb,var(--cat-w) 30%, transparent)}
+  .cat-head.t{color:var(--up); border-bottom-color:color-mix(in srgb,var(--up) 30%, transparent)}
+  .cat-head.n{color:var(--text-3)}
+  .cat-row{display:grid; grid-template-columns:26px 1fr; align-items:baseline; gap:10px; padding:9px 16px; border-bottom:1px solid var(--border)}
+  .cat-row:last-child{border-bottom:0}
+  .cat-row .rank{font-size:12px; color:var(--text-3)}
+  .cat-row .pname{font-size:13px; font-weight:600}
+  .cat-row .pname small{font-size:11px; margin-top:1px}
+  .cat-board .cat-row{grid-template-columns:26px 1fr}
+  @media (max-width:680px){ .cat-grid{grid-template-columns:1fr} }
   .timeline{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:8px 20px; box-shadow:var(--shadow-sm)}
   .tl{display:grid; grid-template-columns:88px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--border)}
   .tl:last-child{border-bottom:0}

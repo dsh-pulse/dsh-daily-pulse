@@ -11,7 +11,7 @@ DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次�
 - **M1 ✅**：差分增速榜（star-index 基线）、档案馆首页（历史曲线）、三时点 CI 自动化
 - **M2 ✅**：DeepSeek 中文摘要、健康分全量计分制、自动 commit 公开仓库
 - **M3 ✅**：GitHub Pages「生态档案馆」正式站点（18+ 期、双轴主图 + 4 指标矩阵、中英双语、npm 自然日口径）
-- **M4 🔄（进行中）**：开放数据接口下载（CSV/JSON，本页「开放数据」节）→ 细分榜单 → 数据地图
+- **M4 🔄（进行中）**：①开放数据接口 ✅（CSV/JSON，本页「开放数据」节）②细分榜单 ✅（类别榜+活跃榜）③数据地图 ⏳
 
 ## 目录结构
 
@@ -99,6 +99,8 @@ i18n 接口（zh / en / bi）、`data-mode="structured"` 结构化输出。`toke
 | [`data/snapshots.csv`](data/snapshots.csv) | 全历史时间序列（每期一行，行序 = 期号） |
 | [`data/latest.csv`](data/latest.csv) | 当期 KPI 宽表（一行 25 列，含健康分四因子） |
 | [`data/leaderboard.csv`](data/leaderboard.csv) | 当期榜单（`list` 列区分 `leaderboard` 爆发榜 / `growth` 增速榜） |
+| [`data/category-boards.csv`](data/category-boards.csv) | 细分榜单（每类 top4，`list=category:<类别>`；`verified` 列标注是否通过计分门槛） |
+| [`data/active-board.csv`](data/active-board.csv) | 活跃榜（最近 push top5，`list=active`） |
 | [`data/latest.json`](data/latest.json) | 当期完整快照（与 `store/latest.json` 同构，程序直接消费） |
 
 字段字典（`snapshots.csv` / `latest.csv` 共用的核心列）：
@@ -122,6 +124,11 @@ i18n 接口（zh / en / bi）、`data-mode="structured"` 结构化输出。`toke
 `rank`、`name`（full_name）、`desc`、`stars`、`delta`（窗口增量，首见为空）、`is_new`（1/0，
 DSH 发布日 2026-08-13 后首见）、`score`（蹭标签计分 ≥3 才上榜）、`category`（视觉/工作流/终端/其他）、
 `created`、`pushed`、`url`。增速榜 `created`/`pushed` 为空（由爆发榜行提供）。
+
+`category-boards.csv` / `active-board.csv` 列（M4 细分榜单）：`list`（`category:<类别>` / `active`）、
+`rank`（榜内名次）、`name`、`stars`、`delta`、`is_new`、`score`、`verified`（1/0，是否通过
+manifest/依赖计分门槛）、`category`、`created`、`pushed`、`url`。细分榜来自 stars 前 30 候选
+（每类取 top4），未过计分门槛的仓库保留并标注 `verified=0`，避免口径盲区。
 
 ## 相关文档（vault）
 

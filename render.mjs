@@ -96,6 +96,26 @@ const activity = snap.official_activity.map((c) => {
     <div class="tl"><div class="t"><b>${mmdd}</b>${hhmm}</div><div class="c"><b>${c.msg}</b><p><span class="muted">${c.sha}</span></p></div></div>`;
 }).join('\n');
 
+// —— M4 细分榜单：按类别（视觉/工作流/终端/其他）top4 + 活跃榜 top5 ——
+const hasCats = snap.category_boards && Object.keys(snap.category_boards).some((c) => snap.category_boards[c]?.length);
+const catBoards = hasCats ? Object.entries(snap.category_boards).map(([cat, rows]) => {
+  const rowsHtml = (rows || []).map((r) => {
+    const trust = r.verified
+      ? (r.score != null ? ` · ${t.catTrust.replace('{n}', r.score)}` : '')
+      : ` · <span class="muted">${t.catUnverified}</span>`;
+    const delta = r.delta != null ? ` · ${t.catDelta.replace('{n}', nf(r.delta))}` : '';
+    return `<div class="cat-row"><span class="rank">${String(r.rank).padStart(2, '0')}</span><span class="pname">${r.name}<small>${t.catStars.replace('{n}', nf(r.stars))}${delta}${trust}</small></span></div>`;
+  }).join('\n');
+  return `<div class="cat-col"><div class="cat-head ${['v', 'w', 't', 'n'][['视觉', '工作流', '终端', '其他'].indexOf(cat)] || 'n'}">${catLabel(cat)}</div>${rowsHtml}</div>`;
+}).join('\n') : '';
+
+const activeRows = (snap.active_board || []).map((r) => {
+  const pushed = r.pushed ? r.pushed.slice(0, 16).replace('T', ' ') + 'Z' : '—';
+  const trust = r.verified ? '' : ` · <span class="muted">${t.catUnverified}</span>`;
+  return `<div class="cat-row"><span class="rank">${String(r.rank).padStart(2, '0')}</span><span class="pname">${r.name}<small>${t.activePushed.replace('{t}', pushed)} · ${t.catStars.replace('{n}', nf(r.stars))}${trust}</small></span></div>`;
+}).join('\n');
+const hasActive = (snap.active_board || []).length > 0;
+
 // —— 健康分（M2b：i18n 文案）——
 const h = snap.health;
 const ringCls = h.score >= 80 ? '' : h.score >= 60 ? ' ring--brand' : ' ring--down';
@@ -167,6 +187,16 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
   <div class="chips">
     ${t.boardCharts.map((c, i) => `<span class="cat ${['v', 'w', 't', 'n'][i]}">${c}</span>`).join('\n    ')}
   </div>
+
+  ${hasCats ? `
+  <h2>${t.h2Categories}</h2>
+  <div class="cat-grid">${catBoards}
+  </div>` : ''}
+
+  ${hasActive ? `
+  <h2>${t.h2Active}</h2>
+  <div class="board cat-board">${activeRows}
+  </div>` : ''}
 
   <h2>${t.h2Activity}</h2>
   <div class="timeline">${activity}
