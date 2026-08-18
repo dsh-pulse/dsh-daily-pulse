@@ -6,7 +6,7 @@
  *   reports/data/snapshots.csv   全历史时间序列（每期一行，期号=行序）
  *   reports/data/latest.csv      当期 KPI 宽表（一行）
  *   reports/data/leaderboard.csv 当期榜单（爆发榜 ∪ 增速榜，list 列区分）
- *   reports/data/category-boards.csv 细分榜单（每类 top4，list=category:<类别>）
+ *   reports/data/category-boards.csv 细分榜单（每类每维度 top10，list=category:<类别>:<维度>）
  *   reports/data/active-board.csv    活跃榜（最近 push top5）
  *   reports/data/latest.json     当期完整快照（结构化 JSON，与 store/latest.json 同构）
  *
@@ -122,10 +122,12 @@ function main() {
   for (const r of latest.growth || []) boardLines.push(csvRow(boardRow('growth', r)));
   writeFileSync(join(DATA, 'leaderboard.csv'), boardLines.join('\n') + '\n');
 
-  // category-boards.csv（M4 细分榜单：每类 top4，list=category:<类别>）
+  // category-boards.csv（M4 细分榜单：每类每维度 top10，list=category:<类别>:<维度>）
   const catLines = [csvRow(CAT_HEADERS)];
-  for (const [cat, rows] of Object.entries(latest.category_boards || {})) {
-    for (const r of rows || []) catLines.push(csvRow(catRow(`category:${cat}`, r)));
+  for (const [cat, dims] of Object.entries(latest.category_boards || {})) {
+    for (const [dim, rows] of Object.entries(dims || {})) {
+      for (const r of rows || []) catLines.push(csvRow(catRow(`category:${cat}:${dim}`, r)));
+    }
   }
   writeFileSync(join(DATA, 'category-boards.csv'), catLines.join('\n') + '\n');
 

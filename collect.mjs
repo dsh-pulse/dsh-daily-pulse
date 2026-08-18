@@ -179,12 +179,13 @@ async function main() {
 
   // 2. 新秀爆发榜 + 差分增速榜（M1）：star-index 维护每仓库星标基线，算窗口内增速；
   //    M0 §1.2 蹭标签计分制：manifest +2 / 依赖 @deepseek-ai/dsh +2 / topic +1，≥3 才计入榜
-  //    M4 细分榜单：候选池扩到 60（按 stars 取），计分前 30，按类别/活跃度拆细分榜
-  const rookie = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${DSH_LAUNCH}&sort=stars&order=desc&per_page=60`);
+  //    M4 细分榜单：候选池 100（分类榜 × 4 维度 top10），计分前 50（主榜可信度）
+  const rookie = await gh(`/search/repositories?q=topic%3Adsh-plugin+fork%3Afalse+created%3A%3E%3D${DSH_LAUNCH}&sort=stars&order=desc&per_page=100`);
   const starIndex = loadStarIndex();
-  const boardCandidates = rookie.items
+  const allCandidates = rookie.items
     .filter((i) => i.full_name !== 'deepseek-ai/deepseek-harness')
-    .slice(0, 30);
+    .slice(0, 100);
+  const boardCandidates = allCandidates.slice(0, 50);
 
   // 计分（串行，避免突发请求）
   const scoredCandidates = [];
@@ -220,18 +221,21 @@ async function main() {
     .map((r) => ({ rank: r.rank, name: r.name, desc: r.desc, delta: r.delta, stars: r.stars, is_new: r.is_new, score: r.score, category: r.category, url: r.url }))
     .map((r, i) => ({ ...r, rank: i + 1 }));
 
-  // —— M4 细分榜单：从全量候选（含未过计分门槛者，标注 verified）按类别 / 活跃度拆榜 ——
-  //    类别用 topic+description 关键词（零额外请求）；活跃榜按最近 push 时间
-  const allScored = scoredCandidates.map(({ item, score, verified }) => {
+  // —— M4 细分榜单：全量候选（100）按类别 × 维度 分别 top10 ——
+  //    维度：stars 累计星标 / delta 窗口增速（需基线）/ active 最近 push / newest 最新创建
+  //    计分信息来自前 50（未计分的标 verified:false），类别用 topic+description 关键词
+  const scoreMap = new Map(scoredCandidates.map((s) => [s.item.full_name, { score: s.score, verified: s.verified }]));
+  const allScored = allCandidates.map((item) => {
     const prev = starIndex[item.full_name];
+    const sc = scoreMap.get(item.full_name) || { score: null, verified: false };
     return {
       name: item.full_name,
       desc: (item.description || '').slice(0, 80),
       stars: item.stargazers_count,
       delta: prev ? item.stargazers_count - prev.stars : null,
       is_new: !prev,
-      score,
-      verified,
+      score: sc.score,
+      verified: sc.verified,
       category: category(item),
       created: item.created_at,
       pushed: item.pushed_at,
@@ -239,15 +243,17 @@ async function main() {
     };
   });
 
-  // 类别榜：每类按 stars 取 top 4（候选池按 stars 取的前 30，覆盖主要类别）
+  // 类别 × 维度榜（每类每维度 top 10）
   const categoryBoards = {};
   const CATEGORIES = ['视觉', '工作流', '终端', '其他'];
   for (const c of CATEGORIES) {
-    categoryBoards[c] = allScored
-      .filter((r) => r.category === c)
-      .sort((a, b) => b.stars - a.stars)
-      .slice(0, 4)
-      .map((r, i) => ({ rank: i + 1, ...r }));
+    const pool = allScored.filter((r) => r.category === c);
+    const dims = {};
+    dims.stars = pool.slice().sort((a, b) => b.stars - a.stars).slice(0, 10).map((r, i) => ({ rank: i + 1, dim: 'stars', ...r }));
+    dims.delta = pool.filter((r) => r.delta != null).sort((a, b) => b.delta - a.delta).slice(0, 10).map((r, i) => ({ rank: i + 1, dim: 'delta', ...r }));
+    dims.active = pool.filter((r) => r.pushed).sort((a, b) => (b.pushed || '').localeCompare(a.pushed || '')).slice(0, 10).map((r, i) => ({ rank: i + 1, dim: 'active', ...r }));
+    dims.newest = pool.slice().sort((a, b) => (b.created || '').localeCompare(a.created || '')).slice(0, 10).map((r, i) => ({ rank: i + 1, dim: 'newest', ...r }));
+    categoryBoards[c] = dims;
   }
 
   // 活跃榜：按最近 push 时间 top 5
@@ -268,7 +274,7 @@ async function main() {
   }));
 
   // 更新 star-index（下一期才有差分基线；追踪全部候选，不只榜上）
-  for (const item of boardCandidates) {
+  for (const item of allCandidates) {
     const prev = starIndex[item.full_name];
     starIndex[item.full_name] = {
       stars: item.stargazers_count,

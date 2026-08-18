@@ -96,18 +96,34 @@ const activity = snap.official_activity.map((c) => {
     <div class="tl"><div class="t"><b>${mmdd}</b>${hhmm}</div><div class="c"><b>${c.msg}</b><p><span class="muted">${c.sha}</span></p></div></div>`;
 }).join('\n');
 
-// —— M4 细分榜单：按类别（视觉/工作流/终端/其他）top4 + 活跃榜 top5 ——
-const hasCats = snap.category_boards && Object.keys(snap.category_boards).some((c) => snap.category_boards[c]?.length);
-const catBoards = hasCats ? Object.entries(snap.category_boards).map(([cat, rows]) => {
-  const rowsHtml = (rows || []).map((r) => {
-    const trust = r.verified
-      ? (r.score != null ? ` · ${t.catTrust.replace('{n}', r.score)}` : '')
-      : ` · <span class="muted">${t.catUnverified}</span>`;
-    const delta = r.delta != null ? ` · ${t.catDelta.replace('{n}', nf(r.delta))}` : '';
-    return `<div class="cat-row"><span class="rank">${String(r.rank).padStart(2, '0')}</span><span class="pname">${r.name}<small>${t.catStars.replace('{n}', nf(r.stars))}${delta}${trust}</small></span></div>`;
+// —— M4 细分榜单：按类别（视觉/工作流/终端/其他）× 维度（stars/delta/active/newest）各 top10 ——
+const DIM_KEYS = ['stars', 'delta', 'active', 'newest'];
+const dimKeyLabel = (dk) => ({ stars: t.dimStars, delta: t.dimDelta, active: t.dimActive, newest: t.dimNewest }[dk] || dk);
+const CAT_ORDER = ['视觉', '工作流', '终端', '其他'];
+const catCls = (c) => ['v', 'w', 't', 'n'][CAT_ORDER.indexOf(c)] || 'n';
+const catGrids = {};
+for (const dk of DIM_KEYS) {
+  const hasAny = Object.values(snap.category_boards || {}).some((c) => (c && c[dk] || []).length);
+  if (!hasAny) continue;
+  const cols = Object.entries(snap.category_boards || {}).map(([cat, dims]) => {
+    const rows = (dims && dims[dk] || []).map((r) => {
+      const trust = r.verified
+        ? (r.score != null ? ` · ${t.catTrust.replace('{n}', r.score)}` : '')
+        : ` · <span class="muted">${t.catUnverified}</span>`;
+      const metric = {
+        stars: t.catStars.replace('{n}', nf(r.stars)),
+        delta: t.catDelta.replace('{n}', nf(r.delta ?? 0)),
+        active: t.activePushed.replace('{t}', (r.pushed || '').slice(0, 10)),
+        newest: t.newRepoCreated.replace('{t}', (r.created || '').slice(0, 10)),
+      }[dk] || '';
+      return `<div class="cat-row"><span class="rank">${String(r.rank).padStart(2, '0')}</span><span class="pname">${r.name}<small>${metric}${trust}</small></span></div>`;
+    }).join('\n');
+    return `<div class="cat-col"><div class="cat-head ${catCls(cat)}">${catLabel(cat)}</div>${rows || `<div class="cat-row"><span class="pname"><small class="muted">—</small></span></div>`}</div>`;
   }).join('\n');
-  return `<div class="cat-col"><div class="cat-head ${['v', 'w', 't', 'n'][['视觉', '工作流', '终端', '其他'].indexOf(cat)] || 'n'}">${catLabel(cat)}</div>${rowsHtml}</div>`;
-}).join('\n') : '';
+  catGrids[dk] = cols;
+}
+const dimTabs = Object.keys(catGrids);
+const hasCats = dimTabs.length > 0;
 
 const activeRows = (snap.active_board || []).map((r) => {
   const pushed = r.pushed ? r.pushed.slice(0, 16).replace('T', ' ') + 'Z' : '—';
@@ -215,8 +231,15 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
 
   ${hasCats ? `
   <h2>${t.h2Categories}</h2>
-  <div class="cat-grid">${catBoards}
+  ${dimTabs.length > 1 ? `
+  ${dimTabs.map((dk, i) => `<input type="radio" name="dim" id="dim-${dk}" class="dim-radio"${i === 0 ? ' checked' : ''}>`).join('\n')}
+  <div class="dim-labels">
+    ${dimTabs.map((dk) => `<label for="dim-${dk}">${dimKeyLabel(dk)}</label>`).join('\n')}
   </div>` : ''}
+  ${dimTabs.map((dk) => `
+  <div class="cat-grid" id="panel-${dk}"${dimTabs.length === 1 ? ' style="display:grid"' : ''}>${catGrids[dk]}
+  </div>`).join('\n')}
+  ` : ''}
 
   ${hasActive ? `
   <h2>${t.h2Active}</h2>
