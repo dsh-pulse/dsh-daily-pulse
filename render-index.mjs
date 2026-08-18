@@ -89,7 +89,7 @@ if (!last) {
 
 const html = `<!doctype html>
 <html lang="${LANG === 'en' ? 'en' : 'zh-CN'}">
-${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive' : 'DSH·daily-pulse · 档案馆'} · ${total} 期`, LANG === 'en' ? 'DSH plugin ecosystem archive - full historical timeline.' : 'DSH 插件生态档案馆 · 全量历史快照时间轴')}
+${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive · ' + total + ' issues' : 'DSH·daily-pulse · 档案馆 · ' + total + ' 期'}`, LANG === 'en' ? 'DSH plugin ecosystem archive - full historical timeline.' : 'DSH 插件生态档案馆 · 全量历史快照时间轴')}
 <style>${CSS()}</style>
 </head>
 <body>
