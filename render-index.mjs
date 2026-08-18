@@ -19,7 +19,8 @@ import { CSS, head, topbar, scripts, historyChart, dualAxisChart, miniChart, fmt
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // —— 语言参数（en / zh；默认 zh）——
-const langArg = process.argv.find((a) => a.startsWith('--lang=')) || process.argv[process.argv.indexOf('--lang') + 1];
+const langEq = process.argv.find((a) => a.startsWith('--lang='));
+const langArg = langEq ? langEq.split('=')[1] : process.argv[process.argv.indexOf('--lang') + 1];
 const LANG = (langArg === 'en' || langArg === 'zh') ? langArg : 'zh';
 const I18N = JSON.parse(readFileSync(join(__dirname, 'i18n.json'), 'utf8'));
 const t = I18N[LANG];
