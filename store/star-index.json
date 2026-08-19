@@ -1,463 +1,463 @@
 {
   "anywhere-labs/deepseek-harness-desktop": {
-    "stars": 14154,
+    "stars": 14161,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "awesome-dsh-plugin/awesome-dsh-plugin": {
-    "stars": 9338,
+    "stars": 9342,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "xiaobright/dsh-anchored-standard": {
     "stars": 3589,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ccch1mneyyy/dsh-TUI": {
-    "stars": 2018,
+    "stars": 2019,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Small-tailqwq/dsh-deep-whale": {
-    "stars": 1406,
+    "stars": 1408,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "dsh-market/dsh-market": {
-    "stars": 1113,
+    "stars": 1115,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Anionex/dsh-vision-toolkit": {
     "stars": 718,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ysr666/dsh-vision-router": {
     "stars": 780,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Electricitysheep/dsh-handbook": {
     "stars": 509,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "hairyf/deepseek-harness-desktop": {
     "stars": 556,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "omdsh-dev/dsh-at-file": {
     "stars": 397,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "vibeinging/deepseek-harness-desktop-app": {
     "stars": 487,
     "first_seen": "2026-08-16T18:17:34Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report": {
     "stars": 1011,
     "first_seen": "2026-08-17T22:16:43Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "bowenliang123/dsh-context": {
     "stars": 418,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "WYH66666666/DSH-Transparent-UI-Plugin": {
     "stars": 303,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "fufankeji/deepseek-harness-studio": {
     "stars": 305,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "bruc3van/awesome-dsh-plugin": {
     "stars": 234,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "omdsh-dev/dsh-genui": {
     "stars": 227,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "huiliyi37/dsh-tianshu-tui": {
     "stars": 217,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "lencx/Minke": {
     "stars": 217,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Nagi-ovo/dsh-visualize": {
     "stars": 182,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "hikariming/dshfind": {
     "stars": 172,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins": {
     "stars": 173,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "op7418/pilot-harness": {
     "stars": 196,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "QCYTSN/dsh-dafeiyu": {
     "stars": 162,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Ruler4396/dsh-launcher": {
     "stars": 149,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Dominic789654/awesome-deepseek-harness": {
     "stars": 154,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "cocofhu/anime-find": {
     "stars": 149,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Nagi-ovo/dsh-find-plugins": {
     "stars": 148,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "shaobeichen/dsh-pocket": {
-    "stars": 185,
+    "stars": 186,
     "first_seen": "2026-08-18T17:22:01Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "PC2005-cloud/dsh-pet": {
-    "stars": 169,
+    "stars": 170,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "libukai/awesome-deepseek-harness": {
     "stars": 146,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "liceses/dsh-gitbash-preset": {
     "stars": 130,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Devin-AXIS/deepseek-design": {
     "stars": 137,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "bradeGithub/DSH-Plugins-Marketplace": {
     "stars": 123,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ningbainb/deepseek-harness-desktop": {
     "stars": 136,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ChisaAlter/Deepseek-Harness-Desktop": {
     "stars": 120,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "yjh051108/dsh-super-injector": {
     "stars": 119,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ZSeven-W/dsh-noema": {
     "stars": 110,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "V1ki/dsh-plugin-subscriptions": {
     "stars": 137,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "d-dev0101/open-sea-skin": {
     "stars": 178,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "anysearch-team/anysearch-dsh": {
-    "stars": 120,
+    "stars": 121,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "zh667/TokenLedger": {
     "stars": 104,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "NanmiCoder/dsh-auto-mode": {
     "stars": 103,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "kingOfSoySauce/dsh-liang-skin": {
     "stars": 105,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Ayase34/gal-view": {
     "stars": 102,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Han-1413141/dsh-cost-meter": {
     "stars": 102,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Sanqi-normal/dsh-webui-market-plugin": {
     "stars": 88,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "beancookie/awesome-dsh-plugin": {
     "stars": 88,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Tabbit-Browser/dsh-plugin": {
     "stars": 87,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Anionex/dsh-turn-rewind": {
     "stars": 83,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "imsai-sh/awesome-deepseek-harness-plugins": {
     "stars": 97,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "lire1131/dsh-undo-plugin": {
     "stars": 87,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "HanaAyane/dsh-reasoning-effort": {
     "stars": 83,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "pingfanfan/hello-dsh": {
     "stars": 77,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "kelai141/dsh-mobile-apk": {
     "stars": 74,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Ychris12138/dsh-usage-stats": {
     "stars": 77,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "elysia395/dsh-wallpaper-engine": {
     "stars": 80,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "mishibeikejie/zat-dsh-engine": {
     "stars": 72,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Alex-Yanggg/awesome-DSH-plugin": {
     "stars": 72,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Nwflower/dsh-chat-import": {
     "stars": 71,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "oil-oil/dsh-vision": {
     "stars": 68,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "AITabby/dockyard-dsh": {
     "stars": 70,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Fishquito7/dsh-skill-mcp-panel": {
     "stars": 66,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "like-study1/Oh-My-DSH": {
     "stars": 63,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "liyupi/dsh-kun-like-pet": {
     "stars": 66,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "tencent-connect/dsh-qqbot": {
     "stars": 62,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "omdsh-dev/dsh-notification": {
     "stars": 61,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ZSeven-W/dsh-crew": {
     "stars": 59,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Mars-Sea/dsh-commandcode-provider": {
     "stars": 63,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "wess09/DeepSeekHarnessDesktop": {
     "stars": 63,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "LX2000WASD/dsh-web-plugin-manager": {
     "stars": 58,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "RevolutionLA/dsh-dream-skin": {
     "stars": 58,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "PerryLink/dsh-memento": {
     "stars": 58,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "eri64/dsh-claude-ux": {
     "stars": 57,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "awesome-dsh-plugin/dsh-find-plugin": {
     "stars": 59,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "ZASENJC/dsh-plugins-store": {
     "stars": 56,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "LayneChai/superpowers-dsh": {
     "stars": 58,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "c3ll256/dsh-toy": {
     "stars": 56,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "titanwings/dsh-automation": {
     "stars": 59,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Noob-stupid/dsh-plugin-hub": {
     "stars": 54,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "xmanrui/dsh-im": {
     "stars": 56,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "howmp/dsh-pentest": {
     "stars": 73,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "omdsh-dev/dsh-open-in-vscode": {
     "stars": 51,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "LaplaceYoung/oh-my-dsh": {
     "stars": 50,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "toolclub/dsh-agent-team-gui": {
-    "stars": 89,
+    "stars": 90,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Awu12277/dsh-stock-watch": {
     "stars": 50,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "HeiGeAi/deepseek-harness-skin": {
     "stars": 47,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "shanliuling/dsh-image-gen": {
     "stars": 66,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "Francis-Xavier-code/dsh-balance-plugin": {
     "stars": 48,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "xiincs/deepseek-harness-desktop": {
     "stars": 47,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "whyihaveyou/dsh-suite": {
     "stars": 42,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "kanghelyu/dsh-deepseek-flow": {
     "stars": 41,
@@ -472,12 +472,12 @@
   "openma-ai/deepseek-harness-tui": {
     "stars": 42,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "THEWOLFWALKER/dsh-notifier": {
     "stars": 43,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "shengsheng90/DSH-taskboard": {
     "stars": 39,
@@ -492,26 +492,26 @@
   "feibi-mochi/deepseek-harness-control-center": {
     "stars": 46,
     "first_seen": "2026-08-18T17:57:28Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "pengyue-polaron/deepseek-harness-genui": {
     "stars": 43,
     "first_seen": "2026-08-18T22:14:44Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "cocode-agency/cocode": {
-    "stars": 69,
+    "stars": 70,
     "first_seen": "2026-08-19T06:34:53Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "MeteorNOX/DeepSeek-Balance-Whale-Widget": {
     "stars": 48,
     "first_seen": "2026-08-19T06:34:53Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   },
   "wssfk12138/dsh-damage-pulse": {
     "stars": 47,
     "first_seen": "2026-08-19T06:34:53Z",
-    "last_seen": "2026-08-19T06:34:53Z"
+    "last_seen": "2026-08-19T06:38:16Z"
   }
 }

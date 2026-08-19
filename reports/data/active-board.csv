@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ysr666/dsh-vision-router,780,26,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-19T06:33:53Z,https://github.com/ysr666/dsh-vision-router
-active,2,xmanrui/dsh-im,56,4,0,,0,工作流,2026-08-14T20:40:06Z,2026-08-19T06:33:42Z,https://github.com/xmanrui/dsh-im
-active,3,hairyf/deepseek-harness-desktop,556,27,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-19T06:32:01Z,https://github.com/hairyf/deepseek-harness-desktop
-active,4,imsai-sh/awesome-deepseek-harness-plugins,97,16,0,3,1,工作流,2026-08-14T05:53:47Z,2026-08-19T06:29:15Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,Dominic789654/awesome-deepseek-harness,154,6,0,1,0,工作流,2026-08-13T13:54:05Z,2026-08-19T06:26:54Z,https://github.com/Dominic789654/awesome-deepseek-harness
+active,1,fufankeji/deepseek-harness-studio,305,0,0,3,1,视觉,2026-08-15T03:00:06Z,2026-08-19T06:38:09Z,https://github.com/fufankeji/deepseek-harness-studio
+active,2,ccch1mneyyy/dsh-TUI,2019,1,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-19T06:36:13Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,Small-tailqwq/dsh-deep-whale,1408,2,0,1,0,视觉,2026-08-13T13:02:14Z,2026-08-19T06:35:37Z,https://github.com/Small-tailqwq/dsh-deep-whale
+active,4,ysr666/dsh-vision-router,780,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-19T06:35:26Z,https://github.com/ysr666/dsh-vision-router
+active,5,shanliuling/dsh-image-gen,66,0,0,,0,工作流,2026-08-17T10:16:37Z,2026-08-19T06:35:11Z,https://github.com/shanliuling/dsh-image-gen
