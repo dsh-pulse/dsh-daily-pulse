@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Anionex/dsh-vision-toolkit,747,0,0,3,1,视觉,2026-08-13T12:36:34Z,2026-08-19T14:53:24Z,https://github.com/Anionex/dsh-vision-toolkit
-active,2,Ruler4396/dsh-launcher,152,-1,0,1,0,终端,2026-08-13T13:27:09Z,2026-08-19T14:53:17Z,https://github.com/Ruler4396/dsh-launcher
-active,3,ZASENJC/dsh-plugins-store,58,0,0,,0,工作流,2026-08-13T22:16:37Z,2026-08-19T14:53:17Z,https://github.com/ZASENJC/dsh-plugins-store
-active,4,shaobeichen/dsh-pocket,213,2,0,3,1,终端,2026-08-15T09:36:29Z,2026-08-19T14:50:24Z,https://github.com/shaobeichen/dsh-pocket
-active,5,anywhere-labs/deepseek-harness-desktop,14913,41,0,3,1,视觉,2026-08-13T16:30:50Z,2026-08-19T14:44:49Z,https://github.com/anywhere-labs/deepseek-harness-desktop
+active,1,anywhere-labs/deepseek-harness-desktop,14915,2,0,3,1,视觉,2026-08-13T16:30:50Z,2026-08-19T14:57:17Z,https://github.com/anywhere-labs/deepseek-harness-desktop
+active,2,Ruler4396/dsh-launcher,152,0,0,1,0,终端,2026-08-13T13:27:09Z,2026-08-19T14:56:13Z,https://github.com/Ruler4396/dsh-launcher
+active,3,ysr666/dsh-vision-router,830,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-19T14:56:01Z,https://github.com/ysr666/dsh-vision-router
+active,4,kelai141/dsh-mobile-apk,79,0,0,,0,视觉,2026-08-13T23:55:34Z,2026-08-19T14:55:46Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,Anionex/dsh-vision-toolkit,747,0,0,3,1,视觉,2026-08-13T12:36:34Z,2026-08-19T14:53:24Z,https://github.com/Anionex/dsh-vision-toolkit
