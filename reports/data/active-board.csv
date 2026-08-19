@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,hikariming/dshfind,161,1,0,3,1,终端,2026-08-13T12:16:50Z,2026-08-18T22:08:28Z,https://github.com/hikariming/dshfind
-active,2,ysr666/dsh-vision-router,754,2,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-18T22:04:24Z,https://github.com/ysr666/dsh-vision-router
-active,3,ZASENJC/dsh-plugins-store,56,0,0,,0,工作流,2026-08-13T22:16:37Z,2026-08-18T21:46:44Z,https://github.com/ZASENJC/dsh-plugins-store
-active,4,whyihaveyou/dsh-suite,42,0,0,,0,工作流,2026-08-13T13:32:50Z,2026-08-18T21:39:50Z,https://github.com/whyihaveyou/dsh-suite
-active,5,ccch1mneyyy/dsh-TUI,1968,7,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-18T21:35:12Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,ysr666/dsh-vision-router,780,26,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-19T06:33:53Z,https://github.com/ysr666/dsh-vision-router
+active,2,xmanrui/dsh-im,56,4,0,,0,工作流,2026-08-14T20:40:06Z,2026-08-19T06:33:42Z,https://github.com/xmanrui/dsh-im
+active,3,hairyf/deepseek-harness-desktop,556,27,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-19T06:32:01Z,https://github.com/hairyf/deepseek-harness-desktop
+active,4,imsai-sh/awesome-deepseek-harness-plugins,97,16,0,3,1,工作流,2026-08-14T05:53:47Z,2026-08-19T06:29:15Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,5,Dominic789654/awesome-deepseek-harness,154,6,0,1,0,工作流,2026-08-13T13:54:05Z,2026-08-19T06:26:54Z,https://github.com/Dominic789654/awesome-deepseek-harness
