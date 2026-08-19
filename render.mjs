@@ -33,6 +33,9 @@ const nf = (n) => (n == null ? '—' : Number(n).toLocaleString('en-US'));
 
 const snap = JSON.parse(readFileSync(join(STORE, 'latest.json'), 'utf8'));
 
+// —— 项目版本（package.json，footer 可见迭代）——
+const VERSION = JSON.parse(readFileSync(join(__dirname, 'package.json'), 'utf8')).version;
+
 // —— 期号 = 快照历史行数（第 N 期）——
 const lines = readFileSync(join(STORE, 'snapshots.jsonl'), 'utf8').trim().split('\n').filter(Boolean);
 const issueNo = lines.length;
@@ -298,7 +301,7 @@ ${head(`${LANG === 'en' ? 'DSH Ecosystem Pulse' : 'DSH·daily-pulse'} · ${t.met
 
   <footer>
     <span>${t.footer1.replace('{n}', issueNo)}</span>
-    <span>${t.footer2.replace('{t}', stamp)}</span>
+    <span>v${VERSION} · ${t.footer2.replace('{t}', stamp)}</span>
   </footer>
 
 </div>

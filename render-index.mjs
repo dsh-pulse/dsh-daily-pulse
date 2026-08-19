@@ -28,6 +28,7 @@ const t = I18N[LANG];
 const STORE = join(__dirname, 'store');
 const REPORTS = join(__dirname, 'reports');
 mkdirSync(REPORTS, { recursive: true });
+const VERSION = JSON.parse(readFileSync(join(__dirname, 'package.json'), 'utf8')).version;
 
 // —— 读取全部快照 ——
 const lines = readFileSync(join(STORE, 'snapshots.jsonl'), 'utf8').trim().split('\n').filter(Boolean);
@@ -175,6 +176,7 @@ ${head(`${LANG === 'en' ? 'DSH·daily-pulse · Archive · ' + total + ' issues' 
   <footer>
     <span>DSH·daily-pulse · ${LANG === 'zh' ? `档案馆 · ${total} 期快照` : `Archive · ${total} snapshots`}</span>
     <span>${LANG === 'zh' ? '数据源' : 'Sources'} GitHub Search API + npm registry · ${cst(new Date().toISOString())}</span>
+    <span>v${VERSION} · <a href="https://github.com/dsh-pulse/dsh-daily-pulse/releases" style="color:var(--text-3)">CHANGELOG</a></span>
   </footer>
 
 </div>

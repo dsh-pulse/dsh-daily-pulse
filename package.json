@@ -1,0 +1,26 @@
+{
+  "name": "dsh-daily-pulse",
+  "version": "0.1.0",
+  "description": "DSH 插件生态日报/档案馆 — 每天 06:00/14:00/22:00 自动采集 GitHub+npm 真实数据，输出日报、档案馆、开放数据（CSV/JSON）。DSH plugin ecosystem daily pulse & archive.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dsh-pulse/dsh-daily-pulse.git"
+  },
+  "scripts": {
+    "collect": "node collect.mjs",
+    "summarize": "node summarize.mjs",
+    "render": "node render.mjs",
+    "render:en": "node render.mjs --lang en",
+    "render-index": "node render-index.mjs",
+    "render-index:en": "node render-index.mjs --lang en",
+    "render-structured": "node render-structured.mjs",
+    "export": "node export.mjs",
+    "pulse": "node collect.mjs && node summarize.mjs && node render.mjs --lang zh && node render.mjs --lang en && node render-index.mjs --lang zh && node render-index.mjs --lang en && node render-structured.mjs && node export.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
