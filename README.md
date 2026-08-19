@@ -17,7 +17,7 @@ DSH 插件生态日报 — 每天 06:00 / 14:00 / 22:00（北京时间）三次�
 - **M1 ✅**：差分增速榜（star-index 基线）、档案馆首页（历史曲线）、三时点 CI 自动化
 - **M2 ✅**：DeepSeek 中文摘要、健康分全量计分制、自动 commit 公开仓库
 - **M3 ✅**：GitHub Pages「生态档案馆」正式站点（18+ 期、双轴主图 + 4 指标矩阵、中英双语、npm 自然日口径）
-- **M4 🔄（进行中）**：①开放数据接口 ✅（CSV/JSON，本页「开放数据」节）②细分榜单 ✅（各分类 Top 10 × 4 维度）③数据地图 ⏳（最后）
+- **M4 🔄（进行中）**：①开放数据接口 ✅ ②细分榜单 ✅（Top 10 × 4 维度）③数据地图 ⏳（最后）；**插件行情页 ✅**（趋势浏览器，star 轨迹）
 
 ## 目录结构
 
@@ -27,6 +27,7 @@ dsh-daily-pulse/
 ├── bootstrap.mjs       # 一次性：首次按 star 抓前 1000 建历史库 → store/repos.jsonl（护城河数据集根基）
 ├── render.mjs          # 渲染单期日报（双语：--lang zh|en）→ reports/<期号>_<时间>_zh/_en.html + latest.html
 ├── render-index.mjs    # 渲染档案馆首页（双语）→ reports/index.html + index_en.html
+├── render-plugins.mjs   # 插件行情页（趋势浏览器，双语）→ reports/plugins.html（star 轨迹 + 增速 + 排序）
 ├── render-structured.mjs # 渲染结构化输出 → reports/structured/（JSON-LD + 英文正文，GEO 引用源）
 ├── export.mjs          # M4：导出开放数据 → reports/data/（snapshots.csv / latest.csv / leaderboard.csv / latest.json）
 ├── tokens.mjs          # 设计系统 v0.2 令牌模块（三层令牌 + 组件 CSS + 图表，单文件可交付）
@@ -53,6 +54,8 @@ node render.mjs --lang zh
 node render.mjs --lang en
 node render-index.mjs --lang zh
 node render-index.mjs --lang en
+node render-plugins.mjs --lang zh
+node render-plugins.mjs --lang en
 node render-structured.mjs
 node export.mjs
 # 3) 打开 reports/latest.html（中文默认）/ latest 的 EN 切换 / reports/index_en.html

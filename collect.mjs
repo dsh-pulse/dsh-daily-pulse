@@ -372,6 +372,7 @@ async function main() {
     growth,
     category_boards: categoryBoards, // M4 细分榜单：{类别: [top4]}
     active_board: activeBoard,      // M4 活跃榜：最近 push top5
+    tracked_repos: allScored,       // 追踪候选全量（100）：轨迹数据（趋势浏览器行情版依赖）
     new_repos: newRepos,            // M4-A 新面孔：8h 新增 top6
     stale_list: staleList,          // M4-A 沉寂名单：7 天无 push top6
     official_activity: officialActivity,

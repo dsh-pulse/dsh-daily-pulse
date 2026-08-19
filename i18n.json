@@ -49,8 +49,16 @@
     ],
     "healthRing": "生态健康分",
     "healthNow": "当前 {n} / 100",
-    "healthZone": ["「健康扩张」区间", "「稳定扩张」区间", "「需关注」区间"],
-    "healthBand": ["≥80 绿", "60–79 蓝", "<60 红"],
+    "healthZone": [
+      "「健康扩张」区间",
+      "「稳定扩张」区间",
+      "「需关注」区间"
+    ],
+    "healthBand": [
+      "≥80 绿",
+      "60–79 蓝",
+      "<60 红"
+    ],
     "healthMethod": "M2 全量计分制：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20。",
     "healthWarnTitle": "沉寂预警",
     "healthStale7d": "个仓库 7 天无提交（{p}% 弃养率）",
@@ -64,7 +72,22 @@
     "archiveLink": "查看完整历史 →",
     "archiveFirst": "首期快照 · 历史曲线自第 2 期起累积",
     "footer1": "DSH·daily-pulse · 第 {n} 期 · 真实采集数据",
-    "footer2": "数据源 GitHub Search API + npm registry · 生成于 {t}"
+    "footer2": "数据源 GitHub Search API + npm registry · 生成于 {t}",
+    "pKicker": "Market Data",
+    "pTitle": "插件行情",
+    "pSub": "全量追踪仓库的 star 轨迹与活跃度 —— 唯一带时间线的插件数据索引。",
+    "pTableTitle": "全部追踪仓库",
+    "pColRepo": "仓库",
+    "pColStars": "当前★",
+    "pColDelta": "8h 增速",
+    "pColLen": "轨迹点数",
+    "pColTraj": "star 轨迹",
+    "pColPushed": "最近 push",
+    "pColCat": "分类",
+    "pTrust": "证据 {n}/5",
+    "pUnverified": "无 manifest 证据",
+    "pStale": "停更 {n} 天",
+    "pNote": "计分为事实证据（manifest / 依赖 / topic），非评价；策展与收录判断见 awesome-dsh-plugin / dshhub。轨迹自每期快照聚合，随运行持续累积。"
   },
   "en": {
     "kicker": "Daily Pulse",
@@ -116,8 +139,16 @@
     ],
     "healthRing": "Ecosystem Health",
     "healthNow": "Now {n} / 100",
-    "healthZone": ["healthy expansion", "stable expansion", "needs attention"],
-    "healthBand": ["≥80 green", "60–79 blue", "<60 red"],
+    "healthZone": [
+      "healthy expansion",
+      "stable expansion",
+      "needs attention"
+    ],
+    "healthBand": [
+      "≥80 green",
+      "60–79 blue",
+      "<60 red"
+    ],
     "healthMethod": "M2 full scoring: activity 40 + freshness 20 + adoption 20 + diversity 20.",
     "healthWarnTitle": "Staleness Alert",
     "healthStale7d": "repos with no push in 7d ({p}% abandonment)",
@@ -131,6 +162,21 @@
     "archiveLink": "View full history →",
     "archiveFirst": "First snapshot · history accumulates from issue 2",
     "footer1": "DSH·daily-pulse · Issue #{n} · real collected data",
-    "footer2": "Sources GitHub Search API + npm registry · generated {t}"
+    "footer2": "Sources GitHub Search API + npm registry · generated {t}",
+    "pKicker": "Market Data",
+    "pTitle": "Plugin Trends",
+    "pSub": "Star trajectories & activity for every tracked repo - the only timeline-based plugin index.",
+    "pTableTitle": "All Tracked Repos",
+    "pColRepo": "Repo",
+    "pColStars": "★",
+    "pColDelta": "8h Δ",
+    "pColLen": "Points",
+    "pColTraj": "Star trail",
+    "pColPushed": "Last push",
+    "pColCat": "Category",
+    "pTrust": "evidence {n}/5",
+    "pUnverified": "no manifest evidence",
+    "pStale": "{n}d stale",
+    "pNote": "Score = factual evidence (manifest / deps / topic), not a verdict; curation lives at awesome-dsh-plugin / dshhub. Trajectories aggregate from each snapshot and grow over time."
   }
 }

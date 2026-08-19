@@ -50,6 +50,9 @@ jobs:
       - name: 渲染档案馆首页（英文）
         run: node render-index.mjs --lang en
 
+      - name: 渲染插件行情页（趋势浏览器，中英）
+        run: node render-plugins.mjs --lang zh && node render-plugins.mjs --lang en
+
       - name: 渲染结构化输出（JSON-LD + 英文正文，GEO 引用源）
         run: node render-structured.mjs
 
