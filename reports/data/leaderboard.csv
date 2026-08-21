@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,anywhere-labs/deepseek-harness-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,16873,445,0,3,视觉,2026-08-13T16:30:50Z,2026-08-21T06:16:09Z,https://github.com/anywhere-labs/deepseek-harness-desktop
-leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,10836,210,0,3,终端,2026-08-13T13:55:31Z,2026-08-21T06:36:14Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,3,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3693,13,0,3,工作流,2026-08-14T14:06:39Z,2026-08-17T06:19:58Z,https://github.com/xiaobright/dsh-anchored-standard
-leaderboard,4,ccch1mneyyy/dsh-TUI,DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ,2219,36,0,3,视觉,2026-08-13T12:49:31Z,2026-08-21T06:39:09Z,https://github.com/ccch1mneyyy/dsh-TUI
-leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",1510,66,0,3,视觉,2026-08-14T04:58:15Z,2026-08-21T06:37:56Z,https://github.com/dsh-market/dsh-market
-leaderboard,6,ysr666/dsh-vision-router,Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ,919,16,0,3,视觉,2026-08-13T18:57:47Z,2026-08-21T06:31:54Z,https://github.com/ysr666/dsh-vision-router
-growth,1,anywhere-labs/deepseek-harness-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,16873,445,0,3,视觉,,,https://github.com/anywhere-labs/deepseek-harness-desktop
-growth,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,10836,210,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,3,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",1510,66,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,4,ccch1mneyyy/dsh-TUI,DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ,2219,36,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
-growth,5,ysr666/dsh-vision-router,Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ,919,16,0,3,视觉,,,https://github.com/ysr666/dsh-vision-router
-growth,6,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3693,13,0,3,工作流,,,https://github.com/xiaobright/dsh-anchored-standard
+leaderboard,1,anywhere-labs/deepseek-harness-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,17355,482,0,3,视觉,2026-08-13T16:30:50Z,2026-08-21T14:10:10Z,https://github.com/anywhere-labs/deepseek-harness-desktop
+leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,11042,206,0,3,终端,2026-08-13T13:55:31Z,2026-08-21T09:43:47Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,3,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3698,5,0,3,工作流,2026-08-14T14:06:39Z,2026-08-17T06:19:58Z,https://github.com/xiaobright/dsh-anchored-standard
+leaderboard,4,ccch1mneyyy/dsh-TUI,DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ,2252,33,0,3,视觉,2026-08-13T12:49:31Z,2026-08-21T14:27:17Z,https://github.com/ccch1mneyyy/dsh-TUI
+leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",1593,83,0,3,视觉,2026-08-14T04:58:15Z,2026-08-21T09:46:20Z,https://github.com/dsh-market/dsh-market
+leaderboard,6,ysr666/dsh-vision-router,Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ,929,10,0,3,视觉,2026-08-13T18:57:47Z,2026-08-21T13:31:46Z,https://github.com/ysr666/dsh-vision-router
+growth,1,anywhere-labs/deepseek-harness-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,17355,482,0,3,视觉,,,https://github.com/anywhere-labs/deepseek-harness-desktop
+growth,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,11042,206,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,3,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",1593,83,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,4,ccch1mneyyy/dsh-TUI,DSH 官方公众号收录的 TUI 补位插件：Claude Code 风，鲸鱼顶栏/实时状态/流式思考/双击 Esc 回滚/上下文进度+TPS。npm 一键装。 ,2252,33,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
+growth,5,ysr666/dsh-vision-router,Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) ,929,10,0,3,视觉,,,https://github.com/ysr666/dsh-vision-router
+growth,6,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3698,5,0,3,工作流,,,https://github.com/xiaobright/dsh-anchored-standard
