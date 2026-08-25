@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,saya-ch/dsh-mobile,138,0,0,,0,终端,2026-08-15T05:28:38Z,2026-08-25T06:39:14Z,https://github.com/saya-ch/dsh-mobile
-active,2,kingOfSoySauce/dsh-skin-market,88,2,0,,0,视觉,2026-08-16T12:31:32Z,2026-08-25T06:38:31Z,https://github.com/kingOfSoySauce/dsh-skin-market
-active,3,Small-tailqwq/dsh-deep-whale,1691,17,0,1,0,视觉,2026-08-13T13:02:14Z,2026-08-25T06:38:13Z,https://github.com/Small-tailqwq/dsh-deep-whale
-active,4,dsh-tauri-desk/deepseek-harness-desktop,1131,27,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-25T06:36:16Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,5,Dominic789654/awesome-deepseek-harness,192,1,0,1,0,工作流,2026-08-13T13:54:05Z,2026-08-25T06:36:00Z,https://github.com/Dominic789654/awesome-deepseek-harness
+active,1,ChisaAlter/Deepseek-Harness-Desktop,139,1,0,,0,视觉,2026-08-13T13:21:50Z,2026-08-25T14:38:08Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,2,dsh-tauri-desk/deepseek-harness-desktop,1161,30,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-25T14:37:46Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,3,Ychris12138/dsh-usage-stats,123,3,0,,0,其他,2026-08-14T01:40:02Z,2026-08-25T14:33:44Z,https://github.com/Ychris12138/dsh-usage-stats
+active,4,lencx/Minke,508,14,0,3,1,视觉,2026-08-15T01:49:38Z,2026-08-25T14:32:01Z,https://github.com/lencx/Minke
+active,5,hikariming/dshfind,222,2,0,3,1,终端,2026-08-13T12:16:50Z,2026-08-25T14:22:36Z,https://github.com/hikariming/dshfind
