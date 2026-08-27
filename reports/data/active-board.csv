@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,beancookie/awesome-dsh-plugin,117,1,0,,0,其他,2026-08-14T09:35:25Z,2026-08-26T14:28:33Z,https://github.com/beancookie/awesome-dsh-plugin
-active,2,xmanrui/dsh-im,879,20,0,3,1,工作流,2026-08-14T20:40:06Z,2026-08-26T14:24:45Z,https://github.com/xmanrui/dsh-im
-active,3,ysr666/dsh-vision-router,990,11,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-26T14:24:27Z,https://github.com/ysr666/dsh-vision-router
-active,4,kingOfSoySauce/dsh-skin-market,98,4,0,,0,视觉,2026-08-16T12:31:32Z,2026-08-26T14:17:17Z,https://github.com/kingOfSoySauce/dsh-skin-market
-active,5,ccch1mneyyy/dsh-TUI,2585,23,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-26T14:09:28Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,libukai/awesome-deepseek-harness,214,1,0,1,0,工作流,2026-08-13T13:47:48Z,2026-08-27T02:28:13Z,https://github.com/libukai/awesome-deepseek-harness
+active,2,ccch1mneyyy/dsh-TUI,2601,16,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-27T02:27:12Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,dsh-tauri-desk/deepseek-harness-desktop,1250,26,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-27T02:15:25Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,4,Dominic789654/awesome-deepseek-harness,203,1,0,1,0,工作流,2026-08-13T13:54:05Z,2026-08-27T02:05:24Z,https://github.com/Dominic789654/awesome-deepseek-harness
+active,5,kelai141/dsh-mobile-apk,244,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-08-27T02:04:44Z,https://github.com/kelai141/dsh-mobile-apk
