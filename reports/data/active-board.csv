@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dsh-tauri-desk/deepseek-harness-desktop,1346,40,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-28T18:06:01Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,2,chokwinlee/deepseek-harness-desktop,111,2,0,,0,视觉,2026-08-14T15:11:01Z,2026-08-28T18:05:38Z,https://github.com/chokwinlee/deepseek-harness-desktop
-active,3,kingOfSoySauce/dsh-skin-market,105,1,0,,0,视觉,2026-08-16T12:31:32Z,2026-08-28T18:02:45Z,https://github.com/kingOfSoySauce/dsh-skin-market
-active,4,bradeGithub/DSH-Plugins-Marketplace,150,1,0,,0,工作流,2026-08-13T16:01:59Z,2026-08-28T17:56:19Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
-active,5,anywhere-labs/dsh-desktop,21513,230,0,3,1,视觉,2026-08-13T16:30:50Z,2026-08-28T17:54:50Z,https://github.com/anywhere-labs/dsh-desktop
+active,1,Hilbert-beinghappy/seektty,103,,1,,0,视觉,2026-08-14T11:10:57Z,2026-08-28T23:15:39Z,https://github.com/Hilbert-beinghappy/seektty
+active,2,ccch1mneyyy/dsh-TUI,2662,3,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-28T22:57:58Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,omdsh-dev/dsh-genui,363,1,0,3,1,视觉,2026-08-13T13:07:52Z,2026-08-28T20:35:47Z,https://github.com/omdsh-dev/dsh-genui
+active,4,bradeGithub/DSH-Plugins-Marketplace,151,1,0,,0,工作流,2026-08-13T16:01:59Z,2026-08-28T20:33:58Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,5,lire1131/dsh-undo-savepoint,132,0,0,,0,终端,2026-08-14T05:13:17Z,2026-08-28T19:21:54Z,https://github.com/lire1131/dsh-undo-savepoint
