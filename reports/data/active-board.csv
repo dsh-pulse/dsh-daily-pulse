@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,13259,64,0,3,1,终端,2026-08-13T13:55:31Z,2026-08-28T05:53:15Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,dsh-market/dsh-market,2632,20,0,3,1,视觉,2026-08-14T04:58:15Z,2026-08-28T05:50:49Z,https://github.com/dsh-market/dsh-market
-active,3,imsai-sh/awesome-deepseek-harness-plugins,197,0,0,3,1,工作流,2026-08-14T05:53:47Z,2026-08-28T05:47:47Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,4,kelai141/dsh-mobile-apk,258,3,0,1,0,视觉,2026-08-13T23:55:34Z,2026-08-28T05:42:56Z,https://github.com/kelai141/dsh-mobile-apk
-active,5,ccch1mneyyy/dsh-TUI,2640,10,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-28T05:30:04Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,dsh-tauri-desk/deepseek-harness-desktop,1346,40,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-28T18:06:01Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,2,chokwinlee/deepseek-harness-desktop,111,2,0,,0,视觉,2026-08-14T15:11:01Z,2026-08-28T18:05:38Z,https://github.com/chokwinlee/deepseek-harness-desktop
+active,3,kingOfSoySauce/dsh-skin-market,105,1,0,,0,视觉,2026-08-16T12:31:32Z,2026-08-28T18:02:45Z,https://github.com/kingOfSoySauce/dsh-skin-market
+active,4,bradeGithub/DSH-Plugins-Marketplace,150,1,0,,0,工作流,2026-08-13T16:01:59Z,2026-08-28T17:56:19Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,5,anywhere-labs/dsh-desktop,21513,230,0,3,1,视觉,2026-08-13T16:30:50Z,2026-08-28T17:54:50Z,https://github.com/anywhere-labs/dsh-desktop
