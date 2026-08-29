@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,kingOfSoySauce/dsh-skin-market,105,0,0,,0,视觉,2026-08-16T12:31:32Z,2026-08-29T03:22:11Z,https://github.com/kingOfSoySauce/dsh-skin-market
-active,2,ysr666/dsh-vision-router,1016,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-29T03:19:52Z,https://github.com/ysr666/dsh-vision-router
-active,3,ChisaAlter/Deepseek-Harness-Desktop,144,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-08-29T03:11:14Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
-active,4,Mars-Sea/dsh-commandcode-provider,118,1,0,,0,其他,2026-08-14T11:38:54Z,2026-08-29T02:59:48Z,https://github.com/Mars-Sea/dsh-commandcode-provider
-active,5,ccch1mneyyy/dsh-TUI,2666,4,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-29T02:51:45Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,Anionex/dsh-vision-toolkit,839,1,0,3,1,视觉,2026-08-13T12:36:34Z,2026-08-29T12:05:58Z,https://github.com/Anionex/dsh-vision-toolkit
+active,2,ysr666/dsh-vision-router,1020,4,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-29T12:05:30Z,https://github.com/ysr666/dsh-vision-router
+active,3,Dominic789654/awesome-deepseek-harness,205,0,0,1,0,工作流,2026-08-13T13:54:05Z,2026-08-29T12:03:50Z,https://github.com/Dominic789654/awesome-deepseek-harness
+active,4,dsh-tauri-desk/deepseek-harness-desktop,1378,16,0,3,1,视觉,2026-08-14T02:36:29Z,2026-08-29T12:02:22Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,5,ccch1mneyyy/dsh-TUI,2677,11,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-29T12:01:57Z,https://github.com/ccch1mneyyy/dsh-TUI
