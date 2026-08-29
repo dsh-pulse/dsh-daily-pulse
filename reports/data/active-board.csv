@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,cocode-agency/cocode,161,0,0,,0,视觉,2026-08-14T09:35:46Z,2026-08-29T16:56:49Z,https://github.com/cocode-agency/cocode
-active,2,bradeGithub/DSH-Plugins-Marketplace,152,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-08-29T16:56:28Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
-active,3,ccch1mneyyy/dsh-TUI,2686,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-29T16:52:26Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,imsai-sh/awesome-deepseek-harness-plugins,201,1,0,3,1,工作流,2026-08-14T05:53:47Z,2026-08-29T16:49:44Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,weijiafu14/pi2dsh,174,0,0,,0,工作流,2026-08-13T19:05:34Z,2026-08-29T16:32:22Z,https://github.com/weijiafu14/pi2dsh
+active,1,ysr666/dsh-vision-router,1022,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-08-29T23:46:23Z,https://github.com/ysr666/dsh-vision-router
+active,2,imsai-sh/awesome-deepseek-harness-plugins,203,2,0,3,1,工作流,2026-08-14T05:53:47Z,2026-08-29T23:44:47Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,3,kelai141/dsh-mobile-apk,274,2,0,1,0,视觉,2026-08-13T23:55:34Z,2026-08-29T23:44:09Z,https://github.com/kelai141/dsh-mobile-apk
+active,4,xmanrui/dsh-im,983,2,0,3,1,工作流,2026-08-14T20:40:06Z,2026-08-29T23:03:03Z,https://github.com/xmanrui/dsh-im
+active,5,ccch1mneyyy/dsh-TUI,2689,3,0,3,1,视觉,2026-08-13T12:49:31Z,2026-08-29T21:43:52Z,https://github.com/ccch1mneyyy/dsh-TUI
