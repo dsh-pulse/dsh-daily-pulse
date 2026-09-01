@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="DSH plugin ecosystem daily digest - 3x a day, 1 min to read the pulse." />
+<meta name="generator" content="dsh-daily-pulse" />
+<title>DSH Ecosystem Pulse · Issue #68 · 2026-09-01 · 19:02</title>
+<script>
+  (function(){try{
+    var t=localStorage.getItem('dsh-theme');
+    if(!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t='light';
+    if(t) document.documentElement.dataset.theme=t;
+  }catch(e){}})();
+</script>
+<script type="application/ld+json">{"@context":["https://schema.org",{"dsh":"https://dsh-pulse.github.io/dsh-daily-pulse/ns#"}],"@type":"Dataset","@id":"https://dsh-pulse.github.io/dsh-daily-pulse/structured/0068.json","name":"DSH Plugin Ecosystem Snapshot · Issue #68","description":"Daily snapshot of the DeepSeek Harness (DSH) plugin ecosystem: 13235 plugins total, +52 in 8h, official repo 207439 stars, npm weekly 366.6K.","url":"https://dsh-pulse.github.io/dsh-daily-pulse/latest.html","datePublished":"2026-09-01T11:02:24Z","dateModified":"2026-09-01T11:02:24Z","temporalCoverage":"2026-09-01T02:57:24Z/2026-09-01T11:02:24Z","inLanguage":"en","publisher":{"@type":"Organization","name":"dsh-pulse","url":"https://dsh-pulse.github.io/dsh-daily-pulse/"},"creator":{"@type":"Organization","name":"dsh-daily-pulse"},"distribution":{"@type":"DataDownload","contentUrl":"https://dsh-pulse.github.io/dsh-daily-pulse/structured/0068.json","encodingFormat":"application/json"},"variableMeasured":[{"@type":"PropertyValue","name":"Total plugins (topic count, incl. forks)","value":13235},{"@type":"PropertyValue","name":"Tracked plugins (non-fork)","value":13073},{"@type":"PropertyValue","name":"New repos in 8h","value":52},{"@type":"PropertyValue","name":"Official repo stars","value":207439},{"@type":"PropertyValue","name":"Official repo forks","value":24125},{"@type":"PropertyValue","name":"npm weekly downloads (@deepseek-ai/dsh)","value":366625},{"@type":"PropertyValue","name":"Official stars delta (8h)","value":972},{"@type":"PropertyValue","name":"Ecosystem health score","value":43},{"@type":"PropertyValue","name":"Stale repos (7d no push)","value":8659},{"@type":"PropertyValue","name":"Stale repos (24h no push)","value":11829}],"kpis":{"total_plugins":13235,"non_fork_plugins":13073,"count_source":"topics-page","new_8h_repos":52,"official_stars":207439,"official_forks":24125,"npm_weekly_downloads":366625,"npm_daily":36258,"npm_daily_date":"2026-08-30","delta_8h_stars":972},"official":{"full_name":"deepseek-ai/deepseek-harness","pushed_at":"2026-08-31T16:03:39Z","created_at":"2026-08-13T11:56:32Z","open_issues":0},"leaderboard":[{"rank":1,"name":"anywhere-labs/dsh-desktop","stars":22664,"delta":208,"category":"视觉","score":3,"url":"https://github.com/anywhere-labs/dsh-desktop","created":"2026-08-13T16:30:50Z","pushed":"2026-09-01T09:36:59Z"},{"rank":2,"name":"awesome-dsh-plugin/awesome-dsh-plugin","stars":13997,"delta":102,"category":"终端","score":3,"url":"https://github.com/awesome-dsh-plugin/awesome-dsh-plugin","created":"2026-08-13T13:55:31Z","pushed":"2026-09-01T04:17:07Z"},{"rank":3,"name":"yjh051108/dsh-routing-suite","stars":7015,"delta":17,"category":"工作流","score":3,"url":"https://github.com/yjh051108/dsh-routing-suite","created":"2026-08-14T21:20:55Z","pushed":"2026-08-28T19:03:44Z"},{"rank":4,"name":"xiaobright/dsh-anchored-standard","stars":3821,"delta":9,"category":"工作流","score":3,"url":"https://github.com/xiaobright/dsh-anchored-standard","created":"2026-08-14T14:06:39Z","pushed":"2026-08-28T03:10:01Z"},{"rank":5,"name":"dsh-market/dsh-market","stars":2982,"delta":51,"category":"视觉","score":3,"url":"https://github.com/dsh-market/dsh-market","created":"2026-08-14T04:58:15Z","pushed":"2026-09-01T04:15:24Z"},{"rank":6,"name":"ccch1mneyyy/dsh-TUI","stars":2761,"delta":17,"category":"视觉","score":3,"url":"https://github.com/ccch1mneyyy/dsh-TUI","created":"2026-08-13T12:49:31Z","pushed":"2026-09-01T10:53:31Z"}],"growth":[{"rank":1,"name":"anywhere-labs/dsh-desktop","delta":208,"stars":22664},{"rank":2,"name":"awesome-dsh-plugin/awesome-dsh-plugin","delta":102,"stars":13997},{"rank":3,"name":"dsh-market/dsh-market","delta":51,"stars":2982},{"rank":4,"name":"yjh051108/dsh-routing-suite","delta":17,"stars":7015},{"rank":5,"name":"ccch1mneyyy/dsh-TUI","delta":17,"stars":2761},{"rank":6,"name":"xiaobright/dsh-anchored-standard","delta":9,"stars":3821}],"official_activity":[{"sha":"dd6322d","date":"2026-08-31T15:53:17Z","msg":"Merge pull request #3387 from deepseek-harness/release/dsh-0.1.2-alpha.3"},{"sha":"14bab44","date":"2026-08-31T15:39:37Z","msg":"release(dsh): 0.1.2-alpha.3"},{"sha":"8b4b815","date":"2026-08-31T14:43:12Z","msg":"Merge pull request #3384 from deepseek-harness/worktree-connerr"}],"health":{"score":43,"factors":{"activity":{"score":14,"max":40,"label":"活跃度","note":"7 天内有提交的仓库占比"},"freshness":{"score":2,"max":20,"label":"新鲜度","note":"8h 新建仓库占比"},"adoption":{"score":16,"max":20,"label":"采用度","note":"npm 周下载分级"},"diversity":{"score":11,"max":20,"label":"多样性","note":"爆发榜 top1 占比（越低越好）"}},"stale_7d":8659,"stale_1d":11829,"total_tracked":13073},"summary":{"en":"DSH plugin ecosystem added \u003cb>52\u003c/b> new plugins in 8h, total stars hit \u003cb>207k\u003c/b>; dsh-desktop led growth with \u003cb>208\u003c/b> stars, official v0.1.2-alpha.3 released. Health score at \u003cb>43\u003c/b>, monitor closely.","zh":"过去8小时DSH插件生态新增\u003cb>52\u003c/b>个插件，总星标突破\u003cb>20.7万\u003c/b>；dsh-desktop以\u003cb>208\u003c/b>星领涨，官方发布0.1.2-alpha.3版本。健康分仅\u003cb>43\u003c/b>，建议持续观察。"}}</script>
+<style>
+  :root{
+    --brand:#3E7BFA; --brand-2:#5C93FF; --brand-soft:rgba(62,123,250,.14);
+    --up:#25C99B; --down:#F4606B; --warn:#F5B544; --info:#3E7BFA;
+    --bg-base:#0A0E17; --bg-surface:#111623; --bg-elev:#181F2E;
+    --border:#232C3F; --border-strong:#2E3A52;
+    --text-1:#EAEEF6; --text-2:#9BA6BC; --text-3:#5E6A82;
+    --cat-v:#7FC8FF; --cat-w:#C9A3FF; --logo-fg:#FFFFFF;
+    --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.40);
+    --shadow-sm:0 1px 0 rgba(255,255,255,.03) inset, 0 4px 14px rgba(0,0,0,.30);
+  }
+  :root[data-theme="light"]{
+    --bg-base:#F6F8FC; --bg-surface:#FFFFFF; --bg-elev:#FFFFFF;
+    --border:#E4E9F1; --border-strong:#CFD7E5;
+    --text-1:#0E1726; --text-2:#46526A; --text-3:#8591A6;
+    --shadow:0 1px 2px rgba(16,23,38,.06), 0 12px 32px rgba(16,23,38,.10);
+    --shadow-sm:0 1px 2px rgba(16,23,38,.06), 0 4px 14px rgba(16,23,38,.08);
+  }
+  :root[data-accent="teal"]{ --brand:#1FB6C9; --brand-2:#3FD0E0; --brand-soft:rgba(31,182,201,.14); }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg-base); color:var(--text-1); font-family:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .mono{font-family:"JetBrains Mono","SF Mono","IBM Plex Mono",ui-monospace,"Cascadia Code",monospace}
+  .wrap{max-width:1080px; margin:0 auto; padding:28px 24px 96px}
+  a{color:var(--brand-2); text-decoration:none}
+  h2{font-size:13px; font-weight:700; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin:54px 0 16px; display:flex; align-items:center; gap:10px}
+  h2::before{content:""; width:7px; height:7px; border-radius:2px; background:var(--brand)}
+  p{color:var(--text-2); font-size:14.5px}
+  .muted{color:var(--text-3)}
+  .topbar{display:flex; align-items:center; gap:14px; justify-content:space-between; flex-wrap:wrap; position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg-base) 88%, transparent); backdrop-filter:blur(8px); padding:14px 0; border-bottom:1px solid var(--border); margin-bottom:8px}
+  .brand{display:flex; align-items:center; gap:12px}
+  .logo{width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; color:var(--logo-fg); font-weight:800; font-size:15px; box-shadow:var(--shadow-sm)}
+  .brand b{font-size:16px; font-weight:700; letter-spacing:-.01em}
+  .brand span{color:var(--text-3); font-size:12px}
+  .controls{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .navi{font-size:12.5px; color:var(--text-2); padding:5px 11px; border-radius:999px; background:transparent; border:0; cursor:pointer; text-decoration:none; font-family:inherit}
+  .navi:hover{color:var(--text-1)}
+  .navi.on{background:var(--brand-soft); color:var(--brand-2); font-weight:600}
+  .seg{display:inline-flex; align-items:center; gap:6px; background:var(--bg-surface); border:1px solid var(--border); border-radius:999px; padding:4px 6px 4px 10px}
+  .seg-lbl{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.04em}
+  .seg-btn{font-size:12.5px; color:var(--text-2); background:transparent; border:0; padding:5px 11px; border-radius:999px; cursor:pointer; font-family:inherit}
+  .seg-btn:hover{color:var(--text-1)}
+  .seg-btn[aria-pressed="true"]{background:var(--brand-soft); color:var(--brand-2); font-weight:600}
+  .toggle{font-size:13px; color:var(--text-2); border:1px solid var(--border); background:var(--bg-surface); padding:7px 14px; border-radius:999px; cursor:pointer}
+  .toggle:hover{color:var(--text-1)}
+  .hero{padding:18px 0 6px}
+  .hero .kicker{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--brand-2); font-weight:700}
+  .hero h1{font-size:42px; font-weight:800; margin:8px 0 4px; letter-spacing:-.03em; line-height:1.05}
+  .hero .sub{font-size:15.5px; color:var(--text-2)}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:16px; font-size:12.5px; color:var(--text-3)}
+  .hero .meta b{color:var(--text-1); font-weight:600}
+  .hero .meta .dot{width:5px; height:5px; border-radius:50%; background:var(--up); display:inline-block; margin-right:6px; box-shadow:0 0 0 3px var(--brand-soft)}
+  .kpi-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px}
+  .kpi{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); position:relative; overflow:hidden}
+  .kpi::after{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(var(--brand),var(--brand-2))}
+  .kpi .k{font-size:12.5px; color:var(--text-3)}
+  .kpi .v{font-size:30px; font-weight:800; margin:6px 0 4px; letter-spacing:-.02em; font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace}
+  .delta{font-size:12.5px; font-weight:700; display:inline-flex; align-items:center; gap:4px}
+  .delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.warn{color:var(--warn)}
+  .board{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .board .row{display:grid; grid-template-columns:34px 1fr 120px; align-items:center; gap:14px; padding:14px 18px; border-bottom:1px solid var(--border)}
+  .board .row:last-child{border-bottom:0}
+  .rank{font-weight:800; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:14px}
+  .rank.top{color:var(--warn)}
+  .pname{font-weight:700; font-size:15px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .pname small{display:block; color:var(--text-3); font-weight:400; font-size:12px; width:100%}
+  .bar{height:7px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+  .gain{text-align:right; font-weight:800; color:var(--up); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:15px; white-space:nowrap}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .cat{font-size:12px; padding:4px 11px; border-radius:999px; border:1px solid var(--border-strong); color:var(--text-2)}
+  .cat.v{color:var(--cat-v); border-color:color-mix(in srgb,var(--cat-v) 40%, transparent)}
+  .cat.w{color:var(--cat-w); border-color:color-mix(in srgb,var(--cat-w) 40%, transparent)}
+  .cat.t{color:var(--up); border-color:color-mix(in srgb,var(--up) 40%, transparent)}
+  .cat.n{color:var(--text-3); border-color:color-mix(in srgb,var(--text-3) 35%, transparent)}
+  .cat-grid{display:none; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px}
+  .dim-radio{position:absolute; opacity:0; pointer-events:none}
+  .dim-labels{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .dim-labels label{padding:5px 13px; border-radius:999px; border:1px solid var(--border-strong); color:var(--text-2); font-size:12px; cursor:pointer; user-select:none; transition:background .15s,color .15s}
+  .dim-labels label:hover{color:var(--brand)}
+  #dim-stars:checked ~ .dim-labels label[for="dim-stars"],#dim-delta:checked ~ .dim-labels label[for="dim-delta"],#dim-active:checked ~ .dim-labels label[for="dim-active"],#dim-newest:checked ~ .dim-labels label[for="dim-newest"]{background:var(--brand); color:#fff; border-color:var(--brand)}
+  #dim-stars:checked ~ #panel-stars,#dim-delta:checked ~ #panel-delta,#dim-active:checked ~ #panel-active,#dim-newest:checked ~ #panel-newest{display:grid}
+  .cat-col{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .cat-head{padding:10px 16px; font-size:13px; font-weight:800; border-bottom:1px solid var(--border); letter-spacing:.02em}
+  .cat-head.v{color:var(--cat-v); border-bottom-color:color-mix(in srgb,var(--cat-v) 30%, transparent)}
+  .cat-head.w{color:var(--cat-w); border-bottom-color:color-mix(in srgb,var(--cat-w) 30%, transparent)}
+  .cat-head.t{color:var(--up); border-bottom-color:color-mix(in srgb,var(--up) 30%, transparent)}
+  .cat-head.n{color:var(--text-3)}
+  .cat-row{display:grid; grid-template-columns:26px 1fr; align-items:baseline; gap:10px; padding:9px 16px; border-bottom:1px solid var(--border)}
+  .cat-row:last-child{border-bottom:0}
+  .cat-row .rank{font-size:12px; color:var(--text-3)}
+  .cat-row .pname{font-size:13px; font-weight:600}
+  .cat-row .pname small{font-size:11px; margin-top:1px}
+  .cat-board .cat-row{grid-template-columns:26px 1fr}
+  @media (max-width:680px){ .cat-grid{grid-template-columns:1fr} }
+  .timeline{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:8px 20px; box-shadow:var(--shadow-sm)}
+  .tl{display:grid; grid-template-columns:88px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--border)}
+  .tl:last-child{border-bottom:0}
+  .tl .t{font-size:12.5px; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; padding-top:2px}
+  .tl .t b{display:block; color:var(--brand-2); font-size:13px}
+  .tl .c b{font-size:14.5px; color:var(--text-1); font-weight:700}
+  .tl .c p{margin:3px 0 0; font-size:13.5px}
+  .two{display:grid; grid-template-columns:1fr 1.3fr; gap:16px}
+  .card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:var(--shadow-sm)}
+  .card .ct{font-size:12px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px}
+  .health{display:flex; align-items:center; gap:22px}
+  .ring{--p:78; --ring-c:var(--up); width:104px; height:104px; border-radius:50%; background:conic-gradient(var(--ring-c) calc(var(--p)*1%), var(--border) 0); display:grid; place-items:center; flex:none}
+  .ring--brand{--ring-c:var(--brand)}
+  .ring--down{--ring-c:var(--down)}
+  .ring i{width:78px; height:78px; border-radius:50%; background:var(--bg-surface); display:grid; place-items:center; font-size:28px; font-weight:800; font-style:normal; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .health .note{font-size:13px}
+  .warnlist{display:flex; flex-direction:column; gap:10px}
+  .wl{display:flex; align-items:center; gap:12px; padding:11px 13px; border:1px solid var(--border); border-radius:10px; background:var(--bg-elev)}
+  .wl .ic{width:8px; height:8px; border-radius:50%; flex:none}
+  .wl .ic.warn{background:var(--warn)} .wl .ic.down{background:var(--down)}
+  .wl b{font-size:15px; font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:800}
+  .wl span{color:var(--text-3); font-size:13px}
+  .factors{display:flex; flex-direction:column; gap:9px; margin-top:16px; padding-top:14px; border-top:1px solid var(--border)}
+  .factor{display:grid; grid-template-columns:1fr auto; gap:2px 12px; align-items:center}
+  .factor .fl{font-size:12.5px; color:var(--text-2); font-weight:600}
+  .factor .fl small{display:block; color:var(--text-3); font-weight:400; font-size:11px}
+  .factor .fv{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12.5px; font-weight:700}
+  .factor .fv.up{color:var(--up)} .factor .fv.warn{color:var(--warn)} .factor .fv.down{color:var(--down)}
+  .factor .fbar{grid-column:1/-1; height:5px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .factor .fbar i{display:block; height:100%; border-radius:999px}
+  .factor .fbar i.up{background:var(--up)} .factor .fbar i.warn{background:var(--warn)} .factor .fbar i.down{background:var(--down)}
+  .src-tag{font-size:11px; font-weight:600; color:var(--text-3); background:var(--bg-elev); border:1px solid var(--border); padding:2px 9px; border-radius:999px; text-transform:none; letter-spacing:0; margin-left:8px}
+  .i18n{display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px}
+  .i18n-zh,.i18n-en{background:var(--brand-soft); border:1px solid color-mix(in srgb,var(--brand) 30%, transparent); border-left:3px solid var(--brand); border-radius:10px; padding:15px 17px}
+  .i18n-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; color:var(--brand-2); text-transform:uppercase; margin-bottom:7px}
+  .i18n-zh p,.i18n-en p{margin:0; font-size:14.5px; color:var(--text-1); line-height:1.6}
+  .i18n-en p{font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace; font-size:12px; line-height:1.55}
+  .archive{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:22px; box-shadow:var(--shadow-sm)}
+  .archive .head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+  .archive .head b{font-size:16px}
+  .archive .head a{font-size:13px; font-weight:600}
+  .spark{width:100%; height:auto; display:block}
+  .archive .cap{display:flex; justify-content:space-between; font-size:12px; color:var(--text-3); margin-top:8px; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .issues{display:flex; flex-direction:column}
+  .issue{display:grid; grid-template-columns:52px 1fr auto; align-items:center; gap:14px; padding:14px 6px; border-bottom:1px solid var(--border)}
+  .issue:last-child{border-bottom:0}
+  .issue .no{font-family:"JetBrains Mono",monospace; font-weight:800; font-size:17px; color:var(--brand-2)}
+  .issue .t b{font-size:15px; color:var(--text-1); font-weight:700; display:block}
+  .issue .t span{font-size:12.5px; color:var(--text-3)}
+  .issue .go{color:var(--brand-2); font-size:13px; font-weight:600}
+  .issue:hover{background:var(--bg-elev)}
+  .chart-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; align-items:stretch}
+  .chart-card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:16px 16px 12px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column}
+  .chart-card .ct{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px}
+  .chart-card .cv{font-size:17px; font-weight:800; color:var(--text-1); font-family:"JetBrains Mono",ui-monospace,monospace; letter-spacing:0}
+  .chart-card svg{width:100%; height:auto; display:block}
+  .dac{width:100%; height:auto; display:block}
+  @media (max-width:680px){ .chart-grid{grid-template-columns:1fr} }
+  footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+  @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">D</div>
+      <div><b>DSH·daily-pulse</b><br><span>DSH Ecosystem Pulse · real data</span></div>
+    </div>
+    <div class="controls">
+      <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
+        <a class="navi " href="index.html">Archive</a>
+        <a class="navi  on" href="latest.html">Latest</a>
+      </nav>
+      <div class="seg">
+        <span class="seg-lbl">Lang</span>
+        <a class="seg-btn " href="latest.html" aria-pressed="false">中文</a>
+        <a class="seg-btn  on" href="0068_2026-09-01-1902_en.html" aria-pressed="true">EN</a>
+      </div>
+      <div class="seg">
+        <span class="seg-lbl">Accent</span>
+        <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
+        <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
+      </div>
+      <button class="toggle" id="tg">Light mode</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">Daily Pulse</div>
+    <h1>DSH Ecosystem Pulse</h1>
+    <div class="sub">Three times a day, 1 minute to read the DSH ecosystem pulse.</div>
+    <div class="meta">
+      <span><span class="dot"></span><b>2026-09-01 · 19:02</b> GMT+8</span>
+      <span>Issue #<b>68</b></span>
+      <span>Collection window <b>10:57 – 19:02</b></span>
+      <span>Sources <b>GitHub API · npm</b></span>
+    </div>
+  </section>
+
+  <h2>Ecosystem Snapshot</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="k">Total plugins</div><div class="v">13,235</div><div class="delta up">▲ +52 <span class="muted" style="font-weight:400">/ 8h new · incl. forks</span></div></div>
+
+    <div class="kpi"><div class="k">New repos (8h)</div><div class="v">52</div><div class="delta warn">▲ +31 <span class="muted" style="font-weight:400">vs last</span></div></div>
+
+    <div class="kpi"><div class="k">Official repo stars</div><div class="v">207,439</div><div class="delta up">forks 24,125</div></div>
+
+    <div class="kpi"><div class="k">npm weekly downloads</div><div class="v">366.6K</div><div class="delta up">@deepseek-ai/dsh <span class="muted" style="font-weight:400">last 7 days</span></div></div>
+  </div>
+
+  <h2>Today's Summary <span class="src-tag">AI summary · deepseek-v4-flash</span></h2>
+  <div class="i18n">
+    <div class="i18n-en">
+      <span class="i18n-tag">EN · GEO</span>
+      <p>DSH plugin ecosystem added <b>52</b> new plugins in 8h, total stars hit <b>207k</b>; dsh-desktop led growth with <b>208</b> stars, official v0.1.2-alpha.3 released. Health score at <b>43</b>, monitor closely.</p>
+    </div>
+  </div>
+
+  <h2>Star Growth Leaderboard · Top 6</h2>
+  <div class="board">
+    <div class="row">
+      <div class="rank top">01</div>
+      <div class="pname">anywhere-labs/dsh-desktop <small>Vision · +208 this window · 22,664★ total · trust 3/5</small></div>
+      <div class="gain">+208</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:100%"></i></div>
+
+    <div class="row">
+      <div class="rank top">02</div>
+      <div class="pname">awesome-dsh-plugin/awesome-dsh-plugin <small>Terminal · +102 this window · 13,997★ total · trust 3/5</small></div>
+      <div class="gain">+102</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:49%"></i></div>
+
+    <div class="row">
+      <div class="rank top">03</div>
+      <div class="pname">dsh-market/dsh-market <small>Vision · +51 this window · 2,982★ total · trust 3/5</small></div>
+      <div class="gain">+51</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:25%"></i></div>
+
+    <div class="row">
+      <div class="rank">04</div>
+      <div class="pname">yjh051108/dsh-routing-suite <small>Workflow · +17 this window · 7,015★ total · trust 3/5</small></div>
+      <div class="gain">+17</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:8%"></i></div>
+
+    <div class="row">
+      <div class="rank">05</div>
+      <div class="pname">ccch1mneyyy/dsh-TUI <small>Vision · +17 this window · 2,761★ total · trust 3/5</small></div>
+      <div class="gain">+17</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:8%"></i></div>
+
+    <div class="row">
+      <div class="rank">06</div>
+      <div class="pname">xiaobright/dsh-anchored-standard <small>Workflow · +9 this window · 3,821★ total · trust 3/5</small></div>
+      <div class="gain">+9</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:4%"></i></div>
+  </div>
+  <div class="chips">
+    <span class="cat v">Blue = Vision / Web UI</span>
+    <span class="cat w">Purple = Workflow / Skills</span>
+    <span class="cat t">Green = Terminal / Memory / Browser</span>
+    <span class="cat n">Gray = Neutral (unclassified)</span>
+  </div>
+
+  
+  <h2>Category Boards · Top 10</h2>
+  
+  <input type="radio" name="dim" id="dim-stars" class="dim-radio" checked>
+<input type="radio" name="dim" id="dim-delta" class="dim-radio">
+<input type="radio" name="dim" id="dim-active" class="dim-radio">
+<input type="radio" name="dim" id="dim-newest" class="dim-radio">
+  <div class="dim-labels">
+    <label for="dim-stars">by stars</label>
+<label for="dim-delta">by growth</label>
+<label for="dim-active">by activity</label>
+<label for="dim-newest">by newest</label>
+  </div>
+  
+  <div class="cat-grid" id="panel-stars"><div class="cat-col"><div class="cat-head v">Vision</div><div class="cat-row"><span class="rank">01</span><span class="pname">anywhere-labs/dsh-desktop<small>22,664★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dsh-market/dsh-market<small>2,982★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">ccch1mneyyy/dsh-TUI<small>2,761★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Small-tailqwq/dsh-deep-whale<small>1,869★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">dsh-tauri-desk/deepseek-harness-desktop<small>1,542★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">MeteorNOX/DeepSeek-Balance-Whale-Widget<small>1,529★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">bowenliang123/dsh-context<small>1,223★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">ysr666/dsh-vision-router<small>1,044★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Anionex/dsh-vision-toolkit<small>847★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">Devin-AXIS/deepseek-design<small>660★ total · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head w">Workflow</div><div class="cat-row"><span class="rank">01</span><span class="pname">yjh051108/dsh-routing-suite<small>7,015★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">xiaobright/dsh-anchored-standard<small>3,821★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">xmanrui/dsh-im<small>1,047★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report<small>1,035★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Electricitysheep/dsh-handbook<small>724★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins<small>524★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Aisland-SJL/dsh-worktable<small>425★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">anysearch-team/anysearch-dsh<small>391★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">yjh051108/dsh-router-standard<small>365★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">shanliuling/dsh-image-gen<small>293★ total · trust 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head t">Terminal</div><div class="cat-row"><span class="rank">01</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>13,997★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">shaobeichen/dsh-pocket<small>877★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">liangmianya/dsh-synapse<small>297★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">hikariming/dshfind<small>237★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Ruler4396/dsh-launcher<small>190★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">e2mcc/dsh-popout-sidebar<small>183★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">liguobao/ds-harness-remote<small>145★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">lire1131/dsh-undo-savepoint<small>140★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Mars-Sea/dsh-commandcode-provider<small>136★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">hg1048596-pixel/dsh-recall-unread<small>123★ total · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head n">Other</div><div class="cat-row"><span class="rank">01</span><span class="pname">Minglink/dsh-infinite-gen-3<small>767★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">FSMargoo/dsh-at-file<small>500★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">howmp/dsh-pentest<small>342★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">bruc3van/awesome-dsh-plugin<small>305★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">YuJunZhiXue/dsh-purge<small>250★ total · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">zh667/TokenLedger<small>192★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">oil-oil/dsh-oil-creator<small>172★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">cocofhu/anime-find<small>164★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Totoro-qaq/dsh-plugin-bridge<small>162★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">yjh051108/dsh-super-injector<small>154★ total · <span class="muted">unverified</span></small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-delta"><div class="cat-col"><div class="cat-head v">Vision</div><div class="cat-row"><span class="rank">01</span><span class="pname">anywhere-labs/dsh-desktop<small>+208 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dsh-market/dsh-market<small>+51 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">dsh-tauri-desk/deepseek-harness-desktop<small>+48 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">MeteorNOX/DeepSeek-Balance-Whale-Widget<small>+38 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">ningbainb/deepseek-harness-desktop<small>+31 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">whitelonng/dshcode<small>+20 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Devin-AXIS/deepseek-design<small>+18 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">ccch1mneyyy/dsh-TUI<small>+17 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">bowenliang123/dsh-context<small>+15 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">shengsheng90/DSH-taskboard<small>+15 this window · trust 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head w">Workflow</div><div class="cat-row"><span class="rank">01</span><span class="pname">yjh051108/dsh-routing-suite<small>+17 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins<small>+15 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">xmanrui/dsh-im<small>+14 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Aisland-SJL/dsh-worktable<small>+12 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">xiaobright/dsh-anchored-standard<small>+9 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Electricitysheep/dsh-handbook<small>+7 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">shanliuling/dsh-image-gen<small>+5 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">dream-num/dsh-univer-office<small>+5 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">GraySilver/dsh-evolve-modes<small>+5 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">1692775560/dsh-Mimir-Academic-research<small>+5 this window · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">Terminal</div><div class="cat-row"><span class="rank">01</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>+102 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">shaobeichen/dsh-pocket<small>+15 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">liangmianya/dsh-synapse<small>+14 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">liguobao/ds-harness-remote<small>+7 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">hg1048596-pixel/dsh-recall-unread<small>+5 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">e2mcc/dsh-popout-sidebar<small>+4 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Mars-Sea/dsh-commandcode-provider<small>+3 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Ruler4396/dsh-launcher<small>+1 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">lire1131/dsh-undo-savepoint<small>+1 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">hikariming/dshfind<small>+0 this window · trust 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head n">Other</div><div class="cat-row"><span class="rank">01</span><span class="pname">Minglink/dsh-infinite-gen-3<small>+36 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">SeaOf0/dsh-redteam-model<small>+8 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">howmp/dsh-pentest<small>+7 this window · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">wenbin-wb/dsh-bridge<small>+6 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">bruc3van/awesome-dsh-plugin<small>+2 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">zh667/TokenLedger<small>+2 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">NanmiCoder/dsh-auto-mode<small>+2 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Ychris12138/dsh-usage-stats<small>+2 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">oil-oil/dsh-oil-creator<small>+1 this window · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">yjh051108/dsh-super-injector<small>+1 this window · <span class="muted">unverified</span></small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-active"><div class="cat-col"><div class="cat-head v">Vision</div><div class="cat-row"><span class="rank">01</span><span class="pname">ysr666/dsh-vision-router<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">ccch1mneyyy/dsh-TUI<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">dsh-tauri-desk/deepseek-harness-desktop<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">anywhere-labs/dsh-desktop<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">bowenliang123/dsh-context<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">RevolutionLA/dsh-dream-skin<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">ChisaAlter/Deepseek-Harness-Desktop<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">myYangyunfan/dsh_desktop<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">ningbainb/deepseek-harness-desktop<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">Han-1413141/dsh-cost-meter<small>last push 2026-09-01 · trust 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head w">Workflow</div><div class="cat-row"><span class="rank">01</span><span class="pname">imsai-sh/awesome-deepseek-harness-plugins<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">xmanrui/dsh-im<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">shanliuling/dsh-image-gen<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Dominic789654/awesome-deepseek-harness<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">seriousz158/dsh-memory<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">zenstory-ai/oh-story-dsh<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">bradeGithub/DSH-Plugins-Marketplace<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Nwflower/dsh-chat-import<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">dream-num/dsh-univer-office<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">Electricitysheep/dsh-handbook<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">Terminal</div><div class="cat-row"><span class="rank">01</span><span class="pname">liguobao/ds-harness-remote<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">Mars-Sea/dsh-commandcode-provider<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">hikariming/dshfind<small>last push 2026-08-31 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">lire1131/dsh-undo-savepoint<small>last push 2026-08-31 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">shaobeichen/dsh-pocket<small>last push 2026-08-30 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Ruler4396/dsh-launcher<small>last push 2026-08-29 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">liangmianya/dsh-synapse<small>last push 2026-08-26 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">e2mcc/dsh-popout-sidebar<small>last push 2026-08-20 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">hg1048596-pixel/dsh-recall-unread<small>last push 2026-08-19 · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head n">Other</div><div class="cat-row"><span class="rank">01</span><span class="pname">wenbin-wb/dsh-bridge<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">NanmiCoder/dsh-auto-mode<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">YuJunZhiXue/dsh-purge<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">beancookie/awesome-dsh-plugin<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Totoro-qaq/dsh-plugin-bridge<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">zh667/TokenLedger<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">bruc3van/awesome-dsh-plugin<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">SeaOf0/dsh-redteam-model<small>last push 2026-09-01 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">FSMargoo/dsh-at-file<small>last push 2026-09-01 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">Yan-Zero/dsh-std<small>last push 2026-08-31 · <span class="muted">unverified</span></small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-newest"><div class="cat-col"><div class="cat-head v">Vision</div><div class="cat-row"><span class="rank">01</span><span class="pname">ZSeven-W/dsh-ios<small>created 2026-08-19 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">MeteorNOX/DeepSeek-Balance-Whale-Widget<small>created 2026-08-18 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">summer1238/dsh-remote-web-gateway<small>created 2026-08-17 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">op7418/pilot-harness<small>created 2026-08-17 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">wssfk12138/dsh-damage-pulse<small>created 2026-08-17 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">elysia395/dsh-wallpaper-engine<small>created 2026-08-16 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">ZSeven-W/dsh-crew<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">kingOfSoySauce/dsh-skin-market<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Devin-AXIS/deepseek-design<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">saya-ch/dsh-mobile<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head w">Workflow</div><div class="cat-row"><span class="rank">01</span><span class="pname">Akimiya-z/codex-guard<small>created 2026-08-20 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">1692775560/dsh-Mimir-Academic-research<small>created 2026-08-20 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">zenstory-ai/oh-story-dsh<small>created 2026-08-19 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">seriousz158/dsh-memory<small>created 2026-08-19 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">shanliuling/dsh-image-gen<small>created 2026-08-17 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Aisland-SJL/dsh-worktable<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">GraySilver/dsh-evolve-modes<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">dream-num/dsh-univer-office<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">toolclub/dsh-agent-team-gui<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">Terminal</div><div class="cat-row"><span class="rank">01</span><span class="pname">hg1048596-pixel/dsh-recall-unread<small>created 2026-08-17 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">liangmianya/dsh-synapse<small>created 2026-08-16 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">e2mcc/dsh-popout-sidebar<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">shaobeichen/dsh-pocket<small>created 2026-08-15 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">liguobao/ds-harness-remote<small>created 2026-08-14 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Mars-Sea/dsh-commandcode-provider<small>created 2026-08-14 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">lire1131/dsh-undo-savepoint<small>created 2026-08-14 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>created 2026-08-13 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Ruler4396/dsh-launcher<small>created 2026-08-13 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">hikariming/dshfind<small>created 2026-08-13 · trust 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head n">Other</div><div class="cat-row"><span class="rank">01</span><span class="pname">ZSeven-W/dsh-android<small>created 2026-08-21 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">YuJunZhiXue/dsh-purge<small>created 2026-08-19 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">oil-oil/dsh-oil-creator<small>created 2026-08-19 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">wenbin-wb/dsh-bridge<small>created 2026-08-18 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">SeaOf0/dsh-redteam-model<small>created 2026-08-17 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Totoro-qaq/dsh-plugin-bridge<small>created 2026-08-17 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Yan-Zero/dsh-std<small>created 2026-08-16 · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Minglink/dsh-infinite-gen-3<small>created 2026-08-15 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">howmp/dsh-pentest<small>created 2026-08-15 · trust 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">cocofhu/anime-find<small>created 2026-08-15 · <span class="muted">unverified</span></small></span></div></div>
+  </div>
+  
+
+  
+  <h2>Active · Recently Pushed</h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">ysr666/dsh-vision-router<small>last push 2026-09-01 11:02Z · 1,044★ total</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">liguobao/ds-harness-remote<small>last push 2026-09-01 10:55Z · 145★ total · <span class="muted">unverified</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">ccch1mneyyy/dsh-TUI<small>last push 2026-09-01 10:53Z · 2,761★ total</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">dsh-tauri-desk/deepseek-harness-desktop<small>last push 2026-09-01 10:07Z · 1,542★ total</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">imsai-sh/awesome-deepseek-harness-plugins<small>last push 2026-09-01 10:05Z · 212★ total · <span class="muted">unverified</span></small></span></div>
+  </div>
+
+  
+  <h2>New Faces · last 8h</h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">liangdabiao/dsh-weather-plugin<small>★2 · created 2026-09-01 · dsh = 一台"所有零件都能换"的智能体机器。写插件 = 造一个零件装上去。本项目展示怎样开发一个天气插件：天气插件的设计：Node 端调 Open-Mete</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">Jimmy0123-ux/dsh-token-pet<small>★2 · created 2026-09-01 · DeepSeek Harness Desktop 悬浮用量小宠物：12 个正式逐帧动作反馈请求、工具、上下文压缩、归档与提示词增强；展示实时上下文占用、跨会话 </small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">gengwg/dsh-kubectl-guard<small>★1 · created 2026-09-01 · A dsh policy plugin that gates kubectl by kubeconfig context: deny irreversible </small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">liangdabiao/dsh-plugin-developer-skill<small>★1 · created 2026-09-01 · dsh-plugin-developer — DeepSeek Harness 插件开发 Skill  > 指导 AI Agent 从 0 到 1 开发、构建、</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">cat552/dsh-agent-quality-diagnosis<small>★1 · created 2026-09-01 · Actionable quality diagnostics for DSH agent sessions, with tool-call evidence a</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">linfengyu94/dsh-balance-panel<small>★1 · created 2026-09-01 · DeepSeek 充值余额悬浮面板 - DSH 插件：悬浮显示充值余额，带可视化进度条与动态按钮动画</small></span></div>
+  </div>
+
+  <h2>Official Activity</h2>
+  <div class="timeline">
+    <div class="tl"><div class="t"><b>08-31</b>15:53</div><div class="c"><b>Merge pull request #3387 from deepseek-harness/release/dsh-0.1.2-alpha.3</b><p><span class="muted">dd6322d</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>08-31</b>15:39</div><div class="c"><b>release(dsh): 0.1.2-alpha.3</b><p><span class="muted">14bab44</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>08-31</b>14:43</div><div class="c"><b>Merge pull request #3384 from deepseek-harness/worktree-connerr</b><p><span class="muted">8b4b815</span></p></div></div>
+  </div>
+
+  <h2>Health Score & Staleness</h2>
+  <div class="two">
+    <div class="card">
+      <div class="ct">Ecosystem Health</div>
+      <div class="health">
+        <div class="ring ring--down" style="--p:43"><i>43</i></div>
+        <div class="note">Now <b style="color:var(--brand)">43 / 100</b> / 100，needs attention（<60 red）。<br><span class="muted">M2 full scoring: activity 40 + freshness 20 + adoption 20 + diversity 20.</span></div>
+      </div>
+      
+      <div class="factors">
+        <div class="factor"><span class="fl">Activity<small>repos with commits in 7d</small></span><span class="fv down">14/40</span><div class="fbar"><i style="width:35%" class="down"></i></div></div><div class="factor"><span class="fl">Freshness<small>new repos in 8h</small></span><span class="fv down">2/20</span><div class="fbar"><i style="width:10%" class="down"></i></div></div><div class="factor"><span class="fl">Adoption<small>npm weekly downloads tier</small></span><span class="fv up">16/20</span><div class="fbar"><i style="width:80%" class="up"></i></div></div><div class="factor"><span class="fl">Diversity<small>top1 share of leaderboard (lower = better)</small></span><span class="fv warn">11/20</span><div class="fbar"><i style="width:55%" class="warn"></i></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">Staleness Alert</div>
+      <div class="warnlist">
+        <div class="wl"><span class="ic warn"></span><b>8,659</b><span>repos with no push in 7d (66.2% abandonment)</span></div>
+        <div class="wl"><span class="ic warn"></span><b>11,829</b><span>repos with no update in 24h (90%)</span></div>
+        <div class="wl"><span class="ic down"></span><b>13,073</b><span>repos tracked (topic:dsh-plugin, no forks)</span></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <h2>Stale Watch · dormant repos <span class="muted" style="font-size:12px;font-weight:400">no push in 7d; approximated by last update</span></h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">xiangpc/wemeet-openapi<small>18 days stale · ★1</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">kuangre123/iosdev<small>12 days stale · ★25 · ios app 开发 skill</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">lispking/git-skills<small>18 days stale · ★0 · A powerful Claude Code Git assistant skill that provides intelligent branch mana</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">SummerSec/AI-Inner-Os<small>7 days stale · ★17 · AI Inner OS 是一个面向 AI CLI 工具的插件，支持 Claude Code、Codex CLI、Cursor、OpenCode CLI。  它通</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Tokimorphling/tokilake-ai-gateway<small>18 days stale · ★2 · Self-hosted AI gateway for distributed local LLM GPUs. OpenAI-compatible API wit</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">shanliuling/skills-link<small>5 days stale · ★191 · Sync your local skills across 41+ AI coding agents with a single command.</small></span></div>
+  </div>
+
+  <h2>Ecosystem Archive</h2>
+  <div class="archive">
+    <div class="head">
+      <b>Official stars & plugin totals · history (68 issues)</b>
+      <a href="index.html">View full history →</a>
+    </div>
+    <svg class="spark" viewBox="0 0 620 170" role="img" aria-label="Official stars & plugin totals history">
+  <defs>
+    <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fillB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--up)" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M10.0,148.0 L19.0,145.6 L27.9,141.9 L36.9,123.5 L45.8,117.7 L54.8,117.2 L63.7,115.9 L72.7,113.9 L81.6,113.4 L90.6,107.4 L99.6,105.7 L108.5,105.1 L117.5,105.1 L126.4,101.7 L135.4,101.7 L144.3,101.4 L153.3,101.3 L162.2,101.3 L171.2,101.3 L180.1,101.0 L189.1,98.3 L198.1,96.7 L207.0,96.6 L216.0,96.5 L224.9,95.6 L233.9,91.0 L242.8,90.9 L251.8,86.1 L260.7,85.9 L269.7,85.8 L278.7,83.8 L287.6,79.1 L296.6,74.8 L305.5,71.6 L314.5,67.0 L323.4,61.9 L332.4,59.5 L341.3,57.3 L350.3,54.7 L359.3,52.8 L368.2,51.2 L377.2,49.2 L386.1,47.8 L395.1,45.0 L404.0,42.2 L413.0,40.9 L421.9,38.7 L430.9,36.2 L439.9,35.2 L448.8,33.5 L457.8,31.4 L466.7,29.9 L475.7,26.9 L484.6,26.6 L493.6,25.5 L502.5,23.6 L511.5,23.4 L520.4,23.0 L529.4,22.0 L538.4,21.3 L547.3,21.0 L556.3,19.8 L565.2,19.0 L574.2,18.8 L583.1,16.6 L592.1,15.9 L601.0,15.7 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
+  <path d="M10.0,148.0 L19.0,145.6 L27.9,141.9 L36.9,123.5 L45.8,117.7 L54.8,117.2 L63.7,115.9 L72.7,113.9 L81.6,113.4 L90.6,107.4 L99.6,105.7 L108.5,105.1 L117.5,105.1 L126.4,101.7 L135.4,101.7 L144.3,101.4 L153.3,101.3 L162.2,101.3 L171.2,101.3 L180.1,101.0 L189.1,98.3 L198.1,96.7 L207.0,96.6 L216.0,96.5 L224.9,95.6 L233.9,91.0 L242.8,90.9 L251.8,86.1 L260.7,85.9 L269.7,85.8 L278.7,83.8 L287.6,79.1 L296.6,74.8 L305.5,71.6 L314.5,67.0 L323.4,61.9 L332.4,59.5 L341.3,57.3 L350.3,54.7 L359.3,52.8 L368.2,51.2 L377.2,49.2 L386.1,47.8 L395.1,45.0 L404.0,42.2 L413.0,40.9 L421.9,38.7 L430.9,36.2 L439.9,35.2 L448.8,33.5 L457.8,31.4 L466.7,29.9 L475.7,26.9 L484.6,26.6 L493.6,25.5 L502.5,23.6 L511.5,23.4 L520.4,23.0 L529.4,22.0 L538.4,21.3 L547.3,21.0 L556.3,19.8 L565.2,19.0 L574.2,18.8 L583.1,16.6 L592.1,15.9 L601.0,15.7 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2"/>
+  <path d="M10.0,148.0 L19.0,144.9 L27.9,143.8 L36.9,134.6 L45.8,129.0 L54.8,128.8 L63.7,127.7 L72.7,126.4 L81.6,126.1 L90.6,123.1 L99.6,121.8 L108.5,121.4 L117.5,121.4 L126.4,118.8 L135.4,118.8 L144.3,118.6 L153.3,120.0 L162.2,120.0 L171.2,120.0 L180.1,118.4 L189.1,115.9 L198.1,113.4 L207.0,113.2 L216.0,113.2 L224.9,113.7 L233.9,109.0 L242.8,108.9 L251.8,104.0 L260.7,103.8 L269.7,103.8 L278.7,97.2 L287.6,90.6 L296.6,84.5 L305.5,73.0 L314.5,69.5 L323.4,63.6 L332.4,61.8 L341.3,60.0 L350.3,57.8 L359.3,55.8 L368.2,54.1 L377.2,51.6 L386.1,50.1 L395.1,48.1 L404.0,45.5 L413.0,44.2 L421.9,42.6 L430.9,39.9 L439.9,38.6 L448.8,36.9 L457.8,37.7 L466.7,36.2 L475.7,32.9 L484.6,32.4 L493.6,31.2 L502.5,26.2 L511.5,25.8 L520.4,25.3 L529.4,23.3 L538.4,22.4 L547.3,22.1 L556.3,20.7 L565.2,19.6 L574.2,19.2 L583.1,16.7 L592.1,15.7 L601.0,15.5 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="19.0" cy="145.6" r="2.2" fill="var(--brand)"/><circle cx="27.9" cy="141.9" r="2.2" fill="var(--brand)"/><circle cx="36.9" cy="123.5" r="2.2" fill="var(--brand)"/><circle cx="45.8" cy="117.7" r="2.2" fill="var(--brand)"/><circle cx="54.8" cy="117.2" r="2.2" fill="var(--brand)"/><circle cx="63.7" cy="115.9" r="2.2" fill="var(--brand)"/><circle cx="72.7" cy="113.9" r="2.2" fill="var(--brand)"/><circle cx="81.6" cy="113.4" r="2.2" fill="var(--brand)"/><circle cx="90.6" cy="107.4" r="2.2" fill="var(--brand)"/><circle cx="99.6" cy="105.7" r="2.2" fill="var(--brand)"/><circle cx="108.5" cy="105.1" r="2.2" fill="var(--brand)"/><circle cx="117.5" cy="105.1" r="2.2" fill="var(--brand)"/><circle cx="126.4" cy="101.7" r="2.2" fill="var(--brand)"/><circle cx="135.4" cy="101.7" r="2.2" fill="var(--brand)"/><circle cx="144.3" cy="101.4" r="2.2" fill="var(--brand)"/><circle cx="153.3" cy="101.3" r="2.2" fill="var(--brand)"/><circle cx="162.2" cy="101.3" r="2.2" fill="var(--brand)"/><circle cx="171.2" cy="101.3" r="2.2" fill="var(--brand)"/><circle cx="180.1" cy="101.0" r="2.2" fill="var(--brand)"/><circle cx="189.1" cy="98.3" r="2.2" fill="var(--brand)"/><circle cx="198.1" cy="96.7" r="2.2" fill="var(--brand)"/><circle cx="207.0" cy="96.6" r="2.2" fill="var(--brand)"/><circle cx="216.0" cy="96.5" r="2.2" fill="var(--brand)"/><circle cx="224.9" cy="95.6" r="2.2" fill="var(--brand)"/><circle cx="233.9" cy="91.0" r="2.2" fill="var(--brand)"/><circle cx="242.8" cy="90.9" r="2.2" fill="var(--brand)"/><circle cx="251.8" cy="86.1" r="2.2" fill="var(--brand)"/><circle cx="260.7" cy="85.9" r="2.2" fill="var(--brand)"/><circle cx="269.7" cy="85.8" r="2.2" fill="var(--brand)"/><circle cx="278.7" cy="83.8" r="2.2" fill="var(--brand)"/><circle cx="287.6" cy="79.1" r="2.2" fill="var(--brand)"/><circle cx="296.6" cy="74.8" r="2.2" fill="var(--brand)"/><circle cx="305.5" cy="71.6" r="2.2" fill="var(--brand)"/><circle cx="314.5" cy="67.0" r="2.2" fill="var(--brand)"/><circle cx="323.4" cy="61.9" r="2.2" fill="var(--brand)"/><circle cx="332.4" cy="59.5" r="2.2" fill="var(--brand)"/><circle cx="341.3" cy="57.3" r="2.2" fill="var(--brand)"/><circle cx="350.3" cy="54.7" r="2.2" fill="var(--brand)"/><circle cx="359.3" cy="52.8" r="2.2" fill="var(--brand)"/><circle cx="368.2" cy="51.2" r="2.2" fill="var(--brand)"/><circle cx="377.2" cy="49.2" r="2.2" fill="var(--brand)"/><circle cx="386.1" cy="47.8" r="2.2" fill="var(--brand)"/><circle cx="395.1" cy="45.0" r="2.2" fill="var(--brand)"/><circle cx="404.0" cy="42.2" r="2.2" fill="var(--brand)"/><circle cx="413.0" cy="40.9" r="2.2" fill="var(--brand)"/><circle cx="421.9" cy="38.7" r="2.2" fill="var(--brand)"/><circle cx="430.9" cy="36.2" r="2.2" fill="var(--brand)"/><circle cx="439.9" cy="35.2" r="2.2" fill="var(--brand)"/><circle cx="448.8" cy="33.5" r="2.2" fill="var(--brand)"/><circle cx="457.8" cy="31.4" r="2.2" fill="var(--brand)"/><circle cx="466.7" cy="29.9" r="2.2" fill="var(--brand)"/><circle cx="475.7" cy="26.9" r="2.2" fill="var(--brand)"/><circle cx="484.6" cy="26.6" r="2.2" fill="var(--brand)"/><circle cx="493.6" cy="25.5" r="2.2" fill="var(--brand)"/><circle cx="502.5" cy="23.6" r="2.2" fill="var(--brand)"/><circle cx="511.5" cy="23.4" r="2.2" fill="var(--brand)"/><circle cx="520.4" cy="23.0" r="2.2" fill="var(--brand)"/><circle cx="529.4" cy="22.0" r="2.2" fill="var(--brand)"/><circle cx="538.4" cy="21.3" r="2.2" fill="var(--brand)"/><circle cx="547.3" cy="21.0" r="2.2" fill="var(--brand)"/><circle cx="556.3" cy="19.8" r="2.2" fill="var(--brand)"/><circle cx="565.2" cy="19.0" r="2.2" fill="var(--brand)"/><circle cx="574.2" cy="18.8" r="2.2" fill="var(--brand)"/><circle cx="583.1" cy="16.6" r="2.2" fill="var(--brand)"/><circle cx="592.1" cy="15.9" r="2.2" fill="var(--brand)"/><circle cx="601.0" cy="15.7" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
+  <text x="10.0" y="164" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-16</text>
+  <text x="610.0" y="164" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-09-01</text>
+</svg>
+<div class="cap"><span>Official stars 207.4K · plugins 13.2K</span><span>68 snapshots</span></div>
+  </div>
+
+  <footer>
+    <span>DSH·daily-pulse · Issue #68 · real collected data</span>
+    <span>v0.1.0 · Sources GitHub Search API + npm registry · generated 2026-09-01 · 19:02</span>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var root=document.documentElement;
+    try{
+      var sa=localStorage.getItem('dsh-accent'); if(sa) root.dataset.accent=sa;
+      var sl=localStorage.getItem('dsh-lang');   if(sl) root.dataset.lang=sl; else root.dataset.lang='bi';
+    }catch(e){}
+    var tg=document.getElementById('tg');
+    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? (lang==='en' ? 'Dark mode' : '切换为暗色') : (lang==='en' ? 'Light mode' : '切换为亮色'); }
+    if(tg){ tg.onclick=function(){
+      var next = root.dataset.theme==='light' ? 'dark' : 'light';
+      root.dataset.theme=next;
+      try{ localStorage.setItem('dsh-theme', next); }catch(e){}
+      themeLabel();
+    };}
+    themeLabel();
+    function bindSeg(attr, storeKey){
+      var btns=[].slice.call(document.querySelectorAll('button[data-'+attr+']'));
+      btns.forEach(function(b){
+        b.onclick=function(){
+          var val=b.dataset[attr];
+          root.setAttribute('data-'+attr, val);
+          btns.forEach(function(x){ x.setAttribute('aria-pressed', x.dataset[attr]===val); });
+          try{ if(storeKey) localStorage.setItem(storeKey, val); }catch(e){}
+        };
+      });
+    }
+    bindSeg('accent','dsh-accent');
+  })();
+</script>
+</body>
+</html>

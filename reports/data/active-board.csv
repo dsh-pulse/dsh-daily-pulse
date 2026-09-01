@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ChisaAlter/Deepseek-Harness-Desktop,150,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-01T00:44:05Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
-active,2,Dominic789654/awesome-deepseek-harness,212,0,0,,0,工作流,2026-08-13T13:54:05Z,2026-09-01T00:43:08Z,https://github.com/Dominic789654/awesome-deepseek-harness
-active,3,ccch1mneyyy/dsh-TUI,2744,1,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-01T00:40:29Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,V1ki/dsh-plugin-subscriptions,305,0,0,3,1,视觉,2026-08-14T08:27:11Z,2026-09-01T00:32:58Z,https://github.com/V1ki/dsh-plugin-subscriptions
-active,5,saya-ch/dsh-mobile,183,1,0,,0,视觉,2026-08-15T05:28:38Z,2026-09-01T00:21:56Z,https://github.com/saya-ch/dsh-mobile
+active,1,ysr666/dsh-vision-router,1044,5,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-01T11:02:08Z,https://github.com/ysr666/dsh-vision-router
+active,2,liguobao/ds-harness-remote,145,7,0,,0,终端,2026-08-14T15:33:53Z,2026-09-01T10:55:24Z,https://github.com/liguobao/ds-harness-remote
+active,3,ccch1mneyyy/dsh-TUI,2761,17,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-01T10:53:31Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,dsh-tauri-desk/deepseek-harness-desktop,1542,48,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-01T10:07:28Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,5,imsai-sh/awesome-deepseek-harness-plugins,212,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-01T10:05:42Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
