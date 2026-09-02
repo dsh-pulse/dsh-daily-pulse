@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,imsai-sh/awesome-deepseek-harness-plugins,214,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-02T10:32:55Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,2,YuJunZhiXue/dsh-purge,264,8,0,3,1,其他,2026-08-19T07:41:12Z,2026-09-02T10:28:02Z,https://github.com/YuJunZhiXue/dsh-purge
-active,3,ysr666/dsh-vision-router,1051,6,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-02T10:26:56Z,https://github.com/ysr666/dsh-vision-router
-active,4,yjh051108/dsh-routing-suite,7024,4,0,3,1,工作流,2026-08-14T21:20:55Z,2026-09-02T10:20:12Z,https://github.com/yjh051108/dsh-routing-suite
-active,5,ccch1mneyyy/dsh-TUI,2779,12,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-02T10:17:32Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,yjh051108/dsh-routing-suite,7031,7,0,3,1,工作流,2026-08-14T21:20:55Z,2026-09-02T17:33:33Z,https://github.com/yjh051108/dsh-routing-suite
+active,2,dsh-tauri-desk/deepseek-harness-desktop,1579,13,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-02T17:29:29Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,3,whitelonng/dshcode,689,11,0,3,1,视觉,2026-08-13T13:23:11Z,2026-09-02T17:27:34Z,https://github.com/whitelonng/dshcode
+active,4,xmanrui/dsh-im,1072,9,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-02T17:14:03Z,https://github.com/xmanrui/dsh-im
+active,5,shanliuling/dsh-image-gen,299,2,0,3,1,工作流,2026-08-17T10:16:37Z,2026-09-02T17:09:07Z,https://github.com/shanliuling/dsh-image-gen
