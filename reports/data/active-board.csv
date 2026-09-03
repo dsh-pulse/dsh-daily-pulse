@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,cocode-agency/cocode,162,0,0,,0,视觉,2026-08-14T09:35:46Z,2026-09-03T10:37:09Z,https://github.com/cocode-agency/cocode
-active,2,ccch1mneyyy/dsh-TUI,2802,18,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-03T10:36:08Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,elysia395/dsh-wallpaper-engine,231,0,0,3,1,视觉,2026-08-16T16:04:08Z,2026-09-03T10:30:31Z,https://github.com/elysia395/dsh-wallpaper-engine
-active,4,imsai-sh/awesome-deepseek-harness-plugins,215,1,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-03T10:24:01Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,ChisaAlter/Deepseek-Harness-Desktop,154,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-03T10:13:41Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,1,liguobao/ds-harness-remote,158,-1,0,,0,终端,2026-08-14T15:33:53Z,2026-09-03T17:24:52Z,https://github.com/liguobao/ds-harness-remote
+active,2,vibeinging/dsh-desktop,634,-4,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-03T17:17:30Z,https://github.com/vibeinging/dsh-desktop
+active,3,Minglink/dsh-infinite-gen-3,922,29,0,3,1,其他,2026-08-15T15:47:15Z,2026-09-03T17:09:06Z,https://github.com/Minglink/dsh-infinite-gen-3
+active,4,ysr666/dsh-vision-router,1060,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-03T16:28:16Z,https://github.com/ysr666/dsh-vision-router
+active,5,dsh-tauri-desk/deepseek-harness-desktop,1620,14,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-03T16:22:44Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
