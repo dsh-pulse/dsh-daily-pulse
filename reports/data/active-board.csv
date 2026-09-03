@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,liguobao/ds-harness-remote,158,-1,0,,0,终端,2026-08-14T15:33:53Z,2026-09-03T17:24:52Z,https://github.com/liguobao/ds-harness-remote
-active,2,vibeinging/dsh-desktop,634,-4,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-03T17:17:30Z,https://github.com/vibeinging/dsh-desktop
-active,3,Minglink/dsh-infinite-gen-3,922,29,0,3,1,其他,2026-08-15T15:47:15Z,2026-09-03T17:09:06Z,https://github.com/Minglink/dsh-infinite-gen-3
-active,4,ysr666/dsh-vision-router,1060,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-03T16:28:16Z,https://github.com/ysr666/dsh-vision-router
-active,5,dsh-tauri-desk/deepseek-harness-desktop,1620,14,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-03T16:22:44Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,1,imsai-sh/awesome-deepseek-harness-plugins,215,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-03T23:36:33Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,2,ccch1mneyyy/dsh-TUI,2812,0,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-03T23:02:48Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,bradeGithub/DSH-Plugins-Marketplace,155,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-03T22:47:58Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,4,whitelonng/dshcode,711,0,0,3,1,视觉,2026-08-13T13:23:11Z,2026-09-03T22:03:03Z,https://github.com/whitelonng/dshcode
+active,5,Akimiya-z/codex-guard,135,0,0,,0,工作流,2026-08-20T16:28:08Z,2026-09-03T20:24:41Z,https://github.com/Akimiya-z/codex-guard
