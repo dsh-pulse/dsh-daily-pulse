@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,anywhere-labs/dsh-desktop,23574,66,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-04T17:19:27Z,https://github.com/anywhere-labs/dsh-desktop
-active,2,dsh-market/dsh-market,3177,22,0,3,1,视觉,2026-08-14T04:58:15Z,2026-09-04T17:19:24Z,https://github.com/dsh-market/dsh-market
-active,3,dsh-tauri-desk/deepseek-harness-desktop,1661,14,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-04T17:11:39Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,4,awesome-dsh-plugin/awesome-dsh-plugin,14459,34,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-04T17:11:25Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,5,xmanrui/dsh-im,1104,5,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-04T17:04:09Z,https://github.com/xmanrui/dsh-im
+active,1,ysr666/dsh-vision-router,1071,2,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-04T23:34:33Z,https://github.com/ysr666/dsh-vision-router
+active,2,bradeGithub/DSH-Plugins-Marketplace,156,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-04T22:37:00Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,3,anywhere-labs/dsh-desktop,23593,19,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-04T22:29:07Z,https://github.com/anywhere-labs/dsh-desktop
+active,4,xmanrui/dsh-im,1107,3,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-04T20:11:10Z,https://github.com/xmanrui/dsh-im
+active,5,bowenliang123/dsh-context,1282,1,0,3,1,视觉,2026-08-14T08:23:28Z,2026-09-04T18:28:01Z,https://github.com/bowenliang123/dsh-context
