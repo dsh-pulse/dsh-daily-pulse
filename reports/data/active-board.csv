@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,bowenliang123/dsh-context,1276,12,0,3,1,视觉,2026-08-14T08:23:28Z,2026-09-04T10:28:52Z,https://github.com/bowenliang123/dsh-context
-active,2,dsh-tauri-desk/deepseek-harness-desktop,1647,20,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-04T10:27:22Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,3,Tiger3807861189/GLM-5.3-Flash-J-Space-Capability-Realization-Report,1025,-1,0,1,0,工作流,2026-08-16T11:38:42Z,2026-09-04T10:27:01Z,https://github.com/Tiger3807861189/GLM-5.3-Flash-J-Space-Capability-Realization-Report
-active,4,ccch1mneyyy/dsh-TUI,2828,16,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-04T10:17:01Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,Devin-AXIS/deepseek-design,721,3,0,1,0,视觉,2026-08-15T13:08:53Z,2026-09-04T10:13:50Z,https://github.com/Devin-AXIS/deepseek-design
+active,1,anywhere-labs/dsh-desktop,23574,66,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-04T17:19:27Z,https://github.com/anywhere-labs/dsh-desktop
+active,2,dsh-market/dsh-market,3177,22,0,3,1,视觉,2026-08-14T04:58:15Z,2026-09-04T17:19:24Z,https://github.com/dsh-market/dsh-market
+active,3,dsh-tauri-desk/deepseek-harness-desktop,1661,14,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-04T17:11:39Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,4,awesome-dsh-plugin/awesome-dsh-plugin,14459,34,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-04T17:11:25Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,5,xmanrui/dsh-im,1104,5,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-04T17:04:09Z,https://github.com/xmanrui/dsh-im
