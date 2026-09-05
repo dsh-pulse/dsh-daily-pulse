@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,PC2005-cloud/dsh-pet,547,7,0,1,0,视觉,2026-08-14T00:38:45Z,2026-09-05T09:54:49Z,https://github.com/PC2005-cloud/dsh-pet
-active,2,dream-num/dsh-univer-office,273,4,0,3,1,工作流,2026-08-15T16:29:45Z,2026-09-05T09:50:37Z,https://github.com/dream-num/dsh-univer-office
-active,3,PerryLink/dsh-auto-review,134,0,0,,0,工作流,2026-08-13T19:44:34Z,2026-09-05T09:48:36Z,https://github.com/PerryLink/dsh-auto-review
-active,4,dsh-tauri-desk/deepseek-harness-desktop,1687,10,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-05T09:26:37Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,5,ChisaAlter/Deepseek-Harness-Desktop,156,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-05T09:20:35Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,1,LivXue/dsh-plugin-shop,157,3,0,,0,工作流,2026-08-25T05:16:32Z,2026-09-05T16:28:50Z,https://github.com/LivXue/dsh-plugin-shop
+active,2,ccch1mneyyy/dsh-TUI,2846,7,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-05T16:28:45Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,xmanrui/dsh-im,1113,2,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-05T16:28:11Z,https://github.com/xmanrui/dsh-im
+active,4,Minglink/dsh-infinite-gen-3,1000,11,0,3,1,其他,2026-08-15T15:47:15Z,2026-09-05T16:27:50Z,https://github.com/Minglink/dsh-infinite-gen-3
+active,5,anywhere-labs/dsh-desktop,23773,53,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-05T16:26:08Z,https://github.com/anywhere-labs/dsh-desktop
