@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,2860,2,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-06T22:46:46Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,anywhere-labs/dsh-desktop,23953,16,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-06T22:36:51Z,https://github.com/anywhere-labs/dsh-desktop
-active,3,imsai-sh/awesome-deepseek-harness-plugins,223,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-06T21:44:37Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,4,xmanrui/dsh-im,1169,12,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-06T21:38:24Z,https://github.com/xmanrui/dsh-im
-active,5,bradeGithub/DSH-Plugins-Marketplace,157,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-06T20:30:22Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,1,dsh-tauri-desk/deepseek-harness-desktop,1757,24,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-07T11:29:16Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,2,PerryLink/dsh-auto-review,142,6,0,,0,工作流,2026-08-13T19:44:34Z,2026-09-07T11:28:00Z,https://github.com/PerryLink/dsh-auto-review
+active,3,LivXue/dsh-plugin-shop,280,12,0,3,1,工作流,2026-08-25T05:16:32Z,2026-09-07T11:26:58Z,https://github.com/LivXue/dsh-plugin-shop
+active,4,wssfk12138/dsh-damage-pulse,153,2,0,,0,视觉,2026-08-17T03:23:58Z,2026-09-07T11:20:52Z,https://github.com/wssfk12138/dsh-damage-pulse
+active,5,bradeGithub/DSH-Plugins-Marketplace,157,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-07T11:09:33Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
