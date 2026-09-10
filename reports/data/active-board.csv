@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Totoro-qaq/dsh-plugin-bridge,164,0,0,,0,其他,2026-08-17T07:52:45Z,2026-09-10T10:31:50Z,https://github.com/Totoro-qaq/dsh-plugin-bridge
-active,2,ccch1mneyyy/dsh-TUI,2926,17,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-10T10:26:38Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,bowenliang123/dsh-context,1322,22,0,3,1,视觉,2026-08-14T08:23:28Z,2026-09-10T10:09:54Z,https://github.com/bowenliang123/dsh-context
-active,4,liguobao/ds-harness-remote,172,2,0,,0,终端,2026-08-14T15:33:53Z,2026-09-10T10:09:09Z,https://github.com/liguobao/ds-harness-remote
-active,5,shaobeichen/dsh-pocket,1044,8,0,3,1,终端,2026-08-15T09:36:29Z,2026-09-10T10:07:42Z,https://github.com/shaobeichen/dsh-pocket
+active,1,xmanrui/dsh-im,1257,8,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-10T17:21:13Z,https://github.com/xmanrui/dsh-im
+active,2,flizzywine/dsh-tavern,237,13,0,,0,工作流,2026-08-16T13:07:23Z,2026-09-10T17:12:47Z,https://github.com/flizzywine/dsh-tavern
+active,3,dsh-tauri-desk/deepseek-harness-desktop,1889,21,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-10T17:04:15Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,4,Small-tailqwq/dsh-deep-whale,1997,12,0,1,0,视觉,2026-08-13T13:02:14Z,2026-09-10T17:02:30Z,https://github.com/Small-tailqwq/dsh-deep-whale
+active,5,LivXue/dsh-plugin-shop,505,8,0,3,1,工作流,2026-08-25T05:16:32Z,2026-09-10T16:58:27Z,https://github.com/LivXue/dsh-plugin-shop
