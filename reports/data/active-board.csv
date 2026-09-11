@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,FuRongJun-1999/dsh-memory,159,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-10T23:26:07Z,https://github.com/FuRongJun-1999/dsh-memory
-active,2,imsai-sh/awesome-deepseek-harness-plugins,226,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-10T23:10:25Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,3,ysr666/dsh-vision-router,1097,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-10T22:50:24Z,https://github.com/ysr666/dsh-vision-router
-active,4,op7418/pilot-harness,270,-1,0,3,1,视觉,2026-08-17T06:56:42Z,2026-09-10T20:06:01Z,https://github.com/op7418/pilot-harness
-active,5,dsh-tauri-desk/deepseek-harness-desktop,1899,10,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-10T19:23:31Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
+active,1,flizzywine/dsh-tavern,255,14,0,,0,工作流,2026-08-16T13:07:23Z,2026-09-11T10:28:03Z,https://github.com/flizzywine/dsh-tavern
+active,2,omdsh-dev/dsh-genui,435,6,0,3,1,视觉,2026-08-13T13:07:52Z,2026-09-11T10:27:32Z,https://github.com/omdsh-dev/dsh-genui
+active,3,imsai-sh/awesome-deepseek-harness-plugins,228,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-11T10:23:23Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,4,ChisaAlter/Deepseek-Harness-Desktop,160,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-11T10:21:12Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,5,ysr666/dsh-vision-router,1095,-2,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-11T10:20:58Z,https://github.com/ysr666/dsh-vision-router
