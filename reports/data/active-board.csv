@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,255,14,0,,0,工作流,2026-08-16T13:07:23Z,2026-09-11T10:28:03Z,https://github.com/flizzywine/dsh-tavern
-active,2,omdsh-dev/dsh-genui,435,6,0,3,1,视觉,2026-08-13T13:07:52Z,2026-09-11T10:27:32Z,https://github.com/omdsh-dev/dsh-genui
-active,3,imsai-sh/awesome-deepseek-harness-plugins,228,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-11T10:23:23Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,4,ChisaAlter/Deepseek-Harness-Desktop,160,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-11T10:21:12Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
-active,5,ysr666/dsh-vision-router,1095,-2,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-11T10:20:58Z,https://github.com/ysr666/dsh-vision-router
+active,1,elysia395/dsh-wallpaper-engine,262,2,0,,0,视觉,2026-08-16T16:04:08Z,2026-09-11T17:25:00Z,https://github.com/elysia395/dsh-wallpaper-engine
+active,2,bowenliang123/dsh-context,1338,5,0,3,1,视觉,2026-08-14T08:23:28Z,2026-09-11T17:24:56Z,https://github.com/bowenliang123/dsh-context
+active,3,d-dev0101/open-sea-skin,373,0,0,3,1,视觉,2026-08-14T22:19:03Z,2026-09-11T17:23:31Z,https://github.com/d-dev0101/open-sea-skin
+active,4,omdsh-dev/dsh-genui,436,1,0,3,1,视觉,2026-08-13T13:07:52Z,2026-09-11T17:22:40Z,https://github.com/omdsh-dev/dsh-genui
+active,5,Anionex/dsh-vision-toolkit,873,0,0,3,1,视觉,2026-08-13T12:36:34Z,2026-09-11T17:20:52Z,https://github.com/Anionex/dsh-vision-toolkit
