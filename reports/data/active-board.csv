@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,332,6,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-15T17:45:49Z,https://github.com/flizzywine/dsh-tavern
-active,2,vibeinging/dsh-desktop,587,2,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-15T17:43:32Z,https://github.com/vibeinging/dsh-desktop
-active,3,dsh-tauri-desk/deepseek-harness-desktop,2113,-4,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-15T17:33:11Z,https://github.com/dsh-tauri-desk/deepseek-harness-desktop
-active,4,FuRongJun-1999/dsh-memory,199,3,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-15T17:26:23Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,kelai141/dsh-mobile-apk,442,6,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-15T17:21:02Z,https://github.com/kelai141/dsh-mobile-apk
+active,1,ysr666/dsh-vision-router,1104,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-15T23:44:11Z,https://github.com/ysr666/dsh-vision-router
+active,2,ningbainb/deepseek-harness-desktop,561,1,0,3,1,视觉,2026-08-13T19:50:01Z,2026-09-15T23:40:18Z,https://github.com/ningbainb/deepseek-harness-desktop
+active,3,FuRongJun-1999/dsh-memory,200,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-15T23:27:26Z,https://github.com/FuRongJun-1999/dsh-memory
+active,4,Totoro-qaq/dsh-plugin-bridge,165,0,0,,0,其他,2026-08-17T07:52:45Z,2026-09-15T23:15:30Z,https://github.com/Totoro-qaq/dsh-plugin-bridge
+active,5,kelai141/dsh-mobile-apk,442,0,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-15T23:14:56Z,https://github.com/kelai141/dsh-mobile-apk
