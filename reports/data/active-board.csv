@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,kelai141/dsh-mobile-apk,458,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-16T23:50:25Z,https://github.com/kelai141/dsh-mobile-apk
-active,2,ccch1mneyyy/dsh-TUI,3071,3,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-16T23:33:35Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,ysr666/dsh-vision-router,1105,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-16T23:25:21Z,https://github.com/ysr666/dsh-vision-router
-active,4,FuRongJun-1999/dsh-memory,210,2,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-16T23:13:02Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,bradeGithub/DSH-Plugins-Marketplace,167,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-16T23:06:35Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,1,FuRongJun-1999/dsh-memory,214,4,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-17T10:52:14Z,https://github.com/FuRongJun-1999/dsh-memory
+active,2,myYangyunfan/dsh_desktop,669,4,0,1,0,视觉,2026-08-13T16:00:16Z,2026-09-17T10:46:10Z,https://github.com/myYangyunfan/dsh_desktop
+active,3,ChisaAlter/Deepseek-Harness-Desktop,167,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-17T10:45:41Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,4,dsh-tauri/deepseek-harness-desktop,2197,31,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-17T10:37:28Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,5,flizzywine/dsh-tavern,348,4,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-17T10:31:00Z,https://github.com/flizzywine/dsh-tavern
