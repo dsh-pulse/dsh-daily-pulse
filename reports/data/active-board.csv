@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,FuRongJun-1999/dsh-memory,214,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-17T17:51:48Z,https://github.com/FuRongJun-1999/dsh-memory
-active,2,dsh-tauri/deepseek-harness-desktop,2210,13,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-17T17:42:10Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,3,vibeinging/dsh-desktop,588,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-17T17:41:52Z,https://github.com/vibeinging/dsh-desktop
-active,4,flizzywine/dsh-tavern,353,5,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-17T17:34:51Z,https://github.com/flizzywine/dsh-tavern
-active,5,Totoro-qaq/dsh-plugin-bridge,165,-1,0,,0,其他,2026-08-17T07:52:45Z,2026-09-17T17:26:54Z,https://github.com/Totoro-qaq/dsh-plugin-bridge
+active,1,FuRongJun-1999/dsh-memory,214,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-17T23:49:35Z,https://github.com/FuRongJun-1999/dsh-memory
+active,2,anywhere-labs/dsh-desktop,27343,10,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-17T23:25:29Z,https://github.com/anywhere-labs/dsh-desktop
+active,3,ccch1mneyyy/dsh-TUI,3081,2,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-17T21:37:48Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,bradeGithub/DSH-Plugins-Marketplace,166,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-17T21:29:26Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,5,flizzywine/dsh-tavern,354,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-17T21:15:04Z,https://github.com/flizzywine/dsh-tavern
