@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,FuRongJun-1999/dsh-memory,214,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-17T23:49:35Z,https://github.com/FuRongJun-1999/dsh-memory
-active,2,anywhere-labs/dsh-desktop,27343,10,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-17T23:25:29Z,https://github.com/anywhere-labs/dsh-desktop
-active,3,ccch1mneyyy/dsh-TUI,3081,2,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-17T21:37:48Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,bradeGithub/DSH-Plugins-Marketplace,166,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-17T21:29:26Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
-active,5,flizzywine/dsh-tavern,354,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-17T21:15:04Z,https://github.com/flizzywine/dsh-tavern
+active,1,bradeGithub/DSH-Plugins-Marketplace,166,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-18T10:29:51Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,2,FuRongJun-1999/dsh-memory,219,5,0,,0,工作流,2026-08-14T13:28:26Z,2026-09-18T10:29:44Z,https://github.com/FuRongJun-1999/dsh-memory
+active,3,YuJunZhiXue/dsh-purge,1329,64,0,3,1,其他,2026-08-19T07:41:12Z,2026-09-18T10:26:26Z,https://github.com/YuJunZhiXue/dsh-purge
+active,4,ccch1mneyyy/dsh-TUI,3089,8,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-18T10:10:12Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,dsh-tauri/deepseek-harness-desktop,2246,33,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-18T10:07:53Z,https://github.com/dsh-tauri/deepseek-harness-desktop
