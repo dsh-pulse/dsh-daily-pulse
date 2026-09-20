@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,VDERR/echocat-skill-panel-3.0,201,1,0,,0,工作流,2026-09-18T00:02:34Z,2026-09-20T10:31:07Z,https://github.com/VDERR/echocat-skill-panel-3.0
-active,2,kelai141/dsh-mobile-apk,485,7,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-20T10:29:32Z,https://github.com/kelai141/dsh-mobile-apk
-active,3,ccch1mneyyy/dsh-TUI,3113,7,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-20T10:15:34Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,anywhere-labs/dsh-desktop,27940,203,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-20T10:12:38Z,https://github.com/anywhere-labs/dsh-desktop
-active,5,liguobao/ds-harness-remote,210,3,0,,0,终端,2026-08-14T15:33:53Z,2026-09-20T10:11:45Z,https://github.com/liguobao/ds-harness-remote
+active,1,awesome-dsh-plugin/awesome-dsh-plugin,16393,47,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-20T17:11:59Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,2,xmanrui/dsh-im,1416,3,0,3,1,工作流,2026-08-14T20:40:06Z,2026-09-20T17:07:50Z,https://github.com/xmanrui/dsh-im
+active,3,dsh-tauri/deepseek-harness-desktop,2383,14,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-20T17:04:36Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,4,dsh-market/dsh-market,4259,25,0,3,1,视觉,2026-08-14T04:58:15Z,2026-09-20T17:01:18Z,https://github.com/dsh-market/dsh-market
+active,5,vibeinging/dsh-desktop,589,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-20T16:55:55Z,https://github.com/vibeinging/dsh-desktop
