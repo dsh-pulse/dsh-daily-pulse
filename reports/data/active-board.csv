@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ChisaAlter/Deepseek-Harness-Desktop,171,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-22T17:51:17Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
-active,2,Nwflower/dsh-chat-import,194,0,0,,0,工作流,2026-08-13T14:21:58Z,2026-09-22T17:50:04Z,https://github.com/Nwflower/dsh-chat-import
-active,3,vibeinging/dsh-desktop,588,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-22T17:41:46Z,https://github.com/vibeinging/dsh-desktop
-active,4,dsh-market/dsh-market,4390,27,0,3,1,视觉,2026-08-14T04:58:15Z,2026-09-22T17:26:57Z,https://github.com/dsh-market/dsh-market
-active,5,awesome-dsh-plugin/awesome-dsh-plugin,16623,29,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-22T17:21:09Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,1,ChisaAlter/Deepseek-Harness-Desktop,171,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-22T23:52:28Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
+active,2,corrinehu/dsh-workbuddy-connect,172,1,0,,0,视觉,2026-08-17T19:02:44Z,2026-09-22T23:25:59Z,https://github.com/corrinehu/dsh-workbuddy-connect
+active,3,Totoro-qaq/dsh-plugin-bridge,165,0,0,,0,其他,2026-08-17T07:52:45Z,2026-09-22T23:15:22Z,https://github.com/Totoro-qaq/dsh-plugin-bridge
+active,4,kelai141/dsh-mobile-apk,514,-1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-22T22:36:05Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,bradeGithub/DSH-Plugins-Marketplace,167,0,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-22T21:25:22Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
