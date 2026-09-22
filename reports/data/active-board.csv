@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Mars-Sea/dsh-commandcode-provider,302,0,0,,0,其他,2026-08-14T11:38:54Z,2026-09-22T00:21:08Z,https://github.com/Mars-Sea/dsh-commandcode-provider
-active,2,awesome-dsh-plugin/awesome-dsh-plugin,16523,6,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-22T00:16:54Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,3,bowenliang123/dsh-context,1472,1,0,3,1,视觉,2026-08-14T08:23:28Z,2026-09-22T00:08:32Z,https://github.com/bowenliang123/dsh-context
-active,4,ccch1mneyyy/dsh-TUI,3135,1,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-21T23:53:27Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,bradeGithub/DSH-Plugins-Marketplace,166,-1,0,,0,工作流,2026-08-13T16:01:59Z,2026-09-21T23:28:33Z,https://github.com/bradeGithub/DSH-Plugins-Marketplace
+active,1,LivXue/dsh-plugin-shop,862,8,0,3,1,工作流,2026-08-25T05:16:32Z,2026-09-22T10:50:55Z,https://github.com/LivXue/dsh-plugin-shop
+active,2,dsh-tauri/deepseek-harness-desktop,2481,32,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-22T10:49:00Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,3,kelai141/dsh-mobile-apk,512,7,0,1,0,视觉,2026-08-13T23:55:34Z,2026-09-22T10:47:04Z,https://github.com/kelai141/dsh-mobile-apk
+active,4,MeteorNOX/DeepSeek-Balance-Whale-Widget,2937,42,0,3,1,视觉,2026-08-18T03:13:51Z,2026-09-22T10:46:02Z,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
+active,5,ChisaAlter/Deepseek-Harness-Desktop,171,0,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-22T10:45:45Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
