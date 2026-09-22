@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,28275,52,0,3,视觉,2026-08-13T16:30:50Z,2026-09-21T14:31:02Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,16517,26,0,3,终端,2026-08-13T13:55:31Z,2026-09-21T17:48:50Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,8244,50,0,5,视觉,2026-08-13T13:45:50Z,2026-09-21T16:56:10Z,https://github.com/dataelement/dsh-desktop
-leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7206,1,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
-leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",4323,18,0,3,视觉,2026-08-14T04:58:15Z,2026-09-21T17:07:25Z,https://github.com/dsh-market/dsh-market
+leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,28281,6,0,3,视觉,2026-08-13T16:30:50Z,2026-09-21T14:31:02Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,16523,6,0,3,终端,2026-08-13T13:55:31Z,2026-09-22T00:16:54Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,8255,11,0,5,视觉,2026-08-13T13:45:50Z,2026-09-21T16:56:10Z,https://github.com/dataelement/dsh-desktop
+leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7207,1,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",4327,4,0,3,视觉,2026-08-14T04:58:15Z,2026-09-21T17:07:25Z,https://github.com/dsh-market/dsh-market
 leaderboard,6,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3804,0,0,3,工作流,2026-08-14T14:06:39Z,2026-09-10T05:00:13Z,https://github.com/xiaobright/dsh-anchored-standard
-growth,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,28275,52,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,2,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,8244,50,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
-growth,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,16517,26,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,4,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",4323,18,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,5,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7206,1,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
+growth,1,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,8255,11,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
+growth,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,28281,6,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,16523,6,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,4,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",4327,4,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,5,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7207,1,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
 growth,6,xiaobright/dsh-anchored-standard,"Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard",3804,0,0,3,工作流,,,https://github.com/xiaobright/dsh-anchored-standard
