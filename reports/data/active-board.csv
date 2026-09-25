@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dataelement/dsh-desktop,9106,22,0,5,1,视觉,2026-08-13T13:45:50Z,2026-09-25T00:02:45Z,https://github.com/dataelement/dsh-desktop
-active,2,ccch1mneyyy/dsh-TUI,3175,1,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-24T22:01:18Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,ZSeven-W/dsh-ios,303,0,0,,0,视觉,2026-08-19T18:02:50Z,2026-09-24T21:40:18Z,https://github.com/ZSeven-W/dsh-ios
-active,4,imsai-sh/awesome-deepseek-harness-plugins,249,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-09-24T20:49:07Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,vibeinging/dsh-desktop,587,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-24T20:03:31Z,https://github.com/vibeinging/dsh-desktop
+active,1,ysr666/dsh-vision-router,1119,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-25T11:01:45Z,https://github.com/ysr666/dsh-vision-router
+active,2,awesome-dsh-plugin/awesome-dsh-plugin,16868,42,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-25T10:57:33Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,3,dsh-tauri/deepseek-harness-desktop,2642,29,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-25T10:49:00Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,4,flizzywine/dsh-tavern,494,8,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-25T10:45:18Z,https://github.com/flizzywine/dsh-tavern
+active,5,MeteorNOX/DeepSeek-Balance-Whale-Widget,3113,32,0,3,1,视觉,2026-08-18T03:13:51Z,2026-09-25T10:43:48Z,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
