@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ysr666/dsh-vision-router,1119,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-09-25T11:01:45Z,https://github.com/ysr666/dsh-vision-router
-active,2,awesome-dsh-plugin/awesome-dsh-plugin,16868,42,0,3,1,终端,2026-08-13T13:55:31Z,2026-09-25T10:57:33Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,3,dsh-tauri/deepseek-harness-desktop,2642,29,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-25T10:49:00Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,4,flizzywine/dsh-tavern,494,8,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-25T10:45:18Z,https://github.com/flizzywine/dsh-tavern
-active,5,MeteorNOX/DeepSeek-Balance-Whale-Widget,3113,32,0,3,1,视觉,2026-08-18T03:13:51Z,2026-09-25T10:43:48Z,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
+active,1,flizzywine/dsh-tavern,500,6,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-25T18:10:07Z,https://github.com/flizzywine/dsh-tavern
+active,2,vibeinging/dsh-desktop,587,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-25T18:01:09Z,https://github.com/vibeinging/dsh-desktop
+active,3,dsh-market/dsh-market,4571,21,0,3,1,视觉,2026-08-14T04:58:15Z,2026-09-25T17:22:56Z,https://github.com/dsh-market/dsh-market
+active,4,anywhere-labs/dsh-desktop,28983,41,0,3,1,视觉,2026-08-13T16:30:50Z,2026-09-25T17:17:40Z,https://github.com/anywhere-labs/dsh-desktop
+active,5,dsh-tauri/deepseek-harness-desktop,2654,12,0,3,1,视觉,2026-08-14T02:36:29Z,2026-09-25T17:04:27Z,https://github.com/dsh-tauri/deepseek-harness-desktop
