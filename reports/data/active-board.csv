@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,saya-ch/dsh-mobile,317,2,0,,0,视觉,2026-08-15T05:28:38Z,2026-09-26T10:45:27Z,https://github.com/saya-ch/dsh-mobile
-active,2,ccch1mneyyy/dsh-TUI,3176,-2,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-26T10:40:48Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,ChisaAlter/Deepseek-Harness-Desktop,172,1,0,,0,视觉,2026-08-13T13:21:50Z,2026-09-26T10:29:05Z,https://github.com/ChisaAlter/Deepseek-Harness-Desktop
-active,4,flizzywine/dsh-tavern,507,6,0,3,1,工作流,2026-08-16T13:07:23Z,2026-09-26T10:25:02Z,https://github.com/flizzywine/dsh-tavern
-active,5,Anionex/dsh-vision-toolkit,884,2,0,3,1,视觉,2026-08-13T12:36:34Z,2026-09-26T10:19:52Z,https://github.com/Anionex/dsh-vision-toolkit
+active,1,ccch1mneyyy/dsh-TUI,3321,145,0,3,1,视觉,2026-08-13T12:49:31Z,2026-09-26T17:34:43Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,acryldev/acryl,257,1,0,,0,工作流,2026-08-25T15:53:56Z,2026-09-26T17:21:27Z,https://github.com/acryldev/acryl
+active,3,vibeinging/dsh-desktop,586,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-09-26T17:20:36Z,https://github.com/vibeinging/dsh-desktop
+active,4,lencx/Minke,670,0,0,3,1,视觉,2026-08-15T01:49:38Z,2026-09-26T17:17:50Z,https://github.com/lencx/Minke
+active,5,bruc3van/awesome-dsh-plugin,367,0,0,,0,其他,2026-08-13T13:24:25Z,2026-09-26T17:11:28Z,https://github.com/bruc3van/awesome-dsh-plugin
