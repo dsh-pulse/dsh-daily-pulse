@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,29884,8,0,3,视觉,2026-08-13T16:30:50Z,2026-10-03T13:39:42Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,17682,8,0,3,终端,2026-08-13T13:55:31Z,2026-10-01T16:27:12Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,11766,5,0,5,视觉,2026-08-13T13:45:50Z,2026-10-03T06:21:54Z,https://github.com/dataelement/dsh-desktop
-leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6999,0,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
-leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5436,9,0,3,视觉,2026-08-14T04:58:15Z,2026-10-03T17:31:29Z,https://github.com/dsh-market/dsh-market
-leaderboard,6,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",3985,6,0,3,视觉,2026-08-13T12:49:31Z,2026-10-04T00:15:00Z,https://github.com/ccch1mneyyy/dsh-TUI
-growth,1,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5436,9,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,29884,8,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,17682,8,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,4,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",3985,6,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
-growth,5,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,11766,5,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
-growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6999,0,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,29917,33,0,3,视觉,2026-08-13T16:30:50Z,2026-10-03T13:39:42Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,17721,39,0,3,终端,2026-08-13T13:55:31Z,2026-10-01T16:27:12Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,11842,76,0,5,视觉,2026-08-13T13:45:50Z,2026-10-03T06:21:54Z,https://github.com/dataelement/dsh-desktop
+leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7001,2,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5479,43,0,3,视觉,2026-08-14T04:58:15Z,2026-10-03T17:31:29Z,https://github.com/dsh-market/dsh-market
+leaderboard,6,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",4011,26,0,3,视觉,2026-08-13T12:49:31Z,2026-10-04T11:43:55Z,https://github.com/ccch1mneyyy/dsh-TUI
+growth,1,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,11842,76,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
+growth,2,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5479,43,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,17721,39,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,4,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,29917,33,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,5,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",4011,26,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
+growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7001,2,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
