@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,4084,4,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-06T01:50:33Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,bruc3van/awesome-dsh-plugin,389,0,0,,0,其他,2026-08-13T13:24:25Z,2026-10-06T01:23:04Z,https://github.com/bruc3van/awesome-dsh-plugin
-active,3,Mars-Sea/dsh-commandcode-provider,369,3,0,,0,其他,2026-08-14T11:38:54Z,2026-10-06T01:22:40Z,https://github.com/Mars-Sea/dsh-commandcode-provider
-active,4,bowenliang123/dsh-context,1865,3,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-06T01:13:30Z,https://github.com/bowenliang123/dsh-context
-active,5,FuRongJun-1999/dsh-memory,324,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-06T01:02:10Z,https://github.com/FuRongJun-1999/dsh-memory
+active,1,dsh-tauri/deepseek-harness-desktop,3045,2,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-06T12:39:25Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,2,QCYTSN/dsh-dafeiyu,407,3,0,,0,视觉,2026-08-14T03:35:04Z,2026-10-06T12:37:48Z,https://github.com/QCYTSN/dsh-dafeiyu
+active,3,ccch1mneyyy/dsh-TUI,4105,21,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-06T12:34:41Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,FuRongJun-1999/dsh-memory,325,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-06T12:34:10Z,https://github.com/FuRongJun-1999/dsh-memory
+active,5,ningbainb/deepseek-harness-desktop,776,4,0,3,1,视觉,2026-08-13T19:50:01Z,2026-10-06T12:27:57Z,https://github.com/ningbainb/deepseek-harness-desktop
