@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dsh-tauri/deepseek-harness-desktop,3045,2,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-06T12:39:25Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,2,QCYTSN/dsh-dafeiyu,407,3,0,,0,视觉,2026-08-14T03:35:04Z,2026-10-06T12:37:48Z,https://github.com/QCYTSN/dsh-dafeiyu
-active,3,ccch1mneyyy/dsh-TUI,4105,21,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-06T12:34:41Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,FuRongJun-1999/dsh-memory,325,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-06T12:34:10Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,ningbainb/deepseek-harness-desktop,776,4,0,3,1,视觉,2026-08-13T19:50:01Z,2026-10-06T12:27:57Z,https://github.com/ningbainb/deepseek-harness-desktop
+active,1,vibeinging/dsh-desktop,590,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-10-06T18:58:58Z,https://github.com/vibeinging/dsh-desktop
+active,2,bowenliang123/dsh-context,1875,4,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-06T18:53:15Z,https://github.com/bowenliang123/dsh-context
+active,3,Anionex/dsh-vision-toolkit,885,2,0,3,1,视觉,2026-08-13T12:36:34Z,2026-10-06T18:42:38Z,https://github.com/Anionex/dsh-vision-toolkit
+active,4,ningbainb/deepseek-harness-desktop,776,0,0,3,1,视觉,2026-08-13T19:50:01Z,2026-10-06T18:35:48Z,https://github.com/ningbainb/deepseek-harness-desktop
+active,5,DDDMUC/dsh-free-search,328,2,0,,0,其他,2026-08-14T16:42:17Z,2026-10-06T18:34:24Z,https://github.com/DDDMUC/dsh-free-search
