@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,768,17,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-07T12:31:32Z,https://github.com/flizzywine/dsh-tavern
-active,2,omdsh-dev/dsh-genui,521,3,0,3,1,视觉,2026-08-13T13:07:52Z,2026-10-07T12:29:24Z,https://github.com/omdsh-dev/dsh-genui
-active,3,ccch1mneyyy/dsh-TUI,4152,27,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-07T12:14:58Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,dsh-tauri/deepseek-harness-desktop,3069,13,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-07T12:10:25Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,5,Miaotofu01/Study-Mate,660,23,0,3,1,工作流,2026-09-17T19:36:05Z,2026-10-07T12:08:48Z,https://github.com/Miaotofu01/Study-Mate
+active,1,awesome-dsh-plugin/awesome-dsh-plugin,18008,24,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-07T19:40:43Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,2,dsh-tauri/deepseek-harness-desktop,3076,7,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-07T19:35:39Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,3,vibeinging/dsh-desktop,590,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-10-07T19:26:35Z,https://github.com/vibeinging/dsh-desktop
+active,4,dsh-market/dsh-market,5749,16,0,3,1,视觉,2026-08-14T04:58:15Z,2026-10-07T19:25:51Z,https://github.com/dsh-market/dsh-market
+active,5,ccch1mneyyy/dsh-TUI,4160,8,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-07T19:24:01Z,https://github.com/ccch1mneyyy/dsh-TUI
