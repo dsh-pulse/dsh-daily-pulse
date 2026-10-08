@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,30082,22,0,3,视觉,2026-08-13T16:30:50Z,2026-10-03T13:39:42Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,18008,24,0,3,终端,2026-08-13T13:55:31Z,2026-10-07T19:40:43Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,12182,16,0,5,视觉,2026-08-13T13:45:50Z,2026-10-03T06:21:54Z,https://github.com/dataelement/dsh-desktop
-leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7013,3,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
-leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5749,16,0,3,视觉,2026-08-14T04:58:15Z,2026-10-07T19:25:51Z,https://github.com/dsh-market/dsh-market
-leaderboard,6,MeteorNOX/DeepSeek-Balance-Whale-Widget,DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动,4197,14,0,3,视觉,2026-08-18T03:13:51Z,2026-10-07T15:24:21Z,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
-growth,1,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,18008,24,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,30082,22,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,12182,16,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
-growth,4,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5749,16,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,5,MeteorNOX/DeepSeek-Balance-Whale-Widget,DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动,4197,14,0,3,视觉,,,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
-growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7013,3,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,30094,12,0,3,视觉,2026-08-13T16:30:50Z,2026-10-03T13:39:42Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,2,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,18010,2,0,3,终端,2026-08-13T13:55:31Z,2026-10-07T19:52:57Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,3,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,12201,19,0,5,视觉,2026-08-13T13:45:50Z,2026-10-03T06:21:54Z,https://github.com/dataelement/dsh-desktop
+leaderboard,4,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7013,0,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5756,7,0,3,视觉,2026-08-14T04:58:15Z,2026-10-07T19:42:56Z,https://github.com/dsh-market/dsh-market
+leaderboard,6,MeteorNOX/DeepSeek-Balance-Whale-Widget,DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动,4205,8,0,3,视觉,2026-08-18T03:13:51Z,2026-10-07T15:24:21Z,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
+growth,1,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,12201,19,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
+growth,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,30094,12,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,3,MeteorNOX/DeepSeek-Balance-Whale-Widget,DeepSeek Harness（DSH）一只住在 DSH 界面右下角的小鲸鱼娘，帮你盯着DeepSeek账户余额。QQ弹弹，支持拖拽吸附、左吸附翻转、数字滚动,4205,8,0,3,视觉,,,https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget
+growth,4,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",5756,7,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,5,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,18010,2,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,7013,0,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
