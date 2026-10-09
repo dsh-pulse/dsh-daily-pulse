@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,FuRongJun-1999/dsh-memory,359,2,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-09T12:30:53Z,https://github.com/FuRongJun-1999/dsh-memory
-active,2,acryldev/acryl,256,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-09T12:30:46Z,https://github.com/acryldev/acryl
-active,3,ysr666/dsh-vision-router,1137,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-10-09T12:30:29Z,https://github.com/ysr666/dsh-vision-router
-active,4,imsai-sh/awesome-deepseek-harness-plugins,271,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-09T12:25:24Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,ccch1mneyyy/dsh-TUI,4221,24,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-09T12:12:42Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,ccch1mneyyy/dsh-TUI,4235,14,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-09T19:07:43Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,FuRongJun-1999/dsh-memory,361,2,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-09T19:05:26Z,https://github.com/FuRongJun-1999/dsh-memory
+active,3,vibeinging/dsh-desktop,592,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-10-09T18:54:54Z,https://github.com/vibeinging/dsh-desktop
+active,4,acryldev/acryl,256,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-09T18:49:12Z,https://github.com/acryldev/acryl
+active,5,dsh-tauri/deepseek-harness-desktop,3131,3,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-09T18:47:17Z,https://github.com/dsh-tauri/deepseek-harness-desktop
