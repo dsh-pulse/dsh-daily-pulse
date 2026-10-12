@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Ebony-Vinyl/EAC-Desktop,1995,16,0,1,0,视觉,2026-08-14T16:29:54Z,2026-10-12T14:18:21Z,https://github.com/Ebony-Vinyl/EAC-Desktop
-active,2,ccch1mneyyy/dsh-TUI,4400,107,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-12T14:17:41Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,Fei2411/DeepSeek-Bot,1278,,1,1,0,工作流,2026-10-07T15:37:36Z,2026-10-12T14:07:26Z,https://github.com/Fei2411/DeepSeek-Bot
-active,4,dsh-tauri/deepseek-harness-desktop,3062,-6,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-12T14:05:14Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,5,acryldev/acryl,255,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-12T14:02:44Z,https://github.com/acryldev/acryl
+active,1,vibeinging/dsh-desktop,593,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-10-12T21:48:36Z,https://github.com/vibeinging/dsh-desktop
+active,2,acryldev/acryl,255,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-12T21:36:45Z,https://github.com/acryldev/acryl
+active,3,ccch1mneyyy/dsh-TUI,4461,61,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-12T21:08:04Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,toolclub/dsh-agent-team-gui,285,0,0,,0,工作流,2026-08-15T03:40:19Z,2026-10-12T19:57:27Z,https://github.com/toolclub/dsh-agent-team-gui
+active,5,dsh-tauri/deepseek-harness-desktop,3034,-28,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-12T19:44:19Z,https://github.com/dsh-tauri/deepseek-harness-desktop
