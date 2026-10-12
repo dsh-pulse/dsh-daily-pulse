@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dsh-tauri/deepseek-harness-desktop,3095,-58,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-11T18:26:24Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,2,bowenliang123/dsh-context,1994,12,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-11T18:21:55Z,https://github.com/bowenliang123/dsh-context
-active,3,vibeinging/dsh-desktop,592,0,0,3,1,视觉,2026-08-13T10:41:33Z,2026-10-11T18:17:49Z,https://github.com/vibeinging/dsh-desktop
-active,4,liguobao/ds-harness-remote,308,-1,0,,0,终端,2026-08-14T15:33:53Z,2026-10-11T18:11:44Z,https://github.com/liguobao/ds-harness-remote
-active,5,xmanrui/dsh-im,1834,30,0,3,1,工作流,2026-08-14T20:40:06Z,2026-10-11T17:51:17Z,https://github.com/xmanrui/dsh-im
+active,1,FuRongJun-1999/dsh-memory,370,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-12T00:42:15Z,https://github.com/FuRongJun-1999/dsh-memory
+active,2,bowenliang123/dsh-context,1995,1,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-12T00:41:39Z,https://github.com/bowenliang123/dsh-context
+active,3,liguobao/ds-harness-remote,309,1,0,,0,终端,2026-08-14T15:33:53Z,2026-10-12T00:22:23Z,https://github.com/liguobao/ds-harness-remote
+active,4,ccch1mneyyy/dsh-TUI,4293,1,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-11T23:44:58Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,acryldev/acryl,255,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-11T23:15:52Z,https://github.com/acryldev/acryl
