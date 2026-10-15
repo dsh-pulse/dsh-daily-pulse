@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Miaotofu01/Study-Mate,979,11,0,3,1,工作流,2026-09-17T19:36:05Z,2026-10-15T17:55:58Z,https://github.com/Miaotofu01/Study-Mate
-active,2,Fei2411/DeepSeek-Bot,2028,41,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-15T17:54:21Z,https://github.com/Fei2411/DeepSeek-Bot
-active,3,FuRongJun-1999/dsh-memory,393,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-15T17:52:28Z,https://github.com/FuRongJun-1999/dsh-memory
-active,4,vibeinging/dsh-desktop,483,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-15T17:50:41Z,https://github.com/vibeinging/dsh-desktop
-active,5,awesome-dsh-plugin/awesome-dsh-plugin,18886,50,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-15T17:31:25Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,1,dsh-tauri/deepseek-harness-desktop,3028,13,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-15T23:53:49Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,2,kelai141/dsh-mobile-apk,699,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-15T22:24:33Z,https://github.com/kelai141/dsh-mobile-apk
+active,3,sixtysevenlf/dsh-blender-plugin,235,3,0,,0,工作流,2026-09-13T16:07:04Z,2026-10-15T22:23:52Z,https://github.com/sixtysevenlf/dsh-blender-plugin
+active,4,Miaotofu01/Study-Mate,979,0,0,3,1,工作流,2026-09-17T19:36:05Z,2026-10-15T21:07:18Z,https://github.com/Miaotofu01/Study-Mate
+active,5,FuRongJun-1999/dsh-memory,395,2,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-15T20:49:56Z,https://github.com/FuRongJun-1999/dsh-memory
