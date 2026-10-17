@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,1028,14,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-17T10:04:09Z,https://github.com/flizzywine/dsh-tavern
-active,2,Fei2411/DeepSeek-Bot,2239,98,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-17T10:03:24Z,https://github.com/Fei2411/DeepSeek-Bot
-active,3,corrinehu/dsh-workbuddy-connect,1109,69,0,3,1,视觉,2026-08-17T19:02:44Z,2026-10-17T10:03:09Z,https://github.com/corrinehu/dsh-workbuddy-connect
-active,4,FuRongJun-1999/dsh-memory,404,3,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-17T10:02:36Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,dsh-tauri/deepseek-harness-desktop,3129,26,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-17T09:59:46Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,1,dsh-tauri/deepseek-harness-desktop,3156,27,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-17T16:45:38Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,2,ccch1mneyyy/dsh-TUI,4734,36,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-17T16:45:27Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,Ebony-Vinyl/dsh-our-free-model,21399,1022,0,3,1,工作流,2026-09-24T16:17:19Z,2026-10-17T16:42:57Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
+active,4,Fei2411/DeepSeek-Bot,2345,106,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-17T16:42:18Z,https://github.com/Fei2411/DeepSeek-Bot
+active,5,Ebony-Vinyl/EAC-Desktop,2068,14,0,1,0,视觉,2026-08-14T16:29:54Z,2026-10-17T16:39:13Z,https://github.com/Ebony-Vinyl/EAC-Desktop
