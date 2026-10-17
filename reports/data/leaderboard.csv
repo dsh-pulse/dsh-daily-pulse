@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,31248,86,0,3,视觉,2026-08-13T16:30:50Z,2026-10-17T16:17:23Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,2,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,21399,1022,0,3,工作流,2026-09-24T16:17:19Z,2026-10-17T16:42:57Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
-leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,19152,63,0,3,终端,2026-08-13T13:55:31Z,2026-10-17T09:52:12Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,14840,80,0,5,视觉,2026-08-13T13:45:50Z,2026-10-16T10:00:51Z,https://github.com/dataelement/dsh-desktop
-leaderboard,5,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6991,-3,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
-leaderboard,6,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",6926,91,0,3,视觉,2026-08-14T04:58:15Z,2026-10-17T09:17:02Z,https://github.com/dsh-market/dsh-market
-growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,21399,1022,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
-growth,2,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",6926,91,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,3,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,31248,86,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,14840,80,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
-growth,5,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,19152,63,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6991,-3,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,1,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,31274,26,0,3,视觉,2026-08-13T16:30:50Z,2026-10-17T20:05:05Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,2,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,21757,358,0,3,工作流,2026-09-24T16:17:19Z,2026-10-17T18:26:59Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
+leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,19162,10,0,3,终端,2026-08-13T13:55:31Z,2026-10-17T23:19:17Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,14858,18,0,5,视觉,2026-08-13T13:45:50Z,2026-10-16T10:00:51Z,https://github.com/dataelement/dsh-desktop
+leaderboard,5,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6991,0,0,3,工作流,2026-08-14T21:20:55Z,2026-09-18T23:10:58Z,https://github.com/yjh051108/dsh-routing-suite
+leaderboard,6,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",6957,31,0,3,视觉,2026-08-14T04:58:15Z,2026-10-17T18:06:51Z,https://github.com/dsh-market/dsh-market
+growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,21757,358,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
+growth,2,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",6957,31,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,3,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,31274,26,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,14858,18,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
+growth,5,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,19162,10,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,6,yjh051108/dsh-routing-suite,dsh-routing-suite — injector + router-standard kit: install the runtime injector,6991,0,0,3,工作流,,,https://github.com/yjh051108/dsh-routing-suite
