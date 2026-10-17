@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,19004,40,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-16T17:46:30Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,FuRongJun-1999/dsh-memory,401,2,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-16T17:42:55Z,https://github.com/FuRongJun-1999/dsh-memory
-active,3,vibeinging/dsh-desktop,483,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-16T17:36:08Z,https://github.com/vibeinging/dsh-desktop
-active,4,T-Auto/dsh-ops,2553,109,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-16T17:31:24Z,https://github.com/T-Auto/dsh-ops
-active,5,Mars-Sea/dsh-commandcode-provider,394,0,0,,0,其他,2026-08-14T11:38:54Z,2026-10-16T17:26:34Z,https://github.com/Mars-Sea/dsh-commandcode-provider
+active,1,ccch1mneyyy/dsh-TUI,4678,4,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-17T00:03:21Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,kelai141/dsh-mobile-apk,709,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-16T23:54:36Z,https://github.com/kelai141/dsh-mobile-apk
+active,3,FuRongJun-1999/dsh-memory,401,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-16T23:40:15Z,https://github.com/FuRongJun-1999/dsh-memory
+active,4,bowenliang123/dsh-context,2203,2,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-16T23:08:10Z,https://github.com/bowenliang123/dsh-context
+active,5,LivXue/dsh-plugin-shop,706,0,0,3,1,工作流,2026-08-25T05:16:32Z,2026-10-16T21:54:05Z,https://github.com/LivXue/dsh-plugin-shop
