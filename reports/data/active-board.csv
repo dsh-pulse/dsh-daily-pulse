@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,4776,33,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-18T10:17:41Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,flizzywine/dsh-tavern,1068,22,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-18T10:16:38Z,https://github.com/flizzywine/dsh-tavern
-active,3,LivXue/dsh-plugin-shop,706,0,0,3,1,工作流,2026-08-25T05:16:32Z,2026-10-18T09:59:01Z,https://github.com/LivXue/dsh-plugin-shop
-active,4,imsai-sh/awesome-deepseek-harness-plugins,296,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-18T09:57:22Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,T-Auto/dsh-ops,2961,151,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-18T09:54:14Z,https://github.com/T-Auto/dsh-ops
+active,1,dsh-market/dsh-market,7190,98,0,3,1,视觉,2026-08-14T04:58:15Z,2026-10-18T17:02:19Z,https://github.com/dsh-market/dsh-market
+active,2,Fei2411/DeepSeek-Bot,2470,36,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-18T17:00:04Z,https://github.com/Fei2411/DeepSeek-Bot
+active,3,ccch1mneyyy/dsh-TUI,4802,26,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-18T16:57:54Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,T-Auto/dsh-ops,3048,87,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-18T16:56:27Z,https://github.com/T-Auto/dsh-ops
+active,5,FuRongJun-1999/dsh-memory,411,3,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-18T16:55:39Z,https://github.com/FuRongJun-1999/dsh-memory
