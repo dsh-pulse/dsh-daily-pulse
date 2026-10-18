@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dshplugin/dsh-plugin-hub,246,3,0,,0,工作流,2026-08-20T03:32:27Z,2026-10-17T23:40:17Z,https://github.com/dshplugin/dsh-plugin-hub
-active,2,ccch1mneyyy/dsh-TUI,4743,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-17T23:29:18Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,awesome-dsh-plugin/awesome-dsh-plugin,19162,10,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-17T23:19:17Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,4,Nagi-ovo/dsh-visualize,310,0,0,,0,视觉,2026-08-13T13:11:49Z,2026-10-17T23:11:16Z,https://github.com/Nagi-ovo/dsh-visualize
-active,5,T-Auto/dsh-ops,2810,26,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-17T20:07:52Z,https://github.com/T-Auto/dsh-ops
+active,1,ccch1mneyyy/dsh-TUI,4776,33,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-18T10:17:41Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,flizzywine/dsh-tavern,1068,22,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-18T10:16:38Z,https://github.com/flizzywine/dsh-tavern
+active,3,LivXue/dsh-plugin-shop,706,0,0,3,1,工作流,2026-08-25T05:16:32Z,2026-10-18T09:59:01Z,https://github.com/LivXue/dsh-plugin-shop
+active,4,imsai-sh/awesome-deepseek-harness-plugins,296,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-18T09:57:22Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,5,T-Auto/dsh-ops,2961,151,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-18T09:54:14Z,https://github.com/T-Auto/dsh-ops
