@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,4878,69,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-19T11:59:18Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,dataelement/dsh-desktop,15500,318,0,5,1,视觉,2026-08-13T13:45:50Z,2026-10-19T11:58:41Z,https://github.com/dataelement/dsh-desktop
-active,3,FishBottle7/opencode2dsh,274,7,0,,0,工作流,2026-08-29T07:22:12Z,2026-10-19T11:55:02Z,https://github.com/FishBottle7/opencode2dsh
-active,4,T-Auto/dsh-ops,3219,155,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-19T11:52:56Z,https://github.com/T-Auto/dsh-ops
-active,5,acryldev/acryl,257,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-19T11:49:40Z,https://github.com/acryldev/acryl
+active,1,vibeinging/dsh-desktop,484,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-19T19:24:55Z,https://github.com/vibeinging/dsh-desktop
+active,2,ccch1mneyyy/dsh-TUI,4938,60,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-19T19:19:19Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,acryldev/acryl,257,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-19T19:03:01Z,https://github.com/acryldev/acryl
+active,4,Fei2411/DeepSeek-Bot,2582,28,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-19T18:43:28Z,https://github.com/Fei2411/DeepSeek-Bot
+active,5,T-Auto/dsh-ops,3283,64,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-19T18:32:46Z,https://github.com/T-Auto/dsh-ops
