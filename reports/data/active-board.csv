@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,FuRongJun-1999/dsh-memory,419,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-20T00:50:46Z,https://github.com/FuRongJun-1999/dsh-memory
-active,2,bowenliang123/dsh-context,2362,3,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-20T00:42:58Z,https://github.com/bowenliang123/dsh-context
-active,3,ccch1mneyyy/dsh-TUI,4952,14,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-20T00:39:11Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,imsai-sh/awesome-deepseek-harness-plugins,301,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-20T00:34:03Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,dsh-tauri/deepseek-harness-desktop,3325,8,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-20T00:11:13Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,1,ccch1mneyyy/dsh-TUI,5011,59,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-20T10:52:29Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,FishBottle7/opencode2dsh,295,13,0,,0,工作流,2026-08-29T07:22:12Z,2026-10-20T10:51:31Z,https://github.com/FishBottle7/opencode2dsh
+active,3,dataelement/dsh-desktop,15822,261,0,5,1,视觉,2026-08-13T13:45:50Z,2026-10-20T10:51:17Z,https://github.com/dataelement/dsh-desktop
+active,4,Fei2411/DeepSeek-Bot,2636,48,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-20T10:47:06Z,https://github.com/Fei2411/DeepSeek-Bot
+active,5,Han-1413141/dsh-cost-meter,473,7,0,,0,视觉,2026-08-13T14:57:55Z,2026-10-20T10:45:23Z,https://github.com/Han-1413141/dsh-cost-meter
