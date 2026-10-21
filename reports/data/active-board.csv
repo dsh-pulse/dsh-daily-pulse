@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,19721,75,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-20T18:05:22Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,vibeinging/dsh-desktop,483,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-20T18:03:53Z,https://github.com/vibeinging/dsh-desktop
-active,3,T-Auto/dsh-ops,3470,68,0,5,1,视觉,2026-10-08T07:09:25Z,2026-10-20T17:58:24Z,https://github.com/T-Auto/dsh-ops
-active,4,Ayuilos/Miffan,324,2,0,,0,视觉,2026-08-16T11:20:01Z,2026-10-20T17:42:29Z,https://github.com/Ayuilos/Miffan
-active,5,xmanrui/dsh-im,2225,18,0,3,1,工作流,2026-08-14T20:40:06Z,2026-10-20T17:39:52Z,https://github.com/xmanrui/dsh-im
+active,1,xmanrui/dsh-im,2227,2,0,3,1,工作流,2026-08-14T20:40:06Z,2026-10-21T00:16:25Z,https://github.com/xmanrui/dsh-im
+active,2,PC2005-cloud/dsh-pet,3062,7,0,1,0,视觉,2026-08-14T00:38:45Z,2026-10-21T00:15:10Z,https://github.com/PC2005-cloud/dsh-pet
+active,3,FuRongJun-1999/dsh-memory,431,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-21T00:13:06Z,https://github.com/FuRongJun-1999/dsh-memory
+active,4,daha1216/dsh-adult-tension,275,1,0,,0,工作流,2026-08-19T15:04:31Z,2026-10-21T00:04:47Z,https://github.com/daha1216/dsh-adult-tension
+active,5,flizzywine/dsh-tavern,1162,4,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-20T23:59:45Z,https://github.com/flizzywine/dsh-tavern

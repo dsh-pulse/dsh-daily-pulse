@@ -6,13 +6,13 @@
     }
   ],
   "@type": "Dataset",
-  "@id": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0216.json",
-  "name": "DSH Plugin Ecosystem Snapshot · Issue #216",
-  "description": "Daily snapshot of the DeepSeek Harness (DSH) plugin ecosystem: 21704 plugins total, +128 in 8h, official repo 255968 stars, npm weekly 299.8K.",
+  "@id": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0217.json",
+  "name": "DSH Plugin Ecosystem Snapshot · Issue #217",
+  "description": "Daily snapshot of the DeepSeek Harness (DSH) plugin ecosystem: 21526 plugins total, +50 in 8h, official repo 255774 stars, npm weekly 299.8K.",
   "url": "https://dsh-pulse.github.io/dsh-daily-pulse/latest.html",
-  "datePublished": "2026-10-20T18:15:03Z",
-  "dateModified": "2026-10-20T18:15:03Z",
-  "temporalCoverage": "2026-10-20T10:10:03Z/2026-10-20T18:15:03Z",
+  "datePublished": "2026-10-21T00:16:54Z",
+  "dateModified": "2026-10-21T00:16:54Z",
+  "temporalCoverage": "2026-10-20T16:11:54Z/2026-10-21T00:16:54Z",
   "inLanguage": "en",
   "publisher": {
     "@type": "Organization",
@@ -25,34 +25,34 @@
   },
   "distribution": {
     "@type": "DataDownload",
-    "contentUrl": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0216.json",
+    "contentUrl": "https://dsh-pulse.github.io/dsh-daily-pulse/structured/0217.json",
     "encodingFormat": "application/json"
   },
   "variableMeasured": [
     {
       "@type": "PropertyValue",
       "name": "Total plugins (topic count, incl. forks)",
-      "value": 21704
+      "value": 21526
     },
     {
       "@type": "PropertyValue",
       "name": "Tracked plugins (non-fork)",
-      "value": 21369
+      "value": 21191
     },
     {
       "@type": "PropertyValue",
       "name": "New repos in 8h",
-      "value": 128
+      "value": 50
     },
     {
       "@type": "PropertyValue",
       "name": "Official repo stars",
-      "value": 255968
+      "value": 255774
     },
     {
       "@type": "PropertyValue",
       "name": "Official repo forks",
-      "value": 30898
+      "value": 30806
     },
     {
       "@type": "PropertyValue",
@@ -62,35 +62,35 @@
     {
       "@type": "PropertyValue",
       "name": "Official stars delta (8h)",
-      "value": 797
+      "value": -194
     },
     {
       "@type": "PropertyValue",
       "name": "Ecosystem health score",
-      "value": 44
+      "value": 42
     },
     {
       "@type": "PropertyValue",
       "name": "Stale repos (7d no push)",
-      "value": 15785
+      "value": 15791
     },
     {
       "@type": "PropertyValue",
       "name": "Stale repos (24h no push)",
-      "value": 19677
+      "value": 19517
     }
   ],
   "kpis": {
-    "total_plugins": 21704,
-    "non_fork_plugins": 21369,
+    "total_plugins": 21526,
+    "non_fork_plugins": 21191,
     "count_source": "topics-page",
-    "new_8h_repos": 128,
-    "official_stars": 255968,
-    "official_forks": 30898,
+    "new_8h_repos": 50,
+    "official_stars": 255774,
+    "official_forks": 30806,
     "npm_weekly_downloads": 299775,
     "npm_daily": 86453,
     "npm_daily_date": "2026-10-18",
-    "delta_8h_stars": 797
+    "delta_8h_stars": -194
   },
   "official": {
     "full_name": "deepseek-ai/deepseek-harness",
@@ -102,8 +102,8 @@
     {
       "rank": 1,
       "name": "anywhere-labs/dsh-desktop",
-      "stars": 31982,
-      "delta": 72,
+      "stars": 31991,
+      "delta": 9,
       "category": "视觉",
       "score": 3,
       "url": "https://github.com/anywhere-labs/dsh-desktop",
@@ -113,8 +113,8 @@
     {
       "rank": 2,
       "name": "Ebony-Vinyl/dsh-our-free-model",
-      "stars": 30730,
-      "delta": 1148,
+      "stars": 30829,
+      "delta": 99,
       "category": "工作流",
       "score": 3,
       "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
@@ -124,19 +124,19 @@
     {
       "rank": 3,
       "name": "awesome-dsh-plugin/awesome-dsh-plugin",
-      "stars": 19721,
-      "delta": 75,
+      "stars": 19728,
+      "delta": 7,
       "category": "终端",
       "score": 3,
       "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
       "created": "2026-08-13T13:55:31Z",
-      "pushed": "2026-10-20T18:05:22Z"
+      "pushed": "2026-10-20T23:55:07Z"
     },
     {
       "rank": 4,
       "name": "dataelement/dsh-desktop",
-      "stars": 15882,
-      "delta": 60,
+      "stars": 15539,
+      "delta": -343,
       "category": "视觉",
       "score": 5,
       "url": "https://github.com/dataelement/dsh-desktop",
@@ -146,19 +146,19 @@
     {
       "rank": 5,
       "name": "dsh-market/dsh-market",
-      "stars": 7741,
-      "delta": 104,
+      "stars": 7743,
+      "delta": 2,
       "category": "视觉",
       "score": 3,
       "url": "https://github.com/dsh-market/dsh-market",
       "created": "2026-08-14T04:58:15Z",
-      "pushed": "2026-10-20T17:34:48Z"
+      "pushed": "2026-10-20T20:55:03Z"
     },
     {
       "rank": 6,
       "name": "yjh051108/dsh-routing-suite",
-      "stars": 6989,
-      "delta": -2,
+      "stars": 6991,
+      "delta": 2,
       "category": "工作流",
       "score": 3,
       "url": "https://github.com/yjh051108/dsh-routing-suite",
@@ -170,38 +170,38 @@
     {
       "rank": 1,
       "name": "Ebony-Vinyl/dsh-our-free-model",
-      "delta": 1148,
-      "stars": 30730
+      "delta": 99,
+      "stars": 30829
     },
     {
       "rank": 2,
-      "name": "dsh-market/dsh-market",
-      "delta": 104,
-      "stars": 7741
+      "name": "anywhere-labs/dsh-desktop",
+      "delta": 9,
+      "stars": 31991
     },
     {
       "rank": 3,
       "name": "awesome-dsh-plugin/awesome-dsh-plugin",
-      "delta": 75,
-      "stars": 19721
+      "delta": 7,
+      "stars": 19728
     },
     {
       "rank": 4,
-      "name": "anywhere-labs/dsh-desktop",
-      "delta": 72,
-      "stars": 31982
+      "name": "dsh-market/dsh-market",
+      "delta": 2,
+      "stars": 7743
     },
     {
       "rank": 5,
-      "name": "dataelement/dsh-desktop",
-      "delta": 60,
-      "stars": 15882
+      "name": "yjh051108/dsh-routing-suite",
+      "delta": 2,
+      "stars": 6991
     },
     {
       "rank": 6,
-      "name": "yjh051108/dsh-routing-suite",
-      "delta": -2,
-      "stars": 6989
+      "name": "dataelement/dsh-desktop",
+      "delta": -343,
+      "stars": 15539
     }
   ],
   "official_activity": [
@@ -222,7 +222,7 @@
     }
   ],
   "health": {
-    "score": 44,
+    "score": 42,
     "factors": {
       "activity": {
         "score": 10,
@@ -231,7 +231,7 @@
         "note": "7 天内有提交的仓库占比"
       },
       "freshness": {
-        "score": 4,
+        "score": 1,
         "max": 20,
         "label": "新鲜度",
         "note": "8h 新建仓库占比"
@@ -249,12 +249,12 @@
         "note": "爆发榜 top1 占比（越低越好）"
       }
     },
-    "stale_7d": 15785,
-    "stale_1d": 19677,
-    "total_tracked": 21369
+    "stale_7d": 15791,
+    "stale_1d": 19517,
+    "total_tracked": 21191
   },
   "summary": {
-    "en": "DSH ecosystem added 128 plugin repos in 8h; official repo now at 255,968 stars. Rookie leader: anywhere-labs/dsh-desktop. 7-day abandonment 73.9%.",
-    "zh": "DSH 生态今日 8 小时新增 <b>128</b> 个插件仓库，官方 stars 达 <b>255,968</b>；新秀榜首 <b>anywhere-labs/dsh-desktop</b> 领跑。7 天弃养率 73.9%，生态整体健康。"
+    "en": "DSH ecosystem added 50 plugin repos in 8h; official repo now at 255,774 stars. Rookie leader: anywhere-labs/dsh-desktop. 7-day abandonment 74.5%.",
+    "zh": "DSH 生态今日 8 小时新增 <b>50</b> 个插件仓库，官方 stars 达 <b>255,774</b>；新秀榜首 <b>anywhere-labs/dsh-desktop</b> 领跑。7 天弃养率 74.5%，生态整体健康。"
   }
 }
