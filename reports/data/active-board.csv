@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Fei2411/DeepSeek-Bot,3154,110,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-23T10:57:59Z,https://github.com/Fei2411/DeepSeek-Bot
-active,2,ccch1mneyyy/dsh-TUI,5393,151,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-23T10:51:32Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,imsai-sh/awesome-deepseek-harness-plugins,314,2,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-23T10:50:54Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,4,sixtysevenlf/dsh-blender-plugin,1170,53,0,3,1,工作流,2026-09-13T16:07:04Z,2026-10-23T10:44:33Z,https://github.com/sixtysevenlf/dsh-blender-plugin
-active,5,FuRongJun-1999/dsh-memory,455,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-23T10:44:15Z,https://github.com/FuRongJun-1999/dsh-memory
+active,1,awesome-dsh-plugin/awesome-dsh-plugin,20339,55,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-23T18:03:10Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,2,Fei2411/DeepSeek-Bot,3399,245,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-23T18:02:40Z,https://github.com/Fei2411/DeepSeek-Bot
+active,3,dream-num/univer-workspace,2270,-1,0,3,1,工作流,2026-08-14T09:24:34Z,2026-10-23T18:02:00Z,https://github.com/dream-num/univer-workspace
+active,4,dsh-market/dsh-market,8469,79,0,3,1,视觉,2026-08-14T04:58:15Z,2026-10-23T18:01:00Z,https://github.com/dsh-market/dsh-market
+active,5,ccch1mneyyy/dsh-TUI,5475,82,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-23T17:59:09Z,https://github.com/ccch1mneyyy/dsh-TUI
