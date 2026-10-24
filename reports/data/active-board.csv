@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,20500,70,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-24T17:08:53Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,ccch1mneyyy/dsh-TUI,5627,64,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-24T17:07:00Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,acryldev/acryl,296,4,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-24T17:06:28Z,https://github.com/acryldev/acryl
-active,4,dsh-market/dsh-market,8676,76,0,3,1,视觉,2026-08-14T04:58:15Z,2026-10-24T17:04:20Z,https://github.com/dsh-market/dsh-market
-active,5,yyh-001/DSH-X,745,1,0,3,1,视觉,2026-09-03T06:07:15Z,2026-10-24T17:03:35Z,https://github.com/yyh-001/DSH-X
+active,1,acryldev/acryl,298,2,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-24T23:53:17Z,https://github.com/acryldev/acryl
+active,2,awesome-dsh-plugin/awesome-dsh-plugin,20520,20,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-24T23:51:47Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,3,ccch1mneyyy/dsh-TUI,5654,27,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-24T23:40:22Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,imsai-sh/awesome-deepseek-harness-plugins,318,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-24T22:46:21Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
+active,5,BotHarness/DeepSeekBot,286,3,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-24T21:42:15Z,https://github.com/BotHarness/DeepSeekBot
