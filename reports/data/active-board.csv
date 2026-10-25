@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,acryldev/acryl,298,2,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-24T23:53:17Z,https://github.com/acryldev/acryl
-active,2,awesome-dsh-plugin/awesome-dsh-plugin,20520,20,0,3,1,终端,2026-08-13T13:55:31Z,2026-10-24T23:51:47Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,3,ccch1mneyyy/dsh-TUI,5654,27,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-24T23:40:22Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,imsai-sh/awesome-deepseek-harness-plugins,318,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-24T22:46:21Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,5,BotHarness/DeepSeekBot,286,3,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-24T21:42:15Z,https://github.com/BotHarness/DeepSeekBot
+active,1,Fei2411/DeepSeek-Bot,3803,54,0,1,0,工作流,2026-10-07T15:37:36Z,2026-10-25T10:37:06Z,https://github.com/Fei2411/DeepSeek-Bot
+active,2,saya-ch/dsh-mobile,605,2,0,,0,视觉,2026-08-15T05:28:38Z,2026-10-25T10:36:51Z,https://github.com/saya-ch/dsh-mobile
+active,3,ADWMC/helm-d,610,30,0,,0,其他,2026-08-14T15:09:38Z,2026-10-25T10:32:36Z,https://github.com/ADWMC/helm-d
+active,4,yyh-001/DSH-X,749,4,0,3,1,视觉,2026-09-03T06:07:15Z,2026-10-25T10:24:59Z,https://github.com/yyh-001/DSH-X
+active,5,kelai141/dsh-mobile-apk,875,11,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-25T10:20:45Z,https://github.com/kelai141/dsh-mobile-apk
