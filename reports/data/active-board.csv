@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,309,12,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-25T17:19:30Z,https://github.com/BotHarness/DeepSeekBot
-active,2,xmanrui/dsh-im,2500,48,0,3,1,工作流,2026-08-14T20:40:06Z,2026-10-25T17:19:15Z,https://github.com/xmanrui/dsh-im
-active,3,c1overzz/dsh-bili-scroll,803,38,0,3,1,其他,2026-10-14T09:03:43Z,2026-10-25T17:14:09Z,https://github.com/c1overzz/dsh-bili-scroll
-active,4,vibeinging/dsh-desktop,485,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-25T17:09:34Z,https://github.com/vibeinging/dsh-desktop
-active,5,bowenliang123/dsh-context,3582,22,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-25T17:02:49Z,https://github.com/bowenliang123/dsh-context
+active,1,kelai141/dsh-mobile-apk,881,3,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-25T23:37:52Z,https://github.com/kelai141/dsh-mobile-apk
+active,2,BotHarness/DeepSeekBot,311,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-25T23:30:05Z,https://github.com/BotHarness/DeepSeekBot
+active,3,ccch1mneyyy/dsh-TUI,5783,17,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-25T23:16:01Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,bowenliang123/dsh-context,3587,5,0,3,1,视觉,2026-08-14T08:23:28Z,2026-10-25T20:35:28Z,https://github.com/bowenliang123/dsh-context
+active,5,dsh-tauri/deepseek-harness-desktop,3269,-1,0,3,1,视觉,2026-08-14T02:36:29Z,2026-10-25T20:22:30Z,https://github.com/dsh-tauri/deepseek-harness-desktop
