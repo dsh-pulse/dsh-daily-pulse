@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,imsai-sh/awesome-deepseek-harness-plugins,332,0,0,,0,工作流,2026-08-14T05:53:47Z,2026-10-28T00:50:48Z,https://github.com/imsai-sh/awesome-deepseek-harness-plugins
-active,2,BotHarness/DeepSeekBot,358,0,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-28T00:49:22Z,https://github.com/BotHarness/DeepSeekBot
-active,3,kelai141/dsh-mobile-apk,916,0,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-28T00:23:32Z,https://github.com/kelai141/dsh-mobile-apk
-active,4,FuRongJun-1999/dsh-memory,504,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-10-28T00:05:32Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,ccch1mneyyy/dsh-TUI,6002,4,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-28T00:02:47Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,ccch1mneyyy/dsh-TUI,6066,64,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-28T12:03:00Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,saya-ch/dsh-mobile,655,5,0,,0,视觉,2026-08-15T05:28:38Z,2026-10-28T12:02:12Z,https://github.com/saya-ch/dsh-mobile
+active,3,BotHarness/DeepSeekBot,364,6,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-28T11:56:27Z,https://github.com/BotHarness/DeepSeekBot
+active,4,kelai141/dsh-mobile-apk,933,17,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-28T11:55:55Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,PC2005-cloud/dsh-pet,4652,127,0,1,0,视觉,2026-08-14T00:38:45Z,2026-10-28T11:49:59Z,https://github.com/PC2005-cloud/dsh-pet
