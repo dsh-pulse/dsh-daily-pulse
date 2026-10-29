@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,369,5,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-28T19:15:13Z,https://github.com/BotHarness/DeepSeekBot
-active,2,kelai141/dsh-mobile-apk,940,7,0,1,0,视觉,2026-08-13T23:55:34Z,2026-10-28T19:14:37Z,https://github.com/kelai141/dsh-mobile-apk
-active,3,acryldev/acryl,319,0,0,,0,工作流,2026-08-25T15:53:56Z,2026-10-28T19:10:45Z,https://github.com/acryldev/acryl
-active,4,vibeinging/dsh-desktop,485,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-10-28T18:58:40Z,https://github.com/vibeinging/dsh-desktop
-active,5,dsh-market/dsh-market,9526,61,0,3,1,视觉,2026-08-14T04:58:15Z,2026-10-28T18:51:51Z,https://github.com/dsh-market/dsh-market
+active,1,ccch1mneyyy/dsh-TUI,6103,12,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-29T01:22:18Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,PC2005-cloud/dsh-pet,4724,13,0,1,0,视觉,2026-08-14T00:38:45Z,2026-10-29T01:15:12Z,https://github.com/PC2005-cloud/dsh-pet
+active,3,omdsh-dev/dsh-genui,811,1,0,3,1,视觉,2026-08-13T13:07:52Z,2026-10-29T01:13:26Z,https://github.com/omdsh-dev/dsh-genui
+active,4,himovo/movo,429,1,0,,0,工作流,2026-09-01T08:46:57Z,2026-10-29T01:10:09Z,https://github.com/himovo/movo
+active,5,flizzywine/dsh-tavern,1361,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-10-29T01:00:30Z,https://github.com/flizzywine/dsh-tavern
