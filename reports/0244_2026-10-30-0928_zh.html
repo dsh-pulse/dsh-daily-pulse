@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="DSH 插件生态日报 · 每天三次，1 分钟读懂 DSH 生态的脉搏" />
+<meta name="generator" content="dsh-daily-pulse" />
+<title>DSH·daily-pulse · 第 244 期 · 2026-10-30 · 09:28</title>
+<script>
+  (function(){try{
+    var t=localStorage.getItem('dsh-theme');
+    if(!t && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) t='light';
+    if(t) document.documentElement.dataset.theme=t;
+  }catch(e){}})();
+</script>
+<script type="application/ld+json">{"@context":["https://schema.org",{"dsh":"https://dsh-pulse.github.io/dsh-daily-pulse/ns#"}],"@type":"Dataset","@id":"https://dsh-pulse.github.io/dsh-daily-pulse/structured/0244.json","name":"DSH Plugin Ecosystem Snapshot · Issue #244","description":"Daily snapshot of the DeepSeek Harness (DSH) plugin ecosystem: 24835 plugins total, +40 in 8h, official repo 265824 stars, npm weekly 661.9K.","url":"https://dsh-pulse.github.io/dsh-daily-pulse/latest.html","datePublished":"2026-10-30T01:28:45Z","dateModified":"2026-10-30T01:28:45Z","temporalCoverage":"2026-10-29T17:23:45Z/2026-10-30T01:28:45Z","inLanguage":"en","publisher":{"@type":"Organization","name":"dsh-pulse","url":"https://dsh-pulse.github.io/dsh-daily-pulse/"},"creator":{"@type":"Organization","name":"dsh-daily-pulse"},"distribution":{"@type":"DataDownload","contentUrl":"https://dsh-pulse.github.io/dsh-daily-pulse/structured/0244.json","encodingFormat":"application/json"},"variableMeasured":[{"@type":"PropertyValue","name":"Total plugins (topic count, incl. forks)","value":24835},{"@type":"PropertyValue","name":"Tracked plugins (non-fork)","value":24443},{"@type":"PropertyValue","name":"New repos in 8h","value":40},{"@type":"PropertyValue","name":"Official repo stars","value":265824},{"@type":"PropertyValue","name":"Official repo forks","value":32219},{"@type":"PropertyValue","name":"npm weekly downloads (@deepseek-ai/dsh)","value":661887},{"@type":"PropertyValue","name":"Official stars delta (8h)","value":113},{"@type":"PropertyValue","name":"Ecosystem health score","value":44},{"@type":"PropertyValue","name":"Stale repos (7d no push)","value":18342},{"@type":"PropertyValue","name":"Stale repos (24h no push)","value":22728}],"kpis":{"total_plugins":24835,"non_fork_plugins":24443,"count_source":"topics-page","new_8h_repos":40,"official_stars":265824,"official_forks":32219,"npm_weekly_downloads":661887,"npm_daily":121748,"npm_daily_date":"2026-10-28","delta_8h_stars":113},"official":{"full_name":"deepseek-ai/deepseek-harness","pushed_at":"2026-10-28T02:48:17Z","created_at":"2026-08-13T11:56:32Z","open_issues":0},"leaderboard":[{"rank":1,"name":"Ebony-Vinyl/dsh-our-free-model","stars":50952,"delta":149,"category":"工作流","score":3,"url":"https://github.com/Ebony-Vinyl/dsh-our-free-model","created":"2026-09-24T16:17:19Z","pushed":"2026-10-29T13:56:02Z"},{"rank":2,"name":"anywhere-labs/dsh-desktop","stars":34032,"delta":9,"category":"视觉","score":3,"url":"https://github.com/anywhere-labs/dsh-desktop","created":"2026-08-13T16:30:50Z","pushed":"2026-10-29T23:27:44Z"},{"rank":3,"name":"awesome-dsh-plugin/awesome-dsh-plugin","stars":21501,"delta":9,"category":"终端","score":3,"url":"https://github.com/awesome-dsh-plugin/awesome-dsh-plugin","created":"2026-08-13T13:55:31Z","pushed":"2026-10-29T23:35:42Z"},{"rank":4,"name":"dataelement/dsh-desktop","stars":16979,"delta":12,"category":"视觉","score":5,"url":"https://github.com/dataelement/dsh-desktop","created":"2026-08-13T13:45:50Z","pushed":"2026-10-29T12:27:50Z"},{"rank":5,"name":"YuJunZhiXue/dsh-purge","stars":13097,"delta":77,"category":"其他","score":3,"url":"https://github.com/YuJunZhiXue/dsh-purge","created":"2026-08-19T07:41:12Z","pushed":"2026-10-28T12:26:02Z"},{"rank":6,"name":"dsh-market/dsh-market","stars":9705,"delta":10,"category":"视觉","score":3,"url":"https://github.com/dsh-market/dsh-market","created":"2026-08-14T04:58:15Z","pushed":"2026-10-29T20:48:24Z"}],"growth":[{"rank":1,"name":"Ebony-Vinyl/dsh-our-free-model","delta":149,"stars":50952},{"rank":2,"name":"YuJunZhiXue/dsh-purge","delta":77,"stars":13097},{"rank":3,"name":"dataelement/dsh-desktop","delta":12,"stars":16979},{"rank":4,"name":"dsh-market/dsh-market","delta":10,"stars":9705},{"rank":5,"name":"anywhere-labs/dsh-desktop","delta":9,"stars":34032},{"rank":6,"name":"awesome-dsh-plugin/awesome-dsh-plugin","delta":9,"stars":21501}],"official_activity":[{"sha":"f3803c9","date":"2026-10-27T18:17:58Z","msg":"release(dsh): 0.2.2-alpha.2 (#7437)"},{"sha":"00d5414","date":"2026-10-27T17:55:40Z","msg":"release(dsh): 0.2.2-alpha.2"},{"sha":"7509c17","date":"2026-10-27T17:58:28Z","msg":"fix(build): serialize release builds and give Client checks 8 GiB (#7435)"}],"health":{"score":44,"factors":{"activity":{"score":10,"max":40,"label":"活跃度","note":"7 天内有提交的仓库占比"},"freshness":{"score":1,"max":20,"label":"新鲜度","note":"8h 新建仓库占比"},"adoption":{"score":20,"max":20,"label":"采用度","note":"npm 周下载分级"},"diversity":{"score":13,"max":20,"label":"多样性","note":"爆发榜 top1 占比（越低越好）"}},"stale_7d":18342,"stale_1d":22728,"total_tracked":24443},"summary":{"en":"DSH ecosystem added 40 plugin repos in 8h; official repo now at 265,824 stars. Rookie leader: Ebony-Vinyl/dsh-our-free-model. 7-day abandonment 75.0%.","zh":"DSH 生态今日 8 小时新增 \u003cb>40\u003c/b> 个插件仓库，官方 stars 达 \u003cb>265,824\u003c/b>；新秀榜首 \u003cb>Ebony-Vinyl/dsh-our-free-model\u003c/b> 领跑。7 天弃养率 75.0%，生态整体健康。"}}</script>
+<style>
+  :root{
+    --brand:#3E7BFA; --brand-2:#5C93FF; --brand-soft:rgba(62,123,250,.14);
+    --up:#25C99B; --down:#F4606B; --warn:#F5B544; --info:#3E7BFA;
+    --bg-base:#0A0E17; --bg-surface:#111623; --bg-elev:#181F2E;
+    --border:#232C3F; --border-strong:#2E3A52;
+    --text-1:#EAEEF6; --text-2:#9BA6BC; --text-3:#5E6A82;
+    --cat-v:#7FC8FF; --cat-w:#C9A3FF; --logo-fg:#FFFFFF;
+    --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 10px 30px rgba(0,0,0,.40);
+    --shadow-sm:0 1px 0 rgba(255,255,255,.03) inset, 0 4px 14px rgba(0,0,0,.30);
+  }
+  :root[data-theme="light"]{
+    --bg-base:#F6F8FC; --bg-surface:#FFFFFF; --bg-elev:#FFFFFF;
+    --border:#E4E9F1; --border-strong:#CFD7E5;
+    --text-1:#0E1726; --text-2:#46526A; --text-3:#8591A6;
+    --shadow:0 1px 2px rgba(16,23,38,.06), 0 12px 32px rgba(16,23,38,.10);
+    --shadow-sm:0 1px 2px rgba(16,23,38,.06), 0 4px 14px rgba(16,23,38,.08);
+  }
+  :root[data-accent="teal"]{ --brand:#1FB6C9; --brand-2:#3FD0E0; --brand-soft:rgba(31,182,201,.14); }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg-base); color:var(--text-1); font-family:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .mono{font-family:"JetBrains Mono","SF Mono","IBM Plex Mono",ui-monospace,"Cascadia Code",monospace}
+  .wrap{max-width:1080px; margin:0 auto; padding:28px 24px 96px}
+  a{color:var(--brand-2); text-decoration:none}
+  h2{font-size:13px; font-weight:700; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin:54px 0 16px; display:flex; align-items:center; gap:10px}
+  h2::before{content:""; width:7px; height:7px; border-radius:2px; background:var(--brand)}
+  p{color:var(--text-2); font-size:14.5px}
+  .muted{color:var(--text-3)}
+  .topbar{display:flex; align-items:center; gap:14px; justify-content:space-between; flex-wrap:wrap; position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg-base) 88%, transparent); backdrop-filter:blur(8px); padding:14px 0; border-bottom:1px solid var(--border); margin-bottom:8px}
+  .brand{display:flex; align-items:center; gap:12px}
+  .logo{width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); display:grid; place-items:center; color:var(--logo-fg); font-weight:800; font-size:15px; box-shadow:var(--shadow-sm)}
+  .brand b{font-size:16px; font-weight:700; letter-spacing:-.01em}
+  .brand span{color:var(--text-3); font-size:12px}
+  .controls{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .navi{font-size:12.5px; color:var(--text-2); padding:5px 11px; border-radius:999px; background:transparent; border:0; cursor:pointer; text-decoration:none; font-family:inherit}
+  .navi:hover{color:var(--text-1)}
+  .navi.on{background:var(--brand-soft); color:var(--brand-2); font-weight:600}
+  .seg{display:inline-flex; align-items:center; gap:6px; background:var(--bg-surface); border:1px solid var(--border); border-radius:999px; padding:4px 6px 4px 10px}
+  .seg-lbl{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.04em}
+  .seg-btn{font-size:12.5px; color:var(--text-2); background:transparent; border:0; padding:5px 11px; border-radius:999px; cursor:pointer; font-family:inherit}
+  .seg-btn:hover{color:var(--text-1)}
+  .seg-btn[aria-pressed="true"]{background:var(--brand-soft); color:var(--brand-2); font-weight:600}
+  .toggle{font-size:13px; color:var(--text-2); border:1px solid var(--border); background:var(--bg-surface); padding:7px 14px; border-radius:999px; cursor:pointer}
+  .toggle:hover{color:var(--text-1)}
+  .hero{padding:18px 0 6px}
+  .hero .kicker{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--brand-2); font-weight:700}
+  .hero h1{font-size:42px; font-weight:800; margin:8px 0 4px; letter-spacing:-.03em; line-height:1.05}
+  .hero .sub{font-size:15.5px; color:var(--text-2)}
+  .hero .meta{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:16px; font-size:12.5px; color:var(--text-3)}
+  .hero .meta b{color:var(--text-1); font-weight:600}
+  .hero .meta .dot{width:5px; height:5px; border-radius:50%; background:var(--up); display:inline-block; margin-right:6px; box-shadow:0 0 0 3px var(--brand-soft)}
+  .kpi-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px}
+  .kpi{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow-sm); position:relative; overflow:hidden}
+  .kpi::after{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(var(--brand),var(--brand-2))}
+  .kpi .k{font-size:12.5px; color:var(--text-3)}
+  .kpi .v{font-size:30px; font-weight:800; margin:6px 0 4px; letter-spacing:-.02em; font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace}
+  .delta{font-size:12.5px; font-weight:700; display:inline-flex; align-items:center; gap:4px}
+  .delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.warn{color:var(--warn)}
+  .board{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .board .row{display:grid; grid-template-columns:34px 1fr 120px; align-items:center; gap:14px; padding:14px 18px; border-bottom:1px solid var(--border)}
+  .board .row:last-child{border-bottom:0}
+  .rank{font-weight:800; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:14px}
+  .rank.top{color:var(--warn)}
+  .pname{font-weight:700; font-size:15px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .pname small{display:block; color:var(--text-3); font-weight:400; font-size:12px; width:100%}
+  .bar{height:7px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+  .gain{text-align:right; font-weight:800; color:var(--up); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:15px; white-space:nowrap}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .cat{font-size:12px; padding:4px 11px; border-radius:999px; border:1px solid var(--border-strong); color:var(--text-2)}
+  .cat.v{color:var(--cat-v); border-color:color-mix(in srgb,var(--cat-v) 40%, transparent)}
+  .cat.w{color:var(--cat-w); border-color:color-mix(in srgb,var(--cat-w) 40%, transparent)}
+  .cat.t{color:var(--up); border-color:color-mix(in srgb,var(--up) 40%, transparent)}
+  .cat.n{color:var(--text-3); border-color:color-mix(in srgb,var(--text-3) 35%, transparent)}
+  .cat-grid{display:none; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:16px}
+  .dim-radio{position:absolute; opacity:0; pointer-events:none}
+  .dim-labels{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .dim-labels label{padding:5px 13px; border-radius:999px; border:1px solid var(--border-strong); color:var(--text-2); font-size:12px; cursor:pointer; user-select:none; transition:background .15s,color .15s}
+  .dim-labels label:hover{color:var(--brand)}
+  #dim-stars:checked ~ .dim-labels label[for="dim-stars"],#dim-delta:checked ~ .dim-labels label[for="dim-delta"],#dim-active:checked ~ .dim-labels label[for="dim-active"],#dim-newest:checked ~ .dim-labels label[for="dim-newest"]{background:var(--brand); color:#fff; border-color:var(--brand)}
+  #dim-stars:checked ~ #panel-stars,#dim-delta:checked ~ #panel-delta,#dim-active:checked ~ #panel-active,#dim-newest:checked ~ #panel-newest{display:grid}
+  .cat-col{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; box-shadow:var(--shadow-sm)}
+  .cat-head{padding:10px 16px; font-size:13px; font-weight:800; border-bottom:1px solid var(--border); letter-spacing:.02em}
+  .cat-head.v{color:var(--cat-v); border-bottom-color:color-mix(in srgb,var(--cat-v) 30%, transparent)}
+  .cat-head.w{color:var(--cat-w); border-bottom-color:color-mix(in srgb,var(--cat-w) 30%, transparent)}
+  .cat-head.t{color:var(--up); border-bottom-color:color-mix(in srgb,var(--up) 30%, transparent)}
+  .cat-head.n{color:var(--text-3)}
+  .cat-row{display:grid; grid-template-columns:26px 1fr; align-items:baseline; gap:10px; padding:9px 16px; border-bottom:1px solid var(--border)}
+  .cat-row:last-child{border-bottom:0}
+  .cat-row .rank{font-size:12px; color:var(--text-3)}
+  .cat-row .pname{font-size:13px; font-weight:600}
+  .cat-row .pname small{font-size:11px; margin-top:1px}
+  .cat-board .cat-row{grid-template-columns:26px 1fr}
+  @media (max-width:680px){ .cat-grid{grid-template-columns:1fr} }
+  .timeline{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:8px 20px; box-shadow:var(--shadow-sm)}
+  .tl{display:grid; grid-template-columns:88px 1fr; gap:16px; padding:16px 0; border-bottom:1px solid var(--border)}
+  .tl:last-child{border-bottom:0}
+  .tl .t{font-size:12.5px; color:var(--text-3); font-family:"JetBrains Mono",ui-monospace,monospace; padding-top:2px}
+  .tl .t b{display:block; color:var(--brand-2); font-size:13px}
+  .tl .c b{font-size:14.5px; color:var(--text-1); font-weight:700}
+  .tl .c p{margin:3px 0 0; font-size:13.5px}
+  .two{display:grid; grid-template-columns:1fr 1.3fr; gap:16px}
+  .card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:20px; box-shadow:var(--shadow-sm)}
+  .card .ct{font-size:12px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; margin-bottom:14px}
+  .health{display:flex; align-items:center; gap:22px}
+  .ring{--p:78; --ring-c:var(--up); width:104px; height:104px; border-radius:50%; background:conic-gradient(var(--ring-c) calc(var(--p)*1%), var(--border) 0); display:grid; place-items:center; flex:none}
+  .ring--brand{--ring-c:var(--brand)}
+  .ring--down{--ring-c:var(--down)}
+  .ring i{width:78px; height:78px; border-radius:50%; background:var(--bg-surface); display:grid; place-items:center; font-size:28px; font-weight:800; font-style:normal; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .health .note{font-size:13px}
+  .warnlist{display:flex; flex-direction:column; gap:10px}
+  .wl{display:flex; align-items:center; gap:12px; padding:11px 13px; border:1px solid var(--border); border-radius:10px; background:var(--bg-elev)}
+  .wl .ic{width:8px; height:8px; border-radius:50%; flex:none}
+  .wl .ic.warn{background:var(--warn)} .wl .ic.down{background:var(--down)}
+  .wl b{font-size:15px; font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:800}
+  .wl span{color:var(--text-3); font-size:13px}
+  .factors{display:flex; flex-direction:column; gap:9px; margin-top:16px; padding-top:14px; border-top:1px solid var(--border)}
+  .factor{display:grid; grid-template-columns:1fr auto; gap:2px 12px; align-items:center}
+  .factor .fl{font-size:12.5px; color:var(--text-2); font-weight:600}
+  .factor .fl small{display:block; color:var(--text-3); font-weight:400; font-size:11px}
+  .factor .fv{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12.5px; font-weight:700}
+  .factor .fv.up{color:var(--up)} .factor .fv.warn{color:var(--warn)} .factor .fv.down{color:var(--down)}
+  .factor .fbar{grid-column:1/-1; height:5px; border-radius:999px; background:var(--brand-soft); overflow:hidden}
+  .factor .fbar i{display:block; height:100%; border-radius:999px}
+  .factor .fbar i.up{background:var(--up)} .factor .fbar i.warn{background:var(--warn)} .factor .fbar i.down{background:var(--down)}
+  .src-tag{font-size:11px; font-weight:600; color:var(--text-3); background:var(--bg-elev); border:1px solid var(--border); padding:2px 9px; border-radius:999px; text-transform:none; letter-spacing:0; margin-left:8px}
+  .i18n{display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px}
+  .i18n-zh,.i18n-en{background:var(--brand-soft); border:1px solid color-mix(in srgb,var(--brand) 30%, transparent); border-left:3px solid var(--brand); border-radius:10px; padding:15px 17px}
+  .i18n-tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; color:var(--brand-2); text-transform:uppercase; margin-bottom:7px}
+  .i18n-zh p,.i18n-en p{margin:0; font-size:14.5px; color:var(--text-1); line-height:1.6}
+  .i18n-en p{font-family:"JetBrains Mono","SF Mono",ui-monospace,monospace; font-size:12px; line-height:1.55}
+  .archive{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:22px; box-shadow:var(--shadow-sm)}
+  .archive .head{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px}
+  .archive .head b{font-size:16px}
+  .archive .head a{font-size:13px; font-weight:600}
+  .spark{width:100%; height:auto; display:block}
+  .archive .cap{display:flex; justify-content:space-between; font-size:12px; color:var(--text-3); margin-top:8px; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .issues{display:flex; flex-direction:column}
+  .issue{display:grid; grid-template-columns:52px 1fr auto; align-items:center; gap:14px; padding:14px 6px; border-bottom:1px solid var(--border)}
+  .issue:last-child{border-bottom:0}
+  .issue .no{font-family:"JetBrains Mono",monospace; font-weight:800; font-size:17px; color:var(--brand-2)}
+  .issue .t b{font-size:15px; color:var(--text-1); font-weight:700; display:block}
+  .issue .t span{font-size:12.5px; color:var(--text-3)}
+  .issue .go{color:var(--brand-2); font-size:13px; font-weight:600}
+  .issue:hover{background:var(--bg-elev)}
+  .chart-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; align-items:stretch}
+  .chart-card{background:var(--bg-surface); border:1px solid var(--border); border-radius:14px; padding:16px 16px 12px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column}
+  .chart-card .ct{font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px}
+  .chart-card .cv{font-size:17px; font-weight:800; color:var(--text-1); font-family:"JetBrains Mono",ui-monospace,monospace; letter-spacing:0}
+  .chart-card svg{width:100%; height:auto; display:block}
+  .dac{width:100%; height:auto; display:block}
+  @media (max-width:680px){ .chart-grid{grid-template-columns:1fr} }
+  footer{margin-top:60px; padding-top:20px; border-top:1px solid var(--border); font-size:12.5px; color:var(--text-3); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+  @media (max-width:680px){ .two{grid-template-columns:1fr} .hero h1{font-size:32px} .board .row{grid-template-columns:28px 1fr 84px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">D</div>
+      <div><b>DSH·daily-pulse</b><br><span>DSH 生态日报 · 真实数据</span></div>
+    </div>
+    <div class="controls">
+      <nav class="nav" style="display:flex;gap:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:4px 6px">
+        <a class="navi " href="index.html">档案馆</a>
+        <a class="navi  on" href="latest.html">最新一期</a>
+      </nav>
+      <div class="seg">
+        <span class="seg-lbl">语言</span>
+        <a class="seg-btn  on" href="latest.html" aria-pressed="true">中文</a>
+        <a class="seg-btn " href="0244_2026-10-30-0928_en.html" aria-pressed="false">EN</a>
+      </div>
+      <div class="seg">
+        <span class="seg-lbl">配色</span>
+        <button class="seg-btn" data-accent="blue" aria-pressed="true">Blue</button>
+        <button class="seg-btn" data-accent="teal" aria-pressed="false">Teal</button>
+      </div>
+      <button class="toggle" id="tg">切换为亮色</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">Daily Pulse</div>
+    <h1>DSH 生态日报</h1>
+    <div class="sub">每天三次，1 分钟读懂 DSH 生态的脉搏。</div>
+    <div class="meta">
+      <span><span class="dot"></span><b>2026-10-30 · 09:28</b> GMT+8</span>
+      <span>第 <b>244</b> 期</span>
+      <span>采集窗口 <b>01:23 – 09:28</b></span>
+      <span>数据源 <b>GitHub API · npm</b></span>
+    </div>
+  </section>
+
+  <h2>生态快照</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="k">插件总数</div><div class="v">24,835</div><div class="delta up">▲ +40 <span class="muted" style="font-weight:400">/ 8h 新增 · 含 fork</span></div></div>
+
+    <div class="kpi"><div class="k">8h 新增仓库</div><div class="v">40</div><div class="delta down">▼ 57 <span class="muted" style="font-weight:400">vs 上期</span></div></div>
+
+    <div class="kpi"><div class="k">官方仓库 stars</div><div class="v">265,824</div><div class="delta up">forks 32,219</div></div>
+
+    <div class="kpi"><div class="k">npm 周下载</div><div class="v">661.9K</div><div class="delta up">@deepseek-ai/dsh <span class="muted" style="font-weight:400">过去 7 天</span></div></div>
+  </div>
+
+  <h2>今日摘要 <span class="src-tag">规则生成</span></h2>
+  <div class="i18n">
+    <div class="i18n-zh">
+      <span class="i18n-tag">中文</span>
+      <p>DSH 生态今日 8 小时新增 <b>40</b> 个插件仓库，官方 stars 达 <b>265,824</b>；新秀榜首 <b>Ebony-Vinyl/dsh-our-free-model</b> 领跑。7 天弃养率 75.0%，生态整体健康。</p>
+    </div>
+  </div>
+
+  <h2>star 增速爆发榜 · Top 6</h2>
+  <div class="board">
+    <div class="row">
+      <div class="rank top">01</div>
+      <div class="pname">Ebony-Vinyl/dsh-our-free-model <small>工作流 · 窗口增速 +149 · 累计 50,952★ · 可信 3/5</small></div>
+      <div class="gain">+149</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:100%"></i></div>
+
+    <div class="row">
+      <div class="rank top">02</div>
+      <div class="pname">YuJunZhiXue/dsh-purge <small>其他 · 窗口增速 +77 · 累计 13,097★ · 可信 3/5</small></div>
+      <div class="gain">+77</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:52%"></i></div>
+
+    <div class="row">
+      <div class="rank top">03</div>
+      <div class="pname">dataelement/dsh-desktop <small>视觉类 · 窗口增速 +12 · 累计 16,979★ · 可信 5/5</small></div>
+      <div class="gain">+12</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:8%"></i></div>
+
+    <div class="row">
+      <div class="rank">04</div>
+      <div class="pname">dsh-market/dsh-market <small>视觉类 · 窗口增速 +10 · 累计 9,705★ · 可信 3/5</small></div>
+      <div class="gain">+10</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:7%"></i></div>
+
+    <div class="row">
+      <div class="rank">05</div>
+      <div class="pname">anywhere-labs/dsh-desktop <small>视觉类 · 窗口增速 +9 · 累计 34,032★ · 可信 3/5</small></div>
+      <div class="gain">+9</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:6%"></i></div>
+
+    <div class="row">
+      <div class="rank">06</div>
+      <div class="pname">awesome-dsh-plugin/awesome-dsh-plugin <small>终端类 · 窗口增速 +9 · 累计 21,501★ · 可信 3/5</small></div>
+      <div class="gain">+9</div>
+    </div>
+    <div class="bar" style="margin:-4px 18px 0; width:auto"><i style="width:6%"></i></div>
+  </div>
+  <div class="chips">
+    <span class="cat v">蓝 = 视觉类 (Vision / Web UI)</span>
+    <span class="cat w">紫 = 工作流 (Workflow / Skills)</span>
+    <span class="cat t">绿 = 终端类 (Terminal / Memory / Browser)</span>
+    <span class="cat n">灰 = 中性（无明确分类）</span>
+  </div>
+
+  
+  <h2>细分榜单 · 各分类 Top 10</h2>
+  
+  <input type="radio" name="dim" id="dim-stars" class="dim-radio" checked>
+<input type="radio" name="dim" id="dim-delta" class="dim-radio">
+<input type="radio" name="dim" id="dim-active" class="dim-radio">
+<input type="radio" name="dim" id="dim-newest" class="dim-radio">
+  <div class="dim-labels">
+    <label for="dim-stars">按星标</label>
+<label for="dim-delta">按增速</label>
+<label for="dim-active">按活跃</label>
+<label for="dim-newest">按最新</label>
+  </div>
+  
+  <div class="cat-grid" id="panel-stars"><div class="cat-col"><div class="cat-head v">视觉类</div><div class="cat-row"><span class="rank">01</span><span class="pname">anywhere-labs/dsh-desktop<small>累计 34,032★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dataelement/dsh-desktop<small>累计 16,979★ · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">dsh-market/dsh-market<small>累计 9,705★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">MeteorNOX/DeepSeek-Balance-Whale-Widget<small>累计 6,523★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">ccch1mneyyy/dsh-TUI<small>累计 6,196★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">PC2005-cloud/dsh-pet<small>累计 4,896★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">T-Auto/dsh-ops<small>累计 4,783★ · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">elysia395/dsh-wallpaper-engine<small>累计 3,907★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">bowenliang123/dsh-context<small>累计 3,848★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">dsh-tauri/deepseek-harness-desktop<small>累计 3,359★ · 可信 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head w">工作流</div><div class="cat-row"><span class="rank">01</span><span class="pname">Ebony-Vinyl/dsh-our-free-model<small>累计 50,952★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">yjh051108/dsh-routing-suite<small>累计 7,000★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">QingYunA/answer-me-with-html<small>累计 4,749★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Fei2411/DS-Bot<small>累计 4,531★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">xiaobright/dsh-anchored-standard<small>累计 3,730★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">kingcharleslzy-ai/dsh-purge<small>累计 3,390★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">xmanrui/dsh-im<small>累计 2,783★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">dream-num/univer-workspace<small>累计 2,260★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">zhuyansen/new-term-radar<small>累计 1,966★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">flizzywine/dsh-tavern<small>累计 1,381★ · 可信 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head t">终端类</div><div class="cat-row"><span class="rank">01</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>累计 21,501★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">shaobeichen/dsh-pocket<small>累计 2,559★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">liguobao/ds-harness-remote<small>累计 943★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">dingminhua/dsh-connect-workbuddy<small>累计 861★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">liangmianya/dsh-synapse<small>累计 624★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">yyh-001/dsh-meme<small>累计 445★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">hikariming/dshfind<small>累计 339★ · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head n">其他</div><div class="cat-row"><span class="rank">01</span><span class="pname">YuJunZhiXue/dsh-purge<small>累计 13,097★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">mmparko/dsh-purge<small>累计 2,680★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">c1overzz/dsh-bili-scroll<small>累计 1,019★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">ADWMC/helm-d<small>累计 866★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">beiyege-01/dsh-voice-ai-girlfriend<small>累计 822★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">SeaOf0/dsh-redteam-model<small>累计 793★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">DDDMUC/dsh-free-search<small>累计 716★ · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">6shenhonghong9/dsh-startup-screen<small>累计 632★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">howmp/dsh-pentest<small>累计 613★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">FSMargoo/dsh-at-file<small>累计 547★ · <span class="muted">未验证</span></small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-delta"><div class="cat-col"><div class="cat-head v">视觉类</div><div class="cat-row"><span class="rank">01</span><span class="pname">elysia395/dsh-wallpaper-engine<small>窗口 +17 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dataelement/dsh-desktop<small>窗口 +12 · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">dsh-market/dsh-market<small>窗口 +10 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">PC2005-cloud/dsh-pet<small>窗口 +10 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">anywhere-labs/dsh-desktop<small>窗口 +9 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">T-Auto/dsh-ops<small>窗口 +8 · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">ccch1mneyyy/dsh-TUI<small>窗口 +5 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">Devin-AXIS/deepseek-design<small>窗口 +4 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">sixtysevenlf/dsh-blender-plugin<small>窗口 +3 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">kelai141/dsh-mobile-apk<small>窗口 +3 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head w">工作流</div><div class="cat-row"><span class="rank">01</span><span class="pname">Ebony-Vinyl/dsh-our-free-model<small>窗口 +149 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">QingYunA/answer-me-with-html<small>窗口 +45 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">Fei2411/DS-Bot<small>窗口 +18 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">shanliuling/dsh-image-gen<small>窗口 +15 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">kingcharleslzy-ai/dsh-purge<small>窗口 +10 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">zhuyansen/new-term-radar<small>窗口 +6 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">WSK-build/DSHBox<small>窗口 +4 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">xmanrui/dsh-im<small>窗口 +3 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">acryldev/acryl<small>窗口 +3 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">XDTrees/dsh-xdpool<small>窗口 +2 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">终端类</div><div class="cat-row"><span class="rank">01</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>窗口 +9 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dingminhua/dsh-connect-workbuddy<small>窗口 +9 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">shaobeichen/dsh-pocket<small>窗口 +3 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">yyh-001/dsh-meme<small>窗口 +1 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">liguobao/ds-harness-remote<small>窗口 +0 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">liangmianya/dsh-synapse<small>窗口 +0 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">hikariming/dshfind<small>窗口 +0 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head n">其他</div><div class="cat-row"><span class="rank">01</span><span class="pname">YuJunZhiXue/dsh-purge<small>窗口 +77 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">ADWMC/helm-d<small>窗口 +6 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">Alice-Marx/dsh-model-router<small>窗口 +6 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">c1overzz/dsh-bili-scroll<small>窗口 +5 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">tencent-connect/dsh-qqbot<small>窗口 +3 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">mmparko/dsh-purge<small>窗口 +2 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">DDDMUC/dsh-free-search<small>窗口 +2 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">c3cvld7aag/fujiang-dsh<small>窗口 +2 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">beiyege-01/dsh-voice-ai-girlfriend<small>窗口 +1 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">6shenhonghong9/dsh-startup-screen<small>窗口 +1 · <span class="muted">未验证</span></small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-active"><div class="cat-col"><div class="cat-head v">视觉类</div><div class="cat-row"><span class="rank">01</span><span class="pname">ccch1mneyyy/dsh-TUI<small>最近 push 2026-10-30 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">kelai141/dsh-mobile-apk<small>最近 push 2026-10-30 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">dsh-tauri/deepseek-harness-desktop<small>最近 push 2026-10-30 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">bowenliang123/dsh-context<small>最近 push 2026-10-30 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">saya-ch/dsh-mobile<small>最近 push 2026-10-30 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">PC2005-cloud/dsh-pet<small>最近 push 2026-10-30 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">anywhere-labs/dsh-desktop<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">vibeinging/dsh-desktop<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">dsh-market/dsh-market<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">sixtysevenlf/dsh-blender-plugin<small>最近 push 2026-10-29 · 可信 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head w">工作流</div><div class="cat-row"><span class="rank">01</span><span class="pname">QingYunA/answer-me-with-html<small>最近 push 2026-10-30 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">FishBottle7/opencode2dsh<small>最近 push 2026-10-30 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">flizzywine/dsh-tavern<small>最近 push 2026-10-30 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">BotHarness/DeepSeekBot<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">dream-num/univer-workspace<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">acryldev/acryl<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">xmanrui/dsh-im<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">himovo/movo<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Fei2411/DS-Bot<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">LivXue/dsh-plugin-shop<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">终端类</div><div class="cat-row"><span class="rank">01</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">dingminhua/dsh-connect-workbuddy<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">liguobao/ds-harness-remote<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">hikariming/dshfind<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">yyh-001/dsh-meme<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">liangmianya/dsh-synapse<small>最近 push 2026-10-27 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">shaobeichen/dsh-pocket<small>最近 push 2026-10-17 · 可信 3/5</small></span></div></div>
+<div class="cat-col"><div class="cat-head n">其他</div><div class="cat-row"><span class="rank">01</span><span class="pname">bruc3van/awesome-dsh-plugin<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">DDDMUC/dsh-free-search<small>最近 push 2026-10-29 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">Mars-Sea/dsh-commandcode-provider<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">tencent-connect/dsh-qqbot<small>最近 push 2026-10-29 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">ADWMC/helm-d<small>最近 push 2026-10-28 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">YuJunZhiXue/dsh-purge<small>最近 push 2026-10-28 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">c1overzz/dsh-bili-scroll<small>最近 push 2026-10-28 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">6shenhonghong9/dsh-startup-screen<small>最近 push 2026-10-27 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Alice-Marx/dsh-model-router<small>最近 push 2026-10-27 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">SeaOf0/dsh-redteam-model<small>最近 push 2026-10-27 · 可信 3/5</small></span></div></div>
+  </div>
+
+  <div class="cat-grid" id="panel-newest"><div class="cat-col"><div class="cat-head v">视觉类</div><div class="cat-row"><span class="rank">01</span><span class="pname">Ebony-Vinyl/EAC-design-world<small>created 2026-10-17 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">T-Auto/dsh-ops<small>created 2026-10-08 · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">Yuuyuko-uu/dsh-fish-memory<small>created 2026-09-21 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">Nwflower/dsh-claude-style<small>created 2026-09-19 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">sixtysevenlf/dsh-blender-plugin<small>created 2026-09-13 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">yyh-001/DSH-X<small>created 2026-09-03 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">jingyunstudio/jingyun-dsh<small>created 2026-08-27 · 可信 5/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">ZSeven-W/dsh-ios<small>created 2026-08-19 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">MeteorNOX/DeepSeek-Balance-Whale-Widget<small>created 2026-08-18 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">Clarklevis1995/dsh-mobile<small>created 2026-08-17 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head w">工作流</div><div class="cat-row"><span class="rank">01</span><span class="pname">kingcharleslzy-ai/dsh-purge<small>created 2026-10-16 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">zhuyansen/new-term-radar<small>created 2026-10-12 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">Fei2411/DS-Bot<small>created 2026-10-07 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">xcisxc29/dsh-wechat<small>created 2026-10-07 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">QingYunA/answer-me-with-html<small>created 2026-10-02 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">Ebony-Vinyl/dsh-our-free-model<small>created 2026-09-24 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">Miaotofu01/Study-Mate<small>created 2026-09-17 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">BotHarness/DeepSeekBot<small>created 2026-09-16 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">Clearailhc/clearai-dsh<small>created 2026-09-12 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">XDTrees/dsh-xdpool<small>created 2026-09-04 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head t">终端类</div><div class="cat-row"><span class="rank">01</span><span class="pname">dingminhua/dsh-connect-workbuddy<small>created 2026-08-28 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">liangmianya/dsh-synapse<small>created 2026-08-16 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">shaobeichen/dsh-pocket<small>created 2026-08-15 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">liguobao/ds-harness-remote<small>created 2026-08-14 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">yyh-001/dsh-meme<small>created 2026-08-13 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">awesome-dsh-plugin/awesome-dsh-plugin<small>created 2026-08-13 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">hikariming/dshfind<small>created 2026-08-13 · <span class="muted">未验证</span></small></span></div></div>
+<div class="cat-col"><div class="cat-head n">其他</div><div class="cat-row"><span class="rank">01</span><span class="pname">c1overzz/dsh-bili-scroll<small>created 2026-10-14 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">mmparko/dsh-purge<small>created 2026-10-13 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">c3cvld7aag/fujiang-dsh<small>created 2026-10-03 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">6shenhonghong9/dsh-startup-screen<small>created 2026-09-22 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Alice-Marx/dsh-model-router<small>created 2026-09-01 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">YuJunZhiXue/dsh-purge<small>created 2026-08-19 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">07</span><span class="pname">SeaOf0/dsh-redteam-model<small>created 2026-08-17 · 可信 3/5</small></span></div>
+<div class="cat-row"><span class="rank">08</span><span class="pname">beiyege-01/dsh-voice-ai-girlfriend<small>created 2026-08-15 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">09</span><span class="pname">howmp/dsh-pentest<small>created 2026-08-15 · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">10</span><span class="pname">DDDMUC/dsh-free-search<small>created 2026-08-14 · 可信 3/5</small></span></div></div>
+  </div>
+  
+
+  
+  <h2>活跃榜 · 最近更新</h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">ccch1mneyyy/dsh-TUI<small>最近 push 2026-10-30 01:22Z · 累计 6,196★</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">kelai141/dsh-mobile-apk<small>最近 push 2026-10-30 01:21Z · 累计 961★ · <span class="muted">未验证</span></small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">QingYunA/answer-me-with-html<small>最近 push 2026-10-30 01:17Z · 累计 4,749★</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">dsh-tauri/deepseek-harness-desktop<small>最近 push 2026-10-30 01:15Z · 累计 3,359★</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">FishBottle7/opencode2dsh<small>最近 push 2026-10-30 01:13Z · 累计 379★ · <span class="muted">未验证</span></small></span></div>
+  </div>
+
+  
+  <h2>新面孔 · 8h 新增</h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">ridistant8-art/dsh-cookie-meter<small>★2 · created 2026-10-29 · 大肥鱼出品 · DSH 桌面版登录 cookie 百分表：浮窗显示请求头占用百分比（过半变红），带一键清理按钮，防止启动 72 次后被 431 挡住。</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">makooslee/dsh-company<small>★1 · created 2026-10-29 · A tiny company of employee agents for DeepSeek Harness — each has its own identi</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">xushilianzhuren/dsh-hello-pipeline<small>★0 · created 2026-10-29 · 流水线实测件：发布全链验证用最小插件（可忽略/可卸载） Pipeline smoke-test plugin.</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">xushilianzhuren/dsh-translate-kit<small>★0 · created 2026-10-30 · 翻译工坊：术语表跨会话一致+双译对照+回译自检·零依赖装上即用 Translation kit with persistent glossary.</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Maxim-Kerman-Lin/dsh-daily-luck<small>★0 · created 2026-10-29 · 今日好运来临：DSH Web UI 塔罗每日运势插件（五维评分 + 针对问题的回答）</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">CECILIALOVE0616/dsh-auth-cookie-hygiene<small>★0 · created 2026-10-29 · DSH 本地认证 Cookie 卫生插件：为已停止 Host 的 dsh-auth-* Cookie 下发过期头，避免随机端口导致的 Cookie 堆积与 HT</small></span></div>
+  </div>
+
+  <h2>官方动态</h2>
+  <div class="timeline">
+    <div class="tl"><div class="t"><b>10-27</b>18:17</div><div class="c"><b>release(dsh): 0.2.2-alpha.2 (#7437)</b><p><span class="muted">f3803c9</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>10-27</b>17:55</div><div class="c"><b>release(dsh): 0.2.2-alpha.2</b><p><span class="muted">00d5414</span></p></div></div>
+
+    <div class="tl"><div class="t"><b>10-27</b>17:58</div><div class="c"><b>fix(build): serialize release builds and give Client checks 8 GiB (#7435)</b><p><span class="muted">7509c17</span></p></div></div>
+  </div>
+
+  <h2>健康分 & 沉寂预警</h2>
+  <div class="two">
+    <div class="card">
+      <div class="ct">生态健康分</div>
+      <div class="health">
+        <div class="ring ring--down" style="--p:44"><i>44</i></div>
+        <div class="note">当前 <b style="color:var(--brand)">44 / 100</b> / 100，「需关注」区间（<60 红）。<br><span class="muted">M2 全量计分制：活跃度 40 + 新鲜度 20 + 采用度 20 + 多样性 20。</span></div>
+      </div>
+      
+      <div class="factors">
+        <div class="factor"><span class="fl">活跃度<small>7 天内有提交的仓库占比</small></span><span class="fv down">10/40</span><div class="fbar"><i style="width:25%" class="down"></i></div></div><div class="factor"><span class="fl">新鲜度<small>8h 新建仓库占比</small></span><span class="fv down">1/20</span><div class="fbar"><i style="width:5%" class="down"></i></div></div><div class="factor"><span class="fl">采用度<small>npm 周下载分级</small></span><span class="fv up">20/20</span><div class="fbar"><i style="width:100%" class="up"></i></div></div><div class="factor"><span class="fl">多样性<small>爆发榜 top1 占比（越低越好）</small></span><span class="fv warn">13/20</span><div class="fbar"><i style="width:65%" class="warn"></i></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">沉寂预警</div>
+      <div class="warnlist">
+        <div class="wl"><span class="ic warn"></span><b>18,342</b><span>个仓库 7 天无提交（75.0% 弃养率）</span></div>
+        <div class="wl"><span class="ic warn"></span><b>22,728</b><span>个仓库近 24h 无更新（占 93%）</span></div>
+        <div class="wl"><span class="ic down"></span><b>24,443</b><span>个仓库纳入追踪（topic:dsh-plugin, 排除 fork）</span></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <h2>沉寂预警 · 停更名单 <span class="muted" style="font-size:12px;font-weight:400">7 天无 push；按最近更新时间近似</span></h2>
+  <div class="board cat-board"><div class="cat-row"><span class="rank">01</span><span class="pname">Gishi1/katacoda-scenarios<small>停更 43 天 · ★0 · Katacoda Scenarios</small></span></div>
+<div class="cat-row"><span class="rank">02</span><span class="pname">xiangpc/wemeet-openapi<small>停更 76 天 · ★1</small></span></div>
+<div class="cat-row"><span class="rank">03</span><span class="pname">LLLike27/One-Time-Link<small>停更 8 天 · ★3 · agent</small></span></div>
+<div class="cat-row"><span class="rank">04</span><span class="pname">kuangre123/iosdev<small>停更 6 天 · ★28 · ios app 开发 skill</small></span></div>
+<div class="cat-row"><span class="rank">05</span><span class="pname">Gishi1/OpenAI-TTS-API-Relay-Server<small>停更 43 天 · ★0</small></span></div>
+<div class="cat-row"><span class="rank">06</span><span class="pname">SummerSec/AI-Inner-Os<small>停更 19 天 · ★16 · AI Inner OS 是一个面向 AI CLI 工具的插件，支持 Claude Code、Codex CLI、Cursor、OpenCode CLI。  它通</small></span></div>
+  </div>
+
+  <h2>生态档案馆</h2>
+  <div class="archive">
+    <div class="head">
+      <b>官方 stars & 插件总数 · 历史曲线（244 期）</b>
+      <a href="index.html">查看完整历史 →</a>
+    </div>
+    <svg class="spark" viewBox="0 0 620 170" role="img" aria-label="官方 stars 与插件总数历史曲线">
+  <defs>
+    <linearGradient id="fillA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--brand)" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="var(--brand)" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fillB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--up)" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M10.0,148.0 L12.5,146.6 L14.9,144.5 L17.4,134.0 L19.9,130.7 L22.3,130.4 L24.8,129.7 L27.3,128.5 L29.8,128.3 L32.2,124.8 L34.7,123.9 L37.2,123.5 L39.6,123.5 L42.1,121.6 L44.6,121.6 L47.0,121.4 L49.5,121.3 L52.0,121.3 L54.4,121.3 L56.9,121.2 L59.4,119.6 L61.9,118.7 L64.3,118.6 L66.8,118.6 L69.3,118.1 L71.7,115.4 L74.2,115.4 L76.7,112.6 L79.1,112.5 L81.6,112.5 L84.1,111.3 L86.5,108.7 L89.0,106.2 L91.5,104.4 L94.0,101.7 L96.4,98.8 L98.9,97.5 L101.4,96.2 L103.8,94.7 L106.3,93.7 L108.8,92.7 L111.2,91.6 L113.7,90.8 L116.2,89.2 L118.6,87.6 L121.1,86.9 L123.6,85.6 L126.0,84.1 L128.5,83.6 L131.0,82.6 L133.5,81.4 L135.9,80.6 L138.4,78.9 L140.9,78.7 L143.3,78.0 L145.8,77.0 L148.3,76.8 L150.7,76.6 L153.2,76.1 L155.7,75.7 L158.1,75.5 L160.6,74.8 L163.1,74.4 L165.6,74.2 L168.0,73.0 L170.5,72.6 L173.0,72.4 L175.4,71.5 L177.9,71.1 L180.4,70.9 L182.8,70.0 L185.3,69.5 L187.8,69.4 L190.2,68.5 L192.7,68.1 L195.2,68.0 L197.7,67.2 L200.1,66.9 L202.6,66.8 L205.1,66.3 L207.5,66.0 L210.0,65.9 L212.5,65.4 L214.9,65.2 L217.4,65.0 L219.9,64.3 L222.3,64.0 L224.8,63.9 L227.3,63.3 L229.8,62.9 L232.2,62.8 L234.7,62.1 L237.2,61.7 L239.6,61.7 L242.1,60.6 L244.6,60.2 L247.0,60.0 L249.5,59.1 L252.0,58.7 L254.4,58.6 L256.9,58.0 L259.4,57.7 L261.9,57.5 L264.3,57.1 L266.8,56.8 L269.3,56.6 L271.7,55.8 L274.2,55.4 L276.7,55.2 L279.1,54.4 L281.6,54.0 L284.1,53.9 L286.5,53.1 L289.0,52.7 L291.5,52.6 L294.0,51.8 L296.4,51.5 L298.9,51.3 L301.4,50.6 L303.8,50.2 L306.3,50.1 L308.8,49.7 L311.2,49.4 L313.7,49.3 L316.2,48.5 L318.6,48.2 L321.1,48.1 L323.6,47.3 L326.0,47.1 L328.5,47.0 L331.0,46.3 L333.5,46.0 L335.9,45.9 L338.4,45.3 L340.9,45.1 L343.3,45.0 L345.8,44.5 L348.3,44.3 L350.7,44.2 L353.2,43.7 L355.7,43.5 L358.1,43.4 L360.6,42.9 L363.1,42.6 L365.6,42.5 L368.0,42.1 L370.5,41.8 L373.0,41.7 L375.4,41.0 L377.9,40.7 L380.4,40.6 L382.8,40.0 L385.3,39.5 L387.8,39.4 L390.2,38.7 L392.7,38.4 L395.2,38.3 L397.7,38.0 L400.1,37.8 L402.6,37.7 L405.1,37.4 L407.5,37.2 L410.0,37.1 L412.5,36.8 L414.9,36.6 L417.4,36.6 L419.9,36.3 L422.3,36.1 L424.8,36.1 L427.3,35.7 L429.8,35.5 L432.2,35.4 L434.7,35.1 L437.2,35.0 L439.6,34.9 L442.1,34.5 L444.6,34.4 L447.0,34.3 L449.5,33.8 L452.0,33.9 L454.4,33.8 L456.9,33.4 L459.4,33.2 L461.9,33.2 L464.3,32.8 L466.8,32.6 L469.3,32.5 L471.7,32.2 L474.2,32.1 L476.7,32.0 L479.1,31.5 L481.6,31.4 L484.1,31.2 L486.5,30.8 L489.0,30.6 L491.5,30.6 L494.0,30.2 L496.4,30.0 L498.9,29.9 L501.4,29.5 L503.8,29.2 L506.3,29.2 L508.8,28.7 L511.2,28.5 L513.7,28.4 L516.2,28.1 L518.6,27.6 L521.1,27.5 L523.6,27.0 L526.0,26.7 L528.5,26.6 L531.0,25.6 L533.5,25.3 L535.9,25.2 L538.4,24.5 L540.9,23.7 L543.3,23.9 L545.8,23.2 L548.3,22.8 L550.7,22.7 L553.2,22.0 L555.7,21.7 L558.1,21.6 L560.6,20.9 L563.1,20.4 L565.6,20.3 L568.0,19.8 L570.5,19.4 L573.0,19.3 L575.4,18.8 L577.9,18.5 L580.4,18.4 L582.8,17.6 L585.3,17.3 L587.8,17.2 L590.2,16.5 L592.7,16.2 L595.2,16.1 L597.7,15.4 L600.1,15.1 L602.6,15.0 L605.1,14.3 L607.5,14.1 L610.0,14.0 L610.0,148.0 L10.0,148.0 Z" fill="url(#fillA)"/>
+  <path d="M10.0,148.0 L12.5,146.6 L14.9,144.5 L17.4,134.0 L19.9,130.7 L22.3,130.4 L24.8,129.7 L27.3,128.5 L29.8,128.3 L32.2,124.8 L34.7,123.9 L37.2,123.5 L39.6,123.5 L42.1,121.6 L44.6,121.6 L47.0,121.4 L49.5,121.3 L52.0,121.3 L54.4,121.3 L56.9,121.2 L59.4,119.6 L61.9,118.7 L64.3,118.6 L66.8,118.6 L69.3,118.1 L71.7,115.4 L74.2,115.4 L76.7,112.6 L79.1,112.5 L81.6,112.5 L84.1,111.3 L86.5,108.7 L89.0,106.2 L91.5,104.4 L94.0,101.7 L96.4,98.8 L98.9,97.5 L101.4,96.2 L103.8,94.7 L106.3,93.7 L108.8,92.7 L111.2,91.6 L113.7,90.8 L116.2,89.2 L118.6,87.6 L121.1,86.9 L123.6,85.6 L126.0,84.1 L128.5,83.6 L131.0,82.6 L133.5,81.4 L135.9,80.6 L138.4,78.9 L140.9,78.7 L143.3,78.0 L145.8,77.0 L148.3,76.8 L150.7,76.6 L153.2,76.1 L155.7,75.7 L158.1,75.5 L160.6,74.8 L163.1,74.4 L165.6,74.2 L168.0,73.0 L170.5,72.6 L173.0,72.4 L175.4,71.5 L177.9,71.1 L180.4,70.9 L182.8,70.0 L185.3,69.5 L187.8,69.4 L190.2,68.5 L192.7,68.1 L195.2,68.0 L197.7,67.2 L200.1,66.9 L202.6,66.8 L205.1,66.3 L207.5,66.0 L210.0,65.9 L212.5,65.4 L214.9,65.2 L217.4,65.0 L219.9,64.3 L222.3,64.0 L224.8,63.9 L227.3,63.3 L229.8,62.9 L232.2,62.8 L234.7,62.1 L237.2,61.7 L239.6,61.7 L242.1,60.6 L244.6,60.2 L247.0,60.0 L249.5,59.1 L252.0,58.7 L254.4,58.6 L256.9,58.0 L259.4,57.7 L261.9,57.5 L264.3,57.1 L266.8,56.8 L269.3,56.6 L271.7,55.8 L274.2,55.4 L276.7,55.2 L279.1,54.4 L281.6,54.0 L284.1,53.9 L286.5,53.1 L289.0,52.7 L291.5,52.6 L294.0,51.8 L296.4,51.5 L298.9,51.3 L301.4,50.6 L303.8,50.2 L306.3,50.1 L308.8,49.7 L311.2,49.4 L313.7,49.3 L316.2,48.5 L318.6,48.2 L321.1,48.1 L323.6,47.3 L326.0,47.1 L328.5,47.0 L331.0,46.3 L333.5,46.0 L335.9,45.9 L338.4,45.3 L340.9,45.1 L343.3,45.0 L345.8,44.5 L348.3,44.3 L350.7,44.2 L353.2,43.7 L355.7,43.5 L358.1,43.4 L360.6,42.9 L363.1,42.6 L365.6,42.5 L368.0,42.1 L370.5,41.8 L373.0,41.7 L375.4,41.0 L377.9,40.7 L380.4,40.6 L382.8,40.0 L385.3,39.5 L387.8,39.4 L390.2,38.7 L392.7,38.4 L395.2,38.3 L397.7,38.0 L400.1,37.8 L402.6,37.7 L405.1,37.4 L407.5,37.2 L410.0,37.1 L412.5,36.8 L414.9,36.6 L417.4,36.6 L419.9,36.3 L422.3,36.1 L424.8,36.1 L427.3,35.7 L429.8,35.5 L432.2,35.4 L434.7,35.1 L437.2,35.0 L439.6,34.9 L442.1,34.5 L444.6,34.4 L447.0,34.3 L449.5,33.8 L452.0,33.9 L454.4,33.8 L456.9,33.4 L459.4,33.2 L461.9,33.2 L464.3,32.8 L466.8,32.6 L469.3,32.5 L471.7,32.2 L474.2,32.1 L476.7,32.0 L479.1,31.5 L481.6,31.4 L484.1,31.2 L486.5,30.8 L489.0,30.6 L491.5,30.6 L494.0,30.2 L496.4,30.0 L498.9,29.9 L501.4,29.5 L503.8,29.2 L506.3,29.2 L508.8,28.7 L511.2,28.5 L513.7,28.4 L516.2,28.1 L518.6,27.6 L521.1,27.5 L523.6,27.0 L526.0,26.7 L528.5,26.6 L531.0,25.6 L533.5,25.3 L535.9,25.2 L538.4,24.5 L540.9,23.7 L543.3,23.9 L545.8,23.2 L548.3,22.8 L550.7,22.7 L553.2,22.0 L555.7,21.7 L558.1,21.6 L560.6,20.9 L563.1,20.4 L565.6,20.3 L568.0,19.8 L570.5,19.4 L573.0,19.3 L575.4,18.8 L577.9,18.5 L580.4,18.4 L582.8,17.6 L585.3,17.3 L587.8,17.2 L590.2,16.5 L592.7,16.2 L595.2,16.1 L597.7,15.4 L600.1,15.1 L602.6,15.0 L605.1,14.3 L607.5,14.1 L610.0,14.0" fill="none" stroke="var(--brand)" stroke-width="2"/>
+  <path d="M10.0,148.0 L12.5,146.8 L14.9,146.3 L17.4,142.6 L19.9,140.4 L22.3,140.3 L24.8,139.9 L27.3,139.4 L29.8,139.2 L32.2,138.0 L34.7,137.5 L37.2,137.4 L39.6,137.4 L42.1,136.3 L44.6,136.3 L47.0,136.3 L49.5,136.8 L52.0,136.8 L54.4,136.8 L56.9,136.2 L59.4,135.2 L61.9,134.2 L64.3,134.1 L66.8,134.1 L69.3,134.3 L71.7,132.4 L74.2,132.4 L76.7,130.4 L79.1,130.4 L81.6,130.4 L84.1,127.7 L86.5,125.1 L89.0,122.7 L91.5,118.0 L94.0,116.6 L96.4,114.3 L98.9,113.6 L101.4,112.9 L103.8,112.0 L106.3,111.2 L108.8,110.5 L111.2,109.5 L113.7,108.9 L116.2,108.1 L118.6,107.1 L121.1,106.5 L123.6,105.9 L126.0,104.9 L128.5,104.3 L131.0,103.6 L133.5,104.0 L135.9,103.3 L138.4,102.0 L140.9,101.8 L143.3,101.4 L145.8,99.4 L148.3,99.2 L150.7,99.0 L153.2,98.2 L155.7,97.9 L158.1,97.7 L160.6,97.2 L163.1,96.7 L165.6,96.6 L168.0,95.6 L170.5,95.2 L173.0,95.1 L175.4,94.5 L177.9,94.1 L180.4,94.0 L182.8,93.3 L185.3,92.9 L187.8,92.8 L190.2,92.2 L192.7,92.0 L195.2,91.9 L197.7,91.4 L200.1,91.1 L202.6,91.0 L205.1,90.6 L207.5,90.3 L210.0,90.1 L212.5,89.8 L214.9,89.5 L217.4,89.4 L219.9,88.8 L222.3,88.6 L224.8,88.5 L227.3,88.1 L229.8,87.8 L232.2,87.7 L234.7,87.3 L237.2,87.0 L239.6,87.0 L242.1,86.6 L244.6,86.3 L247.0,86.1 L249.5,85.6 L252.0,85.2 L254.4,85.0 L256.9,84.4 L259.4,84.0 L261.9,83.8 L264.3,83.6 L266.8,83.1 L269.3,82.9 L271.7,82.4 L274.2,82.0 L276.7,81.9 L279.1,81.5 L281.6,81.2 L284.1,81.0 L286.5,80.6 L289.0,80.3 L291.5,80.2 L294.0,79.7 L296.4,79.3 L298.9,79.1 L301.4,78.6 L303.8,78.3 L306.3,78.2 L308.8,77.9 L311.2,77.7 L313.7,77.6 L316.2,77.1 L318.6,76.7 L321.1,76.7 L323.6,76.2 L326.0,75.8 L328.5,75.8 L331.0,75.4 L333.5,74.9 L335.9,74.9 L338.4,74.3 L340.9,74.0 L343.3,74.0 L345.8,73.5 L348.3,73.4 L350.7,73.3 L353.2,73.1 L355.7,72.8 L358.1,72.7 L360.6,74.0 L363.1,72.1 L365.6,71.9 L368.0,71.5 L370.5,71.1 L373.0,71.0 L375.4,72.1 L377.9,70.3 L380.4,70.3 L382.8,69.7 L385.3,69.3 L387.8,69.2 L390.2,68.2 L392.7,67.7 L395.2,67.6 L397.7,66.9 L400.1,66.4 L402.6,66.4 L405.1,65.6 L407.5,65.1 L410.0,65.0 L412.5,64.2 L414.9,63.7 L417.4,63.6 L419.9,63.0 L422.3,62.4 L424.8,62.4 L427.3,61.8 L429.8,61.5 L432.2,61.4 L434.7,61.1 L437.2,60.7 L439.6,60.6 L442.1,60.0 L444.6,59.3 L447.0,59.2 L449.5,58.4 L452.0,60.0 L454.4,58.0 L456.9,56.9 L459.4,56.6 L461.9,56.5 L464.3,55.6 L466.8,55.2 L469.3,55.1 L471.7,54.6 L474.2,54.2 L476.7,54.1 L479.1,53.3 L481.6,52.9 L484.1,53.0 L486.5,52.2 L489.0,51.9 L491.5,51.8 L494.0,51.1 L496.4,50.5 L498.9,50.4 L501.4,49.7 L503.8,49.1 L506.3,48.9 L508.8,47.9 L511.2,47.1 L513.7,46.9 L516.2,45.8 L518.6,44.7 L521.1,44.0 L523.6,42.5 L526.0,41.2 L528.5,40.7 L531.0,38.9 L533.5,37.9 L535.9,37.6 L538.4,35.7 L540.9,35.7 L543.3,37.0 L545.8,36.0 L548.3,35.0 L550.7,34.7 L553.2,33.6 L555.7,32.8 L558.1,32.6 L560.6,31.2 L563.1,30.1 L565.6,29.8 L568.0,28.7 L570.5,27.7 L573.0,27.4 L575.4,26.1 L577.9,25.0 L580.4,24.7 L582.8,23.3 L585.3,22.4 L587.8,22.3 L590.2,20.9 L592.7,20.1 L595.2,19.9 L597.7,18.0 L600.1,17.0 L602.6,16.8 L605.1,15.2 L607.5,14.3 L610.0,14.0" fill="none" stroke="var(--up)" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <circle cx="10.0" cy="148.0" r="2.2" fill="var(--brand)"/><circle cx="12.5" cy="146.6" r="2.2" fill="var(--brand)"/><circle cx="14.9" cy="144.5" r="2.2" fill="var(--brand)"/><circle cx="17.4" cy="134.0" r="2.2" fill="var(--brand)"/><circle cx="19.9" cy="130.7" r="2.2" fill="var(--brand)"/><circle cx="22.3" cy="130.4" r="2.2" fill="var(--brand)"/><circle cx="24.8" cy="129.7" r="2.2" fill="var(--brand)"/><circle cx="27.3" cy="128.5" r="2.2" fill="var(--brand)"/><circle cx="29.8" cy="128.3" r="2.2" fill="var(--brand)"/><circle cx="32.2" cy="124.8" r="2.2" fill="var(--brand)"/><circle cx="34.7" cy="123.9" r="2.2" fill="var(--brand)"/><circle cx="37.2" cy="123.5" r="2.2" fill="var(--brand)"/><circle cx="39.6" cy="123.5" r="2.2" fill="var(--brand)"/><circle cx="42.1" cy="121.6" r="2.2" fill="var(--brand)"/><circle cx="44.6" cy="121.6" r="2.2" fill="var(--brand)"/><circle cx="47.0" cy="121.4" r="2.2" fill="var(--brand)"/><circle cx="49.5" cy="121.3" r="2.2" fill="var(--brand)"/><circle cx="52.0" cy="121.3" r="2.2" fill="var(--brand)"/><circle cx="54.4" cy="121.3" r="2.2" fill="var(--brand)"/><circle cx="56.9" cy="121.2" r="2.2" fill="var(--brand)"/><circle cx="59.4" cy="119.6" r="2.2" fill="var(--brand)"/><circle cx="61.9" cy="118.7" r="2.2" fill="var(--brand)"/><circle cx="64.3" cy="118.6" r="2.2" fill="var(--brand)"/><circle cx="66.8" cy="118.6" r="2.2" fill="var(--brand)"/><circle cx="69.3" cy="118.1" r="2.2" fill="var(--brand)"/><circle cx="71.7" cy="115.4" r="2.2" fill="var(--brand)"/><circle cx="74.2" cy="115.4" r="2.2" fill="var(--brand)"/><circle cx="76.7" cy="112.6" r="2.2" fill="var(--brand)"/><circle cx="79.1" cy="112.5" r="2.2" fill="var(--brand)"/><circle cx="81.6" cy="112.5" r="2.2" fill="var(--brand)"/><circle cx="84.1" cy="111.3" r="2.2" fill="var(--brand)"/><circle cx="86.5" cy="108.7" r="2.2" fill="var(--brand)"/><circle cx="89.0" cy="106.2" r="2.2" fill="var(--brand)"/><circle cx="91.5" cy="104.4" r="2.2" fill="var(--brand)"/><circle cx="94.0" cy="101.7" r="2.2" fill="var(--brand)"/><circle cx="96.4" cy="98.8" r="2.2" fill="var(--brand)"/><circle cx="98.9" cy="97.5" r="2.2" fill="var(--brand)"/><circle cx="101.4" cy="96.2" r="2.2" fill="var(--brand)"/><circle cx="103.8" cy="94.7" r="2.2" fill="var(--brand)"/><circle cx="106.3" cy="93.7" r="2.2" fill="var(--brand)"/><circle cx="108.8" cy="92.7" r="2.2" fill="var(--brand)"/><circle cx="111.2" cy="91.6" r="2.2" fill="var(--brand)"/><circle cx="113.7" cy="90.8" r="2.2" fill="var(--brand)"/><circle cx="116.2" cy="89.2" r="2.2" fill="var(--brand)"/><circle cx="118.6" cy="87.6" r="2.2" fill="var(--brand)"/><circle cx="121.1" cy="86.9" r="2.2" fill="var(--brand)"/><circle cx="123.6" cy="85.6" r="2.2" fill="var(--brand)"/><circle cx="126.0" cy="84.1" r="2.2" fill="var(--brand)"/><circle cx="128.5" cy="83.6" r="2.2" fill="var(--brand)"/><circle cx="131.0" cy="82.6" r="2.2" fill="var(--brand)"/><circle cx="133.5" cy="81.4" r="2.2" fill="var(--brand)"/><circle cx="135.9" cy="80.6" r="2.2" fill="var(--brand)"/><circle cx="138.4" cy="78.9" r="2.2" fill="var(--brand)"/><circle cx="140.9" cy="78.7" r="2.2" fill="var(--brand)"/><circle cx="143.3" cy="78.0" r="2.2" fill="var(--brand)"/><circle cx="145.8" cy="77.0" r="2.2" fill="var(--brand)"/><circle cx="148.3" cy="76.8" r="2.2" fill="var(--brand)"/><circle cx="150.7" cy="76.6" r="2.2" fill="var(--brand)"/><circle cx="153.2" cy="76.1" r="2.2" fill="var(--brand)"/><circle cx="155.7" cy="75.7" r="2.2" fill="var(--brand)"/><circle cx="158.1" cy="75.5" r="2.2" fill="var(--brand)"/><circle cx="160.6" cy="74.8" r="2.2" fill="var(--brand)"/><circle cx="163.1" cy="74.4" r="2.2" fill="var(--brand)"/><circle cx="165.6" cy="74.2" r="2.2" fill="var(--brand)"/><circle cx="168.0" cy="73.0" r="2.2" fill="var(--brand)"/><circle cx="170.5" cy="72.6" r="2.2" fill="var(--brand)"/><circle cx="173.0" cy="72.4" r="2.2" fill="var(--brand)"/><circle cx="175.4" cy="71.5" r="2.2" fill="var(--brand)"/><circle cx="177.9" cy="71.1" r="2.2" fill="var(--brand)"/><circle cx="180.4" cy="70.9" r="2.2" fill="var(--brand)"/><circle cx="182.8" cy="70.0" r="2.2" fill="var(--brand)"/><circle cx="185.3" cy="69.5" r="2.2" fill="var(--brand)"/><circle cx="187.8" cy="69.4" r="2.2" fill="var(--brand)"/><circle cx="190.2" cy="68.5" r="2.2" fill="var(--brand)"/><circle cx="192.7" cy="68.1" r="2.2" fill="var(--brand)"/><circle cx="195.2" cy="68.0" r="2.2" fill="var(--brand)"/><circle cx="197.7" cy="67.2" r="2.2" fill="var(--brand)"/><circle cx="200.1" cy="66.9" r="2.2" fill="var(--brand)"/><circle cx="202.6" cy="66.8" r="2.2" fill="var(--brand)"/><circle cx="205.1" cy="66.3" r="2.2" fill="var(--brand)"/><circle cx="207.5" cy="66.0" r="2.2" fill="var(--brand)"/><circle cx="210.0" cy="65.9" r="2.2" fill="var(--brand)"/><circle cx="212.5" cy="65.4" r="2.2" fill="var(--brand)"/><circle cx="214.9" cy="65.2" r="2.2" fill="var(--brand)"/><circle cx="217.4" cy="65.0" r="2.2" fill="var(--brand)"/><circle cx="219.9" cy="64.3" r="2.2" fill="var(--brand)"/><circle cx="222.3" cy="64.0" r="2.2" fill="var(--brand)"/><circle cx="224.8" cy="63.9" r="2.2" fill="var(--brand)"/><circle cx="227.3" cy="63.3" r="2.2" fill="var(--brand)"/><circle cx="229.8" cy="62.9" r="2.2" fill="var(--brand)"/><circle cx="232.2" cy="62.8" r="2.2" fill="var(--brand)"/><circle cx="234.7" cy="62.1" r="2.2" fill="var(--brand)"/><circle cx="237.2" cy="61.7" r="2.2" fill="var(--brand)"/><circle cx="239.6" cy="61.7" r="2.2" fill="var(--brand)"/><circle cx="242.1" cy="60.6" r="2.2" fill="var(--brand)"/><circle cx="244.6" cy="60.2" r="2.2" fill="var(--brand)"/><circle cx="247.0" cy="60.0" r="2.2" fill="var(--brand)"/><circle cx="249.5" cy="59.1" r="2.2" fill="var(--brand)"/><circle cx="252.0" cy="58.7" r="2.2" fill="var(--brand)"/><circle cx="254.4" cy="58.6" r="2.2" fill="var(--brand)"/><circle cx="256.9" cy="58.0" r="2.2" fill="var(--brand)"/><circle cx="259.4" cy="57.7" r="2.2" fill="var(--brand)"/><circle cx="261.9" cy="57.5" r="2.2" fill="var(--brand)"/><circle cx="264.3" cy="57.1" r="2.2" fill="var(--brand)"/><circle cx="266.8" cy="56.8" r="2.2" fill="var(--brand)"/><circle cx="269.3" cy="56.6" r="2.2" fill="var(--brand)"/><circle cx="271.7" cy="55.8" r="2.2" fill="var(--brand)"/><circle cx="274.2" cy="55.4" r="2.2" fill="var(--brand)"/><circle cx="276.7" cy="55.2" r="2.2" fill="var(--brand)"/><circle cx="279.1" cy="54.4" r="2.2" fill="var(--brand)"/><circle cx="281.6" cy="54.0" r="2.2" fill="var(--brand)"/><circle cx="284.1" cy="53.9" r="2.2" fill="var(--brand)"/><circle cx="286.5" cy="53.1" r="2.2" fill="var(--brand)"/><circle cx="289.0" cy="52.7" r="2.2" fill="var(--brand)"/><circle cx="291.5" cy="52.6" r="2.2" fill="var(--brand)"/><circle cx="294.0" cy="51.8" r="2.2" fill="var(--brand)"/><circle cx="296.4" cy="51.5" r="2.2" fill="var(--brand)"/><circle cx="298.9" cy="51.3" r="2.2" fill="var(--brand)"/><circle cx="301.4" cy="50.6" r="2.2" fill="var(--brand)"/><circle cx="303.8" cy="50.2" r="2.2" fill="var(--brand)"/><circle cx="306.3" cy="50.1" r="2.2" fill="var(--brand)"/><circle cx="308.8" cy="49.7" r="2.2" fill="var(--brand)"/><circle cx="311.2" cy="49.4" r="2.2" fill="var(--brand)"/><circle cx="313.7" cy="49.3" r="2.2" fill="var(--brand)"/><circle cx="316.2" cy="48.5" r="2.2" fill="var(--brand)"/><circle cx="318.6" cy="48.2" r="2.2" fill="var(--brand)"/><circle cx="321.1" cy="48.1" r="2.2" fill="var(--brand)"/><circle cx="323.6" cy="47.3" r="2.2" fill="var(--brand)"/><circle cx="326.0" cy="47.1" r="2.2" fill="var(--brand)"/><circle cx="328.5" cy="47.0" r="2.2" fill="var(--brand)"/><circle cx="331.0" cy="46.3" r="2.2" fill="var(--brand)"/><circle cx="333.5" cy="46.0" r="2.2" fill="var(--brand)"/><circle cx="335.9" cy="45.9" r="2.2" fill="var(--brand)"/><circle cx="338.4" cy="45.3" r="2.2" fill="var(--brand)"/><circle cx="340.9" cy="45.1" r="2.2" fill="var(--brand)"/><circle cx="343.3" cy="45.0" r="2.2" fill="var(--brand)"/><circle cx="345.8" cy="44.5" r="2.2" fill="var(--brand)"/><circle cx="348.3" cy="44.3" r="2.2" fill="var(--brand)"/><circle cx="350.7" cy="44.2" r="2.2" fill="var(--brand)"/><circle cx="353.2" cy="43.7" r="2.2" fill="var(--brand)"/><circle cx="355.7" cy="43.5" r="2.2" fill="var(--brand)"/><circle cx="358.1" cy="43.4" r="2.2" fill="var(--brand)"/><circle cx="360.6" cy="42.9" r="2.2" fill="var(--brand)"/><circle cx="363.1" cy="42.6" r="2.2" fill="var(--brand)"/><circle cx="365.6" cy="42.5" r="2.2" fill="var(--brand)"/><circle cx="368.0" cy="42.1" r="2.2" fill="var(--brand)"/><circle cx="370.5" cy="41.8" r="2.2" fill="var(--brand)"/><circle cx="373.0" cy="41.7" r="2.2" fill="var(--brand)"/><circle cx="375.4" cy="41.0" r="2.2" fill="var(--brand)"/><circle cx="377.9" cy="40.7" r="2.2" fill="var(--brand)"/><circle cx="380.4" cy="40.6" r="2.2" fill="var(--brand)"/><circle cx="382.8" cy="40.0" r="2.2" fill="var(--brand)"/><circle cx="385.3" cy="39.5" r="2.2" fill="var(--brand)"/><circle cx="387.8" cy="39.4" r="2.2" fill="var(--brand)"/><circle cx="390.2" cy="38.7" r="2.2" fill="var(--brand)"/><circle cx="392.7" cy="38.4" r="2.2" fill="var(--brand)"/><circle cx="395.2" cy="38.3" r="2.2" fill="var(--brand)"/><circle cx="397.7" cy="38.0" r="2.2" fill="var(--brand)"/><circle cx="400.1" cy="37.8" r="2.2" fill="var(--brand)"/><circle cx="402.6" cy="37.7" r="2.2" fill="var(--brand)"/><circle cx="405.1" cy="37.4" r="2.2" fill="var(--brand)"/><circle cx="407.5" cy="37.2" r="2.2" fill="var(--brand)"/><circle cx="410.0" cy="37.1" r="2.2" fill="var(--brand)"/><circle cx="412.5" cy="36.8" r="2.2" fill="var(--brand)"/><circle cx="414.9" cy="36.6" r="2.2" fill="var(--brand)"/><circle cx="417.4" cy="36.6" r="2.2" fill="var(--brand)"/><circle cx="419.9" cy="36.3" r="2.2" fill="var(--brand)"/><circle cx="422.3" cy="36.1" r="2.2" fill="var(--brand)"/><circle cx="424.8" cy="36.1" r="2.2" fill="var(--brand)"/><circle cx="427.3" cy="35.7" r="2.2" fill="var(--brand)"/><circle cx="429.8" cy="35.5" r="2.2" fill="var(--brand)"/><circle cx="432.2" cy="35.4" r="2.2" fill="var(--brand)"/><circle cx="434.7" cy="35.1" r="2.2" fill="var(--brand)"/><circle cx="437.2" cy="35.0" r="2.2" fill="var(--brand)"/><circle cx="439.6" cy="34.9" r="2.2" fill="var(--brand)"/><circle cx="442.1" cy="34.5" r="2.2" fill="var(--brand)"/><circle cx="444.6" cy="34.4" r="2.2" fill="var(--brand)"/><circle cx="447.0" cy="34.3" r="2.2" fill="var(--brand)"/><circle cx="449.5" cy="33.8" r="2.2" fill="var(--brand)"/><circle cx="452.0" cy="33.9" r="2.2" fill="var(--brand)"/><circle cx="454.4" cy="33.8" r="2.2" fill="var(--brand)"/><circle cx="456.9" cy="33.4" r="2.2" fill="var(--brand)"/><circle cx="459.4" cy="33.2" r="2.2" fill="var(--brand)"/><circle cx="461.9" cy="33.2" r="2.2" fill="var(--brand)"/><circle cx="464.3" cy="32.8" r="2.2" fill="var(--brand)"/><circle cx="466.8" cy="32.6" r="2.2" fill="var(--brand)"/><circle cx="469.3" cy="32.5" r="2.2" fill="var(--brand)"/><circle cx="471.7" cy="32.2" r="2.2" fill="var(--brand)"/><circle cx="474.2" cy="32.1" r="2.2" fill="var(--brand)"/><circle cx="476.7" cy="32.0" r="2.2" fill="var(--brand)"/><circle cx="479.1" cy="31.5" r="2.2" fill="var(--brand)"/><circle cx="481.6" cy="31.4" r="2.2" fill="var(--brand)"/><circle cx="484.1" cy="31.2" r="2.2" fill="var(--brand)"/><circle cx="486.5" cy="30.8" r="2.2" fill="var(--brand)"/><circle cx="489.0" cy="30.6" r="2.2" fill="var(--brand)"/><circle cx="491.5" cy="30.6" r="2.2" fill="var(--brand)"/><circle cx="494.0" cy="30.2" r="2.2" fill="var(--brand)"/><circle cx="496.4" cy="30.0" r="2.2" fill="var(--brand)"/><circle cx="498.9" cy="29.9" r="2.2" fill="var(--brand)"/><circle cx="501.4" cy="29.5" r="2.2" fill="var(--brand)"/><circle cx="503.8" cy="29.2" r="2.2" fill="var(--brand)"/><circle cx="506.3" cy="29.2" r="2.2" fill="var(--brand)"/><circle cx="508.8" cy="28.7" r="2.2" fill="var(--brand)"/><circle cx="511.2" cy="28.5" r="2.2" fill="var(--brand)"/><circle cx="513.7" cy="28.4" r="2.2" fill="var(--brand)"/><circle cx="516.2" cy="28.1" r="2.2" fill="var(--brand)"/><circle cx="518.6" cy="27.6" r="2.2" fill="var(--brand)"/><circle cx="521.1" cy="27.5" r="2.2" fill="var(--brand)"/><circle cx="523.6" cy="27.0" r="2.2" fill="var(--brand)"/><circle cx="526.0" cy="26.7" r="2.2" fill="var(--brand)"/><circle cx="528.5" cy="26.6" r="2.2" fill="var(--brand)"/><circle cx="531.0" cy="25.6" r="2.2" fill="var(--brand)"/><circle cx="533.5" cy="25.3" r="2.2" fill="var(--brand)"/><circle cx="535.9" cy="25.2" r="2.2" fill="var(--brand)"/><circle cx="538.4" cy="24.5" r="2.2" fill="var(--brand)"/><circle cx="540.9" cy="23.7" r="2.2" fill="var(--brand)"/><circle cx="543.3" cy="23.9" r="2.2" fill="var(--brand)"/><circle cx="545.8" cy="23.2" r="2.2" fill="var(--brand)"/><circle cx="548.3" cy="22.8" r="2.2" fill="var(--brand)"/><circle cx="550.7" cy="22.7" r="2.2" fill="var(--brand)"/><circle cx="553.2" cy="22.0" r="2.2" fill="var(--brand)"/><circle cx="555.7" cy="21.7" r="2.2" fill="var(--brand)"/><circle cx="558.1" cy="21.6" r="2.2" fill="var(--brand)"/><circle cx="560.6" cy="20.9" r="2.2" fill="var(--brand)"/><circle cx="563.1" cy="20.4" r="2.2" fill="var(--brand)"/><circle cx="565.6" cy="20.3" r="2.2" fill="var(--brand)"/><circle cx="568.0" cy="19.8" r="2.2" fill="var(--brand)"/><circle cx="570.5" cy="19.4" r="2.2" fill="var(--brand)"/><circle cx="573.0" cy="19.3" r="2.2" fill="var(--brand)"/><circle cx="575.4" cy="18.8" r="2.2" fill="var(--brand)"/><circle cx="577.9" cy="18.5" r="2.2" fill="var(--brand)"/><circle cx="580.4" cy="18.4" r="2.2" fill="var(--brand)"/><circle cx="582.8" cy="17.6" r="2.2" fill="var(--brand)"/><circle cx="585.3" cy="17.3" r="2.2" fill="var(--brand)"/><circle cx="587.8" cy="17.2" r="2.2" fill="var(--brand)"/><circle cx="590.2" cy="16.5" r="2.2" fill="var(--brand)"/><circle cx="592.7" cy="16.2" r="2.2" fill="var(--brand)"/><circle cx="595.2" cy="16.1" r="2.2" fill="var(--brand)"/><circle cx="597.7" cy="15.4" r="2.2" fill="var(--brand)"/><circle cx="600.1" cy="15.1" r="2.2" fill="var(--brand)"/><circle cx="602.6" cy="15.0" r="2.2" fill="var(--brand)"/><circle cx="605.1" cy="14.3" r="2.2" fill="var(--brand)"/><circle cx="607.5" cy="14.1" r="2.2" fill="var(--brand)"/><circle cx="610.0" cy="14.0" r="2.2" fill="var(--brand)"/>
+  <text x="10.0" y="164" text-anchor="start" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-08-16</text>
+  <text x="610.0" y="164" text-anchor="end" fill="var(--text-3)" font-size="11" font-family="JetBrains Mono,monospace">2026-10-30</text>
+</svg>
+<div class="cap"><span>官方 stars 265.8K · 插件总数 24.8K</span><span>244 期快照</span></div>
+  </div>
+
+  <footer>
+    <span>DSH·daily-pulse · 第 244 期 · 真实采集数据</span>
+    <span>v0.1.0 · 数据源 GitHub Search API + npm registry · 生成于 2026-10-30 · 09:28</span>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var root=document.documentElement;
+    try{
+      var sa=localStorage.getItem('dsh-accent'); if(sa) root.dataset.accent=sa;
+      var sl=localStorage.getItem('dsh-lang');   if(sl) root.dataset.lang=sl; else root.dataset.lang='bi';
+    }catch(e){}
+    var tg=document.getElementById('tg');
+    function themeLabel(){ if(tg) tg.textContent = root.dataset.theme==='light' ? (lang==='en' ? 'Dark mode' : '切换为暗色') : (lang==='en' ? 'Light mode' : '切换为亮色'); }
+    if(tg){ tg.onclick=function(){
+      var next = root.dataset.theme==='light' ? 'dark' : 'light';
+      root.dataset.theme=next;
+      try{ localStorage.setItem('dsh-theme', next); }catch(e){}
+      themeLabel();
+    };}
+    themeLabel();
+    function bindSeg(attr, storeKey){
+      var btns=[].slice.call(document.querySelectorAll('button[data-'+attr+']'));
+      btns.forEach(function(b){
+        b.onclick=function(){
+          var val=b.dataset[attr];
+          root.setAttribute('data-'+attr, val);
+          btns.forEach(function(x){ x.setAttribute('aria-pressed', x.dataset[attr]===val); });
+          try{ if(storeKey) localStorage.setItem(storeKey, val); }catch(e){}
+        };
+      });
+    }
+    bindSeg('accent','dsh-accent');
+  })();
+</script>
+</body>
+</html>
