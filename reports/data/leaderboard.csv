@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,53615,790,0,3,工作流,2026-09-24T16:17:19Z,2026-10-31T04:39:48Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
-leaderboard,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,34242,67,0,3,视觉,2026-08-13T16:30:50Z,2026-10-31T01:25:11Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,21718,74,0,3,终端,2026-08-13T13:55:31Z,2026-10-30T23:21:26Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,16988,-55,0,5,视觉,2026-08-13T13:45:50Z,2026-10-30T12:58:04Z,https://github.com/dataelement/dsh-desktop
-leaderboard,5,YuJunZhiXue/dsh-purge,DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every mod,14225,348,0,3,其他,2026-08-19T07:41:12Z,2026-10-31T07:07:41Z,https://github.com/YuJunZhiXue/dsh-purge
-leaderboard,6,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",9933,84,0,3,视觉,2026-08-14T04:58:15Z,2026-10-30T18:43:34Z,https://github.com/dsh-market/dsh-market
-growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,53615,790,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
-growth,2,YuJunZhiXue/dsh-purge,DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every mod,14225,348,0,3,其他,,,https://github.com/YuJunZhiXue/dsh-purge
-growth,3,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",9933,84,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,4,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,21718,74,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,5,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,34242,67,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,6,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,16988,-55,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
+leaderboard,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,54179,564,0,3,工作流,2026-09-24T16:17:19Z,2026-10-31T13:24:11Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
+leaderboard,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,34274,32,0,3,视觉,2026-08-13T16:30:50Z,2026-10-31T18:04:49Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,21769,51,0,3,终端,2026-08-13T13:55:31Z,2026-10-31T17:32:25Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,17001,13,0,5,视觉,2026-08-13T13:45:50Z,2026-10-31T15:12:32Z,https://github.com/dataelement/dsh-desktop
+leaderboard,5,YuJunZhiXue/dsh-purge,DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every mod,14498,273,0,3,其他,2026-08-19T07:41:12Z,2026-10-31T17:33:31Z,https://github.com/YuJunZhiXue/dsh-purge
+leaderboard,6,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",9987,54,0,3,视觉,2026-08-14T04:58:15Z,2026-10-31T16:46:39Z,https://github.com/dsh-market/dsh-market
+growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,54179,564,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
+growth,2,YuJunZhiXue/dsh-purge,DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every mod,14498,273,0,3,其他,,,https://github.com/YuJunZhiXue/dsh-purge
+growth,3,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",9987,54,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,4,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,21769,51,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,5,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,34274,32,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,6,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,17001,13,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
