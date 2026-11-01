@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dsh-tauri/deepseek-harness-desktop,3392,0,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-01T00:31:15Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,2,saya-ch/dsh-mobile,699,0,0,,0,视觉,2026-08-15T05:28:38Z,2026-11-01T00:12:54Z,https://github.com/saya-ch/dsh-mobile
-active,3,dshplugin/dsh-plugin-hub,410,0,0,,0,工作流,2026-08-20T03:32:27Z,2026-11-01T00:02:58Z,https://github.com/dshplugin/dsh-plugin-hub
-active,4,BotHarness/DeepSeekBot,464,4,0,,0,工作流,2026-09-16T22:02:12Z,2026-10-31T23:49:53Z,https://github.com/BotHarness/DeepSeekBot
-active,5,ccch1mneyyy/dsh-TUI,6432,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-10-31T23:40:11Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,Fei2411/DS-Bot,4780,58,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-01T12:37:09Z,https://github.com/Fei2411/DS-Bot
+active,2,ccch1mneyyy/dsh-Go,4224,621,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-01T12:36:35Z,https://github.com/ccch1mneyyy/dsh-Go
+active,3,dsh-tauri/deepseek-harness-desktop,3404,12,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-01T12:36:09Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,4,ADWMC/helm-d,941,16,0,3,1,其他,2026-08-14T15:09:38Z,2026-11-01T12:31:00Z,https://github.com/ADWMC/helm-d
+active,5,sixtysevenlf/dsh-blender-plugin,1518,18,0,3,1,视觉,2026-09-13T16:07:04Z,2026-11-01T12:28:07Z,https://github.com/sixtysevenlf/dsh-blender-plugin
