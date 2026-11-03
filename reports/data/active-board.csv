@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,1450,10,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-03T13:33:44Z,https://github.com/flizzywine/dsh-tavern
-active,2,kelai141/dsh-mobile-apk,1008,9,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-03T13:32:46Z,https://github.com/kelai141/dsh-mobile-apk
-active,3,himovo/movo,517,10,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-03T13:32:10Z,https://github.com/himovo/movo
-active,4,ccch1mneyyy/dsh-TUI,6701,70,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-03T13:31:20Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,BotHarness/DeepSeekBot,578,24,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-03T13:27:35Z,https://github.com/BotHarness/DeepSeekBot
+active,1,awesome-dsh-plugin/awesome-dsh-plugin,22225,44,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-03T20:22:25Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,2,T-Auto/dsh-ops,5141,21,0,5,1,视觉,2026-10-08T07:09:25Z,2026-11-03T20:22:07Z,https://github.com/T-Auto/dsh-ops
+active,3,BotHarness/DeepSeekBot,588,10,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-03T20:20:32Z,https://github.com/BotHarness/DeepSeekBot
+active,4,kelai141/dsh-mobile-apk,1011,3,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-03T20:17:47Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,vibeinging/dsh-desktop,487,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-03T20:12:49Z,https://github.com/vibeinging/dsh-desktop
