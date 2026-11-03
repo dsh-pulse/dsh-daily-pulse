@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,vibeinging/dsh-desktop,488,1,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-02T22:24:37Z,https://github.com/vibeinging/dsh-desktop
-active,2,BotHarness/DeepSeekBot,547,7,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-02T22:19:40Z,https://github.com/BotHarness/DeepSeekBot
-active,3,flizzywine/dsh-tavern,1438,3,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-02T21:56:17Z,https://github.com/flizzywine/dsh-tavern
-active,4,ccch1mneyyy/dsh-TUI,6601,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-02T21:41:21Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,dshplugin/dsh-plugin-hub,425,1,0,,0,工作流,2026-08-20T03:32:27Z,2026-11-02T20:50:39Z,https://github.com/dshplugin/dsh-plugin-hub
+active,1,ccch1mneyyy/dsh-TUI,6631,30,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-03T03:12:43Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,Alice-Marx/dsh-model-router,654,4,0,,0,其他,2026-09-01T12:14:45Z,2026-11-03T03:10:15Z,https://github.com/Alice-Marx/dsh-model-router
+active,3,QingYunA/answer-me-with-html,5093,8,0,3,1,工作流,2026-10-02T09:57:40Z,2026-11-03T03:09:00Z,https://github.com/QingYunA/answer-me-with-html
+active,4,LivXue/dsh-plugin-shop,662,0,0,,0,工作流,2026-08-25T05:16:32Z,2026-11-03T03:05:46Z,https://github.com/LivXue/dsh-plugin-shop
+active,5,dshplugin/dsh-plugin-hub,429,4,0,,0,工作流,2026-08-20T03:32:27Z,2026-11-03T03:02:53Z,https://github.com/dshplugin/dsh-plugin-hub
