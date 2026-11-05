@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,bruc3van/awesome-dsh-plugin,494,0,0,,0,其他,2026-08-13T13:24:25Z,2026-11-05T01:55:27Z,https://github.com/bruc3van/awesome-dsh-plugin
-active,2,flizzywine/dsh-tavern,1475,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-05T01:55:22Z,https://github.com/flizzywine/dsh-tavern
-active,3,ccch1mneyyy/dsh-TUI,6901,19,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-05T01:54:57Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,ccch1mneyyy/dsh-Go,9615,268,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-05T01:53:08Z,https://github.com/ccch1mneyyy/dsh-Go
-active,5,dsh-tauri/deepseek-harness-desktop,3469,3,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-05T01:46:58Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,1,flizzywine/dsh-tavern,1481,6,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-05T13:56:28Z,https://github.com/flizzywine/dsh-tavern
+active,2,BotHarness/DeepSeekBot,636,21,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-05T13:55:12Z,https://github.com/BotHarness/DeepSeekBot
+active,3,ccch1mneyyy/dsh-TUI,6975,74,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-05T13:54:58Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,kelai141/dsh-mobile-apk,1019,2,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-05T13:51:56Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,kingcharleslzy-ai/dsh-purge,4580,102,0,3,1,工作流,2026-10-16T07:44:27Z,2026-11-05T13:51:46Z,https://github.com/kingcharleslzy-ai/dsh-purge
