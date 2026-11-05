@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,1481,6,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-05T13:56:28Z,https://github.com/flizzywine/dsh-tavern
-active,2,BotHarness/DeepSeekBot,636,21,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-05T13:55:12Z,https://github.com/BotHarness/DeepSeekBot
-active,3,ccch1mneyyy/dsh-TUI,6975,74,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-05T13:54:58Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,kelai141/dsh-mobile-apk,1019,2,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-05T13:51:56Z,https://github.com/kelai141/dsh-mobile-apk
-active,5,kingcharleslzy-ai/dsh-purge,4580,102,0,3,1,工作流,2026-10-16T07:44:27Z,2026-11-05T13:51:46Z,https://github.com/kingcharleslzy-ai/dsh-purge
+active,1,vibeinging/dsh-desktop,488,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-05T20:45:38Z,https://github.com/vibeinging/dsh-desktop
+active,2,dsh-market/dsh-market,10985,43,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-05T20:37:35Z,https://github.com/dsh-market/dsh-market
+active,3,onehumanbeing/esp32-iphone-agent,4437,,1,1,0,视觉,2026-10-11T19:10:25Z,2026-11-05T20:37:31Z,https://github.com/onehumanbeing/esp32-iphone-agent
+active,4,BotHarness/DeepSeekBot,643,7,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-05T20:26:30Z,https://github.com/BotHarness/DeepSeekBot
+active,5,awesome-dsh-plugin/awesome-dsh-plugin,22635,111,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-05T20:25:54Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
