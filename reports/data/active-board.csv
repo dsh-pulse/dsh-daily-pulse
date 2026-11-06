@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,vibeinging/dsh-desktop,488,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-05T20:45:38Z,https://github.com/vibeinging/dsh-desktop
-active,2,dsh-market/dsh-market,10985,43,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-05T20:37:35Z,https://github.com/dsh-market/dsh-market
-active,3,onehumanbeing/esp32-iphone-agent,4437,,1,1,0,视觉,2026-10-11T19:10:25Z,2026-11-05T20:37:31Z,https://github.com/onehumanbeing/esp32-iphone-agent
-active,4,BotHarness/DeepSeekBot,643,7,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-05T20:26:30Z,https://github.com/BotHarness/DeepSeekBot
-active,5,awesome-dsh-plugin/awesome-dsh-plugin,22635,111,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-05T20:25:54Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,1,bruc3van/awesome-dsh-plugin,498,0,0,,0,其他,2026-08-13T13:24:25Z,2026-11-06T01:55:52Z,https://github.com/bruc3van/awesome-dsh-plugin
+active,2,BotHarness/DeepSeekBot,649,6,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-06T01:53:29Z,https://github.com/BotHarness/DeepSeekBot
+active,3,ccch1mneyyy/dsh-TUI,6995,5,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-06T01:52:30Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,dsh-tauri/deepseek-harness-desktop,3492,3,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-06T01:49:21Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,5,yyh-001/dsh-meme,516,1,0,,0,终端,2026-08-13T14:54:33Z,2026-11-06T01:40:58Z,https://github.com/yyh-001/dsh-meme
