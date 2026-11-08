@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dream-num/univer-workspace,2271,0,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-08T00:57:04Z,https://github.com/dream-num/univer-workspace
-active,2,BotHarness/DeepSeekBot,714,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-08T00:47:32Z,https://github.com/BotHarness/DeepSeekBot
-active,3,ccch1mneyyy/dsh-Go,14388,211,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-08T00:47:06Z,https://github.com/ccch1mneyyy/dsh-Go
-active,4,ccch1mneyyy/dsh-TUI,7163,8,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-08T00:28:21Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,awesome-dsh-plugin/awesome-dsh-plugin,23570,19,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-08T00:22:38Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,1,XDTrees/dsh-xdpool,467,9,0,,0,工作流,2026-09-04T09:28:58Z,2026-11-08T12:41:29Z,https://github.com/XDTrees/dsh-xdpool
+active,2,dream-num/univer-workspace,2271,0,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-08T12:40:19Z,https://github.com/dream-num/univer-workspace
+active,3,kelai141/dsh-mobile-apk,1054,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-08T12:38:51Z,https://github.com/kelai141/dsh-mobile-apk
+active,4,flizzywine/dsh-tavern,1520,8,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-08T12:37:24Z,https://github.com/flizzywine/dsh-tavern
+active,5,Fei2411/DS-Bot,6264,101,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-08T12:37:03Z,https://github.com/Fei2411/DS-Bot
