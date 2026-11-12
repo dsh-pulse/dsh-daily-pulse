@@ -1,13 +1,13 @@
 list,rank,name,desc,stars,delta,is_new,score,category,created,pushed,url
-leaderboard,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,71059,901,0,3,工作流,2026-09-24T16:17:19Z,2026-11-11T09:33:36Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
-leaderboard,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,35836,81,0,3,视觉,2026-08-13T16:30:50Z,2026-11-06T16:29:38Z,https://github.com/anywhere-labs/dsh-desktop
-leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,24423,85,0,3,终端,2026-08-13T13:55:31Z,2026-11-12T06:48:40Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,18401,184,0,5,视觉,2026-08-13T13:45:50Z,2026-11-12T14:23:28Z,https://github.com/dataelement/dsh-desktop
-leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",12141,98,0,3,视觉,2026-08-14T04:58:15Z,2026-11-12T06:36:49Z,https://github.com/dsh-market/dsh-market
-leaderboard,6,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",7579,50,0,3,视觉,2026-08-13T12:49:31Z,2026-11-12T14:33:45Z,https://github.com/ccch1mneyyy/dsh-TUI
-growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,71059,901,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
-growth,2,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,18401,184,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
-growth,3,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",12141,98,0,3,视觉,,,https://github.com/dsh-market/dsh-market
-growth,4,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,24423,85,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-growth,5,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,35836,81,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
-growth,6,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",7579,50,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
+leaderboard,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,71277,218,0,3,工作流,2026-09-24T16:17:19Z,2026-11-11T09:33:36Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
+leaderboard,2,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,35858,22,0,3,视觉,2026-08-13T16:30:50Z,2026-11-06T16:29:38Z,https://github.com/anywhere-labs/dsh-desktop
+leaderboard,3,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,24440,17,0,3,终端,2026-08-13T13:55:31Z,2026-11-12T20:40:28Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+leaderboard,4,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,18410,9,0,5,视觉,2026-08-13T13:45:50Z,2026-11-12T14:42:19Z,https://github.com/dataelement/dsh-desktop
+leaderboard,5,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",12170,29,0,3,视觉,2026-08-14T04:58:15Z,2026-11-12T16:52:32Z,https://github.com/dsh-market/dsh-market
+leaderboard,6,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",7589,10,0,3,视觉,2026-08-13T12:49:31Z,2026-11-12T21:00:32Z,https://github.com/ccch1mneyyy/dsh-TUI
+growth,1,Ebony-Vinyl/dsh-our-free-model,在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全,71277,218,0,3,工作流,,,https://github.com/Ebony-Vinyl/dsh-our-free-model
+growth,2,dsh-market/dsh-market,"The plugin market inside DeepSeek Harness — browse, search, one-click install · ",12170,29,0,3,视觉,,,https://github.com/dsh-market/dsh-market
+growth,3,anywhere-labs/dsh-desktop,为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。,35858,22,0,3,视觉,,,https://github.com/anywhere-labs/dsh-desktop
+growth,4,awesome-dsh-plugin/awesome-dsh-plugin,A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表,24440,17,0,3,终端,,,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+growth,5,ccch1mneyyy/dsh-TUI,"DSH's officially top-recommended TUI plugin — high performance, low overhead, cu",7589,10,0,3,视觉,,,https://github.com/ccch1mneyyy/dsh-TUI
+growth,6,dataelement/dsh-desktop,DSHDesktop：DeepSeek Harness Desktop / DeepSeek Harness 桌面版,18410,9,0,5,视觉,,,https://github.com/dataelement/dsh-desktop
