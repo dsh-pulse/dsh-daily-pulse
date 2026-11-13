@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,kingcharleslzy-ai/dsh-purge,7773,284,0,3,1,工作流,2026-10-16T07:44:27Z,2026-11-13T13:52:33Z,https://github.com/kingcharleslzy-ai/dsh-purge
-active,2,ccch1mneyyy/dsh-TUI,7653,55,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-13T13:50:01Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,3,T-Auto/dsh-ops,5784,19,0,5,1,视觉,2026-10-08T07:09:25Z,2026-11-13T13:48:45Z,https://github.com/T-Auto/dsh-ops
-active,4,liguobao/ds-harness-remote,2783,52,0,3,1,终端,2026-08-14T15:33:53Z,2026-11-13T13:43:17Z,https://github.com/liguobao/ds-harness-remote
-active,5,BotHarness/DeepSeekBot,836,9,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-13T13:38:30Z,https://github.com/BotHarness/DeepSeekBot
+active,1,ccch1mneyyy/dsh-Go,21763,228,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-13T20:43:08Z,https://github.com/ccch1mneyyy/dsh-Go
+active,2,BotHarness/DeepSeekBot,842,6,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-13T20:41:52Z,https://github.com/BotHarness/DeepSeekBot
+active,3,vibeinging/dsh-desktop,492,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-13T20:35:25Z,https://github.com/vibeinging/dsh-desktop
+active,4,anywhere-labs/dsh-desktop,35936,16,0,3,1,视觉,2026-08-13T16:30:50Z,2026-11-13T20:33:25Z,https://github.com/anywhere-labs/dsh-desktop
+active,5,awesome-dsh-plugin/awesome-dsh-plugin,24570,19,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-13T20:30:09Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
