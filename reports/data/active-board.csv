@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,863,11,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-15T13:22:50Z,https://github.com/BotHarness/DeepSeekBot
-active,2,dream-num/univer-workspace,2281,0,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-15T13:20:06Z,https://github.com/dream-num/univer-workspace
-active,3,elysia395/dsh-wallpaper-engine,7033,109,0,3,1,视觉,2026-08-16T16:04:08Z,2026-11-15T13:19:48Z,https://github.com/elysia395/dsh-wallpaper-engine
-active,4,FuRongJun-1999/dsh-memory,688,10,0,,0,工作流,2026-08-14T13:28:26Z,2026-11-15T13:16:31Z,https://github.com/FuRongJun-1999/dsh-memory
-active,5,ccch1mneyyy/dsh-TUI,7741,24,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-15T13:15:18Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,1,vibeinging/dsh-desktop,493,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-15T19:25:41Z,https://github.com/vibeinging/dsh-desktop
+active,2,BotHarness/DeepSeekBot,868,5,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-15T19:24:08Z,https://github.com/BotHarness/DeepSeekBot
+active,3,ccch1mneyyy/dsh-Go,23684,262,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-15T19:22:56Z,https://github.com/ccch1mneyyy/dsh-Go
+active,4,ccch1mneyyy/dsh-TUI,7757,16,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-15T19:17:51Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,dsh-market/dsh-market,12521,30,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-15T18:52:11Z,https://github.com/dsh-market/dsh-market
