@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,851,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-14T18:53:04Z,https://github.com/BotHarness/DeepSeekBot
-active,2,ccch1mneyyy/dsh-Go,22660,291,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-14T18:49:59Z,https://github.com/ccch1mneyyy/dsh-Go
-active,3,Ebony-Vinyl/dsh-our-free-model,74231,474,0,3,1,工作流,2026-09-24T16:17:19Z,2026-11-14T18:48:56Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
-active,4,kelai141/dsh-mobile-apk,1093,4,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-14T18:48:35Z,https://github.com/kelai141/dsh-mobile-apk
-active,5,vibeinging/dsh-desktop,493,1,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-14T18:47:25Z,https://github.com/vibeinging/dsh-desktop
+active,1,Fei2411/DS-Bot,7761,8,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-15T01:26:55Z,https://github.com/Fei2411/DS-Bot
+active,2,bruc3van/awesome-dsh-plugin,519,1,0,,0,其他,2026-08-13T13:24:25Z,2026-11-15T01:24:56Z,https://github.com/bruc3van/awesome-dsh-plugin
+active,3,ccch1mneyyy/dsh-Go,22763,103,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-15T01:24:15Z,https://github.com/ccch1mneyyy/dsh-Go
+active,4,FuRongJun-1999/dsh-memory,678,1,0,,0,工作流,2026-08-14T13:28:26Z,2026-11-15T01:24:10Z,https://github.com/FuRongJun-1999/dsh-memory
+active,5,BotHarness/DeepSeekBot,852,1,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-15T01:22:16Z,https://github.com/BotHarness/DeepSeekBot
