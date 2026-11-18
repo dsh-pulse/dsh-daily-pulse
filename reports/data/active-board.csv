@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,himovo/movo,707,5,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-18T03:12:09Z,https://github.com/himovo/movo
-active,2,Yu-tao-Li/dsh-computer-use-win,781,1,0,,0,视觉,2026-08-16T19:17:19Z,2026-11-18T03:10:59Z,https://github.com/Yu-tao-Li/dsh-computer-use-win
-active,3,ccch1mneyyy/dsh-TUI,7879,18,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-18T03:08:15Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,bruc3van/awesome-dsh-plugin-pro,525,0,0,,0,终端,2026-08-13T13:24:25Z,2026-11-18T03:06:33Z,https://github.com/bruc3van/awesome-dsh-plugin-pro
-active,5,ccch1mneyyy/dsh-Go,26184,222,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-18T03:05:22Z,https://github.com/ccch1mneyyy/dsh-Go
+active,1,BotHarness/DeepSeekBot,919,11,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-18T15:01:10Z,https://github.com/BotHarness/DeepSeekBot
+active,2,Yu-tao-Li/dsh-computer-use-win,793,12,0,,0,视觉,2026-08-16T19:17:19Z,2026-11-18T14:59:22Z,https://github.com/Yu-tao-Li/dsh-computer-use-win
+active,3,ccch1mneyyy/dsh-TUI,7929,50,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-18T14:57:23Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,dream-num/univer-workspace,2300,2,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-18T14:47:45Z,https://github.com/dream-num/univer-workspace
+active,5,saya-ch/dsh-mobile,882,6,0,,0,视觉,2026-08-15T05:28:38Z,2026-11-18T14:34:48Z,https://github.com/saya-ch/dsh-mobile
