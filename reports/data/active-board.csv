@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,906,5,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-17T21:55:30Z,https://github.com/BotHarness/DeepSeekBot
-active,2,vibeinging/dsh-desktop,495,0,0,,0,视觉,2026-08-13T10:41:33Z,2026-11-17T21:51:08Z,https://github.com/vibeinging/dsh-desktop
-active,3,Fei2411/DS-Bot,8230,24,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-17T21:34:17Z,https://github.com/Fei2411/DS-Bot
-active,4,WSL043/dsh-codex-subscription,501,2,0,,0,工作流,2026-08-13T20:51:16Z,2026-11-17T21:33:23Z,https://github.com/WSL043/dsh-codex-subscription
-active,5,ccch1mneyyy/dsh-Go,25962,189,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-17T21:26:37Z,https://github.com/ccch1mneyyy/dsh-Go
+active,1,himovo/movo,707,5,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-18T03:12:09Z,https://github.com/himovo/movo
+active,2,Yu-tao-Li/dsh-computer-use-win,781,1,0,,0,视觉,2026-08-16T19:17:19Z,2026-11-18T03:10:59Z,https://github.com/Yu-tao-Li/dsh-computer-use-win
+active,3,ccch1mneyyy/dsh-TUI,7879,18,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-18T03:08:15Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,4,bruc3van/awesome-dsh-plugin-pro,525,0,0,,0,终端,2026-08-13T13:24:25Z,2026-11-18T03:06:33Z,https://github.com/bruc3van/awesome-dsh-plugin-pro
+active,5,ccch1mneyyy/dsh-Go,26184,222,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-18T03:05:22Z,https://github.com/ccch1mneyyy/dsh-Go
