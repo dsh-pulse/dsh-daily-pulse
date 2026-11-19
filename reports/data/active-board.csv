@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,922,3,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-18T21:39:24Z,https://github.com/BotHarness/DeepSeekBot
-active,2,onehumanbeing/esp32-iphone-agent,5066,6,0,1,0,视觉,2026-10-11T19:10:25Z,2026-11-18T21:19:19Z,https://github.com/onehumanbeing/esp32-iphone-agent
-active,3,ccch1mneyyy/dsh-TUI,7939,10,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-18T21:06:31Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,4,dsh-market/dsh-market,12869,17,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-18T20:53:09Z,https://github.com/dsh-market/dsh-market
-active,5,sixtysevenlf/dsh-blender-plugin,2191,0,0,3,1,视觉,2026-09-13T16:07:04Z,2026-11-18T20:36:07Z,https://github.com/sixtysevenlf/dsh-blender-plugin
+active,1,BotHarness/DeepSeekBot,924,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-19T02:53:43Z,https://github.com/BotHarness/DeepSeekBot
+active,2,ningbainb/deepseek-harness-desktop,937,1,0,,0,视觉,2026-08-13T19:50:01Z,2026-11-19T02:51:45Z,https://github.com/ningbainb/deepseek-harness-desktop
+active,3,ccch1mneyyy/dsh-Go,27315,179,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-19T02:49:35Z,https://github.com/ccch1mneyyy/dsh-Go
+active,4,ccch1mneyyy/dsh-TUI,7948,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-19T02:40:46Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,ysr666/dsh-vision-router,1286,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-19T02:39:35Z,https://github.com/ysr666/dsh-vision-router
