@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,924,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-19T02:53:43Z,https://github.com/BotHarness/DeepSeekBot
-active,2,ningbainb/deepseek-harness-desktop,937,1,0,,0,视觉,2026-08-13T19:50:01Z,2026-11-19T02:51:45Z,https://github.com/ningbainb/deepseek-harness-desktop
-active,3,ccch1mneyyy/dsh-Go,27315,179,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-19T02:49:35Z,https://github.com/ccch1mneyyy/dsh-Go
-active,4,ccch1mneyyy/dsh-TUI,7948,9,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-19T02:40:46Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,ysr666/dsh-vision-router,1286,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-19T02:39:35Z,https://github.com/ysr666/dsh-vision-router
+active,1,liguobao/ds-harness-remote,3325,57,0,3,1,终端,2026-08-14T15:33:53Z,2026-11-19T15:10:57Z,https://github.com/liguobao/ds-harness-remote
+active,2,ccch1mneyyy/dsh-TUI,7986,38,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-19T15:05:44Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,Fei2411/DS-Bot,8445,79,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-19T15:04:10Z,https://github.com/Fei2411/DS-Bot
+active,4,dream-num/dsh-univer-office,739,2,0,,0,工作流,2026-08-15T16:29:45Z,2026-11-19T15:01:47Z,https://github.com/dream-num/dsh-univer-office
+active,5,bruc3van/awesome-dsh-plugin-pro,528,1,0,,0,其他,2026-08-13T13:24:25Z,2026-11-19T15:01:43Z,https://github.com/bruc3van/awesome-dsh-plugin-pro
