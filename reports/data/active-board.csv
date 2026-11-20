@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,932,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-19T21:56:46Z,https://github.com/BotHarness/DeepSeekBot
-active,2,ccch1mneyyy/dsh-Go,28152,176,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-19T21:52:35Z,https://github.com/ccch1mneyyy/dsh-Go
-active,3,ai-timon/timon,613,,1,,0,工作流,2026-11-06T17:30:24Z,2026-11-19T21:47:41Z,https://github.com/ai-timon/timon
-active,4,ccch1mneyyy/dsh-TUI,7997,11,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-19T21:23:20Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,Fei2411/DS-Bot,8468,23,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-19T21:20:16Z,https://github.com/Fei2411/DS-Bot
+active,1,dataelement/dsh-desktop,20077,37,0,5,1,视觉,2026-08-13T13:45:50Z,2026-11-20T02:42:47Z,https://github.com/dataelement/dsh-desktop
+active,2,Nwflower/dsh-claude-style,659,2,0,,0,视觉,2026-09-19T18:51:52Z,2026-11-20T02:42:39Z,https://github.com/Nwflower/dsh-claude-style
+active,3,flizzywine/dsh-tavern,1688,3,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-20T02:34:05Z,https://github.com/flizzywine/dsh-tavern
+active,4,Fei2411/DS-Bot,8490,22,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-20T02:31:33Z,https://github.com/Fei2411/DS-Bot
+active,5,himovo/movo,758,2,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-20T02:29:55Z,https://github.com/himovo/movo
