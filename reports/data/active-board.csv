@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,Miaotofu01/Study-Mate,1508,4,0,3,1,工作流,2026-09-17T19:36:05Z,2026-11-20T14:48:45Z,https://github.com/Miaotofu01/Study-Mate
-active,2,dsh-tauri/deepseek-harness-desktop,3688,4,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-20T14:48:44Z,https://github.com/dsh-tauri/deepseek-harness-desktop
-active,3,T-Auto/dsh-ops,5961,13,0,5,1,视觉,2026-10-08T07:09:25Z,2026-11-20T14:48:01Z,https://github.com/T-Auto/dsh-ops
-active,4,ccch1mneyyy/dsh-Go,28826,547,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-20T14:47:32Z,https://github.com/ccch1mneyyy/dsh-Go
-active,5,V1ki/dsh-plugin-subscriptions,629,0,0,,0,视觉,2026-08-14T08:27:11Z,2026-11-20T14:46:31Z,https://github.com/V1ki/dsh-plugin-subscriptions
+active,1,BotHarness/DeepSeekBot,943,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-20T21:38:29Z,https://github.com/BotHarness/DeepSeekBot
+active,2,Fei2411/DS-Bot,8566,11,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-20T21:10:31Z,https://github.com/Fei2411/DS-Bot
+active,3,dsh-market/dsh-market,13078,16,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-20T20:45:24Z,https://github.com/dsh-market/dsh-market
+active,4,ccch1mneyyy/dsh-TUI,8037,14,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-20T20:35:13Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,DDDMUC/dsh-free-search,1526,10,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-20T20:35:07Z,https://github.com/DDDMUC/dsh-free-search
