@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,dataelement/dsh-desktop,20077,37,0,5,1,视觉,2026-08-13T13:45:50Z,2026-11-20T02:42:47Z,https://github.com/dataelement/dsh-desktop
-active,2,Nwflower/dsh-claude-style,659,2,0,,0,视觉,2026-09-19T18:51:52Z,2026-11-20T02:42:39Z,https://github.com/Nwflower/dsh-claude-style
-active,3,flizzywine/dsh-tavern,1688,3,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-20T02:34:05Z,https://github.com/flizzywine/dsh-tavern
-active,4,Fei2411/DS-Bot,8490,22,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-20T02:31:33Z,https://github.com/Fei2411/DS-Bot
-active,5,himovo/movo,758,2,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-20T02:29:55Z,https://github.com/himovo/movo
+active,1,Miaotofu01/Study-Mate,1508,4,0,3,1,工作流,2026-09-17T19:36:05Z,2026-11-20T14:48:45Z,https://github.com/Miaotofu01/Study-Mate
+active,2,dsh-tauri/deepseek-harness-desktop,3688,4,0,3,1,视觉,2026-08-14T02:36:29Z,2026-11-20T14:48:44Z,https://github.com/dsh-tauri/deepseek-harness-desktop
+active,3,T-Auto/dsh-ops,5961,13,0,5,1,视觉,2026-10-08T07:09:25Z,2026-11-20T14:48:01Z,https://github.com/T-Auto/dsh-ops
+active,4,ccch1mneyyy/dsh-Go,28826,547,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-20T14:47:32Z,https://github.com/ccch1mneyyy/dsh-Go
+active,5,V1ki/dsh-plugin-subscriptions,629,0,0,,0,视觉,2026-08-14T08:27:11Z,2026-11-20T14:46:31Z,https://github.com/V1ki/dsh-plugin-subscriptions
