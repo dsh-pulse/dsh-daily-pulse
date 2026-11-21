@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,BotHarness/DeepSeekBot,943,2,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-20T21:38:29Z,https://github.com/BotHarness/DeepSeekBot
-active,2,Fei2411/DS-Bot,8566,11,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-20T21:10:31Z,https://github.com/Fei2411/DS-Bot
-active,3,dsh-market/dsh-market,13078,16,0,3,1,视觉,2026-08-14T04:58:15Z,2026-11-20T20:45:24Z,https://github.com/dsh-market/dsh-market
-active,4,ccch1mneyyy/dsh-TUI,8037,14,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-20T20:35:13Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,5,DDDMUC/dsh-free-search,1526,10,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-20T20:35:07Z,https://github.com/DDDMUC/dsh-free-search
+active,1,ccch1mneyyy/dsh-TUI,8042,5,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-21T02:55:13Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,Fei2411/DS-Bot,8576,10,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-21T02:54:51Z,https://github.com/Fei2411/DS-Bot
+active,3,ningbainb/deepseek-harness-desktop,949,0,0,3,1,视觉,2026-08-13T19:50:01Z,2026-11-21T02:35:33Z,https://github.com/ningbainb/deepseek-harness-desktop
+active,4,yyh-001/DSH-X,783,0,0,,0,工作流,2026-09-03T06:07:15Z,2026-11-21T02:27:40Z,https://github.com/yyh-001/DSH-X
+active,5,BotHarness/DeepSeekBot,946,3,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-21T02:26:40Z,https://github.com/BotHarness/DeepSeekBot
