@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,DDDMUC/dsh-free-search,1562,27,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-21T14:09:25Z,https://github.com/DDDMUC/dsh-free-search
-active,2,flizzywine/dsh-tavern,1713,5,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-21T14:09:21Z,https://github.com/flizzywine/dsh-tavern
-active,3,Fei2411/DS-Bot,8615,39,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-21T14:08:03Z,https://github.com/Fei2411/DS-Bot
-active,4,1692775560/dsh-Mimir-Academic-research,571,0,0,,0,工作流,2026-08-20T13:46:05Z,2026-11-21T14:01:44Z,https://github.com/1692775560/dsh-Mimir-Academic-research
-active,5,BotHarness/DeepSeekBot,953,7,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-21T13:51:35Z,https://github.com/BotHarness/DeepSeekBot
+active,1,BotHarness/DeepSeekBot,956,3,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-21T20:19:20Z,https://github.com/BotHarness/DeepSeekBot
+active,2,Fei2411/DS-Bot,8626,11,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-21T20:18:40Z,https://github.com/Fei2411/DS-Bot
+active,3,flizzywine/dsh-tavern,1720,7,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-21T20:15:05Z,https://github.com/flizzywine/dsh-tavern
+active,4,awesome-dsh-plugin/awesome-dsh-plugin,25338,10,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-21T20:04:06Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,5,bruc3van/awesome-dsh-plugin-pro,529,0,0,,0,其他,2026-08-13T13:24:25Z,2026-11-21T19:36:52Z,https://github.com/bruc3van/awesome-dsh-plugin-pro
