@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,8042,5,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-21T02:55:13Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,Fei2411/DS-Bot,8576,10,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-21T02:54:51Z,https://github.com/Fei2411/DS-Bot
-active,3,ningbainb/deepseek-harness-desktop,949,0,0,3,1,视觉,2026-08-13T19:50:01Z,2026-11-21T02:35:33Z,https://github.com/ningbainb/deepseek-harness-desktop
-active,4,yyh-001/DSH-X,783,0,0,,0,工作流,2026-09-03T06:07:15Z,2026-11-21T02:27:40Z,https://github.com/yyh-001/DSH-X
-active,5,BotHarness/DeepSeekBot,946,3,0,,0,工作流,2026-09-16T22:02:12Z,2026-11-21T02:26:40Z,https://github.com/BotHarness/DeepSeekBot
+active,1,DDDMUC/dsh-free-search,1562,27,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-21T14:09:25Z,https://github.com/DDDMUC/dsh-free-search
+active,2,flizzywine/dsh-tavern,1713,5,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-21T14:09:21Z,https://github.com/flizzywine/dsh-tavern
+active,3,Fei2411/DS-Bot,8615,39,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-21T14:08:03Z,https://github.com/Fei2411/DS-Bot
+active,4,1692775560/dsh-Mimir-Academic-research,571,0,0,,0,工作流,2026-08-20T13:46:05Z,2026-11-21T14:01:44Z,https://github.com/1692775560/dsh-Mimir-Academic-research
+active,5,BotHarness/DeepSeekBot,953,7,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-21T13:51:35Z,https://github.com/BotHarness/DeepSeekBot
