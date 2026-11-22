@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-TUI,8097,20,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-22T13:58:52Z,https://github.com/ccch1mneyyy/dsh-TUI
-active,2,tencent-connect/dsh-qqbot,623,3,0,,0,其他,2026-08-14T13:57:23Z,2026-11-22T13:57:57Z,https://github.com/tencent-connect/dsh-qqbot
-active,3,ADWMC/helm-d,1442,8,0,3,1,其他,2026-08-14T15:09:38Z,2026-11-22T13:56:57Z,https://github.com/ADWMC/helm-d
-active,4,BotHarness/DeepSeekBot,965,7,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-22T13:55:34Z,https://github.com/BotHarness/DeepSeekBot
-active,5,flizzywine/dsh-tavern,1725,5,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-22T13:54:51Z,https://github.com/flizzywine/dsh-tavern
+active,1,ccch1mneyyy/dsh-Go,30140,128,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-22T20:32:58Z,https://github.com/ccch1mneyyy/dsh-Go
+active,2,BotHarness/DeepSeekBot,965,0,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-22T20:24:24Z,https://github.com/BotHarness/DeepSeekBot
+active,3,aureth-labs/dsh-aurabot-qq,718,1,0,,0,终端,2026-10-24T06:43:38Z,2026-11-22T20:22:36Z,https://github.com/aureth-labs/dsh-aurabot-qq
+active,4,awesome-dsh-plugin/awesome-dsh-plugin,25424,20,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-22T20:20:52Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,5,Fei2411/DS-Bot,8698,14,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-22T19:54:48Z,https://github.com/Fei2411/DS-Bot
