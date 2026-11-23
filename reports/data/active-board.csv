@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,ccch1mneyyy/dsh-Go,30140,128,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-22T20:32:58Z,https://github.com/ccch1mneyyy/dsh-Go
-active,2,BotHarness/DeepSeekBot,965,0,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-22T20:24:24Z,https://github.com/BotHarness/DeepSeekBot
-active,3,aureth-labs/dsh-aurabot-qq,718,1,0,,0,终端,2026-10-24T06:43:38Z,2026-11-22T20:22:36Z,https://github.com/aureth-labs/dsh-aurabot-qq
-active,4,awesome-dsh-plugin/awesome-dsh-plugin,25424,20,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-22T20:20:52Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,5,Fei2411/DS-Bot,8698,14,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-22T19:54:48Z,https://github.com/Fei2411/DS-Bot
+active,1,ccch1mneyyy/dsh-Go,30222,82,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-23T02:05:32Z,https://github.com/ccch1mneyyy/dsh-Go
+active,2,yyh-001/dsh-meme,599,-1,0,,0,终端,2026-08-13T14:54:33Z,2026-11-23T02:04:59Z,https://github.com/yyh-001/dsh-meme
+active,3,flizzywine/dsh-tavern,1730,0,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-23T02:04:44Z,https://github.com/flizzywine/dsh-tavern
+active,4,FuRongJun-1999/dsh-memory,737,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-11-23T02:02:25Z,https://github.com/FuRongJun-1999/dsh-memory
+active,5,ysr666/dsh-vision-router,1296,0,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-23T02:00:14Z,https://github.com/ysr666/dsh-vision-router
