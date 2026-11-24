@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,25496,69,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-23T17:17:07Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,ccch1mneyyy/dsh-Go,30685,463,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-23T17:15:47Z,https://github.com/ccch1mneyyy/dsh-Go
-active,3,ai-timon/timon,717,13,0,,0,工作流,2026-11-06T17:30:24Z,2026-11-23T17:14:04Z,https://github.com/ai-timon/timon
-active,4,ysr666/dsh-vision-router,1297,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-23T17:13:23Z,https://github.com/ysr666/dsh-vision-router
-active,5,Fei-Craft/DS-Bot,8777,,1,1,0,工作流,2026-10-07T15:37:36Z,2026-11-23T17:12:44Z,https://github.com/Fei-Craft/DS-Bot
+active,1,BotHarness/DeepSeekBot,995,12,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-24T01:25:57Z,https://github.com/BotHarness/DeepSeekBot
+active,2,ccch1mneyyy/dsh-TUI,8160,4,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-24T01:22:35Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,3,ccch1mneyyy/dsh-Go,30785,100,0,1,0,视觉,2026-10-25T08:09:52Z,2026-11-24T01:21:13Z,https://github.com/ccch1mneyyy/dsh-Go
+active,4,flizzywine/dsh-tavern,1742,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-24T01:20:46Z,https://github.com/flizzywine/dsh-tavern
+active,5,shanliuling/dsh-image-gen,1708,4,0,3,1,工作流,2026-08-17T10:16:37Z,2026-11-24T01:19:56Z,https://github.com/shanliuling/dsh-image-gen
