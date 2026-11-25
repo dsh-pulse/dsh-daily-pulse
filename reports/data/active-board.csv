@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,1750,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-25T04:43:50Z,https://github.com/flizzywine/dsh-tavern
-active,2,Fei-Craft/DS-Bot,8882,36,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-25T04:41:50Z,https://github.com/Fei-Craft/DS-Bot
-active,3,DDDMUC/dsh-free-search,1679,5,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-25T04:40:40Z,https://github.com/DDDMUC/dsh-free-search
-active,4,ningbainb/deepseek-harness-desktop,956,0,0,,0,视觉,2026-08-13T19:50:01Z,2026-11-25T04:39:14Z,https://github.com/ningbainb/deepseek-harness-desktop
-active,5,Han-1413141/dsh-cost-meter,757,0,0,,0,视觉,2026-08-13T14:57:55Z,2026-11-25T04:38:05Z,https://github.com/Han-1413141/dsh-cost-meter
+active,1,Nwflower/dsh-claude-style,711,6,0,,0,视觉,2026-09-19T18:51:52Z,2026-11-25T16:43:36Z,https://github.com/Nwflower/dsh-claude-style
+active,2,dream-num/univer-workspace,2237,2,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-25T16:42:49Z,https://github.com/dream-num/univer-workspace
+active,3,BotHarness/DeepSeekBot,1053,15,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-25T16:42:23Z,https://github.com/BotHarness/DeepSeekBot
+active,4,awesome-dsh-plugin/awesome-dsh-plugin,25636,40,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-25T16:42:08Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
+active,5,ccch1mneyyy/dsh-TUI,8262,47,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-25T16:39:57Z,https://github.com/ccch1mneyyy/dsh-TUI
