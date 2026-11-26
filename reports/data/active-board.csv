@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,25643,7,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-25T22:53:29Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,BotHarness/DeepSeekBot,1055,2,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-25T22:53:01Z,https://github.com/BotHarness/DeepSeekBot
-active,3,ningbainb/deepseek-harness-desktop,957,0,0,,0,视觉,2026-08-13T19:50:01Z,2026-11-25T22:35:50Z,https://github.com/ningbainb/deepseek-harness-desktop
-active,4,Fei-Craft/DS-Bot,8936,5,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-25T22:16:00Z,https://github.com/Fei-Craft/DS-Bot
-active,5,daha1216/dsh-adult-tension,639,1,0,,0,工作流,2026-08-19T15:04:31Z,2026-11-25T21:41:49Z,https://github.com/daha1216/dsh-adult-tension
+active,1,Fei-Craft/DS-Bot,8953,17,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-26T03:51:40Z,https://github.com/Fei-Craft/DS-Bot
+active,2,flizzywine/dsh-tavern,1768,2,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-26T03:38:44Z,https://github.com/flizzywine/dsh-tavern
+active,3,dream-num/univer-workspace,2237,0,0,3,1,工作流,2026-08-14T09:24:34Z,2026-11-26T03:37:26Z,https://github.com/dream-num/univer-workspace
+active,4,ccch1mneyyy/dsh-TUI,8283,12,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-26T03:35:06Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,5,FuRongJun-1999/dsh-memory,754,0,0,,0,工作流,2026-08-14T13:28:26Z,2026-11-26T03:28:06Z,https://github.com/FuRongJun-1999/dsh-memory
