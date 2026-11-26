@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,awesome-dsh-plugin/awesome-dsh-plugin,25697,36,0,3,1,终端,2026-08-13T13:55:31Z,2026-11-26T16:19:38Z,https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-active,2,ysr666/dsh-vision-router,1304,1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-26T16:18:55Z,https://github.com/ysr666/dsh-vision-router
-active,3,BotHarness/DeepSeekBot,1065,8,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-26T16:18:33Z,https://github.com/BotHarness/DeepSeekBot
-active,4,himovo/movo,789,6,0,,0,工作流,2026-09-01T08:46:57Z,2026-11-26T16:13:40Z,https://github.com/himovo/movo
-active,5,kelai141/dsh-mobile-apk,1146,2,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-26T16:13:06Z,https://github.com/kelai141/dsh-mobile-apk
+active,1,ccch1mneyyy/dsh-TUI,8315,8,0,3,1,视觉,2026-08-13T12:49:31Z,2026-11-26T22:42:49Z,https://github.com/ccch1mneyyy/dsh-TUI
+active,2,flizzywine/dsh-tavern,1776,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-26T22:42:00Z,https://github.com/flizzywine/dsh-tavern
+active,3,BotHarness/DeepSeekBot,1068,3,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-26T22:39:12Z,https://github.com/BotHarness/DeepSeekBot
+active,4,ai-timon/timon,782,5,0,,0,工作流,2026-11-06T17:30:24Z,2026-11-26T22:31:01Z,https://github.com/ai-timon/timon
+active,5,JimLiu/open-artifact,617,10,0,,0,视觉,2026-11-17T02:25:25Z,2026-11-26T21:22:31Z,https://github.com/JimLiu/open-artifact
