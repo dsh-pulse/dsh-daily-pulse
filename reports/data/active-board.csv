@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,kingcharleslzy-ai/dsh-purge,13166,200,0,3,1,工作流,2026-10-16T07:44:27Z,2026-11-27T16:03:05Z,https://github.com/kingcharleslzy-ai/dsh-purge
-active,2,ysr666/dsh-vision-router,1306,-1,0,3,1,视觉,2026-08-13T18:57:47Z,2026-11-27T16:01:33Z,https://github.com/ysr666/dsh-vision-router
-active,3,dataelement/dsh-desktop,20278,140,0,5,1,视觉,2026-08-13T13:45:50Z,2026-11-27T16:01:24Z,https://github.com/dataelement/dsh-desktop
-active,4,Ebony-Vinyl/dsh-our-free-model,88978,611,0,3,1,工作流,2026-09-24T16:17:19Z,2026-11-27T16:01:22Z,https://github.com/Ebony-Vinyl/dsh-our-free-model
-active,5,BotHarness/DeepSeekBot,1081,10,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-27T15:56:28Z,https://github.com/BotHarness/DeepSeekBot
+active,1,flizzywine/dsh-tavern,1789,3,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-27T22:19:42Z,https://github.com/flizzywine/dsh-tavern
+active,2,JimLiu/open-artifact,697,9,0,,0,视觉,2026-11-17T02:25:25Z,2026-11-27T21:41:02Z,https://github.com/JimLiu/open-artifact
+active,3,BotHarness/DeepSeekBot,1085,4,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-27T21:25:04Z,https://github.com/BotHarness/DeepSeekBot
+active,4,DDDMUC/dsh-free-search,1754,2,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-27T21:19:04Z,https://github.com/DDDMUC/dsh-free-search
+active,5,nexu-io/opengame,2189,230,0,3,1,工作流,2026-11-25T10:35:45Z,2026-11-27T21:15:04Z,https://github.com/nexu-io/opengame
