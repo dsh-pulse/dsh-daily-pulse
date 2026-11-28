@@ -1,6 +1,6 @@
 list,rank,name,stars,delta,is_new,score,verified,category,created,pushed,url
-active,1,flizzywine/dsh-tavern,1789,3,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-27T22:19:42Z,https://github.com/flizzywine/dsh-tavern
-active,2,JimLiu/open-artifact,697,9,0,,0,视觉,2026-11-17T02:25:25Z,2026-11-27T21:41:02Z,https://github.com/JimLiu/open-artifact
-active,3,BotHarness/DeepSeekBot,1085,4,0,5,1,工作流,2026-09-16T22:02:12Z,2026-11-27T21:25:04Z,https://github.com/BotHarness/DeepSeekBot
-active,4,DDDMUC/dsh-free-search,1754,2,0,3,1,其他,2026-08-14T16:42:17Z,2026-11-27T21:19:04Z,https://github.com/DDDMUC/dsh-free-search
-active,5,nexu-io/opengame,2189,230,0,3,1,工作流,2026-11-25T10:35:45Z,2026-11-27T21:15:04Z,https://github.com/nexu-io/opengame
+active,1,Devin-AXIS/deepseek-design,2098,1,0,3,1,视觉,2026-08-15T13:08:53Z,2026-11-28T03:39:35Z,https://github.com/Devin-AXIS/deepseek-design
+active,2,liguobao/ds-harness-remote,3897,11,0,3,1,终端,2026-08-14T15:33:53Z,2026-11-28T03:38:32Z,https://github.com/liguobao/ds-harness-remote
+active,3,flizzywine/dsh-tavern,1790,1,0,3,1,工作流,2026-08-16T13:07:23Z,2026-11-28T03:37:44Z,https://github.com/flizzywine/dsh-tavern
+active,4,kelai141/dsh-mobile-apk,1149,1,0,1,0,视觉,2026-08-13T23:55:34Z,2026-11-28T03:35:58Z,https://github.com/kelai141/dsh-mobile-apk
+active,5,Fei-Craft/DS-Bot,9157,14,0,1,0,工作流,2026-10-07T15:37:36Z,2026-11-28T03:35:13Z,https://github.com/Fei-Craft/DS-Bot
